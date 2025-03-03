@@ -1,0 +1,2099 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module 1:Fluid properties &#8212; Mi nuevo libro</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Fluid properties2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mi nuevo libro</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="chapter1.html">
+                    Capítulo 1
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/Fluid properties2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 1:Fluid properties</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-and-compressibility-of-liquids">Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law	and	Compressibility	of	liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-fluid-properties">Basic	fluid	properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal	Gas	Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility-of-liquids">Compressibility	of	Liquids</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-3-vapour-pressure-viscosity-and-surface-tension">Problems for Lecture 3: Vapour pressure, viscosity and surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapour-pressure">Vapour Pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity">Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-tension">Surface Tension</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-1-fluid-properties">
+<h1>Module 1:Fluid properties<a class="headerlink" href="#module-1-fluid-properties" title="Link to this heading">#</a></h1>
+<section id="problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-and-compressibility-of-liquids">
+<h2>Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law	and	Compressibility	of	liquids<a class="headerlink" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-and-compressibility-of-liquids" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>handcalcs<span class="w"> </span>-q
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>Pillow<span class="w"> </span>-q
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span><span class="n">asin</span><span class="p">,</span><span class="n">atan</span><span class="p">,</span><span class="n">degrees</span><span class="p">,</span> <span class="n">tan</span><span class="p">,</span> <span class="n">log10</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">handcalcs.render</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span><span class="n">asin</span><span class="p">,</span><span class="n">atan</span><span class="p">,</span><span class="n">degrees</span><span class="p">,</span> <span class="n">tan</span><span class="p">,</span> <span class="n">log10</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Global variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+g=9.81 #m/s2
+rho_water=1000 #kg/m3
+rho_Hg=13600 #kg/m3
+p_atm=101325 #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g &amp;= 9.810 \; \;\textrm{(m/s2)}
+ &amp;\rho_{water} &amp;= 1000 \; \;\textrm{(kg/m3)}
+ &amp;\rho_{Hg} &amp;= 13600 \; \;\textrm{(kg/m3)}
+\\[10pt]
+ p_{atm} &amp;= 101325 \; \;\textrm{(Pa)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<section id="basic-fluid-properties">
+<h3>Basic	fluid	properties<a class="headerlink" href="#basic-fluid-properties" title="Link to this heading">#</a></h3>
+<p>1.*If the specific volume of a gas is 0.70 m<sup>3 </sup>/kg, what is its specific weight? {14.01 N/m<sup>3</sup>}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+v=0.7 #m3/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+v &amp;= 0.700 \; \;\textrm{(m3/kg)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The specific weigth can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span><br />
+<span class="math notranslate nohighlight">\(\rho\)</span> can be calculated as <span class="math notranslate nohighlight">\(\rho=1/\nu\)</span> and we know <span class="math notranslate nohighlight">\(g\)</span>=9.81 m/s<sup>2 </sup></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+rho= 1/v #kg/m3
+
+gamma= rho*g #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= \frac{ 1 }{ v } \\&amp;= \frac{ 1 }{ 0.700 } \\&amp;= 1.429 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma &amp;= \rho \cdot g \\&amp;= 1.429 \cdot 9.810 \\&amp;= 14.014 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>2.*[R] A reservoir of glycerin has a mass of 1200 kg and a volume of 0.952 m<sup>3. </sup> Find the
+glycerin’s weight, mass density, specific weight and specific gravity. {11.77 kN; 1261 kg/m<sup>3</sup>; 12.36 kN/m<sup>3</sup>; 1.261}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 
+#parameter
+m=1200 #kg
+Vol=0.952 #m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+m &amp;= 1200 \; \;\textrm{(kg)}
+ &amp;\mathrm{Vol} &amp;= 0.952 \; \;\textrm{(m3)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The weight can be calculated as <span class="math notranslate nohighlight">\(W=  m*g\)</span></p>
+<p>The specific weigth can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p><span class="math notranslate nohighlight">\(\rho\)</span> can be calculated as <span class="math notranslate nohighlight">\(\rho=\frac{m}{Vol}\)</span></p>
+<p>The specific gravity is <span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{water}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
+#long
+W= m*g #N
+rho_glycerin= m/Vol #kg/m3
+gamma_glycerin= rho_glycerin*g #N/m3
+s_glycerin= rho_glycerin/rho_water 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+W &amp;= m \cdot g \\&amp;= 1200 \cdot 9.810 \\&amp;= 11772.000 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\rho_{glycerin} &amp;= \frac{ m }{ \mathrm{Vol} } \\&amp;= \frac{ 1200 }{ 0.952 } \\&amp;= 1260.504 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma_{glycerin} &amp;= \rho_{glycerin} \cdot g \\&amp;= 1260.504 \cdot 9.810 \\&amp;= 12365.546 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+s_{glycerin} &amp;= \frac{ \rho_{glycerin} }{ \rho_{water} } \\&amp;= \frac{ 1260.504 }{ 1000 } \\&amp;= 1.261  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>3.* The volume of a rock is found to be 0.00015 m<sup>3</sup>. If the rock’s specific gravity is 2.60, what is its weight? {3.82 N}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param 5
+Vol=0.00015 #m3
+s=2.6
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\mathrm{Vol} &amp;= 0.00015 \; \;\textrm{(m3)}
+ &amp;s &amp;= 2.60000 \;
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The weight of the rock can be calculated as <span class="math notranslate nohighlight">\(W=\rho \cdot g \cdot Vol\)</span><br />
+The volume and <span class="math notranslate nohighlight">\(g\)</span> is known.
+As we have the specific gravity, <span class="math notranslate nohighlight">\(\rho\)</span> can be calculated as <span class="math notranslate nohighlight">\(\rho = \rho_{water} \cdot s\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 1
+rho= rho_water*s #kg/m3
+
+W= rho*g*Vol #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= \rho_{water} \cdot s \\&amp;= 1000 \cdot 2.6 \\&amp;= 2600.0 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+W &amp;= \rho \cdot g \cdot \mathrm{Vol} \\&amp;= 2600.0 \cdot 9.8 \cdot 0.0 \\&amp;= 3.8 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>4.* A certain gas weighs 16.0 N/m<sup>3 </sup> at a certain temperature and pressure. What are the values of its density, specific volume, and specific gravity relative to air weighing 12.0 N/m<sup>3 </sup>? {a) 1.631 kg/ mm<sup>3</sup> b) 0.613 mm<sup>3 </sup>/kg c)1.33}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+gamma_gas=16 #N/m3
+gamma_air=12 #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\gamma_{gas} &amp;= 16 \; \;\textrm{(N/m3)}
+ &amp;\gamma_{air} &amp;= 12 \; \;\textrm{(N/m3)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(\rho\)</span> can be calculated as <span class="math notranslate nohighlight">\(\rho=\frac{\gamma}{g}\)</span></p>
+<p>The specific volume can be calculated as <span class="math notranslate nohighlight">\(v=\frac {1}{\rho_{gas}}\)</span></p>
+<p>The specific gravity is <span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{air}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
+#long
+rho_gas= gamma_gas/g #kg/m3
+v= 1/rho_gas #m3/kg
+s= gamma_gas/gamma_air
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho_{gas} &amp;= \frac{ \gamma_{gas} }{ g } \\&amp;= \frac{ 16 }{ 9.810 } \\&amp;= 1.631 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho_{gas} } \\&amp;= \frac{ 1 }{ 1.631 } \\&amp;= 0.613 \; \;\textrm{(m3/kg)}\\[10pt]
+\\[10pt]
+s &amp;= \frac{ \gamma_{gas} }{ \gamma_{air} } \\&amp;= \frac{ 16 }{ 12 } \\&amp;= 1.333  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>5.* A 3-litre container is filled with a liquid that has a specific gravity of 0.9. Determine mass density, weight and specific volume of the fluid. {900 kg/m<sup>3</sup>; 26.5 N; 0.00111 m<sup>3</sup>/kg}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+s=0.9
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+s &amp;= 0.900 \;
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>And the volumen in m<sup>3</sup> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+Vol=3/1000 #m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\mathrm{Vol} &amp;= 0.003 \; \;\textrm{(m3)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The mass density can be calculated as <span class="math notranslate nohighlight">\(\rho = \rho_{water} \cdot s\)</span><br />
+The weight can be estimated as <span class="math notranslate nohighlight">\(W=\rho \cdot g \cdot Vol\)</span><br />
+The specific volume is <span class="math notranslate nohighlight">\(\nu = 1/\rho\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
+rho= rho_water*s #kg/m3
+W= rho*g*Vol #N
+v= 1/rho #m3/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= \rho_{water} \cdot s \\&amp;= 1000 \cdot 0.9000 \\&amp;= 900.0000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+W &amp;= \rho \cdot g \cdot \mathrm{Vol} \\&amp;= 900.0000 \cdot 9.8100 \cdot 0.0030 \\&amp;= 26.4870 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 900.0000 } \\&amp;= 0.0011 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>6.**[R] A fluid with a specific gravity of 1.2 moves through a pipe at rate of 2 000 kg every 6 hours. Calculate the a) mass density, b) specific weight and c) volumetric flowrate of the fluid. (1200 kg/m<sup>3 </sup>; 11 772 N/m<sup>3 </sup>; 7.716 x 10-5 m<sup>3 </sup>/s)</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+S_fluid= 1.2 
+m= 2000 #kg
+t= 6 #h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S_{fluid} &amp;= 1.200 \; 
+ &amp;m &amp;= 2000 \; \;\textrm{(kg)}
+ &amp;t &amp;= 6 \; \;\textrm{(h)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The density is <span class="math notranslate nohighlight">\(\rho=s*\rho\)</span></p>
+<p>The specific weigth can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p>The volumetric flowrate can be calculated as <span class="math notranslate nohighlight">\(Q= \frac {Vol}{t}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
+
+rho_fluid= S_fluid*rho_water #kg/m3
+gamma_fluid= rho_fluid*g # N/m3
+Vol= m/rho_fluid #m3 
+Q_h= Vol/t #m3/h
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho_{fluid} &amp;= S_{fluid} \cdot \rho_{water} \\&amp;= 1.20 \cdot 1000 \\&amp;= 1200.00 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma_{fluid} &amp;= \rho_{fluid} \cdot g \\&amp;= 1200.00 \cdot 9.81 \\&amp;= 11772.00 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+\mathrm{Vol} &amp;= \frac{ m }{ \rho_{fluid} } \\&amp;= \frac{ 2000 }{ 1200.00 } \\&amp;= 1.67 \; \;\textrm{(m3)}\\[10pt]
+\\[10pt]
+Q_{h} &amp;= \frac{ \mathrm{Vol} }{ t } \\&amp;= \frac{ 1.67 }{ 6 } \\&amp;= 0.28 \; \;\textrm{(m3/h)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 6 
+#long
+Q_s= Vol/(t*60*60)#m3/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{s} &amp;= \frac{ \mathrm{Vol} }{ t \cdot 60 \cdot 60 } \\&amp;= \frac{ 1.666667 }{ 6 \cdot 60 \cdot 60 } \\&amp;= 0.000077 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="ideal-gas-law">
+<h3>Ideal	Gas	Law<a class="headerlink" href="#ideal-gas-law" title="Link to this heading">#</a></h3>
+<p>7.* [R] Calculate the specific weight, density and specific volume of air at 50 °C and absolute pressure of 3.4 bar. Given: R_air = 287 m<sup>2</sup>/(s<sup>2</sup>.K). {36 N/m<sup>3</sup>; 3.67 kg/m<sup>3</sup>; 0.273 m<sup>3</sup>/kg}</p>
+<p>The values of <span class="math notranslate nohighlight">\(R_{air}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(P\)</span> are given. If we convert the temperature units to K and the pressure units to Pa, we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+T=50+273.15 #K
+p=3.4*10**5 #Pa
+R_air=287 #m2/(s2.k)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 323.150 \; \;\textrm{(K)}
+ &amp;p &amp;= 340000.000 \; \;\textrm{(Pa)}
+ &amp;R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.k))}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The specific weight can be calculated as <span class="math notranslate nohighlight">\(\gamma = \frac{g \cdot P}{R_{air} \cdot T}\)</span><br />
+The density is <span class="math notranslate nohighlight">\(\rho = \gamma/g\)</span><br />
+The specific volume is <span class="math notranslate nohighlight">\(\nu = 1/\rho\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
+
+gamma= (g*p)/(R_air*T) #N/m3
+rho= gamma/g #kg/m3
+v= 1/rho #m3/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\gamma &amp;= \frac{ g \cdot p }{ R_{air} \cdot T } \\&amp;= \frac{ 9.810 \cdot 340000.000 }{ 287 \cdot 323.150 } \\&amp;= 35.963 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+\rho &amp;= \frac{ \gamma }{ g } \\&amp;= \frac{ 35.963 }{ 9.810 } \\&amp;= 3.666 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 3.666 } \\&amp;= 0.273 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>8.*Calculate the specific weight, density and specific volume of the air inside a car tyre at a temperature of 15°C and pumped to an absolute pressure of 3 bar. Given: Rair = 287 m<sup>2</sup>/(s<sup>2</sup>.K).  {35.6 N/m<sup>3</sup>; 3.63 kg/m<sup>3</sup>; 0.276 m<sup>3</sup>/kg}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+T_c= 15 #°C
+P_bar= 3 #bar
+R_air= 287 #m2/(s2.K)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{c} &amp;= 15 \; \;\textrm{(°C)}
+ &amp;P_{bar} &amp;= 3 \; \;\textrm{(bar)}
+ &amp;R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The specific weight can be calculated as <span class="math notranslate nohighlight">\(\gamma = \frac{g \cdot P}{R_{air} \cdot T}\)</span><br />
+The density is <span class="math notranslate nohighlight">\(\rho = \gamma/g\)</span><br />
+The specific volume is <span class="math notranslate nohighlight">\(\nu = 1/\rho\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
+#long
+T_k= T_c+273.15 #K
+P_Pa= P_bar*10**5 #Pa
+
+rho_air= P_Pa/(R_air*T_k) #kg/m3
+v_air= 1/rho_air #m3/kg
+gamma_air= rho_air*g #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{k} &amp;= T_{c} + 273.15 \\&amp;= 15 + 273.15 \\&amp;= 288.150 \; \;\textrm{(K)}\\[10pt]
+\\[10pt]
+P_{Pa} &amp;= P_{bar} \cdot \left( 10 \right) ^{ 5 } \\&amp;= 3 \cdot \left( 10 \right) ^{ 5 } \\&amp;= 300000 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+\rho_{air} &amp;= \frac{ P_{Pa} }{ R_{air} \cdot T_{k} } \\&amp;= \frac{ 300000 }{ 287 \cdot 288.150 } \\&amp;= 3.628 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v_{air} &amp;= \frac{ 1 }{ \rho_{air} } \\&amp;= \frac{ 1 }{ 3.628 } \\&amp;= 0.276 \; \;\textrm{(m3/kg)}\\[10pt]
+\\[10pt]
+\gamma_{air} &amp;= \rho_{air} \cdot g \\&amp;= 3.628 \cdot 9.810 \\&amp;= 35.587 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>9.* a) Calculate the specific weight, density and specific volume of oxygen at 20 °C and 50 kN/m<sup>2</sup> absolute. Given: Roxygen = 260 m<sup>2</sup>/(s<sup>2</sup>.K).  ** b) If the oxygen is enclosed in a rigid container of constant volume, what will the pressure be if the temperature is reduced to  100 °C?  {a)6.44 N/m<sup>3</sup>; 0.656 kg/m<sup>3</sup>; 1.524 m<sup>3</sup>/kg; b) 29.5 kPa}</p>
+<p>a)</p>
+<p>The values of <span class="math notranslate nohighlight">\(R_{oxygen}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(P\)</span> are given. If we convert the temperature units to K and the pressure units to Pa, we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+T=20+273.15 #K
+p=50*1000 #Pa
+R_oxygen=260 #m2/(s2.K)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 293.150 \; \;\textrm{(K)}
+ &amp;p &amp;= 50000 \; \;\textrm{(Pa)}
+ &amp;R_{oxygen} &amp;= 260 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The specific weight can be calculated as <span class="math notranslate nohighlight">\(\gamma = \frac{g \cdot P}{R_{oxygen} \cdot T}\)</span><br />
+The density is <span class="math notranslate nohighlight">\(\rho = \gamma/g\)</span><br />
+The specific volume is <span class="math notranslate nohighlight">\(\nu = 1/\rho\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+gamma= (g*p)/(R_oxygen*T) #N/m3
+rho= gamma/g #kg/m3
+v= 1/rho #m3/kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\gamma &amp;= \frac{ g \cdot p }{ R_{oxygen} \cdot T } \\&amp;= \frac{ 9.810 \cdot 50000 }{ 260 \cdot 293.150 } \\&amp;= 6.435 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+\rho &amp;= \frac{ \gamma }{ g } \\&amp;= \frac{ 6.435 }{ 9.810 } \\&amp;= 0.656 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 0.656 } \\&amp;= 1.524 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>b)</p>
+<p>The given pressure and temperatures in Pa, and K are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+
+p_1=50*1000 #Pa
+T_1=20+273.15 #K
+T_2=-100+273.15 #K
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{1} &amp;= 50000 \; \;\textrm{(Pa)}
+ &amp;T_{1} &amp;= 293.150 \; \;\textrm{(K)}
+ &amp;T_{2} &amp;= 173.150 \; \;\textrm{(K)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Considering that <span class="math notranslate nohighlight">\(\frac{P}{T} = constant\)</span><br />
+The following relation applies:
+$<span class="math notranslate nohighlight">\(
+\frac{P_2}{T_2}=\frac{P_1}{T_1}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+p_2= (p_1*T_2)/T_1 #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{2} &amp;= \frac{ p_{1} \cdot T_{2} }{ T_{1} } \\&amp;= \frac{ 50000 \cdot 173.150 }{ 293.150 } \\&amp;= 29532.662 \; \;\textrm{(Pa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The pressure in Kpa is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+p_2_kPa= p_2/1000 #kPa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{2_{kPa}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 29532.662 }{ 1000 } \\&amp;= 29.533 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>10.*** a) If water vapour in the atmosphere has a partial pressure of 3500 Pa and the temperature is 30 °C, what is its specific weight?  b) if the barometer reads 102 kPa absolute, what is the partial pressure of the (dry) air, and its specific weight? c) What is the specific weight of the atmosphere (air plus water vapour present)? Given: Rair = 287 m<sup>2</sup>/(s<sup>2</sup>.K); Rwater vapour = 462 m<sup>2</sup>(s<sup>2</sup>.K).    { 0.245 N/m<sup>3</sup>; 11.11 N/m<sup>3</sup>; 11.36 N/m<sup>3</sup>}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+P_Pa= 3500 #Pa
+T_c= 30 #°C
+R_wvapour= 462 #m2/(s2.K)
+P_barometer=102 #kPa
+R_air=287 #m2/(s2.K)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{Pa} &amp;= 3500 \; \;\textrm{(Pa)}
+ &amp;T_{c} &amp;= 30 \; \;\textrm{(°C)}
+ &amp;R_{wvapour} &amp;= 462 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+ P_{barometer} &amp;= 102 \; \;\textrm{(kPa)}
+ &amp;R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.K))}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The specific weight can be calculated as <span class="math notranslate nohighlight">\(\gamma = \frac{g \cdot P}{R_{oxygen} \cdot T}\)</span></p>
+<p>The partial pressure can be calculated as <span class="math notranslate nohighlight">\(P_{partial}=P_{absolute}-P_{v}\)</span></p>
+<p>The specific weight of the atmosphere is <span class="math notranslate nohighlight">\(\gamma_{atm}=\gamma_{air}+\gamma_{water}\)</span></p>
+<p>a)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span>
+#long
+T_k= T_c+273.15 #K
+
+gamma_wvapour= (g*P_Pa)/(R_wvapour*T_k) #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{k} &amp;= T_{c} + 273.15 \\&amp;= 30 + 273.15 \\&amp;= 303.150 \; \;\textrm{(K)}\\[10pt]
+\\[10pt]
+\gamma_{wvapour} &amp;= \frac{ g \cdot P_{Pa} }{ R_{wvapour} \cdot T_{k} } \\&amp;= \frac{ 9.810 \cdot 3500 }{ 462 \cdot 303.150 } \\&amp;= 0.245 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>b)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 2
+#long
+P_kPa= P_Pa/1000 #kPa
+P_air_kPa= P_barometer-P_kPa #kPa
+P_air_Pa= P_air_kPa*1000 #Pa
+gamma_air= (g*P_air_Pa)/(R_air*T_k) #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P_{kPa} &amp;= \frac{ P_{Pa} }{ 1000 } \\&amp;= \frac{ 3500 }{ 1000 } \\&amp;= 3.50 \; \;\textrm{(kPa)}\\[10pt]
+\\[10pt]
+P_{air_{kPa}} &amp;= P_{barometer} - P_{kPa} \\&amp;= 102 - 3.50 \\&amp;= 98.50 \; \;\textrm{(kPa)}\\[10pt]
+\\[10pt]
+P_{air_{Pa}} &amp;= P_{air_{kPa}} \cdot 1000 \\&amp;= 98.50 \cdot 1000 \\&amp;= 98500.00 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+\gamma_{air} &amp;= \frac{ g \cdot P_{air_{Pa}} }{ R_{air} \cdot T_{k} } \\&amp;= \frac{ 9.81 \cdot 98500.00 }{ 287 \cdot 303.15 } \\&amp;= 11.11 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>c)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+gamma_atmos= gamma_air+gamma_wvapour #N/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\gamma_{atmos} &amp;= \gamma_{air} + \gamma_{wvapour} \\&amp;= 11.106 + 0.245 \\&amp;= 11.351 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="compressibility-of-liquids">
+<h3>Compressibility	of	Liquids<a class="headerlink" href="#compressibility-of-liquids" title="Link to this heading">#</a></h3>
+<p>11.*[R] What pressure in MPa must be applied to water to reduce its volume by 3% under standard sea level atmospheric conditions? {64.2 MPa}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+Delta_Vol=3/100
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\Delta_{Vol} &amp;= 0.030 \;
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>From Table A.3, <span class="math notranslate nohighlight">\(T\)</span> under standard sea level atmospheric conditions is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+T=15+273.15 #K
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+T &amp;= 288.150 \; \;\textrm{(K)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>From Table A.1, <span class="math notranslate nohighlight">\(E_v\)</span> at T=288.15 K (T=15°C) is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+E_v=2.14*10**9 #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+E_{v} &amp;= 2140000000.000 \; \;\textrm{(Pa)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The compressibility of liquids is described by the following equation:
+$<span class="math notranslate nohighlight">\(
+\Delta P =-E_v \frac{\Delta V}{V}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Delta_p= -E_v*-Delta_Vol #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta_{p} &amp;= \left( - E_{v} \right) \cdot \left( - \Delta_{Vol} \right) \\&amp;= \left( - 2140000000.000 \right) \cdot \left( - 0.030 \right) \\&amp;= 64200000.000 \; \;\textrm{(Pa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The result in MPa is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+Delta_p_MPa= Delta_p/1000000 #MPa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta_{p_{MPa}} &amp;= \frac{ \Delta_{p} }{ 1000000 } \\&amp;= \frac{ 64200000.000 }{ 1000000 } \\&amp;= 64.200 \; \;\textrm{(MPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>12.*By what fraction will the volume of a given quantity of mercury at 20°C be reduced if the pressure on it is increased by 100 MPa? {0.38%}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+Delta_P=100 #MPa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\Delta_{P} &amp;= 100 \; \;\textrm{(MPa)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>The reduction of volume can be calculated using the bulk modulus</p>
+<div class="math notranslate nohighlight">
+\[
+E_v= -Vol*\frac {\Delta P}{\Delta Vol}*100\%
+\]</div>
+<p>Using Tabla A.4 the Ev is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> 0
+E_v=26.2*10**9 #N/m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+E_{v} &amp;= 26200000000 \; \;\textrm{(N/m2)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+E_v=-V\frac{\Delta P}{\Delta V}\\
+\frac{\Delta V}{V}=\frac{-\Delta P}{E_V} *100\%
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
+V_percentage= (-Delta_P*10**6/E_v)*100 #%
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{percentage} &amp;= \left( \left( - \Delta_{P} \right) \cdot \frac{ \left( 10 \right) ^{ 6 } }{ E_{v} } \right) \cdot 100 \\&amp;= \left( \left( - 100 \right) \cdot \frac{ \left( 10 \right) ^{ 6 } }{ 26200000000.00 } \right) \cdot 100 \\&amp;= -0.38 \; \;\textrm{(%)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>13.*** A rigid cylinder with inside diameter of 15 mm contains a column of water 500 mm long. What will the column length be if a force of 2 kN is applied to its top by a frictionless plunger? Assume a bulk modulus of 2.21 GPa. (Source: Franzini &amp; Finnemore) {497 mm}</p>
+<p>First, the diameter and column of water were converted to m, the force to N, and the bulk modulus to Pa:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+dF=2000 #N
+d=0.015 #m
+L_1=0.5 #m
+E_v= 2.21*10**9 #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{dF} &amp;= 2000 \; \;\textrm{(N)}
+ &amp;d &amp;= 0.015 \; \;\textrm{(m)}
+ &amp;L_{1} &amp;= 0.500 \; \;\textrm{(m)}
+\\[10pt]
+ E_{v} &amp;= 2210000000.000 \; \;\textrm{(Pa)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Then, <span class="math notranslate nohighlight">\(dP\)</span> is calculated as <span class="math notranslate nohighlight">\(dP=dF/A\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
+
+A= pi*(d/2)**2 #m2
+dp= dF/A #Pa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 } \\&amp;= 3.1416 \cdot \left( \frac{ 0.0150 }{ 2 } \right) ^{ 2 } \\&amp;= 0.0002 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+\mathrm{dp} &amp;= \frac{ \mathrm{dF} }{ A } \\&amp;= \frac{ 2000 }{ 0.0002 } \\&amp;= 11317684.8421 \; \;\textrm{(Pa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Since the tube is rigid, the following relation applies:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{v_2-v_1}{v_1}=\frac{L_2-L_1}{L_1}=\frac{-P_2-P_1}{E_v}
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(L_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+L_2 = -L_1 \cdot \frac{dP}{E_v}+ L_1
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
+
+L_2= -L_1*dp/E_v+L_1 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+L_{2} &amp;= \left( - L_{1} \right) \cdot \frac{ \mathrm{dp} }{ E_{v} } + L_{1} \\&amp;= \left( - 0.5000 \right) \cdot \frac{ 11317684.8421 }{ 2210000000.0000 } + 0.5000 \\&amp;= 0.4974 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(L_2\)</span> in mm:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
+L_2_mm=L_2*1000 #mm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+L_{2_{mm}} &amp;= 497.44 \; \;\textrm{(mm)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+</section>
+</section>
+<section id="problems-for-lecture-3-vapour-pressure-viscosity-and-surface-tension">
+<h2>Problems for Lecture 3: Vapour pressure, viscosity and surface tension<a class="headerlink" href="#problems-for-lecture-3-vapour-pressure-viscosity-and-surface-tension" title="Link to this heading">#</a></h2>
+<section id="vapour-pressure">
+<h3>Vapour Pressure<a class="headerlink" href="#vapour-pressure" title="Link to this heading">#</a></h3>
+<p>1.*[R] At approximately what temperature will water boil at top of Mount Everest (elevation 8 850 m above sea level)? {70°C}</p>
+<p>From Table A.3, the absolute pressure at 8850 m above sea level is 32000 Pa.<br />
+From Table A.1, water has a saturation vapour pressure of 32000 Pa at <strong>70°C.</strong></p>
+<p>2.*At approximately what elevation will water boil at 90 °C? {3 000 m}</p>
+<p>From Table A.1, water has a saturation vapour pressure of 70.1 kPa at 90°C.</p>
+<p>From Table A.3, the absolute pressure at 70 kPa is 3000 m.</p>
+<p>3.**[R] Water at 75°C is placed in a beaker in an airtight container. Air is gradually pumped out of the container. What reduction below standard sea level atmospheric pressure must be achieved before the water boils? {62 kPa}</p>
+<p>The pressure reduction can be calculated as</p>
+<p><span class="math notranslate nohighlight">\(dp=p_{atm}-p_{75c}\)</span></p>
+<p>From Table A.1, saturation vapour pressure at 75°C is 39 kPa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+p_75_C=39 #kPa
+p_atm_= 101 #kPa
+dP= p_atm_-p_75_C #kPa
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{75_{C}} &amp;= 39 \; \;\textrm{(kPa)}
+\\[10pt]
+p_{atm_{}} &amp;= 101 \; \;\textrm{(kPa)}
+\\[10pt]
+\mathrm{dP} &amp;= p_{atm_{}} - p_{75_{C}} \\&amp;= 101 - 39 \\&amp;= 62 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="viscosity">
+<h3>Viscosity<a class="headerlink" href="#viscosity" title="Link to this heading">#</a></h3>
+<p>4.*A square block has a contact area of 0.02 m<sup>2 </sup>  with a table that is lubricated with a 0.1 mm thick layer of oil with viscosity 7 mPa.s. What force is required to move the block at a constant velocity of 1 m/s? {1.4 N}</p>
+<p>If we convert the depth of the layer to m, and viscosity to Pa/s, we have the following given parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+A=0.02 #m2
+y=0.1 #mm
+mu_oil=7*10**-3 #Pa/s
+Delta_V= 1 #m/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= 0.020 \; \;\textrm{(m2)}
+ &amp;y &amp;= 0.100 \; \;\textrm{(mm)}
+ &amp;\mu_{oil} &amp;= 0.007 \; \;\textrm{(Pa/s)}
+\\[10pt]
+ \Delta_{V} &amp;= 1 \; \;\textrm{(m/s)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>At a constant velocity, aceleration is zero, therefore:
+$<span class="math notranslate nohighlight">\(
+\sum F=0\\
+\)</span><span class="math notranslate nohighlight">\(
+Force can be calculated as
+\)</span><span class="math notranslate nohighlight">\(
+F-\tau A=0\\
+\)</span><span class="math notranslate nohighlight">\(
+Where
+\)</span><span class="math notranslate nohighlight">\(
+\tau = \mu \frac {\Delta V}{\Delta y}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 
+
+Delta_y= y/1000 #m
+
+tau= mu_oil*(Delta_V/Delta_y) #Pa
+
+F= tau*A #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta_{y} &amp;= \frac{ y }{ 1000 } \\&amp;= \frac{ 0.100 }{ 1000 } \\&amp;= 0.000 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+\tau &amp;= \mu_{oil} \cdot \left( \frac{ \Delta_{V} }{ \Delta_{y} } \right) \\&amp;= 0.007 \cdot \left( \frac{ 1 }{ 0.000 } \right) \\&amp;= 70.000 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+F &amp;= \tau \cdot A \\&amp;= 70.000 \cdot 0.020 \\&amp;= 1.400 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>5.**[R] A space 16 mm wide between two large plane surfaces is filled with oil with a viscosity μ = 0.18 N.s/m<sup>2</sup>. What force F will be required to drag a very thin plate of 0.4 m<sup>2</sup> area between the surfaces at a speed of 0.25 m/s if the plate is positioned 5 mm from the bottom surface? {5.24 N}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+mu=0.18 #N.s/m2
+V=0.25 #m/s
+yplate=5/1000 #m
+yoil=16/1000 #m
+A=0.4 #m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mu &amp;= 0.180 \; \;\textrm{(N.s/m2)}
+ &amp;V &amp;= 0.250 \; \;\textrm{(m/s)}
+ &amp;\mathrm{yplate} &amp;= 0.005 \; \;\textrm{(m)}
+\\[10pt]
+ \mathrm{yoil} &amp;= 0.016 \; \;\textrm{(m)}
+ &amp;A &amp;= 0.400 \; \;\textrm{(m2)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>To calculate the force required to drag the plate, the Newton’s equation of viscosity can be used:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\tau= \mu\frac{dV}{dy}\\
+F=\tau A
+\end{split}\]</div>
+<p>The total force is the sum between the force of the oil and the force of the plate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F_{oil}= \mu\frac{dV}{(y_{oil}-y_{plate})} A\\
+F_{plate}= \mu\frac{dV}{dy} A
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+y_foil= yoil-yplate #m
+tau_oil= mu*(V/y_foil) #N/m2
+tau_plate= mu*(V/yplate) #N/m2
+F_oil= tau_oil*A #N
+F_plate= tau_plate*A #N
+F= F_oil+F_plate #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+y_{foil} &amp;= \mathrm{yoil} - \mathrm{yplate} \\&amp;= 0.016 - 0.005 \\&amp;= 0.011 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+\tau_{oil} &amp;= \mu \cdot \left( \frac{ V }{ y_{foil} } \right) \\&amp;= 0.180 \cdot \left( \frac{ 0.250 }{ 0.011 } \right) \\&amp;= 4.091 \; \;\textrm{(N/m2)}\\[10pt]
+\\[10pt]
+\tau_{plate} &amp;= \mu \cdot \left( \frac{ V }{ \mathrm{yplate} } \right) \\&amp;= 0.180 \cdot \left( \frac{ 0.250 }{ 0.005 } \right) \\&amp;= 9.000 \; \;\textrm{(N/m2)}\\[10pt]
+\\[10pt]
+F_{oil} &amp;= \tau_{oil} \cdot A \\&amp;= 4.091 \cdot 0.400 \\&amp;= 1.636 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+F_{plate} &amp;= \tau_{plate} \cdot A \\&amp;= 9.000 \cdot 0.400 \\&amp;= 3.600 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+F &amp;= F_{oil} + F_{plate} \\&amp;= 1.636 + 3.600 \\&amp;= 5.236 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>6.**A space 10 mm wide between two large plane surfaces is filled with oil with viscosity μ = 0.18 N.s/m<sup>2</sup>. A very thin plate with a 0.5 m<sup>2</sup> area is located halfway between the two surfaces. If a constant force of 10 N is applied the plate, at what speed will it be dragged out from between the surfaces? {0.278 m/s}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+A=0.5 #m2
+L=5 #mm
+mu =0.18 #N.s/m2
+F= 10 #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= 0.500 \; \;\textrm{(m2)}
+ &amp;L &amp;= 5 \; \;\textrm{(mm)}
+ &amp;\mu &amp;= 0.180 \; \;\textrm{(N.s/m2)}
+\\[10pt]
+ F &amp;= 10 \; \;\textrm{(N)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>Force can be calculated as:
+$<span class="math notranslate nohighlight">\(
+F=A\mu \frac {\Delta V}{\Delta y}\\
+\)</span><span class="math notranslate nohighlight">\(
+Where the total Area is \)</span>1m^2<span class="math notranslate nohighlight">\( because the area of one plate is \)</span>A= 0.5 m^2$.</p>
+<p>Solving for <span class="math notranslate nohighlight">\(\Delta V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta V =F\frac {\Delta y}{\mu A_{total}}
+\]</div>
+<p>Considering that <span class="math notranslate nohighlight">\(\Delta y\)</span> is equal to <span class="math notranslate nohighlight">\(L\)</span> in m:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+L_m= L*10**-3 #m
+A_total=A*2
+V= F*L_m/(mu*A_total) #m/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+L_{m} &amp;= L \cdot \left( 10 \right) ^{ -3 } \\&amp;= 5 \cdot \left( 10 \right) ^{ -3 } \\&amp;= 0.005 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+A_{total} &amp;= 1.000 \; 
+\\[10pt]
+V &amp;= F \cdot \frac{ L_{m} }{ \mu \cdot A_{total} } \\&amp;= 10 \cdot \frac{ 0.005 }{ 0.180 \cdot 1.000 } \\&amp;= 0.278 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>7.***[R] A square block weighing 1.1 kN and with side lengths of 250 mm slides down a 20 °  incline on a film of oil 6.0 micrometre thick. Assuming a linear velocity profile in the oil, what is the terminal velocity of the block? The viscosity of the oil is 7 mPa.s.  {5.16 m/s}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+W=1.1*10**3 #N
+theta=20 #°
+dy=6*10**-6 #m
+mu=7*10**-3 #Pa.s
+L=250/1000 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+W &amp;= 1100.000 \; \;\textrm{(N)}
+ &amp;\theta &amp;= 20 \; \;\textrm{(°)}
+ &amp;\mathrm{dy} &amp;= 0.000 \; \;\textrm{(m)}
+\\[10pt]
+ \mu &amp;= 0.007 \; \;\textrm{(Pa.s)}
+ &amp;L &amp;= 0.250 \; \;\textrm{(m)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+A= L**2 #m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= \left( L \right) ^{ 2 } \\&amp;= \left( 0.250 \right) ^{ 2 } \\&amp;= 0.062 \; \;\textrm{(m2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>At terminal velocity, the block is moving at a constant speed, meaning the net force acting on it is zero. By considering the forces along each axis, the following equation can be derived:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x=0\\
+F_\mu-Wsin\theta=0\\
+F_\mu=Wsin\theta\\
+F_\mu=\tau A\\
+F_\mu=\mu \frac{dV}{dy} A\\
+\mu \frac{dV}{dy} A=Wsin\theta\\
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+dV= (W*sin(radians(theta))*dy)/(A*mu) #m/s
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{dV} &amp;= \frac{ W \cdot \sin { \left( \operatorname{radians} \theta \right) } \cdot \mathrm{dy} }{ A \cdot \mu } \\&amp;= \frac{ 1100.000 \cdot \sin { \left( \operatorname{radians} 20 \right) } \cdot 0.000 }{ 0.062 \cdot 0.007 } \\&amp;= 5.160 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>8.*** A hydraulic lift consist of a 280.00 mm diameter ram which slides in a 280.18 mm  cylinder, the annular space being filled with oil having a kinematic viscosity of 0.00042 m<sup>2</sup>/s and a specific gravity of 0.86. If the rate of travel of the ram is 0.22 m/s, find the frictional resistance when 2 m of the ram is engaged in the cylinder. {1553 N}</p>
+<p>If we convert the diameters of the hydraulic lift and the cilinder to m, we have the following parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param 4
+d_lift= 280/1000 #m
+d_cyl=280.18/1000 #m
+nu= 0.00042 #m2/s
+S=0.86 
+Delta_vel=0.22 #m/s
+h=2 #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{lift} &amp;= 0.2800 \; \;\textrm{(m)}
+ &amp;d_{cyl} &amp;= 0.2802 \; \;\textrm{(m)}
+ &amp;\nu &amp;= 0.0004 \; \;\textrm{(m2/s)}
+\\[10pt]
+ S &amp;= 0.8600 \; 
+ &amp;\Delta_{vel} &amp;= 0.2200 \; \;\textrm{(m/s)}
+ &amp;h &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The frition resistance can be calculated as <span class="math notranslate nohighlight">\(F=\tau A\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(A=h \cdot \pi \cdot d_{lift}\)</span> and <span class="math notranslate nohighlight">\(\tau = \mu \frac {\Delta V}{\Delta y}\)</span></p>
+<p>The dynamic viscosity can be calculated as <span class="math notranslate nohighlight">\(\mu = \nu \cdot \rho\)</span>, where <span class="math notranslate nohighlight">\(\rho = s \cdot \rho_{water}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 
+rho= S*rho_water #kg/m3
+mu= nu*rho #Pa.s
+Delta_y= (d_cyl-d_lift)/2 #m
+
+tau= mu*Delta_vel/(Delta_y) #Pa
+A= h*pi*d_lift #m2
+F= tau*A #N
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= S \cdot \rho_{water} \\&amp;= 0.860 \cdot 1000 \\&amp;= 860.000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\mu &amp;= \nu \cdot \rho \\&amp;= 0.000 \cdot 860.000 \\&amp;= 0.361 \; \;\textrm{(Pa.s)}\\[10pt]
+\\[10pt]
+\Delta_{y} &amp;= \frac{ d_{cyl} - d_{lift} }{ 2 } \\&amp;= \frac{ 0.280 - 0.280 }{ 2 } \\&amp;= 0.000 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+\tau &amp;= \mu \cdot \frac{ \Delta_{vel} }{ \Delta_{y} } \\&amp;= 0.361 \cdot \frac{ 0.220 }{ 0.000 } \\&amp;= 882.933 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+A &amp;= h \cdot \pi \cdot d_{lift} \\&amp;= 2 \cdot 3.142 \cdot 0.280 \\&amp;= 1.759 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+F &amp;= \tau \cdot A \\&amp;= 882.933 \cdot 1.759 \\&amp;= 1553.337 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>9.*** A piston with diameter of 127 mm, height 152 mm and weight 93.4 N slides free in a lubricated vertical pipe. The clearance between the piston and the pipe is 0.0254 mm. If the piston decelerates at 0.64 m/s<sup>2</sup> when its speed is 6.4 m/s, what is the viscosity of the oil? { 0.0065 N.s/m<sup>2</sup> }</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+d=127/1000 #m
+h=152/1000 #m
+W=93.4 #N
+dy=0.0254/1000 #m
+dV=0.64 #m/s2
+a=0.64 #m/s2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.127 \; \;\textrm{(m)}
+ &amp;h &amp;= 0.152 \; \;\textrm{(m)}
+ &amp;W &amp;= 93.400 \; \;\textrm{(N)}
+\\[10pt]
+ \mathrm{dy} &amp;= 0.000 \; \;\textrm{(m)}
+ &amp;\mathrm{dV} &amp;= 0.640 \; \;\textrm{(m/s2)}
+ &amp;a &amp;= 0.640 \; \;\textrm{(m/s2)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+A= 2*pi*(d/2)*h #m2
+m= W/g #kg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= 2 \cdot \pi \cdot \left( \frac{ d }{ 2 } \right) \cdot h \\&amp;= 2 \cdot 3.142 \cdot \left( \frac{ 0.127 }{ 2 } \right) \cdot 0.152 \\&amp;= 0.061 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+m &amp;= \frac{ W }{ g } \\&amp;= \frac{ 93.400 }{ 9.810 } \\&amp;= 9.521 \; \;\textrm{(kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>In this case, since there is a deceleration, the sum of forces along the axis must be set equal to mass times acceleration. Including all the forces in the equation, we have the following
+$<span class="math notranslate nohighlight">\(
+\sum F=ma\\
+F_\tau - W=ma\\
+\)</span><span class="math notranslate nohighlight">\(
+and \)</span>F_\tau<span class="math notranslate nohighlight">\( is:
+\)</span><span class="math notranslate nohighlight">\(
+F_\tau=\mu \frac{dV}{dy} A\\
+\mu \frac{dV}{dy} A - W =ma
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+mu= ((m*a+W)/(A*dV))*dy #N.s/m2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mu &amp;= \left( \frac{ m \cdot a + W }{ A \cdot \mathrm{dV} } \right) \cdot \mathrm{dy} \\&amp;= \left( \frac{ 9.521 \cdot 0.640 + 93.400 }{ 0.061 \cdot 0.640 } \right) \cdot 0.000 \\&amp;= 0.065 \; \;\textrm{(N.s/m2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>10.*** A journal bearing consists of an 80.0 mm diameter shaft in an 80.4 mm sleeve 120 mm long. The clearance space is filled with oil with a viscosity of 0.11 N.s/m<sup>2</sup>. Calculate the torque required to keep the shaft turning at 150 rpm. {0.417 N.m}</p>
+<p>The given parameters are the following: (Note that the diameters and length were converted to meters).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+
+d_journal= 80/1000 #m
+d_sleeve= 80.4/1000 #m
+long_sleeve= 120/1000 #m
+mu_filled=0.11 #Ns/m2
+N_rpm=150 #rpm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{journal} &amp;= 0.080 \; \;\textrm{(m)}
+ &amp;d_{sleeve} &amp;= 0.080 \; \;\textrm{(m)}
+ &amp;\mathrm{long}_{sleeve} &amp;= 0.120 \; \;\textrm{(m)}
+\\[10pt]
+ \mu_{filled} &amp;= 0.110 \; \;\textrm{(Ns/m2)}
+ &amp;N_{rpm} &amp;= 150 \; \;\textrm{(rpm)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>The torque can be calculated as <span class="math notranslate nohighlight">\(Torque = F \cdot r_{journal}\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(\tau= \mu\frac {\Delta V}{\Delta y}\)</span> and <span class="math notranslate nohighlight">\(V=\frac{r_{journal}\cdot2\cdot\pi\cdot N_{rpm}}{60}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+r_journal= (d_journal)/2 #m
+
+V= (r_journal*2*pi*N_rpm)/60 #m/s
+
+Delta_y= ((d_sleeve-d_journal))/2 #m
+
+tau= mu_filled*V/Delta_y #Pa
+
+F= tau*pi*(d_journal)*(long_sleeve) #N
+
+Torque= F*r_journal #N.m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+r_{journal} &amp;= \frac{ d_{journal} }{ 2 } \\&amp;= \frac{ 0.080 }{ 2 } \\&amp;= 0.040 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+V &amp;= \frac{ r_{journal} \cdot 2 \cdot \pi \cdot N_{rpm} }{ 60 } \\&amp;= \frac{ 0.040 \cdot 2 \cdot 3.142 \cdot 150 }{ 60 } \\&amp;= 0.628 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\Delta_{y} &amp;= \frac{ d_{sleeve} - d_{journal} }{ 2 } \\&amp;= \frac{ 0.080 - 0.080 }{ 2 } \\&amp;= 0.000 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+\tau &amp;= \mu_{filled} \cdot \frac{ V }{ \Delta_{y} } \\&amp;= 0.110 \cdot \frac{ 0.628 }{ 0.000 } \\&amp;= 345.575 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+F &amp;= \tau \cdot \pi \cdot d_{journal} \cdot \mathrm{long}_{sleeve} \\&amp;= 345.575 \cdot 3.142 \cdot 0.080 \cdot 0.120 \\&amp;= 10.422 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\mathrm{Torque} &amp;= F \cdot r_{journal} \\&amp;= 10.422 \cdot 0.040 \\&amp;= 0.417 \; \;\textrm{(N.m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+<section id="surface-tension">
+<h3>Surface Tension<a class="headerlink" href="#surface-tension" title="Link to this heading">#</a></h3>
+<p>11.* Calculate the capillary rise of pure water at 10 °C expected in an 0.8 mm diameter tube.  Assume that the contact angle of pure water is 0°. {37.8 mm}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+d=0.8/1000 #m
+T=10 #°C
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+d &amp;= 0.001 \; \;\textrm{(m)}
+ &amp;T &amp;= 10 \; \;\textrm{(°C)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>According to the exercise, and given that the height of the capillary rise can be calculated using the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\theta=0\\
+cos(\theta)=1\\
+h= \frac {2 \sigma}{\gamma *r}
+\end{split}\]</div>
+<p>The values for <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> can be read from the table A.1 at 10 °C</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+sigma=0.0742 #N/m
+gamma= 9804 #kN/m3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+\sigma &amp;= 0.074 \; \;\textrm{(N/m)}
+ &amp;\gamma &amp;= 9804 \; \;\textrm{(kN/m3)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+h_m= (2*sigma)/(gamma*(d/2)) #m
+h_mm= h_m*1000 #mm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{m} &amp;= \frac{ 2 \cdot \sigma }{ \gamma \cdot \left( \frac{ d }{ 2 } \right) } \\&amp;= \frac{ 2 \cdot 0.074 }{ 9804 \cdot \left( \frac{ 0.001 }{ 2 } \right) } \\&amp;= 0.038 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{mm} &amp;= h_{m} \cdot 1000 \\&amp;= 0.038 \cdot 1000 \\&amp;= 37.842 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>12.*[R] A glass tube with diameter 1.5 mm is dipped vertically in water. Calculate from basic principles how high the water will rise in the tube due to capillary action. Take the coefficient of surface tension to be 0.0730 N/m and the angle of contact as 10°.  {19.5 mm}</p>
+<p>If we convert the diameter to meters, we have the following given parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+d_tube=1.5/1000 #m
+sigma=0.0730 #N/m
+theta=10 #°
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{tube} &amp;= 0.002 \; \;\textrm{(m)}
+ &amp;\sigma &amp;= 0.073 \; \;\textrm{(N/m)}
+ &amp;\theta &amp;= 10 \; \;\textrm{(°)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>equating the lifting force created by surface tension to the gravity force, we obtain the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\sum F =0 \\ 
+F_{\sigma}-W=0\\
+F_{\sigma}=\sigma cos(\theta) \pi d\\
+W = \frac {\pi d^2 h\rho g}{4}\\
+\end{split}\]</div>
+<p>Replacing the <span class="math notranslate nohighlight">\(F_{\sigma}\)</span> and <span class="math notranslate nohighlight">\(W\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\sigma cos(\theta) \pi d-\frac {\pi d^2 h\rho g}{4}=0
+\]</div>
+<p>Calculating <span class="math notranslate nohighlight">\(F_{sigma}\)</span> and solving for <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
+theta_rad = radians(theta) #rad
+
+F_sigma= sigma*pi*d_tube*cos(theta_rad) #N
+h= F_sigma*4/(d_tube**2*rho_water*g*pi) #m
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\theta_{rad} &amp;= \operatorname{radians} { \left( \theta \right) } \\&amp;= \operatorname{radians} { \left( 20 \right) } \\&amp;= 0.3491 \; \;\textrm{(rad)}\\[10pt]
+\\[10pt]
+F_{\sigma} &amp;= \sigma \cdot \pi \cdot d_{tube} \cdot \cos \left( \theta_{rad} \right) \\&amp;= 0.0730 \cdot 3.1416 \cdot 0.0015 \cdot \cos \left( 0.3491 \right) \\&amp;= 0.0003 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+h &amp;= F_{\sigma} \cdot \frac{ 4 }{ \left( d_{tube} \right) ^{ 2 } \cdot \rho_{water} \cdot g \cdot \pi } \\&amp;= 0.0003 \cdot \frac{ 4 }{ \left( 0.0015 \right) ^{ 2 } \cdot 1000 \cdot 9.8100 \cdot 3.1416 } \\&amp;= 0.0186 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(h\)</span> in mm would be:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
+h_=h*1000 #mm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+h_{} &amp;= 18.6470 \; \;\textrm{(mm)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>13.*A glass tube with diameter 1 mm is dipped vertically in water. Calculate from basic principles how high the water will rise in the tube due to capillary action. Take the coefficient of surface tension to be 0.0730 N/m and the angle of contact as 20°.  {28 mm}</p>
+<p>Given:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> param
+d=1/1000 #m
+sigma=0.073 #N/m
+theta=20 #°
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.001 \; \;\textrm{(m)}
+ &amp;\sigma &amp;= 0.073 \; \;\textrm{(N/m)}
+ &amp;\theta &amp;= 20 \; \;\textrm{(°)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p>To calculate the height of the water, it is necessary to perform a force balance along that axis, and include all the forces.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_y=0\\
+F_\sigma - W= 0\\
+\sigma cos(\theta) \pi d - \frac{\pi d^2}{4} h \rho g =0
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long
+
+h= (4*sigma*cos(radians(theta)))/(d*rho_water*g) #m
+h_mm= h*1000 #mm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h &amp;= \frac{ 4 \cdot \sigma \cdot \cos { \left( \operatorname{radians} \theta \right) } }{ d \cdot \rho_{water} \cdot g } \\&amp;= \frac{ 4 \cdot 0.073 \cdot \cos { \left( \operatorname{radians} 20 \right) } }{ 0.001 \cdot 1000 \cdot 9.810 } \\&amp;= 0.028 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{mm} &amp;= h \cdot 1000 \\&amp;= 0.028 \cdot 1000 \\&amp;= 27.970 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-and-compressibility-of-liquids">Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law	and	Compressibility	of	liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-fluid-properties">Basic	fluid	properties</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal	Gas	Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility-of-liquids">Compressibility	of	Liquids</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-3-vapour-pressure-viscosity-and-surface-tension">Problems for Lecture 3: Vapour pressure, viscosity and surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapour-pressure">Vapour Pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity">Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-tension">Surface Tension</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

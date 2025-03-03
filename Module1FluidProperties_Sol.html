@@ -1,0 +1,1701 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module 1: Fluid properties &#8212; CIVIL 202: Fluid Mechanics and Pipe Flow</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module1FluidProperties_Sol';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="CIVIL 202 COURSE EXERCISES" href="chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CIVIL 202: Fluid Mechanics and Pipe Flow</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="chapter1.html">
+                    CIVIL 202 COURSE EXERCISES
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 1: Fluid properties</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Module1FluidProperties_Sol.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 1: Fluid properties</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-compressibility-of-liquids-and-surface-tension">Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law,	Compressibility	of	liquids, and Surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-fluid-properties">Basic fluid properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (**)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal	Gas	Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-r">Question 7 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (*)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (*)(**)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10 (***)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility-of-liquids">Compressibility	of	Liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11-r">Question 11 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-12">Question 12 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13">Question 13 (***)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-3-vapour-pressure-and-surface-tension">Problems for Lecture 3: Vapour pressure and surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapour-pressure">Vapour Pressure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (**)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-tension">Surface Tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6">Question 6 (*)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-1-fluid-properties">
+<h1>Module 1: Fluid properties<a class="headerlink" href="#module-1-fluid-properties" title="Link to this heading">#</a></h1>
+<p>Global variables:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g &amp;= 9.810 \; \;\textrm{(m/s2)}
+ &amp;\rho_{water} &amp;= 1000 \; \;\textrm{(kg/m3)}
+ &amp;\rho_{Hg} &amp;= 13600 \; \;\textrm{(kg/m3)}
+\\[10pt]
+ p_{atm} &amp;= 101325 \; \;\textrm{(Pa)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<section id="problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-compressibility-of-liquids-and-surface-tension">
+<h2>Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law,	Compressibility	of	liquids, and Surface tension<a class="headerlink" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-compressibility-of-liquids-and-surface-tension" title="Link to this heading">#</a></h2>
+<section id="basic-fluid-properties">
+<h3>Basic fluid properties<a class="headerlink" href="#basic-fluid-properties" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-1">
+<h4>Question 1 (*)<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h4>
+<p>If the specific volume of a gas is 0.70 m<sup>3 </sup>/kg, what is its specific weight?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(14.01 \; N/m^3\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) is the weight per unit volume <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p class="sd-card-text">Specific volume (<span class="math notranslate nohighlight">\(v\)</span>) is the inverse of the density <span class="math notranslate nohighlight">\(v=\frac{1}{\rho}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=03f3b3dc-8599-4fdf-99f6-b29401590dc4">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v &amp;= 0.70 \; \;\textrm{(m3/kg)}
+\\[10pt]
+\rho &amp;= \frac{ 1 }{ v } \\&amp;= \frac{ 1 }{ 0.70 } \\&amp;= 1.43 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma &amp;= \rho \cdot g \\&amp;= 1.43 \cdot 9.81 \\&amp;= 14.01 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-2-r">
+<h4>Question 2 (*)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h4>
+<hr class="docutils" />
+<p>A reservoir of glycerin has a mass of 1200 kg and a volume of 0.952 m<sup>3 </sup>. Find the glycerin’s weight, mass density, specific weight and specific gravity.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(11.77 \; kN \;; 1261 \; kg/m^3 \; ; 12.36 \; N/m^3 \; ; 1.26\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The weight is given by the equation: <span class="math notranslate nohighlight">\(W=  m \cdot g\)</span></p>
+<p class="sd-card-text">Mass density (<span class="math notranslate nohighlight">\(\rho\)</span>) is the mass divided by the volume <span class="math notranslate nohighlight">\(\rho=\frac{m}{Vol}\)</span></p>
+<p class="sd-card-text">Specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) is the weight per unit volume and can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p class="sd-card-text">Specific gravity (<span class="math notranslate nohighlight">\(s\)</span>) is the ratio of the fluid’s density to the density of water at 4°C (i.e <span class="math notranslate nohighlight">\(1000 kg/m^3\)</span>):</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{water_{4c}}}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=37fad609-170e-42d9-aeec-b294015a1971">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+m &amp;= 1200 \; \;\textrm{(kg)}
+\\[10pt]
+\mathrm{Vol} &amp;= 0.95 \; \;\textrm{(m3)}
+\\[10pt]
+W &amp;= m \cdot g \\&amp;= 1200 \cdot 9.81 \\&amp;= 11772.00 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\rho_{glycerin} &amp;= \frac{ m }{ \mathrm{Vol} } \\&amp;= \frac{ 1200 }{ 0.95 } \\&amp;= 1260.50 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma_{glycerin} &amp;= \rho_{glycerin} \cdot g \\&amp;= 1260.50 \cdot 9.81 \\&amp;= 12365.55 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+s_{glycerin} &amp;= \frac{ \rho_{glycerin} }{ \rho_{water} } \\&amp;= \frac{ 1260.50 }{ 1000 } \\&amp;= 1.26  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-3">
+<h4>Question 3 (*)<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h4>
+<p>The volume of a rock is found to be 0.00015 m<sup>3</sup>. If the rock’s specific gravity is 2.60, what is its weight?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(3.83 \; N\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The weight of the rock can be calculated using the equation:</p>
+<div class="math notranslate nohighlight">
+\[W = \rho \cdot g \cdot Vol\]</div>
+<p class="sd-card-text">Since the specific gravity of the rock is given, the density can be determined using the equation:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \rho_{{water}} \cdot s\]</div>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=daa8122c-3eea-4cd3-9402-b294015a1a69">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Vol} &amp;= 0.00015 \; \;\textrm{(m3)}
+\\[10pt]
+s &amp;= 2.60000 \; 
+\\[10pt]
+\rho &amp;= \rho_{water} \cdot s \\&amp;= 1000 \cdot 2.60000 \\&amp;= 2600.00000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+W &amp;= \rho \cdot g \cdot \mathrm{Vol} \\&amp;= 2600.00000 \cdot 9.81000 \cdot 0.00015 \\&amp;= 3.82590 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-4">
+<h4>Question 4 (*)<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h4>
+<p>A certain gas weighs 16.0 N/m<sup>3 </sup> at a certain temperature and pressure. What are the values of its density, specific volume, and specific gravity relative to air weighing 12.0 N/m<sup>3 </sup>?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(1.63 \; kg/ mm^3 \; ; 0.61 \; mm^3/kg \; ; 1.33\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) is the weight per unit volume and can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p class="sd-card-text">Specific volume is the inverse of the density: <span class="math notranslate nohighlight">\(v=\frac {1}{\rho_{gas}}\)</span></p>
+<p class="sd-card-text">Specific gravity (<span class="math notranslate nohighlight">\(s\)</span>) is the ratio of the fluid’s density to the density of water at 4°C (i.e <span class="math notranslate nohighlight">\(1000 kg/m^3\)</span>):</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{water_{4c}}}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=162ef364-baca-4097-ab05-b294015a1ad0">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\gamma_{gas} &amp;= 16 \; \;\textrm{(N/m3)}
+\\[10pt]
+\gamma_{air} &amp;= 12 \; \;\textrm{(N/m3)}
+\\[10pt]
+\rho_{air} &amp;= \frac{ \gamma_{air} }{ g } \\&amp;= \frac{ 12 }{ 9.8100 } \\&amp;= 1.2232 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\rho_{gas} &amp;= \frac{ \gamma_{gas} }{ g } \\&amp;= \frac{ 16 }{ 9.8100 } \\&amp;= 1.6310 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho_{gas} } \\&amp;= \frac{ 1 }{ 1.6310 } \\&amp;= 0.6131 \; \;\textrm{(m3/kg)}\\[10pt]
+\\[10pt]
+s_{gas} &amp;= \frac{ \rho_{gas} }{ \rho_{water} } \\&amp;= \frac{ 1.6310 }{ 1000 } \\&amp;= 0.0016  \\[10pt]
+\\[10pt]
+s_{air} &amp;= \frac{ \rho_{air} }{ \rho_{water} } \\&amp;= \frac{ 1.2232 }{ 1000 } \\&amp;= 0.0012  \\[10pt]
+\\[10pt]
+s &amp;= 1.3333 \; 
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-5">
+<h4>Question 5 (*)<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h4>
+<p>A 3-litre container is filled with a liquid that has a specific gravity of 0.9. Determine mass density, weight and specific volume of the fluid.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(900 \; kg/m^3 \; ; 26.5 \; N \; ; 0.00111 \; m^3/kg\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The density of the liquid can be calculated using the specific gravity (<span class="math notranslate nohighlight">\(s\)</span>) equation, which is <span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{water}}\)</span>.</p>
+<p class="sd-card-text">Weight is given by the equation: <span class="math notranslate nohighlight">\(W=\rho \cdot g \cdot Vol\)</span></p>
+<p class="sd-card-text">Specific volume is the inverse of the density: <span class="math notranslate nohighlight">\(v=\frac {1}{\rho}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=5b623807-8065-47ea-b729-b294015a19f3">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+s &amp;= 0.9000 \; 
+\\[10pt]
+\rho &amp;= \rho_{water} \cdot s \\&amp;= 1000 \cdot 0.9000 \\&amp;= 900.0000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+W &amp;= \rho \cdot g \cdot \mathrm{Vol} \\&amp;= 900.0000 \cdot 9.8100 \cdot 0.0001 \\&amp;= 1.3243 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 900.0000 } \\&amp;= 0.0011 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-6-r">
+<h4>Question 6 (**)[R]<a class="headerlink" href="#question-6-r" title="Link to this heading">#</a></h4>
+<p>A fluid with a specific gravity of 1.2 moves through a pipe at rate of 2 000 kg every 6 hours. Calculate the mass density, specific weight and volumetric flowrate of the fluid.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(1200 \; kg/m^3 \; ; 11 772 \; N/m^3 \; ; 7.716 x 10^ {-5} \; m^3/s\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The density of the liquid can be calculated using the specific gravity (<span class="math notranslate nohighlight">\(s\)</span>) equation, which is <span class="math notranslate nohighlight">\(s= \frac {\rho_{fluid}}{\rho_{water}}\)</span>.</p>
+<p class="sd-card-text">Specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) is the weight per unit volume and can be calculated as <span class="math notranslate nohighlight">\(\gamma=\rho \cdot g\)</span></p>
+<p class="sd-card-text">The volumetric flow rate is the volume of fluid passing through a given section per unit of time. The equation used is: <span class="math notranslate nohighlight">\(Q= \frac {Vol}{t}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=75e6f28e-1efa-4a20-afac-b294015a2140">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+s_{fluid} &amp;= 1.200 \; 
+\\[10pt]
+m &amp;= 2000 \; \;\textrm{(kg)}
+\\[10pt]
+t &amp;= 6 \; \;\textrm{(h)}
+\\[10pt]
+\rho_{fluid} &amp;= s_{fluid} \cdot \rho_{water} \\&amp;= 1.200 \cdot 1000 \\&amp;= 1200.000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma_{fluid} &amp;= \rho_{fluid} \cdot g \\&amp;= 1200.000 \cdot 9.810 \\&amp;= 11772.000 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+\mathrm{Vol} &amp;= \frac{ m }{ \rho_{fluid} } \\&amp;= \frac{ 2000 }{ 1200.000 } \\&amp;= 1.667 \; \;\textrm{(m3)}\\[10pt]
+\\[10pt]
+Q_{h} &amp;= \frac{ \mathrm{Vol} }{ t } \\&amp;= \frac{ 1.667 }{ 6 } \\&amp;= 0.278 \; \;\textrm{(m3/h)}\\[10pt]
+\\[10pt]
+Q_{s} &amp;= \frac{ \mathrm{Vol} }{ t \cdot 60 \cdot 60 } \cdot 1000 \\&amp;= \frac{ 1.667 }{ 6 \cdot 60 \cdot 60 } \cdot 1000 \\&amp;= 0.077 \; \;\textrm{(L/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="ideal-gas-law">
+<h3>Ideal	Gas	Law<a class="headerlink" href="#ideal-gas-law" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-7-r">
+<h4>Question 7 (*)[R]<a class="headerlink" href="#question-7-r" title="Link to this heading">#</a></h4>
+<p>Calculate the specific weight, density and specific volume of air at 50 °C and absolute pressure of 3.4 bar. Given: R<sub>air</sub> = 287 m<sup>2</sup>/(s<sup>2</sup>.K).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+36 \; N/m^3 \; ; 3.67  \; kg/m^3 \; ; 0.27 \; m^3/kg
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{air} \cdot T}\]</div>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=a53285f2-316d-42cc-aa83-b294015a224b">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The values of <span class="math notranslate nohighlight">\(R_{air}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(p\)</span> are given. We need to convert the temperature units to K and the pressure units to Pa, as required by the ideal gas law.</p>
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{air} \cdot T}\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(p\)</span> is the absolute pressure of the air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(R_{air}\)</span> is the specific gas constant for air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature of the air in Kelvin</p></li>
+</ul>
+<p class="sd-card-text">Once the density is known, the specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) can be calculated using the equation <span class="math notranslate nohighlight">\(\gamma = \rho \cdot g\)</span></p>
+<p class="sd-card-text">Finally, the specific volume is the inverse of the density <span class="math notranslate nohighlight">\(v =\frac{1}{\rho}\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 50 + 273.15 &amp;= 323.15 \; \;\textrm{(K)}
+\\[10pt]
+p &amp;= 3.4 \cdot \left( 10 \right) ^{ 5 } &amp;= 340000.00 \; \;\textrm{(Pa)}
+\\[10pt]
+R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.k))}
+\\[10pt]
+\rho &amp;= \frac{ p }{ R_{air} \cdot T } \\&amp;= \frac{ 340000.00 }{ 287 \cdot 323.15 } \\&amp;= 3.67 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma &amp;= \rho \cdot g \\&amp;= 3.67 \cdot 9.81 \\&amp;= 35.96 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 3.67 } \\&amp;= 0.27 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-8">
+<h4>Question 8 (*)<a class="headerlink" href="#question-8" title="Link to this heading">#</a></h4>
+<p>Calculate the specific weight, density and specific volume of the air inside a car tyre at a temperature of 15°C and pumped to an absolute pressure of 3 bar. Given: R<sub>air</sub> = 287 m<sup>2</sup>/(s<sup>2</sup>.K).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+35.6 \; N/m^3 \; ; 3.63 \; kg/m^3 \; ; 0.28 \; m^3/kg
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{air} \cdot T}\]</div>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=ab7a4e6d-443d-4c75-96a9-b294015a2517">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The values of <span class="math notranslate nohighlight">\(R_{air}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(p\)</span> are given. We need to convert the temperature units to K and the pressure units to Pa, as required by the ideal gas law.</p>
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{air} \cdot T}\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(p\)</span> is the absolute pressure of the air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(R_{air}\)</span> is the specific gas constant for air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature of the air in Kelvin</p></li>
+</ul>
+<p class="sd-card-text">Once the density is known, the specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) can be calculated using the equation <span class="math notranslate nohighlight">\(\gamma = \rho \cdot g\)</span></p>
+<p class="sd-card-text">Finally, the specific volume is the inverse of the density <span class="math notranslate nohighlight">\(v =\frac{1}{\rho}\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T_{k} &amp;= 15 + 273.15 &amp;= 288.15 \; \;\textrm{(K)}
+\\[10pt]
+p_{Pa} &amp;= 3 \cdot \left( 10 \right) ^{ 5 } &amp;= 300000 \; \;\textrm{(Pa)}
+\\[10pt]
+R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+\rho &amp;= \frac{ p }{ R_{air} \cdot T } \\&amp;= \frac{ 340000.00 }{ 287 \cdot 323.15 } \\&amp;= 3.67 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\gamma &amp;= \rho \cdot g \\&amp;= 3.67 \cdot 9.81 \\&amp;= 35.96 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 3.67 } \\&amp;= 0.27 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+<section id="question-9">
+<h5>Question 9 (*)(**)<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h5>
+<p>a)* Calculate the specific weight, density and specific volume of oxygen at 20 °C and 50 kN/m<sup>2</sup> absolute.
+Given: R<sub>oxygen</sub> = 260 m<sup>2</sup>/(s<sup>2</sup>.K).</p>
+<p>b)** If the oxygen is enclosed in a rigid container of constant volume, what will the pressure be if the temperature is reduced to  100 °C?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \; 6.44 \; N/m^3 \; ; \; 0.656 \; kg/m^3 \; ; \; 1.524 \; m^3/kg
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \; 29.5 \; kPa
+\)</span></p>
+</div>
+</details><p><strong>Question 9 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{oxygen} \cdot T}\]</div>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=8633f197-c5a3-40cf-9653-b294015a2635">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The values of <span class="math notranslate nohighlight">\(R_{oxygen}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(p\)</span> are given. We need to convert the temperature units to K and the pressure units to Pa, as required by the ideal gas law.</p>
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{oxygen} \cdot T}\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(p\)</span> is the absolute pressure of the air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(R_{oxygen}\)</span> is the specific gas constant for air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature of the air in Kelvin</p></li>
+</ul>
+<p class="sd-card-text">Once the density is known, the specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) can be calculated using the equation <span class="math notranslate nohighlight">\(\gamma = \rho \cdot g\)</span></p>
+<p class="sd-card-text">Finally, the specific volume is the inverse of the density <span class="math notranslate nohighlight">\(v =\frac{1}{\rho}\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 20 + 273.15 &amp;= 293.150 \; \;\textrm{(K)}
+\\[10pt]
+p &amp;= 50 \cdot 1000 &amp;= 50000 \; \;\textrm{(Pa)}
+\\[10pt]
+R_{oxygen} &amp;= 260 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+\gamma &amp;= \frac{ g \cdot p }{ R_{oxygen} \cdot T } \\&amp;= \frac{ 9.810 \cdot 50000 }{ 260 \cdot 293.150 } \\&amp;= 6.435 \; \;\textrm{(N/m3)}\\[10pt]
+\\[10pt]
+\rho &amp;= \frac{ \gamma }{ g } \\&amp;= \frac{ 6.435 }{ 9.810 } \\&amp;= 0.656 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+v &amp;= \frac{ 1 }{ \rho } \\&amp;= \frac{ 1 }{ 0.656 } \\&amp;= 1.524 \; \;\textrm{(m3/kg)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 9 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The ideal gas law is given by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{oxygen} \cdot T}\]</div>
+<p class="sd-card-text">The <span class="math notranslate nohighlight">\(R_{oxygen}\)</span> and the volume (<span class="math notranslate nohighlight">\(Vol\)</span>) are constant in both scenarios.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The ideal gas law is given by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{oxygen} \cdot T}\]</div>
+<p class="sd-card-text">Considering that the <span class="math notranslate nohighlight">\(R_{oxygen}\)</span> is constant we have:</p>
+<div class="math notranslate nohighlight">
+\[R= \frac {p_1 \cdot Vol_1}{T_1} = \frac {p_2 \cdot Vol_2}{T_2}\]</div>
+<p class="sd-card-text">The <span class="math notranslate nohighlight">\(Vol\)</span> from both scenarios are the same, thus</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_2}{T_2}=\frac{p_1}{T_1}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{1} &amp;= 50000 \; \;\textrm{(Pa)}
+\\[10pt]
+T_{1} &amp;= 293.15 \; \;\textrm{(K)}
+\\[10pt]
+T_{2} &amp;= 173.15 \; \;\textrm{(K)}
+\\[10pt]
+p_{2} &amp;= \frac{ p_{1} \cdot T_{2} }{ T_{1} } \\&amp;= \frac{ 50000 \cdot 173.15 }{ 293.15 } \\&amp;= 29532.66 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 29532.66 }{ 1000 } \\&amp;= 29.53 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="question-10">
+<h4>Question 10 (***)<a class="headerlink" href="#question-10" title="Link to this heading">#</a></h4>
+<p>a) If water vapour in the atmosphere has a partial pressure of 3500 Pa and the temperature is 30 °C, what is its specific weight?</p>
+<p>b) If the atmospheric pressure is 102 kPa, what is the partial pressure of the (dry) air, and its specific weight?</p>
+<p>c) What is the specific weight of the atmosphere (air plus water vapour present)?</p>
+<p>Given: R<sub>air</sub> = 287 m<sup>2</sup>/(s<sup>2</sup>.K); R <sub>water vapour</sub> = 462 m<sup>2</sup>(s<sup>2</sup>.K).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \; 0.25 \; N/m^3 
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;  11.11 \; N/m^3 
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;  11.36 \; N/m^3
+\)</span></p>
+</div>
+</details><p><strong>Question 10 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{wvapour} \cdot T}\]</div>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=d4c95596-571d-4d56-a618-b294015a27a8">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The values of <span class="math notranslate nohighlight">\(R_{wvapour}\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(p\)</span> are given. We need to convert the temperature units to K and the pressure units to Pa, as required by the ideal gas law.</p>
+<p class="sd-card-text">By using the ideal gas law, the density of air (<span class="math notranslate nohighlight">\(\rho\)</span>) can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{p}{R_{wvapour} \cdot T}\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(p\)</span> is the absolute pressure of the air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(R_{wvapour}\)</span> is the specific gas constant for air</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature of the air in Kelvin</p></li>
+</ul>
+<p class="sd-card-text">Once the density is known, the specific weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) can be calculated using the equation <span class="math notranslate nohighlight">\(\gamma = \rho \cdot g\)</span></p>
+<p class="sd-card-text">Replacing the density equation into the specific weight we have:  <span class="math notranslate nohighlight">\(\gamma = \frac{g \cdot p}{R_{oxygen} \cdot T}\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{Pa} &amp;= 3500 \; \;\textrm{(Pa)}
+\\[10pt]
+T_{k} &amp;= 30 + 273.15 &amp;= 303.15 \; \;\textrm{(K)}
+\\[10pt]
+R_{wvapour} &amp;= 462 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+p_{barometer} &amp;= 102000 \; \;\textrm{(Pa)}
+\\[10pt]
+R_{air} &amp;= 287 \; \;\textrm{(m2/(s2.K))}
+\\[10pt]
+\gamma_{wvapour} &amp;= \frac{ g \cdot p_{Pa} }{ R_{wvapour} \cdot T_{k} }  = \frac{ 9.81 \cdot 3500 }{ 462 \cdot 303.15 } &amp;= 0.25 \; \;\textrm{(N/m3)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 10 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The partial pressure can be calculated as <span class="math notranslate nohighlight">\(p_{partial}=p_{total}-p_{v}\)</span></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{air_{Pa}} &amp;= p_{barometer} - p_{Pa} \\&amp;= 102000 - 3500 \\&amp;= 98500 \; \;\textrm{(kPa)}\\[10pt]
+\\[10pt]
+\gamma_{air} &amp;= \frac{ g \cdot p_{air_{Pa}} }{ R_{air} \cdot T_{k} } \\&amp;= \frac{ 9.81 \cdot 98500 }{ 287 \cdot 303.15 } \\&amp;= 11.11 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 10 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The specific weight of the atmosphere including the water vapour and the air is</p>
+<div class="math notranslate nohighlight">
+\[\gamma_{atm}=\gamma_{air}+\gamma_{water}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\gamma_{atmos} &amp;= \gamma_{air} + \gamma_{wvapour} \\&amp;= 11.11 + 0.25 \\&amp;= 11.35 \; \;\textrm{(N/m3)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="compressibility-of-liquids">
+<h3>Compressibility	of	Liquids<a class="headerlink" href="#compressibility-of-liquids" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-11-r">
+<h4>Question 11 (*)[R]<a class="headerlink" href="#question-11-r" title="Link to this heading">#</a></h4>
+<p>What pressure in MPa must be applied to water to reduce its volume by 3% under standard sea level atmospheric conditions?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(64.2 \; MPa\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{\Delta v}{v}\]</div>
+<p class="sd-card-text">The bulk modulus <span class="math notranslate nohighlight">\(E_v\)</span> can be found in a table of the physical properties of common liquids at standard sea-level atmospheric conditions.</p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=d3a614bf-9c88-408a-9614-b294015a29a8">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{\Delta v}{v}\]</div>
+<p class="sd-card-text">Where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta p\)</span> is the change in pressure</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(E_v\)</span> is the bulk modulus of elasticity</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta v\)</span> is the change in the specific volume</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(v\)</span> is the original specific volume</p></li>
+</ul>
+<p class="sd-card-text">Specific volume (<span class="math notranslate nohighlight">\(v\)</span>) can be calculated with the following equation:</p>
+<div class="math notranslate nohighlight">
+\[
+v= \frac{1}{\rho}= Vol/m
+\]</div>
+<p class="sd-card-text">From the ICAO table, the physical properties of water at standard sea-level atmospheric pressure <span class="math notranslate nohighlight">\(E_v\)</span> at T=288.15 K (T=15°C) is 2.14x10<sup>9</sup> Pa.</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta_{Vol} &amp;= \frac{ 3 }{ 100 } &amp;= 0.03  
+\\[10pt]
+T &amp;= 15 + 273.15 &amp;= 288.15 \; \;\textrm{(K)}
+\\[10pt]
+E_{v} &amp;= 2140000000.00 \; \;\textrm{(Pa)}
+\\[10pt]
+\Delta_{p} &amp;= \left( - E_{v} \right) \cdot \left( - \Delta_{Vol} \right) \\&amp;= \left( - 2140000000.00 \right) \cdot \left( - 0.03 \right) \\&amp;= 64200000.00 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+\Delta_{p_{}} &amp;= \frac{ \Delta_{p} }{ 1000000 } \\&amp;= \frac{ 64200000.00 }{ 1000000 } \\&amp;= 64.20 \; \;\textrm{(MPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-12">
+<h4>Question 12 (*)<a class="headerlink" href="#question-12" title="Link to this heading">#</a></h4>
+<p>By what fraction will the volume of a given quantity of mercury at 20°C be reduced if the pressure on it is increased by 100 MPa?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(0.38 \; \% \)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{\Delta v}{v}\]</div>
+<p class="sd-card-text">The bulk modulus <span class="math notranslate nohighlight">\(E_v\)</span> can be found in a table of the physical properties of common liquids at standard sea-level atmospheric conditions.</p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=94eb05ee-3d14-4948-98ff-b294015a2b27">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{\Delta v}{v}\]</div>
+<p class="sd-card-text">Where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta p\)</span> is the change in pressure</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(E_v\)</span> is the bulk modulus of elasticity</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta v\)</span> is the change in the specific volume</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(v\)</span> is the original specific volume</p></li>
+</ul>
+<p class="sd-card-text">Solving for the reduction of volume <span class="math notranslate nohighlight">\(\frac{\Delta Vol}{Vol}\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta Vol}{Vol}=\frac{-\Delta p}{E_v}\]</div>
+<p class="sd-card-text">Additionally, using a table of the physical properties of common liquids at the standard sea-level atmospheric conditions the Ev is: 26.9x10<sup>9</sup> N/m<sup>2</sup></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta_{p} &amp;= 100000000 \; \;\textrm{(MPa)}
+\\[10pt]
+E_{v} &amp;= 26200000000.00 \; \;\textrm{(N/m2)}
+\\[10pt]
+\mathrm{Vol}_{percentage} &amp;= \left( \frac{ \left( - \Delta_{p} \right) }{ E_{v} } \right) \cdot 100 \\&amp;= \left( \frac{ \left( - 100000000 \right) }{ 26200000000.00 } \right) \cdot 100 \\&amp;= -0.38 \; \;\textrm{(%)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-13">
+<h4>Question 13 (***)<a class="headerlink" href="#question-13" title="Link to this heading">#</a></h4>
+<p>A rigid cylinder with inside diameter of 15 mm contains a column of water 500 mm long. What will the column length be if a force of 2 kN is applied to its top by a frictionless plunger? Assume a bulk modulus of 2.21 GPa.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(497 \; mm\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{\Delta v}{v}\]</div>
+<p class="sd-card-text">The change in pressure can be calculated using the force and area as:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p = \frac {\Delta F}{A}\]</div>
+<p class="sd-card-text">The cylinder’s cross-sectional area is fixed, but the column length is changing, modifying the fluid’s volume</p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=21e9c540-fff5-445e-8313-b294015a2d1e">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The compressibility of liquids is described by the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta p =-E_v \frac{\Delta v}{v}\\
+\end{split}\]</div>
+<p class="sd-card-text">where:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta p\)</span> is the change in pressure</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(E_v\)</span> is the bulk modulus of elasticity</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\Delta v\)</span> is the change in the specific volume</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(v\)</span> is the original specific volume</p></li>
+</ul>
+<p class="sd-card-text">The change in pressure can be calculated using the force and area as:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p = \frac {\Delta F}{A}\]</div>
+<p class="sd-card-text">Changing specific volume with the following equation, we have</p>
+<div class="math notranslate nohighlight">
+\[\frac {\Delta v }{v}= \frac {\frac{\Delta Vol}{m}}{\frac{Vol}{m}}\]</div>
+<p class="sd-card-text">Knowing that the change in volume is due to the change in length since the area remains constant, we have the following:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {\Delta v }{v}= \frac{L_2-L_1}{L_1}
+\]</div>
+<p class="sd-card-text">Substituting into the compressibility equation, we have:</p>
+<div class="math notranslate nohighlight">
+\[\Delta p =-E_v \frac{L_2-L_1}{L_1}\]</div>
+<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(L_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[L_2 = -L_1 \cdot \frac{\Delta p}{E_v}+ L_1\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{dF} &amp;= 2000 \; \;\textrm{(N)}
+\\[10pt]
+d &amp;= 0.0150 \; \;\textrm{(m)}
+\\[10pt]
+L_{1} &amp;= 0.5000 \; \;\textrm{(m)}
+\\[10pt]
+E_{v} &amp;= 2.21 \cdot \left( 10 \right) ^{ 9 } &amp;= 2210000000.0000 \; \;\textrm{(Pa)}
+\\[10pt]
+A &amp;= \pi \cdot \left( \frac{ d }{ 2 } \right) ^{ 2 } \\&amp;= 3.1416 \cdot \left( \frac{ 0.0150 }{ 2 } \right) ^{ 2 } \\&amp;= 0.0002 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+\mathrm{dp} &amp;= \frac{ \mathrm{dF} }{ A } \\&amp;= \frac{ 2000 }{ 0.0002 } \\&amp;= 11317684.8421 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+L_{2} &amp;= \left( - L_{1} \right) \cdot \frac{ \mathrm{dp} }{ E_{v} } + L_{1} \\&amp;= \left( - 0.5000 \right) \cdot \frac{ 11317684.8421 }{ 2210000000.0000 } + 0.5000 \\&amp;= 0.4974 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+L_{2_{}} &amp;= 497.4394 \; \;\textrm{(mm)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+</section>
+<section id="problems-for-lecture-3-vapour-pressure-and-surface-tension">
+<h2>Problems for Lecture 3: Vapour pressure and surface tension<a class="headerlink" href="#problems-for-lecture-3-vapour-pressure-and-surface-tension" title="Link to this heading">#</a></h2>
+<section id="vapour-pressure">
+<h3>Vapour Pressure<a class="headerlink" href="#vapour-pressure" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-1-r">
+<h4>Question 1 (*)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h4>
+<p>At approximately what temperature will water boil at top of Mount Everest (elevation 8 850 m above sea level)?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(70 \; °C\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=21e9c540-fff5-445e-8313-b294015a2d1e">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A fluid will boil when its saturation vapour pressure is greater than or equal to the pressure.</p>
+<p class="sd-card-text">From the ICAO standard atmosphere table, the absolute pressure at 8850 m above sea level is 32000 Pa.</p>
+<p class="sd-card-text">From the Physical properties of water at standard sea-level atmospheric pressure table, water has a saturation vapour pressure of 32000 Pa at 70°C.</p>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="question-2">
+<h4>Question 2 (*)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h4>
+<p>At approximately what elevation will water boil at 90 °C?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(3000 \; m\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=c96014f4-2285-4921-9896-b294015a47ec">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">From the Physical properties of water at standard sea-level atmospheric pressure table, water has a saturation vapour pressure of 70.1 kPa at 90°C.</p>
+<p class="sd-card-text">From the ICAO standard atmosphere table, the absolute pressure at 70 kPa is 3000 m.</p>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="question-3-r">
+<h4>Question 3 (**)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h4>
+<p>Water at 75°C is placed in a beaker in an airtight container. Air is gradually pumped out of the container. What reduction below standard sea level atmospheric pressure must be achieved before the water boils?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(62.325 \; kPa\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The pressure reduction is:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(dp=p_{atm}-p_{vp}\)</span></p>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=68749cee-fccf-4e9f-baa5-b294015a5d02">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The pressure reduction can be calculated as the difference between the standard sea level atmospheric pressure and the saturation vapour pressure:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(dp=p_{atm}-p_{vp}\)</span></p>
+<p class="sd-card-text">From the ICAO standard atmosphere table, the standard sea level atmospheric pressure is 101.325 kPa. And from the Physical properties of water at standard sea-level atmospheric pressure table, the saturation vapour pressure at 75°C is 39 kPa.</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{vp} &amp;= 39 \; \;\textrm{(kPa)}
+\\[10pt]
+p_{atm_{}} &amp;= 101 \; \;\textrm{(kPa)}
+\\[10pt]
+\mathrm{dp} &amp;= p_{atm_{}} - p_{vp} \\&amp;= 101 - 39 \\&amp;= 62 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="surface-tension">
+<h3>Surface Tension<a class="headerlink" href="#surface-tension" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="id1">
+<h4>Question 4 (*)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>Calculate the capillary rise of pure water at 10 °C expected in an 0.8 mm diameter tube.  Assume that the contact angle of pure water is 0°.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(37.8 \; mm\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Create a body diagram of the rising fluid.</p></li>
+<li><p class="sd-card-text">Apply Equilibrium (Newton I).</p></li>
+<li><p class="sd-card-text">The downward force is the weight of the fluid.</p></li>
+<li><p class="sd-card-text">The upward force is equal to the vertical component of the surface tension multiplied by the length of the interface between the water and glass.</p></li>
+</ul>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=0440b419-982c-4e52-b60d-b294015a769e">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" src="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" />
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sum F_y=0\)</span> Equilibrium (Newton I)</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(F_{\sigma y}-W=0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sigma cos \theta \pi d = \rho g \frac{\pi d^2}{4} h\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.00 \; \;\textrm{(m)}
+\\[10pt]
+T &amp;= 10 \; \;\textrm{(°C)}
+\\[10pt]
+\sigma &amp;= 0.07 \; \;\textrm{(N/m)}
+\\[10pt]
+\gamma &amp;= 9804 \; \;\textrm{(kN/m3)}
+\\[10pt]
+h_{m} &amp;= \frac{ 2 \cdot \sigma }{ \gamma \cdot \left( \frac{ d }{ 2 } \right) } \\&amp;= \frac{ 2 \cdot 0.07 }{ 9804 \cdot \left( \frac{ 0.00 }{ 2 } \right) } \\&amp;= 0.04 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{mm} &amp;= h_{m} \cdot 1000 \\&amp;= 0.04 \cdot 1000 \\&amp;= 37.84 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-5-r">
+<h4>Question 5 (*)[R]<a class="headerlink" href="#question-5-r" title="Link to this heading">#</a></h4>
+<p>A glass tube with diameter 1.5 mm is dipped vertically in water. Calculate from basic principles how high the water will rise in the tube due to capillary action. Take the coefficient of surface tension to be 0.0730 N/m and the angle of contact as 10°.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(19.5 \; mm\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Create a body diagram of the rising fluid.</p></li>
+<li><p class="sd-card-text">Apply Equilibrium (Newton I).</p></li>
+<li><p class="sd-card-text">The downward force is the weight of the fluid.</p></li>
+<li><p class="sd-card-text">The upward force is equal to the vertical component of the surface tension multiplied by the length of the interface between the water and glass.</p></li>
+</ul>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=f4550463-0b65-4c53-9479-b294015aaa74">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" src="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" />
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sum F_y=0\)</span> Equilibrium (Newton I)</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(F_{\sigma y}-W=0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sigma cos \theta \pi d = \rho g \frac{\pi d^2}{4} h\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{tube} &amp;= 0.0015 \; \;\textrm{(m)}
+\\[10pt]
+\sigma &amp;= 0.0730 \; \;\textrm{(N/m)}
+\\[10pt]
+\theta &amp;= 10 \; \;\textrm{(°)}
+\\[10pt]
+\theta_{rad} &amp;= \operatorname{radians} \left( \theta \right) \\&amp;= \operatorname{radians} \left( 10 \right) \\&amp;= 0.1745 \; \;\textrm{(rad)}\\[10pt]
+\\[10pt]
+F_{\sigma} &amp;= \sigma \cdot \pi \cdot d_{tube} \cdot \cos \left( \theta_{rad} \right) \\&amp;= 0.0730 \cdot 3.1416 \cdot 0.0015 \cdot \cos \left( 0.1745 \right) \\&amp;= 0.0003 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+h &amp;= F_{\sigma} \cdot \frac{ 4 }{ \left( d_{tube} \right) ^{ 2 } \cdot \rho_{water} \cdot g \cdot \pi } \\&amp;= 0.0003 \cdot \frac{ 4 }{ \left( 0.0015 \right) ^{ 2 } \cdot 1000 \cdot 9.8100 \cdot 3.1416 } \\&amp;= 0.0195 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{mm} &amp;= h_{} \\&amp;= h \cdot 1000 \\&amp;= 19.5422 \\&amp;= 0.0195 \cdot 1000 \\&amp;= 19.5422 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-6">
+<h4>Question 6 (*)<a class="headerlink" href="#question-6" title="Link to this heading">#</a></h4>
+<p>A glass tube with diameter 1 mm is dipped vertically in water. Calculate from basic principles how high the water will rise in the tube due to capillary action. Take the coefficient of surface tension to be 0.0730 N/m and the angle of contact as 20°.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(28 \; mm\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Create a body diagram of the rising fluid.</p></li>
+<li><p class="sd-card-text">Apply Equilibrium (Newton I).</p></li>
+<li><p class="sd-card-text">The downward force is the weight of the fluid.</p></li>
+<li><p class="sd-card-text">The upward force is equal to the vertical component of the surface tension multiplied by the length of the interface between the water and glass.</p></li>
+</ul>
+<p class="sd-card-text"><a class="reference external" href="https://auckland.au.panopto.com/Panopto/Pages/Viewer.aspx?id=36407e19-ab4f-4c15-901e-b294015aad41">Click here for a video explaining the problem</a></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" src="_images/7136f24d94ebfdc0e5c39b538ae857cf3bd7e222ef5314fe187fb1b9008ad52d.png" />
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sum F_y=0\)</span> Equilibrium (Newton I)</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(F_{\sigma y}-W=0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sigma cos \theta \pi d = \rho g \frac{\pi d^2}{4} h\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.001 \; \;\textrm{(m)}
+\\[10pt]
+\sigma &amp;= 0.073 \; \;\textrm{(N/m)}
+\\[10pt]
+\theta &amp;= 20 \; \;\textrm{(°)}
+\\[10pt]
+h &amp;= \frac{ 4 \cdot \sigma \cdot \cos \left( \operatorname{radians} \theta \right) }{ d \cdot \rho_{water} \cdot g } \\&amp;= \frac{ 4 \cdot 0.073 \cdot \cos \left( \operatorname{radians} 20 \right) }{ 0.001 \cdot 1000 \cdot 9.810 } \\&amp;= 0.028 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{mm} &amp;= h \cdot 1000 \\&amp;= 0.028 \cdot 1000 \\&amp;= 27.970 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CIVIL 202 COURSE EXERCISES</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-2-basic-fluid-properties-ideal-gas-law-compressibility-of-liquids-and-surface-tension">Problems for Lecture 2: Basic	fluid	properties,	Ideal	gas	law,	Compressibility	of	liquids, and Surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-fluid-properties">Basic fluid properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (**)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal	Gas	Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-r">Question 7 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (*)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (*)(**)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10 (***)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility-of-liquids">Compressibility	of	Liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11-r">Question 11 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-12">Question 12 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13">Question 13 (***)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-3-vapour-pressure-and-surface-tension">Problems for Lecture 3: Vapour pressure and surface tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapour-pressure">Vapour Pressure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (**)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-tension">Surface Tension</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (*)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6">Question 6 (*)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
