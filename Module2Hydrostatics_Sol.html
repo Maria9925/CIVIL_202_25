@@ -773,37 +773,9 @@ A &amp;= \left( L \right) ^{ 2 } \\&amp;= \left( 0.250000 \right) ^{ 2 } \\&amp;
 <span class="math notranslate nohighlight">\(\tau = \mu \frac {\Delta V}{\Delta y}\)</span></p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/viscosity_5.jpg&quot;</span><span class="p">)</span>
-<span class="n">base_width</span> <span class="o">=</span> <span class="mi">350</span> <span class="c1"># Change this to your desired width</span>
-<span class="n">w_percent</span> <span class="o">=</span> <span class="n">base_width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">h_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">w_percent</span><span class="p">)</span>
-<span class="n">resized_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">base_width</span><span class="p">,</span> <span class="n">h_size</span><span class="p">))</span>
-<span class="n">resized_img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/viscosity_5.jpg&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">350</span> <span class="c1"># Change this to your desired width</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">w_percent</span> <span class="o">=</span> <span class="n">base_width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\PIL\Image.py:3469,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3466</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fp</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">3468</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3469</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3470</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">3471</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:\\Users\\hp\\Documents\\Problems_Complete_Solutions\\figures\\viscosity_5.jpg&#39;
-</pre></div>
-</div>
+<img alt="_images/526d63f05345738b9976067f8b800f49109b146669609e7d20fa39d6e8613cdf.png" src="_images/526d63f05345738b9976067f8b800f49109b146669609e7d20fa39d6e8613cdf.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -886,20 +858,9 @@ F_\tau=\mu \frac{dV}{dy} A\\
 \end{split}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/viscosity_6.jpg&quot;</span><span class="p">)</span>
-<span class="n">base_width</span> <span class="o">=</span> <span class="mi">350</span> <span class="c1"># Change this to your desired width</span>
-<span class="n">w_percent</span> <span class="o">=</span> <span class="n">base_width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">h_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">w_percent</span><span class="p">)</span>
-<span class="n">resized_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">base_width</span><span class="p">,</span> <span class="n">h_size</span><span class="p">))</span>
-<span class="n">resized_img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/e168f578f8e61160925c670cfb3236e305fa6baddcc0b0fa942b1c8aca60aaf6.png" src="_images/e168f578f8e61160925c670cfb3236e305fa6baddcc0b0fa942b1c8aca60aaf6.png" />
+<img alt="_images/71785580701d2f51f1f589f17e4b542099e789328cafb426a4d8e97476b3b0ad.png" src="_images/71785580701d2f51f1f589f17e4b542099e789328cafb426a4d8e97476b3b0ad.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -984,20 +945,9 @@ F=\tau A\\
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/viscosity_7.jpg&quot;</span><span class="p">)</span>
-<span class="n">base_width</span> <span class="o">=</span> <span class="mi">350</span> <span class="c1"># Change this to your desired width</span>
-<span class="n">w_percent</span> <span class="o">=</span> <span class="n">base_width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">h_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">w_percent</span><span class="p">)</span>
-<span class="n">resized_img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">base_width</span><span class="p">,</span> <span class="n">h_size</span><span class="p">))</span>
-<span class="n">resized_img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/9382fad1209e4745b7f4db548f91f2de5face9b7e5c79c419ba9210e75bc9b21.png" src="_images/9382fad1209e4745b7f4db548f91f2de5face9b7e5c79c419ba9210e75bc9b21.png" />
+<img alt="_images/f9aec5b99a5a48a8087e938419b024f75b7b9ad74bef142d90fdb65a4c8cf087.png" src="_images/f9aec5b99a5a48a8087e938419b024f75b7b9ad74bef142d90fdb65a4c8cf087.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1131,6 +1081,8 @@ c) \; 0.73 \; m
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+p_{mbar} &amp;= 970 \; \;\textrm{(mbar)}
+\\[10pt]
 p_{bar} &amp;= p_{mbar} \cdot \left( 10 \right) ^{ -3 } \\&amp;= 970 \cdot \left( 10 \right) ^{ -3 } \\&amp;= 0.97 \; \;\textrm{(bar)}\\[10pt]
 \\[10pt]
 p_{kPa} &amp;= p_{bar} \cdot 100 \\&amp;= 0.97 \cdot 100 \\&amp;= 97.00 \; \;\textrm{(kPa)}\\[10pt]
@@ -1210,7 +1162,7 @@ p= \rho_{Hg} \cdot g \cdot h
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-h_{Hg} &amp;= \frac{ p_{Pa} }{ \rho_{Hg} \cdot g } \\&amp;= \frac{ 500000 }{ 13600 \cdot 9.81 } \\&amp;= 3.75 \; \;\textrm{(m)}\\[10pt]
+h_{Hg} &amp;= \frac{ p_{Pa} }{ \rho_{Hg} \cdot g } \\&amp;= \frac{ 97000.00 }{ 13600 \cdot 9.81 } \\&amp;= 0.73 \; \;\textrm{(m)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -1274,6 +1226,12 @@ p= \rho \cdot g \cdot h
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+p &amp;= 500 \; \;\textrm{(kPa)}
+\\[10pt]
+\rho_{Hg_{}} &amp;= 13600 \; \;\textrm{(kg/m3)}
+\\[10pt]
+s &amp;= 0.92 \; 
+\\[10pt]
 p_{Pa} &amp;= 500000 \; \;\textrm{(Pa)}
 \\[10pt]
 h_{water} &amp;= \frac{ p_{Pa} }{ g \cdot \rho_{water} } \\&amp;= \frac{ 500000 }{ 9.81 \cdot 1000 } \\&amp;= 50.97 \; \;\textrm{(m)}\\[10pt]
@@ -1322,9 +1280,9 @@ s= \frac {\rho_{oil}}{\rho_{water}}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\rho_{oil} &amp;= s \cdot \rho_{water} \\&amp;= 0.920 \cdot 1000 \\&amp;= 920.000 \; \;\textrm{(kg/m3)}\\[10pt]
+\rho_{oil} &amp;= s \cdot \rho_{water} \\&amp;= 0.92 \cdot 1000 \\&amp;= 920.00 \; \;\textrm{(kg/m3)}\\[10pt]
 \\[10pt]
-h_{oil} &amp;= \frac{ p_{Pa} }{ g \cdot \rho_{oil} } \\&amp;= \frac{ 500000 }{ 9.810 \cdot 920.000 } \\&amp;= 55.400 \; \;\textrm{(m)}\\[10pt]
+h_{oil} &amp;= \frac{ p_{Pa} }{ g \cdot \rho_{oil} } \\&amp;= \frac{ 500000 }{ 9.81 \cdot 920.00 } \\&amp;= 55.40 \; \;\textrm{(m)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -1384,6 +1342,12 @@ s= \frac {\rho_{Hg}}{\rho_{water}}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+s_{Hg} &amp;= 13.56 \; 
+\\[10pt]
+h &amp;= 0.33 \; \;\textrm{(m)}
+\\[10pt]
+p_{atm_{}} &amp;= 78000 \; \;\textrm{(Pa)}
+\\[10pt]
 \rho_{Hg} &amp;= s_{Hg} \cdot \rho_{water} \\&amp;= 13.56 \cdot 1000 \\&amp;= 13560.00 \; \;\textrm{(kg/m3)}\\[10pt]
 \\[10pt]
 p_{vacuum} &amp;= \rho_{Hg} \cdot g \cdot h \\&amp;= 13560.00 \cdot 9.81 \cdot 0.33 \\&amp;= 43897.79 \; \;\textrm{(Pa)}\\[10pt]
@@ -1403,7 +1367,7 @@ p_{abs_{kPa}} &amp;= \frac{ p_{abs} }{ 1000 } \\&amp;= \frac{ 34102.21 }{ 1000 }
 <p>A pressure gauge is connected to a tank filled with fluid under standard sea level conditions. The gauge shows a reading of 305 kPa. The gauge is then enclosed in a chamber as shown below, and the absolute pressure head in the chamber reduced to 100 mm Hg (the fluid pressure remains unchanged). What will the reading on the pressure gauge now be?</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/bc3ee0161a3d5de6ee3debddff0845a86632b4d670970a6617eed9763199ee2c.png" src="_images/bc3ee0161a3d5de6ee3debddff0845a86632b4d670970a6617eed9763199ee2c.png" />
+<img alt="_images/5b552b312f86707e881c0b911a1a38616ec503352fc1153aeb897d5b6eb5dbe7.png" src="_images/5b552b312f86707e881c0b911a1a38616ec503352fc1153aeb897d5b6eb5dbe7.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1454,7 +1418,11 @@ p_{gauge2}= p_{abs}-p_{chamber}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-p_{gauge_{Pa}} &amp;= p_{gauge} \cdot 1000 \\&amp;= 393022.6 \cdot 1000 \\&amp;= 305000 \; \;\textrm{(Pa)}\\[10pt]
+p_{gauge} &amp;= 305 \; \;\textrm{(kPa)}
+\\[10pt]
+h_{Hg} &amp;= 0.1 \; \;\textrm{(mmHg)}
+\\[10pt]
+p_{gauge_{Pa}} &amp;= p_{gauge} \cdot 1000 \\&amp;= 305 \cdot 1000 \\&amp;= 305000 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
 p_{abs} &amp;= p_{atm} + p_{gauge_{Pa}} \\&amp;= 101325 + 305000 \\&amp;= 406325 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
@@ -1462,9 +1430,9 @@ h_{Hg} &amp;= \frac{ h_{Hg} }{ 1000 } \\&amp;= \frac{ 0.1 }{ 1000 } \\&amp;= 0.1
 \\[10pt]
 p_{chamber} &amp;= \rho_{Hg} \cdot g \cdot h_{Hg} \\&amp;= 13560.0 \cdot 9.8 \cdot 0.1 \\&amp;= 13302.4 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
-p_{gauge} &amp;= p_{abs} - p_{chamber} \\&amp;= 406325 - 13302.4 \\&amp;= 393022.6 \; \;\textrm{(Pa)}\\[10pt]
+p_{gauge_{2}} &amp;= p_{abs} - p_{chamber} \\&amp;= 406325 - 13302.4 \\&amp;= 393022.6 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
-p_{gauge_{kPa}} &amp;= \frac{ p_{gauge} }{ 1000 } \\&amp;= \frac{ 393022.6 }{ 1000 } \\&amp;= 393.0 \; \;\textrm{(kPa)}\\[10pt]
+p_{gauge2_{kPa}} &amp;= \frac{ p_{gauge_{2}} }{ 1000 } \\&amp;= \frac{ 393022.6 }{ 1000 } \\&amp;= 393.0 \; \;\textrm{(kPa)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -1520,6 +1488,8 @@ p_{gauge}=\rho_{water} \cdot g \cdot h
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+h &amp;= 10 \; \;\textrm{(m)}
+\\[10pt]
 p_{gauge} &amp;= \rho_{water} \cdot g \cdot h \\&amp;= 1000 \cdot 9.8 \cdot 10 \\&amp;= 98100.0 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
 p_{gauge_{kPa}} &amp;= \frac{ p_{gauge} }{ 1000 } \\&amp;= \frac{ 98100.0 }{ 1000 } \\&amp;= 98.1 \; \;\textrm{(kPa)}\\[10pt]
@@ -1537,7 +1507,7 @@ p_{abs} &amp;= \frac{ p_{atm} + p_{gauge} }{ 1000 } \\&amp;= \frac{ 101325 + 981
 <p>The pressure vessel below contains glycerine to a depth of 2 m under pressure as shown. Find the pressure at the bottom of the tank.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/1794ac03aa5cc4a1dde489cac1fe8f390ddefc45ed3bf3f8bd89d0e85a8573ca.png" src="_images/1794ac03aa5cc4a1dde489cac1fe8f390ddefc45ed3bf3f8bd89d0e85a8573ca.png" />
+<img alt="_images/6329b60a74b7acfa35487e0bbde7fe26645bab2123b38f7c2f715f15615101f4.png" src="_images/6329b60a74b7acfa35487e0bbde7fe26645bab2123b38f7c2f715f15615101f4.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1578,6 +1548,10 @@ p_{abs} &amp;= \frac{ p_{atm} + p_{gauge} }{ 1000 } \\&amp;= \frac{ 101325 + 981
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+h &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+p_{top} &amp;= 50 \; \;\textrm{(kPa)}
+\\[10pt]
 \rho_{glycerine} &amp;= 1258 \; \;\textrm{(kg/m3)}
 \\[10pt]
 p_{top_{Pa}} &amp;= p_{top} \cdot 1000 \\&amp;= 50 \cdot 1000 \\&amp;= 50000 \; \;\textrm{(Pa)}\\[10pt]
@@ -1637,6 +1611,12 @@ b)\; 207.2 \; kPa
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+h_{water} &amp;= 10 \; \;\textrm{(m)}
+\\[10pt]
+h_{oil} &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+s_{oil} &amp;= 0.80 \; 
+\\[10pt]
 \rho_{oil} &amp;= s_{oil} \cdot \rho_{water} \\&amp;= 0.80 \cdot 1000 \\&amp;= 800.00 \; \;\textrm{(kg/m3)}\\[10pt]
 \\[10pt]
 p_{abs1} &amp;= p_{atm} + \rho_{oil} \cdot g \cdot h_{oil} \\&amp;= 101325 + 800.00 \cdot 9.81 \cdot 1 \\&amp;= 109173.00 \; \;\textrm{(Pa)}\\[10pt]
@@ -1753,6 +1733,14 @@ s= \frac {\gamma}{\gamma_{water}}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+h_{1} &amp;= 4.800 \; \;\textrm{(m)}
+\\[10pt]
+p_{gauge_{1}} &amp;= 34.700 \; \;\textrm{(kPa)}
+\\[10pt]
+h_{2} &amp;= 2.200 \; \;\textrm{(m)}
+\\[10pt]
+p_{gauge_{2}} &amp;= 57.500 \; \;\textrm{(kPa)}
+\\[10pt]
 \Delta_{p} &amp;= \left( p_{gauge_{2}} - p_{gauge_{1}} \right) \cdot 1000 \\&amp;= \left( 57.500 - 34.700 \right) \cdot 1000 \\&amp;= 22800.000 \; \;\textrm{(Pa)}\\[10pt]
 \\[10pt]
 \Delta_{h} &amp;= h_{1} - h_{2} \\&amp;= 4.800 - 2.200 \\&amp;= 2.600 \; \;\textrm{(m)}\\[10pt]
@@ -1774,7 +1762,7 @@ s_{oil} &amp;= \frac{ \rho_{oil} }{ \rho_{water} } \\&amp;= \frac{ 893.907 }{ 10
 <p>A closed vessel containing oil with a density of 830 kg/m<sup>3</sup> under pressure is shown below. The space above the oil is pressurised to 35 kPa above atmospheric pressure. Find the elevation of the oil surface in the attached tube.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/7a00f9b7971623d6d302d9d984fccd20bb8ef76c436f783bf5cf5a578ee78268.png" src="_images/7a00f9b7971623d6d302d9d984fccd20bb8ef76c436f783bf5cf5a578ee78268.png" />
+<img alt="_images/9e1abc0a4ac6a2d9765d1c922753b1a9d61d23baa431e9f26fea40979f213431.png" src="_images/9e1abc0a4ac6a2d9765d1c922753b1a9d61d23baa431e9f26fea40979f213431.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1826,6 +1814,12 @@ h_{oil}=h_1+h_2
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+\rho_{oil} &amp;= 830 \; \;\textrm{(kg/m3)}
+\\[10pt]
+h_{1} &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+p_{1} &amp;= 35000 \; \;\textrm{(Pa)}
+\\[10pt]
 h_{2} &amp;= \frac{ p_{1} }{ \rho_{oil} \cdot g } \\&amp;= \frac{ 35000 }{ 830 \cdot 9.8 } \\&amp;= 4.3 \; \;\textrm{(m)}\\[10pt]
 \\[10pt]
 h_{oil} &amp;= h_{1} + h_{2} \\&amp;= 2 + 4.3 \\&amp;= 6.3 \; \;\textrm{(m)}\\[10pt]
@@ -1841,7 +1835,7 @@ h_{oil} &amp;= h_{1} + h_{2} \\&amp;= 2 + 4.3 \\&amp;= 6.3 \; \;\textrm{(m)}\\[1
 <p>Calculate the level h of the oil in the right-hand tube in the figure below.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/e4f948deea19635dc23e4f8fae4ebbd14c41552e2f9b11bc7f0f2fc0c94281b6.png" src="_images/e4f948deea19635dc23e4f8fae4ebbd14c41552e2f9b11bc7f0f2fc0c94281b6.png" />
+<img alt="_images/f58e645801f615b59a4b66ca8bbe7f5401d1b3a08c0d4bb60d475b81cd914ece.png" src="_images/f58e645801f615b59a4b66ca8bbe7f5401d1b3a08c0d4bb60d475b81cd914ece.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1869,7 +1863,7 @@ p= \rho \cdot g \cdot h
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="_images/9654d07d5c1af6ac52a45746ab36d93eefc49de83fb51c35b98f274060c096a5.png" src="_images/9654d07d5c1af6ac52a45746ab36d93eefc49de83fb51c35b98f274060c096a5.png" />
+<img alt="_images/9eab0fd70f7bf38add63cf57ac5256e57b8783c7d579592a2d026120d8f28ac2.png" src="_images/9eab0fd70f7bf38add63cf57ac5256e57b8783c7d579592a2d026120d8f28ac2.png" />
 </div>
 </details>
 </div>
@@ -1906,6 +1900,14 @@ h= \frac {p_1}{\rho _{oil} \cdot g} -h_{oil}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+s &amp;= 0.8 \; 
+\\[10pt]
+h_{oil} &amp;= 240 \; \;\textrm{(mm)}
+\\[10pt]
+h_{tube} &amp;= 110 \; \;\textrm{(mm)}
+\\[10pt]
+h_{water} &amp;= 280 \; \;\textrm{(mm)}
+\\[10pt]
 \rho_{oil} &amp;= s \cdot \rho_{water} \\&amp;= 0.8 \cdot 1000 \\&amp;= 830.0  \\[10pt]
 \\[10pt]
 p_{1} &amp;= \left( h_{tube} + h_{oil} \right) \cdot \left( 10 \right) ^{ -3 } \cdot g \cdot \rho_{water} \\&amp;= \left( 110 + 240 \right) \cdot \left( 10 \right) ^{ -3 } \cdot 9.8 \cdot 1000 \\&amp;= 3433.5 \; \;\textrm{(Pa)}\\[10pt]
@@ -1925,7 +1927,7 @@ h_{mm} &amp;= h \cdot 1000 \\&amp;= 0.2 \cdot 1000 \\&amp;= 181.7 \; \;\textrm{(
 <p>An open tube is attached to a tank as shown below. If the water rises to a height of 800 mm in the tube, what are the pressures pA and pB of the air above the water? Neglect capillary effects.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/7d5971948e01412930a661ec0fcd18d17d8eab22e1e64ac4deeb294d9a2b3568.png" src="_images/7d5971948e01412930a661ec0fcd18d17d8eab22e1e64ac4deeb294d9a2b3568.png" />
+<img alt="_images/b55f2983efb5590450c50d1e20d4f97888b038a11d6d2cac2dbe441a0e2becef.png" src="_images/b55f2983efb5590450c50d1e20d4f97888b038a11d6d2cac2dbe441a0e2becef.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1953,7 +1955,24 @@ p= \rho \cdot g \cdot h
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="_images/1068c5cac4cd4b3bbbea044959fc7ef405ff25ce88c257a218cf549e565bdb76.png" src="_images/1068c5cac4cd4b3bbbea044959fc7ef405ff25ce88c257a218cf549e565bdb76.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/37S.png&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">base_width</span> <span class="o">=</span> <span class="mi">450</span>  <span class="c1"># Change this to your desired width</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">w_percent</span> <span class="o">=</span> <span class="n">base_width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\PIL\Image.py:3469,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3466</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fp</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">3468</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3469</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3470</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">3471</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:\\Users\\hp\\Documents\\Problems_Complete_Solutions\\figures\\37S.png&#39;
+</pre></div>
+</div>
 </div>
 </details>
 </div>

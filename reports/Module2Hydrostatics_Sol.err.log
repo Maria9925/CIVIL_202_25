@@ -29,21 +29,21 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 from PIL import Image
-img = Image.open(r"figures/viscosity_5.jpg")
-base_width = 350 # Change this to your desired width
+img = Image.open(r"figures/37S.png")
+base_width = 450  # Change this to your desired width
 w_percent = base_width / float(img.size[0])
 h_size = int(float(img.size[1]) * w_percent)
 resized_img = img.resize((base_width, h_size))
-resized_img
+resized_img 
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [1;32mIn[8], line 2[0m
+Cell [1;32mIn[35], line 2[0m
 [0;32m      1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mPIL[39;00m [38;5;28;01mimport[39;00m Image
-[1;32m----> 2[0m img [38;5;241m=[39m [43mImage[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[38;5;124;43mr[39;49m[38;5;124;43m"[39;49m[38;5;124;43mfigures/viscosity_5.jpg[39;49m[38;5;124;43m"[39;49m[43m)[49m
-[0;32m      3[0m base_width [38;5;241m=[39m [38;5;241m350[39m [38;5;66;03m# Change this to your desired width[39;00m
+[1;32m----> 2[0m img [38;5;241m=[39m [43mImage[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[38;5;124;43mr[39;49m[38;5;124;43m"[39;49m[38;5;124;43mfigures/37S.png[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[0;32m      3[0m base_width [38;5;241m=[39m [38;5;241m450[39m  [38;5;66;03m# Change this to your desired width[39;00m
 [0;32m      4[0m w_percent [38;5;241m=[39m base_width [38;5;241m/[39m [38;5;28mfloat[39m(img[38;5;241m.[39msize[[38;5;241m0[39m])
 
 File [1;32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\PIL\Image.py:3469[0m, in [0;36mopen[1;34m(fp, mode, formats)[0m
@@ -53,5 +53,5 @@ File [1;32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\PIL\Imag
 [0;32m   3470[0m     exclusive_fp [38;5;241m=[39m [38;5;28;01mTrue[39;00m
 [0;32m   3471[0m [38;5;28;01melse[39;00m:
 
-[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'C:\\Users\\hp\\Documents\\Problems_Complete_Solutions\\figures\\viscosity_5.jpg'
+[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'C:\\Users\\hp\\Documents\\Problems_Complete_Solutions\\figures\\37S.png'
 
