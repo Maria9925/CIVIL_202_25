@@ -4,4 +4,5 @@ This book contains the exercises for the course, each accompanied by helpful hin
 
 The exercises are organized by course modules.
 
-
+[[Module 1: Fluid Properties](Module1FluidProperties_Sol.ipynb)]
+[[Module 2: Hydrostatics](Module2Hydrostatics_Sol.ipynb)]
