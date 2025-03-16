@@ -1,0 +1,1899 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module 3: Kinematics and Conservation of Mass &#8212; CIVIL 202: Fluid Mechanics and Pipe Flow</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module3Kinematicfluid_Sol';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Module 2: Hydrostatics" href="Module2Hydrostatics_Sol.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CIVIL 202: Fluid Mechanics and Pipe Flow</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="chapter1.html">
+                    CIVIL 202 COURSE EXERCISES
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module1FluidProperties_Sol.html">Module 1: Fluid properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2Hydrostatics_Sol.html">Module 2: Hydrostatics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 3: Kinematics and Conservation of Mass</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Module3Kinematicfluid_Sol.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 3: Kinematics and Conservation of Mass</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-10-fluid-kinematics">Problems for Lecture 10 – Fluid Kinematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7">Question 7 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8(**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10-r">Question 10 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11 (**)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-12-conservation-of-mass">Problems for Lecture 12 – Conservation of Mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 7 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 8 (**)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-3-kinematics-and-conservation-of-mass">
+<h1>Module 3: Kinematics and Conservation of Mass<a class="headerlink" href="#module-3-kinematics-and-conservation-of-mass" title="Link to this heading">#</a></h1>
+<p>The exercises in this module range from lecture 10 to lecture 12.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>Global variables:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g &amp;= 9.810 \; \;\textrm{(m/s2)}
+ &amp;\rho_{water} &amp;= 1000 \; \;\textrm{(kg/m3)}
+ &amp;\rho_{Hg} &amp;= 13600 \; \;\textrm{(kg/m3)}
+\\[10pt]
+ p_{atm} &amp;= 101325 \; \;\textrm{(Pa)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<section id="problems-for-lecture-10-fluid-kinematics">
+<h2>Problems for Lecture 10 – Fluid Kinematics<a class="headerlink" href="#problems-for-lecture-10-fluid-kinematics" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<hr class="docutils" />
+<section id="question-1">
+<h3>Question 1 (*)<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h3>
+<p>The acceleration in the x direction for a two-dimensional velocity field is given by:
+<span class="math notranslate nohighlight">\(𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\)</span></p>
+<p>Explain the physical meaning of the following terms in this equation, and the type of flow for which they would be equal to zero</p>
+<p>a) <span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑡}\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(𝑣\frac {\partial 𝑢}{\partial 𝑦}\)</span></p>
+<p><strong>Question 1 (a)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is the local acceleration in the x direction, representing the time rate of change of the velocity at a given location within the flow. It would be zero in a steady flow</p>
+</div>
+</details><p><strong>Question 1 (b)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is the convective acceleration in the x direction, calculated due to velocity gradients in the y direction, i.e. how fast we’re moving in the y direction and the rate of change of the u velocity in this direction. It would be zero in a uniform flow, as there would be no velocity gradient in any direction</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-2-r">
+<h3>Question 2 (*)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h3>
+<p>The velocity field for a given flow is equal to <span class="math notranslate nohighlight">\((u,v)=(4x,-8xy)\)</span></p>
+<p>a) Calculate the local acceleration in the 𝑥 and 𝑦 directions</p>
+<p>b) Calculate the convective acceleration in the 𝑥 and 𝑦 directions</p>
+<p>c) Calculate the magnitude of the fluid acceleration at the point (𝑥, 𝑦) = (4,3)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">a) {<span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑡}\)</span>,  <span class="math notranslate nohighlight">\(\frac {\partial v}{\partial 𝑡}\)</span>}</p>
+<p class="sd-card-text">b) {<span class="math notranslate nohighlight">\(16x\)</span> , -<span class="math notranslate nohighlight">\(32xy +64x^2y\)</span>}</p>
+<p class="sd-card-text">c) {<span class="math notranslate nohighlight">\(2688.8 𝑚/𝑠^2\)</span>}</p>
+</div>
+</details><p><strong>Question 2 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The local acceleration is:</p>
+<div class="math notranslate nohighlight">
+\[𝑎 = \frac {\partial 𝑢}{\partial 𝑡}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial 𝑡} = \frac {\partial (4x)}{\partial 𝑡}=0 \]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial 𝑡} = \frac {\partial (-8xy)}{\partial 𝑡}=0\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The local acceleration is zero in both 𝑥 and 𝑦 directions.</p>
+</div>
+</details><p><strong>Question 2 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The acceleration in x:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial x} = \frac {\partial (4x)}{\partial x}=0 \]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial y} = \frac {\partial (4x)}{\partial y}=0 \]</div>
+<p class="sd-card-text">The acceleration in y:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x} = \frac {\partial (-8xy)}{\partial x}=-8y \]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y} = \frac {\partial (-8xy)}{\partial y}=-8x \]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Replacing these partial differences in the acceleration equation we have the following:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥= 4x(4) + (-8xy)(0)\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥= 16x\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y= 4x(-8y) + (-8xy)(-8x)\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y= -32xy+64x^2y\]</div>
+</div>
+</details><p><strong>Question 2 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The magnitud of the fluid acceleration is:</p>
+<div class="math notranslate nohighlight">
+\[ \left|a \right|=\sqrt{ax^2+ay^2}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x &amp;= 4 \; \;\textrm{(m)}
+\\[10pt]
+y &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+a_{x} &amp;= 16 \cdot x \\&amp;= 16 \cdot 4 \\&amp;= 64 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{y} &amp;= \left( - 32 \right) \cdot x \cdot y + 64 \cdot \left( x \right) ^{ 2 } \cdot y \\&amp;= \left( - 32 \right) \cdot 4 \cdot 3 + 64 \cdot \left( 4 \right) ^{ 2 } \cdot 3 \\&amp;= 2688 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 64 \right) ^{ 2 } + \left( 2688 \right) ^{ 2 } } \\&amp;= 2688.8 \; \;\textrm{(m/s2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-3">
+<h3>Question 3 (*)<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h3>
+<p>Water accelerates as it passes through a nozzle, such that the velocity of fluid particles passing through the centre of the nozzle (in the x direction only) is given by <span class="math notranslate nohighlight">\(𝑢 = (200𝑥^3 + 10𝑡^2)\)</span>, where 𝑢 is in 𝑚/𝑠, 𝑥 is in 𝑚 and 𝑡 is in 𝑠. Determine the velocity and acceleration of a particle located at 𝑥 = 0.1 𝑚 when 𝑡 = 0.2 𝑠.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">{ <span class="math notranslate nohighlight">\(0.6 𝑚/𝑠\)</span>, <span class="math notranslate nohighlight">\(7.6 𝑚/𝑠^2\)</span>}</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The velocity can be calculated using the equation and replacing the values of 𝑥 and 𝑡</p>
+<p class="sd-card-text">The acceleration is calculated with the following equation</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Replacing the partial differences in the acceleration equation we have the following:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥= 20 \cdot t + 𝑢 \cdot 600𝑥^2 + 𝑣 \cdot 0\]</div>
+<p class="sd-card-text">Then replacing the velocity equation 𝑢 in the acceleration equation we have:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥= 20 \cdot t + (200\cdot 𝑥^3 + 10 \cdot 𝑡^2) 600 \cdot 𝑥^2 + 0\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x &amp;= 0.10 \; \;\textrm{(m)}
+\\[10pt]
+t &amp;= 0.20 \; \;\textrm{(s)}
+\\[10pt]
+u &amp;= 200 \cdot \left( x \right) ^{ 3 } + 10 \cdot \left( t \right) ^{ 2 } \\&amp;= 200 \cdot \left( 0.10 \right) ^{ 3 } + 10 \cdot \left( 0.20 \right) ^{ 2 } \\&amp;= 0.60 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+a_{x} &amp;= 20 \cdot t + u \cdot 600 \cdot \left( x \right) ^{ 2 } \\&amp;= 20 \cdot 0.20 + 0.60 \cdot 600 \cdot \left( 0.10 \right) ^{ 2 } \\&amp;= 7.60 \; \;\textrm{(m/s2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-4-r">
+<h3>Question 4 (*)[R]<a class="headerlink" href="#question-4-r" title="Link to this heading">#</a></h3>
+<p>A flow field has velocity components of <span class="math notranslate nohighlight">\(𝑢 = (3𝑥 + 2𝑡^2)\)</span> and <span class="math notranslate nohighlight">\(𝑣 = (2𝑦^3 + 10𝑡)\)</span>, where 𝑥 and 𝑦 are in 𝑚, 𝑡 is in 𝑠 and both velocity components are in 𝑚/𝑠.
+Determine the magnitudes of the local and convective accelerations of a particle at the point 𝑥 = 3 𝑚, 𝑦 = 1 𝑚 at the time 𝑡 = 2 𝑠.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">{<span class="math notranslate nohighlight">\(12.81 𝑚/𝑠^2\)</span>,<span class="math notranslate nohighlight">\( 141. 51 𝑚/𝑠^2\)</span>}</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For the local acceleration we have the following equations:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial u}{\partial 𝑡}\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial v}{\partial 𝑡}\]</div>
+<p class="sd-card-text">For the convective acceleration we have the following equations:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial u}{\partial x}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial u}{\partial y}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}\]</div>
+<p class="sd-card-text">The magnitud of the fluid acceleration is:</p>
+<div class="math notranslate nohighlight">
+\[ \left|a \right|=\sqrt{a_x^2+a_y^2}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial (3𝑥 + 2𝑡^2)}{\partial 𝑡}= 4t\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial (2𝑦^3 + 10𝑡)}{\partial 𝑡}= 10\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial u}{\partial x}= \frac {\partial (3𝑥 + 2𝑡^2)}{\partial x}=3\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial u}{\partial y}= 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x}= \frac {\partial (2𝑦^3 + 10𝑡)}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial y}{\partial y}= 0\]</div>
+<div class="math notranslate nohighlight">
+\[ \left|a \right|=\sqrt{a_x^2+a_y^2}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+y &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+t &amp;= 2 \; \;\textrm{(s)}
+\\[10pt]
+a_{x_{local}} &amp;= 4 \cdot t \\&amp;= 4 \cdot 2 \\&amp;= 8 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{y_{local}} &amp;= 10 \; \;\textrm{(m/s2)}
+\\[10pt]
+a_{local} &amp;= \sqrt { \left( a_{x_{local}} \right) ^{ 2 } + \left( a_{y_{local}} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 8 \right) ^{ 2 } + \left( 10 \right) ^{ 2 } } \\&amp;= 12.81 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{x_{convective}} &amp;= \left( 3 \cdot x + 2 \cdot \left( t \right) ^{ 2 } \right) \cdot 3 \\&amp;= \left( 3 \cdot 3 + 2 \cdot \left( 2 \right) ^{ 2 } \right) \cdot 3 \\&amp;= 51 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{y_{convective}} &amp;= \left( 2 \cdot \left( y \right) ^{ 3 } + 10 \cdot t \right) \cdot 6 \cdot \left( y \right) ^{ 2 } \\&amp;= \left( 2 \cdot \left( 1 \right) ^{ 3 } + 10 \cdot 2 \right) \cdot 6 \cdot \left( 1 \right) ^{ 2 } \\&amp;= 132 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{convective} &amp;= \sqrt { \left( a_{x_{convective}} \right) ^{ 2 } + \left( a_{y_{convective}} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 51 \right) ^{ 2 } + \left( 132 \right) ^{ 2 } } \\&amp;= 141.51 \; \;\textrm{(m/s2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-5">
+<h3>Question 5 (*)<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h3>
+<p>A steady fluid flow has velocity components <span class="math notranslate nohighlight">\(𝑢 = (5𝑦^2 − 𝑥)\)</span> and <span class="math notranslate nohighlight">\(𝑣 = (4𝑥^2)\)</span>, where 𝑥 and 𝑦 are in 𝑚 and both velocity components are in 𝑚/𝑠. Determine the velocity and acceleration of a particle passing through the point (𝑥, 𝑦) = (2𝑚, 1𝑚)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">{<span class="math notranslate nohighlight">\(16.3 m/s\)</span> (magnitude), <span class="math notranslate nohighlight">\(164.2 m/s^2\)</span> (magnitude)}</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The velocity component can be calculated using the equation and replacing the values of 𝑥 and y</p>
+<p class="sd-card-text">The acceleration is calculated with the following equations</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑦 = \frac {\partial 𝑣}{\partial 𝑡} + 𝑢\frac {\partial 𝑣}{\partial 𝑥} + 𝑣\frac {\partial 𝑣}{\partial 𝑦}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑦 = \frac {\partial 𝑣}{\partial 𝑡} + 𝑢\frac {\partial 𝑣}{\partial 𝑥} + 𝑣\frac {\partial 𝑣}{\partial 𝑦}\]</div>
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(a_x\)</span> the partial differences are:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑡} = 0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑥}= -1\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑦} = 10y\)</span></p>
+<p class="sd-card-text">Replacing these partial differences in the acceleration equation we have the following:</p>
+<div class="math notranslate nohighlight">
+\[
+  𝑎_𝑥= 0 + 𝑢 (-1) + 𝑣 10y
+  \]</div>
+<p class="sd-card-text">Then replacing the velocity equation 𝑢  and 𝑣 in the acceleration equation we have:</p>
+<div class="math notranslate nohighlight">
+\[
+  𝑎_𝑥= 0 + (5𝑦^2 − 𝑥)(-1) + (4𝑥^2)10y
+  \]</div>
+<p class="sd-card-text">The same process is developed for <span class="math notranslate nohighlight">\(𝑎_𝑦\)</span></p>
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(a_y\)</span> the partial differences are:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑣}{\partial 𝑡} = 0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑣}{\partial 𝑥}= 8x\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑣}{\partial 𝑦} = 0\)</span></p>
+<p class="sd-card-text">Replacing the velocities we have:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_y= 0 + (5𝑦^2 − 𝑥)8x + 0\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+y &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+u &amp;= 5 \cdot \left( y \right) ^{ 2 } - x \\&amp;= 5 \cdot \left( 1 \right) ^{ 2 } - 2 \\&amp;= 3 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+v &amp;= 4 \cdot \left( x \right) ^{ 2 } \\&amp;= 4 \cdot \left( 2 \right) ^{ 2 } \\&amp;= 16 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+V &amp;= \sqrt { \left( u \right) ^{ 2 } + \left( v \right) ^{ 2 } } \\&amp;= \sqrt { \left( 3 \right) ^{ 2 } + \left( 16 \right) ^{ 2 } } \\&amp;= 16.28 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+a_{x} &amp;= \left( 5 \cdot \left( y \right) ^{ 2 } - x \right) \cdot \left( - 1 \right) + 4 \cdot \left( x \right) ^{ 2 } \cdot 10 \cdot y \\&amp;= \left( 5 \cdot \left( 1 \right) ^{ 2 } - 2 \right) \cdot \left( - 1 \right) + 4 \cdot \left( 2 \right) ^{ 2 } \cdot 10 \cdot 1 \\&amp;= 157 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a_{y} &amp;= \left( 5 \cdot \left( y \right) ^{ 2 } - x \right) \cdot 8 \cdot x \\&amp;= \left( 5 \cdot \left( 1 \right) ^{ 2 } - 2 \right) \cdot 8 \cdot 2 \\&amp;= 48 \; \;\textrm{(m/s2)}\\[10pt]
+\\[10pt]
+a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 157 \right) ^{ 2 } + \left( 48 \right) ^{ 2 } } \\&amp;= 164.17 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-6-r">
+<h3>Question 6 (**)[R]<a class="headerlink" href="#question-6-r" title="Link to this heading">#</a></h3>
+<p>State whether the following velocity fields are steady or unsteady, and determine the acceleration in the 𝑥, 𝑦, and 𝑧 directions:</p>
+<p>a) <span class="math notranslate nohighlight">\(𝑽 = (𝑢, 𝑣, 𝑤) = (8𝑥𝑦𝑧, −2𝑦^2𝑧, −2𝑦𝑧^2 + 4𝑥)\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(𝑽 = (𝑢, 𝑣, 𝑤) = (9x, -13y+3z^3, 2z^2-t)\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(𝑽 = (𝑢, 𝑣, 𝑤) = (\frac{2x}{y^2}, \frac{2}{y}, 3z)\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">a)  {<span class="math notranslate nohighlight">\(32xy^2z^2+32x^2y\)</span>, <span class="math notranslate nohighlight">\(12y^3z^2\)</span>, <span class="math notranslate nohighlight">\(16xyz+12y^2z^3\)</span>}</p>
+<p class="sd-card-text">b) {<span class="math notranslate nohighlight">\(81x\)</span>, <span class="math notranslate nohighlight">\(169y-39z^3+18z^4-9z^2t\)</span>, <span class="math notranslate nohighlight">\(-1+8z^3-4zt\)</span>}</p>
+<p class="sd-card-text">c) {<span class="math notranslate nohighlight">\(\frac{-4x}{y^4}\)</span>, <span class="math notranslate nohighlight">\(\frac{-4}{y^3}\)</span>, <span class="math notranslate nohighlight">\(9z\)</span>}</p>
+</div>
+</details><p><strong>Question 6 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">It is steady if:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial 𝑡} = 0\]</div>
+<p class="sd-card-text">The aceleration in x:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡}+ u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y} + w\frac {\partial u}{\partial z}\]</div>
+<p class="sd-card-text">The aceleration in y:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial v}{\partial 𝑡} +  u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y} + w\frac {\partial v}{\partial z}\]</div>
+<p class="sd-card-text">The aceleration in z:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_z =\frac {\partial w}{\partial 𝑡}+ u\frac {\partial w}{\partial x} + v\frac {\partial w}{\partial y} + w\frac {\partial w}{\partial z}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial 𝑡} = 0\]</div>
+<p class="sd-card-text">Steady</p>
+<p class="sd-card-text">The aceleration in x:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡}+ u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y} + w\frac {\partial u}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial x}=8yz\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial y}=8zx\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial z}=8xy\]</div>
+<p class="sd-card-text">The aceleration in y:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial v}{\partial 𝑡} +  u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y} + w\frac {\partial v}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}=-4yz\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial z}=-2y^2\]</div>
+<p class="sd-card-text">The aceleration in z:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_z =\frac {\partial w}{\partial 𝑡}+ u\frac {\partial w}{\partial x} + v\frac {\partial w}{\partial y} + w\frac {\partial w}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial x}=4\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial y}=-2z^2\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial z}=-4yz\]</div>
+<div class="math notranslate nohighlight">
+\[a_x= 8xyz(8yz)+-2y^2z(8zx)+(-2yz^2+4x)(8xy)=32xy^2z^2+32x^2y\]</div>
+<div class="math notranslate nohighlight">
+\[a_y= 8xyz(0)+-2y^2z(−4𝑦𝑧)+(-2yz^2+4x)(−2𝑦^2)=12y^3z^2-8xy^2\]</div>
+<div class="math notranslate nohighlight">
+\[a_w= 8xyz(4)+-2y^2z(-2z^2)+(-2yz^2+4x)(-4yz)=16xyz+12y^2z^3\]</div>
+</div>
+</details><p><strong>Question 6 (b)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial 𝑡} = -1\]</div>
+<p class="sd-card-text">Unsteady</p>
+<p class="sd-card-text">The aceleration in x:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡}+ u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y} + w\frac {\partial u}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial x}=9\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial y}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial z}=0\]</div>
+<p class="sd-card-text">The aceleration in y:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial v}{\partial 𝑡} +  u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y} + w\frac {\partial v}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}=-13\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial z}=9z^2\]</div>
+<p class="sd-card-text">The aceleration in z:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_z =\frac {\partial w}{\partial 𝑡}+ u\frac {\partial w}{\partial x} + v\frac {\partial w}{\partial y} + w\frac {\partial w}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial y}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial z}=4z\]</div>
+<div class="math notranslate nohighlight">
+\[a_x= 9x(9)+(-13y+z^3)(0)+(2z^2-t)(0)=81x\]</div>
+<div class="math notranslate nohighlight">
+\[a_y= 9x(0)+(-13y+z^3)(-13)+(2z^2-t)(9z^2)=169y-39z^3+18z^4-9z^2t\]</div>
+<div class="math notranslate nohighlight">
+\[a_w= -1+9x(0)+(-13y+z^3)(0)+(2z^2-t)(4z)=-1+8z^3-4zt\]</div>
+</div>
+</details><p><strong>Question 6 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial 𝑡} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial 𝑡} = 0\]</div>
+<p class="sd-card-text">Steady</p>
+<p class="sd-card-text">The aceleration in x:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡}+ u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y} + w\frac {\partial u}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial x}=\frac{2}{y^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial y}=\frac{-4x}{y^3}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial z}=0\]</div>
+<p class="sd-card-text">The aceleration in y:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_y = \frac {\partial v}{\partial 𝑡} +  u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y} + w\frac {\partial v}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}=\frac{-2}{y^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial z}=0\]</div>
+<p class="sd-card-text">The aceleration in z:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_z =\frac {\partial w}{\partial 𝑡}+ u\frac {\partial w}{\partial x} + v\frac {\partial w}{\partial y} + w\frac {\partial w}{\partial z}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial y}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial w}{\partial z}=3\]</div>
+<div class="math notranslate nohighlight">
+\[a_x= \frac{2x}{y^2}(\frac{2}{y^2})+\frac{2}{y}(\frac{-4x}{y^3})+3z(0)=\frac{-4x}{y^4}\]</div>
+<div class="math notranslate nohighlight">
+\[a_y= \frac{2x}{y^2}(0)+\frac{2}{y}(\frac{-2}{y^2})+3z(0)=\frac{-4}{y^3}\]</div>
+<div class="math notranslate nohighlight">
+\[a_w= \frac{2x}{y^2}(0)+\frac{2}{y}(0)+3z(3)=9z\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-7">
+<h3>Question 7 (*)<a class="headerlink" href="#question-7" title="Link to this heading">#</a></h3>
+<p>Air flows through a horizontal duct with a velocity of <span class="math notranslate nohighlight">\(𝑢 = (6𝑡^2 + 5)\)</span>, where 𝑡 is in seconds and 𝑢 is in 𝑚/𝑠. Determine the acceleration of the flow when 𝑡 = 2 𝑠, and classify the flow in terms of its uniformity and steadiness.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(24 m/s^2\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The acceleration is calculated with the following equations</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The acceleration is calculated with the following equations</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(a_x\)</span> the partial differences are:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑡} = 12t\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑥}= 0\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {\partial 𝑢}{\partial 𝑦} = 0\)</span></p>
+<p class="sd-card-text">Replacing these partial differences in the acceleration equation we have the following:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥= (6𝑡^2 + 5)12t + 0 + 0\]</div>
+<p class="sd-card-text">Considering this equation for acceleration, the flow is unsteady because there is a local component of the acceleration and is uniform because there is no convective acceleration</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+t &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+a &amp;= 12 \cdot t \\&amp;= 12 \cdot 2 \\&amp;= 24 \; \;\textrm{(m/s2)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-8">
+<h3>Question 8(**)<a class="headerlink" href="#question-8" title="Link to this heading">#</a></h3>
+<p>A flow field has the components <span class="math notranslate nohighlight">\((𝑢, 𝑣) = (2𝑥^2, 8𝑦)\)</span> in 𝑚/𝑠, where 𝑥 and 𝑦 are in 𝑚. Determine the equation of the streamline passing through the point (2𝑚, 3𝑚)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(ln(y)+4x^{-1}-3.1=0\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To determine the equation of the streamline the following equation should be used:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dy}{dx}=\frac{v}{u}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The equation of the streamline can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial y}{\partial x} = \frac{v}{u}=\frac{8y}{2x^2}=\frac{4y}{x^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{y}=\frac{4y}{x^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\int \frac{1}{y}dy=\int \frac{4}{x^2}dx\]</div>
+<div class="math notranslate nohighlight">
+\[ln(y)=-4x^{-1}+C\]</div>
+<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(C\)</span> and replacing <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(x\)</span> we can calculate <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C=ln(y)+4x^{-1}=ln(3)+4*2^{-1}=3.1\]</div>
+<p class="sd-card-text">Therefore, the equation of the streamline passing through the point is:</p>
+<div class="math notranslate nohighlight">
+\[ln(y)+4x^{-1}-3.1=0\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-9">
+<h3>Question 9 (**)<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h3>
+<p>A fluid has velocity components of <span class="math notranslate nohighlight">\(𝑢 = (5𝑦^2)\)</span> and 𝑣 = (4𝑥 − 1), where 𝑥 and 𝑦are in 𝑚 and the velocity components are in 𝑚/𝑠. Determine the equation of the streamline passing through the point (𝑥, 𝑦) = (1𝑚, 1𝑚).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac {5y^3}{3}- 2x^2+x-\frac {2}{3}=0\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To determine the equation of the streamline the following equation should be used:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dy}{dx}=\frac{v}{u}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Organizing the equation we have:</p>
+<div class="math notranslate nohighlight">
+\[5y^2dy= (4x-1)dx\]</div>
+<div class="math notranslate nohighlight">
+\[\int 5y^2dy = \int(4x-1)dx \]</div>
+<div class="math notranslate nohighlight">
+\[\frac {5y^3}{3}=\frac {4x^2}{2}-x+C\]</div>
+<p class="sd-card-text">Replacing the (x,y) values in the equation to calculate C and then replace that value in the equation</p>
+<div class="math notranslate nohighlight">
+\[
+C= \frac{5}{3}-2+1 =\frac {2}{3}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac {5y^3}{3}- 2x^2+x-\frac {2}{3}=0
+\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-10-r">
+<h3>Question 10 (**)[R]<a class="headerlink" href="#question-10-r" title="Link to this heading">#</a></h3>
+<p>The velocity of a flow field is defined by <span class="math notranslate nohighlight">\((𝑢, 𝑣) = (-\frac{y}{4},\frac{x}{9})\)</span> 𝑚/𝑠, where 𝑥 and 𝑦 are in 𝑚.</p>
+<p>a) Determine the magnitude of the velocity and acceleration of a particle that passes through the point (𝑥, 𝑦) = (3𝑚, 2𝑚).</p>
+<p>b) Find the equation of the streamline passing through this point.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(a) \; 0.6 \; m/s, \; 0.10 \; m/s^2\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(b) \frac{9y^2}{2}+2x^2-36=0\)</span></p>
+</div>
+</details><p><strong>Question 10 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For the velocity we replace <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> in the given velocity equations:</p>
+<div class="math notranslate nohighlight">
+\[(𝑢, 𝑣) = (-\frac{y}{4},\frac{x}{9})\]</div>
+<p class="sd-card-text">For the acceleration, we have the following equations:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y}\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y = u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For the velocity we replace <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> in the given velocity equations:</p>
+<div class="math notranslate nohighlight">
+\[(𝑢, 𝑣) = (-\frac{y}{4},\frac{x}{9})\]</div>
+<p class="sd-card-text">For the acceleration, we have the following equations:</p>
+<div class="math notranslate nohighlight">
+\[𝑎_𝑥 = u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y}\]</div>
+<div class="math notranslate nohighlight">
+\[𝑎_y = u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial 𝑢}{\partial y}=-1/4\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}=1/9\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {\partial v}{\partial y}=0\]</div>
+<p class="sd-card-text">And the magnitude for the velocity and the acceleration can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[ \left|V \right|=\sqrt{V_x^2+V_y^2}\]</div>
+<div class="math notranslate nohighlight">
+\[ \left|a \right|=\sqrt{a_x^2+a_y^2}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+y &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+V_{x} &amp;= \frac{ \left( - y \right) }{ 4 } \\&amp;= \frac{ \left( - 2 \right) }{ 4 } \\&amp;= -0.50 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+V_{y} &amp;= \frac{ x }{ 9 } \\&amp;= \frac{ 3 }{ 9 } \\&amp;= 0.33 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+V &amp;= \sqrt { \left( V_{x} \right) ^{ 2 } + \left( V_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( -0.50 \right) ^{ 2 } + \left( 0.33 \right) ^{ 2 } } \\&amp;= 0.60 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+a_{x} &amp;= \left( \frac{ \left( - y \right) }{ 4 } \right) \cdot 0 + \left( \frac{ x }{ 9 } \right) \cdot \left( \frac{ \left( - 1 \right) }{ 4 } \right) \\&amp;= \left( \frac{ \left( - 2 \right) }{ 4 } \right) \cdot 0 + \left( \frac{ 3 }{ 9 } \right) \cdot \left( \frac{ \left( - 1 \right) }{ 4 } \right) \\&amp;= -0.08 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+a_{y} &amp;= \left( \frac{ \left( - y \right) }{ 4 } \right) \cdot \left( \frac{ 1 }{ 9 } \right) + \left( \frac{ x }{ 9 } \right) \cdot 0 \\&amp;= \left( \frac{ \left( - 2 \right) }{ 4 } \right) \cdot \left( \frac{ 1 }{ 9 } \right) + \left( \frac{ 3 }{ 9 } \right) \cdot 0 \\&amp;= -0.06 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( -0.08 \right) ^{ 2 } + \left( -0.06 \right) ^{ 2 } } \\&amp;= 0.10 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 10 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To determine the equation of the streamline the following equation should be used:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dy}{dx}=\frac{v}{u}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The equation of the streamline can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\frac {\partial y}{\partial x} = \frac{v}{u}=\frac{x}{9}=\frac{-y}{4}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{y}=\frac{-4x}{9y}\]</div>
+<div class="math notranslate nohighlight">
+\[\int 9ydy=\int -4xdx\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{9y^2}{2}=\frac{-4x^2}{2}+C\]</div>
+<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(C\)</span> and replacing <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(x\)</span> we can calculate <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C=\frac{9y^2}{2}-\frac{-4x^2}{2}=\frac{9(2)^2}{2}-\frac{-4(3)^2}{2}=36\]</div>
+<p class="sd-card-text">Therefore, the equation of the streamline passing through the point is:</p>
+<div class="math notranslate nohighlight">
+\[\frac{9y^2}{2}+2x^2-36=0\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-11">
+<h3>Question 11 (**)<a class="headerlink" href="#question-11" title="Link to this heading">#</a></h3>
+<p>If a velocity field is defined by <span class="math notranslate nohighlight">\((𝑢, 𝑣) = (2𝑥^2, −𝑦)\)</span>, where 𝑥 and 𝑦 are in 𝑚 and 𝑢 and 𝑣 are in 𝑚/𝑠, determine the equation of the streamline that passes through the point (𝑥, 𝑦) = (2𝑚, 6𝑚). Sketch the streamline for 𝑥 &gt; 0.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(ln (y)-\frac {1}{2x}-1.54=0\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To determine the equation of the streamline the following equation should be used:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dy}{dx}=\frac{v}{u}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Organizing the equation we have:</p>
+<div class="math notranslate nohighlight">
+\[-ydy= 2x^2dx\]</div>
+<div class="math notranslate nohighlight">
+\[\int \frac {dy}{y}= \int \frac{dx}{-2x^2} \]</div>
+<div class="math notranslate nohighlight">
+\[ln (y)=\frac {1}{2x}+C\]</div>
+<p class="sd-card-text">Replacing the (x,y) values in the equation to calculate C and then replacet that value in the equation</p>
+<div class="math notranslate nohighlight">
+\[C= ln (6)-\frac {1}{4}=1.54\]</div>
+<div class="math notranslate nohighlight">
+\[ln (y)-\frac {1}{2x}-1.54=0\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/f94138a4d9338a53f4ca6939fe05e12e0e47491994fd543aa3b566c83319e136.png" src="_images/f94138a4d9338a53f4ca6939fe05e12e0e47491994fd543aa3b566c83319e136.png" />
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="problems-for-lecture-12-conservation-of-mass">
+<h2>Problems for Lecture 12 – Conservation of Mass<a class="headerlink" href="#problems-for-lecture-12-conservation-of-mass" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="question-1-r">
+<h3>Question 1 (*)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h3>
+<p>Water flows through a rectangular pipe with a width of 0.08 𝑚 and a height of 0.04 𝑚. If the average velocity of the flow is 4 𝑚/𝑠, determine the mass flow through the pipe. You may assume that the density of water is 1000 𝑘𝑔/𝑚<sup>3</sup>. {12.8 kg/s}</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+b &amp;= 0.080 \; \;\textrm{(m)}
+ &amp;y &amp;= 0.040 \; \;\textrm{(m)}
+ &amp;V &amp;= 4 \; \;\textrm{(m/s)}
+\\[10pt]
+ \rho &amp;= 1000 \; \;\textrm{(kg/m3)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The mass flux can be calculated with the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\dot{m}=\rho V A\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= b \cdot y \\&amp;= 0.080 \cdot 0.040 \\&amp;= 0.003 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+\mathrm{mass}_{flux} &amp;= \rho \cdot V \cdot A \\&amp;= 1000 \cdot 4 \cdot 0.003 \\&amp;= 12.800 \; \;\textrm{(kg/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id1">
+<h3>Question 2 (*)[R]<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Water flows through a pipe of diameter 0.5 m with a discharge of 0.2 𝑚<sup>3</sup>/𝑠. Calculate the velocity of the flow and describe why the mass flux must be constant throughout the pipe {V=1.02 m/s}</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+D &amp;= 0.500 \; \;\textrm{(mm_flux)}
+ &amp;Q &amp;= 0.200 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The mass flux must be constant throughout the pipe because fluid mass can’t be created or destroyed. Assuming no leaks, and that the pipe is flowing full (and that water is incompressible), then the mass inflow and mass outflow from a control volume in the pipe must be equal. Hence, the mass flux throughout the pipe must be constant.</p>
+<p class="sd-card-text">For that reason the following equation can be used:</p>
+<div class="math notranslate nohighlight">
+\[V= \frac {Q}{A}\]</div>
+<p class="sd-card-text">and the area of a pipe is</p>
+<div class="math notranslate nohighlight">
+\[
+A= \pi \frac{D^2}{4}
+\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V &amp;= \frac{ Q \cdot 4 }{ \pi \cdot \left( D \right) ^{ 2 } } \\&amp;= \frac{ 0.20 \cdot 4 }{ 3.14 \cdot \left( 0.50 \right) ^{ 2 } } \\&amp;= 1.02 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-3-r">
+<h3>Question 3 (*)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h3>
+<p>Water flows through a hose (diameter of 25 𝑚𝑚) with a velocity of 1 𝑚/𝑠. The water passes through a nozzle and exits as a free jet. Close to the nozzle, the jet velocity is equal to 5 𝑚/𝑠. Calculate the diameter of the nozzle.
+Hint: You may assume that the jet diameter is equal to the nozzle diameter for this question. {11.18 mm}</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.025 \; \;\textrm{(m)}
+ &amp;V_{in} &amp;= 1 \; \;\textrm{(m/s)}
+ &amp;V_{out} &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Because of the conservation of mass, we have:</p>
+<div class="math notranslate nohighlight">
+\[V_{in}A_{in}=V_{out}A_{out}\]</div>
+<p class="sd-card-text">Replacing the areas, the diameter of the nozzle can be solved from the equation as follows:</p>
+<div class="math notranslate nohighlight">
+\[d_{out}= \sqrt{\frac{V_{in} \pi \frac{d_{in}^2}{4}}{V_{out}}\frac{4}{\pi}}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A_{in} &amp;= \pi \cdot \frac{ \left( d \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0250 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0005 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+d_{out} &amp;= \sqrt { \frac{ V_{in} \cdot A_{in} }{ V_{out} } \cdot \left( \frac{ 4 }{ \pi } \right) } \\&amp;= \sqrt { \frac{ 1 \cdot 0.0005 }{ 5 } \cdot \left( \frac{ 4 }{ 3.1416 } \right) } \\&amp;= 0.0112 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+d_{out_{}} &amp;= d_{out} \cdot 1000 \\&amp;= 0.0112 \cdot 1000 \\&amp;= 11.1803 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id2">
+<h3>Question 4 (*)[R]<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Water flows through a pipe with a diameter of 0.1 𝑚 with a velocity of 2 𝑚/𝑠, where the pipe is flowing full and water may be assumed to be incompressible. You may assume that the velocity is uniform over the pipe cross-section.</p>
+<p>a) At some point in the pipe, a constriction is installed that narrows the pipe diameter to 0.06 𝑚. Use the continuity equation to determine the discharge and  velocity in the narrow section. {<span class="math notranslate nohighlight">\(0.02 m^3/s\)</span>}</p>
+<p>b) At another point, the 0.1 𝑚 pipe (with water flowing at the same velocity) reaches a junction and branches into two pipes with diameters of 0.03 𝑚. Use the Continuity Equation to determine the discharge and velocity in the smaller pipes {<span class="math notranslate nohighlight">\(0.01 m^3/s\)</span>}</p>
+<p>c) Describe how your solution method would change if the flow velocity was not uniform over the cross-section of interest</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+D_{in} &amp;= 0.100 \; \;\textrm{(m)}
+ &amp;V_{in} &amp;= 2 \; \;\textrm{(m/s)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>a)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The equation for the conservation of mass can be used:</p>
+<div class="math notranslate nohighlight">
+\[ Q_{in}=Q_{out}\]</div>
+<p class="sd-card-text">and knowing that flow is <span class="math notranslate nohighlight">\(Q= V \cdot A\)</span></p>
+<p class="sd-card-text">The following equation can be used to calculate the velocisy and flow in the constriction</p>
+<div class="math notranslate nohighlight">
+\[V_{in} \cdot A_{in}=V_{out} \cdot A_{out}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{out} &amp;= 0.06 \; \;\textrm{(m)}
+\\[10pt]
+Q_{in} &amp;= \pi \cdot \left( D_{in} \right) ^{ 2 } \cdot \frac{ V_{in} }{ 4 } \\&amp;= 3.14 \cdot \left( 0.10 \right) ^{ 2 } \cdot \frac{ 2 }{ 4 } \\&amp;= 0.02 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+V_{out} &amp;= \frac{ Q_{in} \cdot 4 }{ \pi \cdot \left( D_{out} \right) ^{ 2 } } \\&amp;= \frac{ 0.02 \cdot 4 }{ 3.14 \cdot \left( 0.06 \right) ^{ 2 } } \\&amp;= 5.56 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q_{out} &amp;= V_{out} \cdot \pi \cdot \frac{ \left( D_{out} \right) ^{ 2 } }{ 4 } \\&amp;= 5.56 \cdot 3.14 \cdot \frac{ \left( 0.06 \right) ^{ 2 } }{ 4 } \\&amp;= 0.02 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p>b)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The continuos equation in this exercise is</p>
+<div class="math notranslate nohighlight">
+\[Q_1=Q_2+Q_3\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_1\)</span> is the discharge in the larger pipe,
+<span class="math notranslate nohighlight">\(Q_2\)</span> and <span class="math notranslate nohighlight">\(Q_3\)</span> are the discharge in the two smaller pipes</p>
+<p class="sd-card-text">And the flow can also be expressed as</p>
+<div class="math notranslate nohighlight">
+\[Q= V*A\]</div>
+<div class="math notranslate nohighlight">
+\[Q_1=V_2*A_2+V_3*A_3\]</div>
+<p class="sd-card-text">Considering the two smaller pipes have the same diameter and flow, the velocity is going to be the same</p>
+<div class="math notranslate nohighlight">
+\[Q_1=2*V_2*A_2\]</div>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(Q_2=Q_3\)</span></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{s} &amp;= 0.03 \; \;\textrm{(m)}
+\\[10pt]
+V_{2} &amp;= Q_{in} \cdot \frac{ 4 }{ 2 \cdot \pi \cdot \left( D_{s} \right) ^{ 2 } } \\&amp;= 0.02 \cdot \frac{ 4 }{ 2 \cdot 3.14 \cdot \left( 0.03 \right) ^{ 2 } } \\&amp;= 11.11 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q_{2} &amp;= V_{2} \cdot \left( D_{s} \right) ^{ 2 } \cdot \frac{ \pi }{ 4 } \\&amp;= 11.11 \cdot \left( 0.03 \right) ^{ 2 } \cdot \frac{ 3.14 }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p>c)</p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We would need to integrate over the cross-sections using the equation</p>
+<p class="sd-card-text">𝑄 = ∫ 𝑣𝑑𝐴, or in polar coordinates for a circular cross-section
+𝑄 = ∫ 𝑣 × 2𝜋𝑟𝑑r</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-5-r">
+<h3>Question 5 (**)[R]<a class="headerlink" href="#question-5-r" title="Link to this heading">#</a></h3>
+<p>The velocity profile for a liquid flowing in a channel is determined to be <span class="math notranslate nohighlight">\(𝑢 = 8𝑧^{1/3}\)</span>, where 𝑧 is the vertical coordinate in 𝑚 and 𝑢 is the horizontal velocity in 𝑚/𝑠. Assuming that the channel is 0.8 𝑚 deep and 1.2 𝑚 wide, calculate:</p>
+<p>a) The discharge in the channel. {5.35 <span class="math notranslate nohighlight">\(m^3/s\)</span>}</p>
+<p>b) The average velocity in the channel. {5.57 m/s}</p>
+<p>c) Sketch the vertical velocity profile.</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+y &amp;= 0.8 \; \;\textrm{(m)}
+ &amp;b &amp;= 1.2 \; \;\textrm{(m)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>a)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge in the channel can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=V A\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{A}^{}V dA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{A}^{}u(z) dA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.8}8𝑧^{1/3}(b) dz\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q &amp;= \left( \frac{ 24 }{ 4 } \cdot \left( 0.8 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot b \right) - \left( \frac{ 24 }{ 4 } \cdot \left( 0 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot b \right) \\&amp;= \left( \frac{ 24 }{ 4 } \cdot \left( 0.8 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot 1.20 \right) - \left( \frac{ 24 }{ 4 } \cdot \left( 0 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot 1.20 \right) \\&amp;= 5.35 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p>b)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The average velocity in the channel can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[V=Q/A\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V &amp;= \frac{ Q }{ b \cdot y } \\&amp;= \frac{ 5.35 }{ 1.20 \cdot 0.80 } \\&amp;= 5.57 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p>c)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You’ll need to integrate the vertical velocity profile. If you’re unsure about the
+sketch, try calculating the velocity at different vertical locations.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/4d899903cb604a90d9c03d30014e252379c2145a0bc915fb1d85fb4aeadc497a.png" src="_images/4d899903cb604a90d9c03d30014e252379c2145a0bc915fb1d85fb4aeadc497a.png" />
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id3">
+<h3>Question 6 (**)[R]<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>A small pipe with a diameter of D<sub>1</sub> = 8𝑐𝑚 attached to a pump injects water at a velocity of V<sub>1</sub> = 30𝑚/𝑠 into a larger pipe (D<sub>2</sub> = 25𝑐𝑚), entraining a secondary flow of V<sub>2</sub> = 3𝑚/𝑠 in the annular region around the small pipe. Some distance downstream, the two flows are fully mixed and the flow within the large pipe is approximately uniform. Calculate the average velocity in the fully mixed region of the large pipe. {V<sub>3</sub>= 5.76 m/s}</p>
+<p>Hint: Draw a diagram (this is really important for this problem!) and remember that the discharge cannot change if mass is conserved, assuming that the water is incompressible.</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{1} &amp;= 0.008 \; \;\textrm{(m)}
+ &amp;V_{1} &amp;= 30 \; \;\textrm{(m/s)}
+ &amp;D_{2} &amp;= 0.025 \; \;\textrm{(m)}
+\\[10pt]
+ V_{2} &amp;= 3 \; \;\textrm{(m/s)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<p><strong>Hint</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/e4515f7366a714091ca6c25b3a0b950190f805e07916b88ed57310bbee230fe4.png" src="_images/e4515f7366a714091ca6c25b3a0b950190f805e07916b88ed57310bbee230fe4.png" />
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The continuity equation in this exercise is</p>
+<div class="math notranslate nohighlight">
+\[Q_3=Q_1+Q_2\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_3\)</span> is the discharge when the flow is fully mixed</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_2\)</span> is the discarge that was in the pipe</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_1\)</span> is the discharge of the pump</p>
+<p class="sd-card-text">And the flow can also be expressed as</p>
+<div class="math notranslate nohighlight">
+\[Q= V*A\]</div>
+<div class="math notranslate nohighlight">
+\[Q_3=V_1*A_1+V_2*A_2\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(A_2= \frac {\pi (D_2^2-D_1^2)}{4}\)</span></p>
+<p class="sd-card-text">Replacing all the equation in the conservation of mass, we have:</p>
+<div class="math notranslate nohighlight">
+\[Q_3=V_1*\frac {\pi (D_1^2)}{4}+V_2*\frac {\pi (D_2^2-D_1^2)}{4}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{3} &amp;= \pi \cdot \left( D_{1} \right) ^{ 2 } \cdot \frac{ V_{1} }{ 4 } + \pi \cdot \left( \left( D_{2} \right) ^{ 2 } - \left( D_{1} \right) ^{ 2 } \right) \cdot \frac{ V_{2} }{ 4 } \\&amp;= 3.142 \cdot \left( 0.008 \right) ^{ 2 } \cdot \frac{ 30 }{ 4 } + 3.142 \cdot \left( \left( 0.025 \right) ^{ 2 } - \left( 0.008 \right) ^{ 2 } \right) \cdot \frac{ 3 }{ 4 } \\&amp;= 0.003 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+V_{3} &amp;= Q_{3} \cdot \frac{ 4 }{ \pi \cdot \left( D_{2} \right) ^{ 2 } } \\&amp;= 0.003 \cdot \frac{ 4 }{ 3.142 \cdot \left( 0.025 \right) ^{ 2 } } \\&amp;= 5.765 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id4">
+<h3>Question 7 (**)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Water flows between two flat plates, which are separated by a gap of 0.5 𝑚. The width of the plates is 2 𝑚. Calculate the discharge between the plates for the following velocity profiles (note that 𝑧 is the vertical coordinate 𝑧 = 0 at the bottom plate and flow is assumed to be uniform in the 𝑥 and 𝑦 directions):
+Hint: for (b) and (c) you will need to integrate the velocity profile in the vertical
+direction.</p>
+<p>a) 𝑢(𝑧) = 2 (i.e. a constant velocity of 2 𝑚/𝑠). {2 <span class="math notranslate nohighlight">\(m^3/s\)</span>}</p>
+<p>b) 𝑢(𝑧) = 4𝑧 (i.e. a linear velocity distribution between the bottom and the top plate). {1 <span class="math notranslate nohighlight">\(m^3/s\)</span>}</p>
+<p>c) 𝑢(𝑧) = <span class="math notranslate nohighlight">\(8𝑧^2\)</span> (i.e. a parabolic velocity distribution). {0.67 <span class="math notranslate nohighlight">\(m^3/s\)</span>}</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+z &amp;= 0.5 \; \;\textrm{(m)}
+ &amp;b &amp;= 2 \; \;\textrm{(m)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p>a)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=z\cdot 2\cdot 2\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+Q &amp;= \left( 0.5 \cdot 2 \cdot 2 \right) - \left( 0 \cdot 2 \cdot 2 \right) &amp;= 2.0 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</details>
+</div>
+<p>b)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=8z^2/2\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+Q &amp;= \left( 8 \cdot \frac{ \left( 0.5 \right) ^{ 2 } }{ 2 } \right) - \left( 8 \cdot \frac{ \left( 0 \right) ^{ 2 } }{ 2 } \right) &amp;= 1.0 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</details>
+</div>
+<p>c)</p>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=16z^3/3\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+Q &amp;= \left( 16 \cdot \frac{ \left( 0.5 \right) ^{ 3 } }{ 3 } \right) - \left( 16 \cdot \frac{ \left( 0 \right) ^{ 3 } }{ 3 } \right) &amp;= 0.67 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id5">
+<h3>Question 8 (**)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>A viscous fluid flows through a channel with a square cross-section (width and height of 0.5 𝑚) with a vertical velocity profile of 𝑢(𝑧) = 8𝑧<sup>2</sup> , where 𝑢 is the horizontal velocity and 𝑧 is the vertical coordinate. Determine the discharge in the channel. {0.167 <span class="math notranslate nohighlight">\(m^3/s\)</span>}</p>
+<p><strong>Given:</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+h &amp;= 0.5 \; \;\textrm{(m)}
+ &amp;b &amp;= 0.5 \; \;\textrm{(m)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+<p><strong>Hint</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To find the discharge 𝑄 in the channel, we integrate the velocity profile 𝑢(𝑧) over the cross-sectional area of the channel.</p>
+<div class="math notranslate nohighlight">
+\[Q= \int u(z)dA\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(u(z)= 8z^2\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(dA= bdz\)</span></p>
+<p class="sd-card-text">The integration is carried out from the bottom of the channel to a height of 0.5 m</p>
+<div class="math notranslate nohighlight">
+\[Q= \int_0^h 8z^2 bdz\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The integration of</p>
+<div class="math notranslate nohighlight">
+\[Q = 8z^2b\]</div>
+<p class="sd-card-text">from (0) to (0.5m) is:</p>
+<div class="math notranslate nohighlight">
+\[Q= \int_{{0}}^{{h}} 8z^2b dz={0.167} \space m^3/s\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module2Hydrostatics_Sol.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 2: Hydrostatics</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-10-fluid-kinematics">Problems for Lecture 10 – Fluid Kinematics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7">Question 7 (*)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8(**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10-r">Question 10 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11 (**)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-12-conservation-of-mass">Problems for Lecture 12 – Conservation of Mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 7 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 8 (**)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
