@@ -340,6 +340,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11 (**)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-13-conservation-of-mass">Problems for Lecture 13 – Conservation of Mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 7 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 8 (**)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -739,13 +750,13 @@ a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&
 \[\frac {\partial v}{\partial 𝑡} = 0\]</div>
 <div class="math notranslate nohighlight">
 \[\frac {\partial w}{\partial 𝑡} = 0\]</div>
-<p class="sd-card-text">The aceleration in x:</p>
+<p class="sd-card-text">The acceleration in x:</p>
 <div class="math notranslate nohighlight">
 \[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡}+ u\frac {\partial 𝑢}{\partial x} + v\frac {\partial 𝑢}{\partial y} + w\frac {\partial u}{\partial z}\]</div>
-<p class="sd-card-text">The aceleration in y:</p>
+<p class="sd-card-text">The acceleration in y:</p>
 <div class="math notranslate nohighlight">
 \[𝑎_y = \frac {\partial v}{\partial 𝑡} +  u\frac {\partial v}{\partial x} + v\frac {\partial v}{\partial y} + w\frac {\partial v}{\partial z}\]</div>
-<p class="sd-card-text">The aceleration in z:</p>
+<p class="sd-card-text">The acceleration in z:</p>
 <div class="math notranslate nohighlight">
 \[𝑎_z =\frac {\partial w}{\partial 𝑡}+ u\frac {\partial w}{\partial x} + v\frac {\partial w}{\partial y} + w\frac {\partial w}{\partial z}\]</div>
 </div>
@@ -899,9 +910,22 @@ a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The acceleration is calculated with the following equations</p>
-<div class="math notranslate nohighlight">
-\[𝑎_𝑥 = \frac {\partial 𝑢}{\partial 𝑡} + 𝑢\frac {\partial 𝑢}{\partial 𝑥} + 𝑣\frac {\partial 𝑢}{\partial 𝑦}\]</div>
+<p class="sd-card-text"><strong>Steady vs Unsteady Flow:</strong></p>
+<p class="sd-card-text">The flow is <strong>steady</strong> if the partial derivatives with respect to time are zero:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\( \frac{\partial u}{\partial t} = 0 \)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\( \frac{\partial v}{\partial t} = 0\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\( \frac{\partial w}{\partial t} = 0 \)</span></p></li>
+</ul>
+<p class="sd-card-text">If any of these are not zero, the flow is <strong>unsteady</strong>.</p>
+<p class="sd-card-text"><strong>Uniform vs Non-uniform Flow:</strong></p>
+<p class="sd-card-text">The flow is <strong>uniform</strong> if the velocity does <strong>not vary with space</strong>, meaning:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x} = 0 \)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\( \frac{\partial v}{\partial y} = 0 \)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\( \frac{\partial w}{\partial z} = 0 \)</span></p></li>
+</ul>
+<p class="sd-card-text">If any of these spatial derivatives are not zero, the flow is <strong>non-uniform</strong>.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1169,6 +1193,583 @@ a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&
 </div>
 </section>
 </section>
+<section id="problems-for-lecture-13-conservation-of-mass">
+<h2>Problems for Lecture 13 – Conservation of Mass<a class="headerlink" href="#problems-for-lecture-13-conservation-of-mass" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="question-1-r">
+<h3>Question 1 (*)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h3>
+<p>Water flows through a rectangular pipe with a width of 0.08 𝑚 and a height of 0.04 𝑚. If the average velocity of the flow is 4 𝑚/𝑠, determine the mass flow through the pipe. You may assume that the density of water is 1000 𝑘𝑔/𝑚<sup>3</sup>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(12.8 kg/s\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The mass flux can be calculated with the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\dot{m}=\rho V A\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+b &amp;= 0.080 \; \;\textrm{(m)}
+\\[10pt]
+y &amp;= 0.040 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= 4 \; \;\textrm{(m/s)}
+\\[10pt]
+\rho &amp;= 1000 \; \;\textrm{(kg/m3)}
+\\[10pt]
+A &amp;= b \cdot y \\&amp;= 0.080 \cdot 0.040 \\&amp;= 0.003 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+\mathrm{mass}_{flux} &amp;= \rho \cdot V \cdot A \\&amp;= 1000 \cdot 4 \cdot 0.003 \\&amp;= 12.800 \; \;\textrm{(kg/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id1">
+<h3>Question 2 (*)[R]<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Water flows through a pipe of diameter 0.5 m with a discharge of 0.2 𝑚<sup>3</sup>/𝑠. Calculate the velocity of the flow and describe why the mass flux must be constant throughout the pipe.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(1.0 m/s\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The mass flux must be constant throughout the pipe because fluid mass can’t be created or destroyed. Assuming no leaks, and that the pipe is flowing full (and that water is incompressible), then the mass inflow and mass outflow from a control volume in the pipe must be equal.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Considering the mass flux must be constant throught the pipe, we have:</p>
+<div class="math notranslate nohighlight">
+\[V= \frac {Q}{A}\]</div>
+<p class="sd-card-text">and the area of a pipe is</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(A= \pi \frac{D^2}{4}\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.5 \; \;\textrm{(mm_flux)}
+\\[10pt]
+Q &amp;= 0.2 \; \;\textrm{(m3/s)}
+\\[10pt]
+V &amp;= \frac{ Q \cdot 4 }{ \pi \cdot \left( D \right) ^{ 2 } } \\&amp;= \frac{ 0.2 \cdot 4 }{ 3.1 \cdot \left( 0.5 \right) ^{ 2 } } \\&amp;= 1.0 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-3-r">
+<h3>Question 3 (*)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h3>
+<p>Water flows through a hose (diameter of 25 𝑚𝑚) with a velocity of 1 𝑚/𝑠. The water passes through a nozzle and exits as a free jet. Close to the nozzle, the jet velocity is equal to 5 𝑚/𝑠. Calculate the diameter of the nozzle.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(11.18 mm\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You may assume that the jet diameter is equal to the nozzle diameter for this question.</p>
+<p class="sd-card-text">Use the principle of conservation of mass. For incompressible flow, the flow rate (Q) must remain constant throughout the hose and the nozzle.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Because of the conservation of mass, we have:</p>
+<div class="math notranslate nohighlight">
+\[V_{in}A_{in}=V_{out}A_{out}\]</div>
+<p class="sd-card-text">Replacing the areas, the diameter of the nozzle can be solved from the equation as follows:</p>
+<div class="math notranslate nohighlight">
+\[d_{out}= \sqrt{\frac{V_{in} \pi \frac{d_{in}^2}{4}}{V_{out}}\frac{4}{\pi}}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d &amp;= 0.0250 \; \;\textrm{(m)}
+\\[10pt]
+V_{in} &amp;= 1 \; \;\textrm{(m/s)}
+\\[10pt]
+V_{out} &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{in} &amp;= \pi \cdot \frac{ \left( d \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0250 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0005 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+d_{out} &amp;= \sqrt { \frac{ V_{in} \cdot A_{in} }{ V_{out} } \cdot \left( \frac{ 4 }{ \pi } \right) } \\&amp;= \sqrt { \frac{ 1 \cdot 0.0005 }{ 5 } \cdot \left( \frac{ 4 }{ 3.1416 } \right) } \\&amp;= 0.0112 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+d_{out_{}} &amp;= d_{out} \cdot 1000 \\&amp;= 0.0112 \cdot 1000 \\&amp;= 11.1803 \; \;\textrm{(mm)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id2">
+<h3>Question 4 (*)[R]<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Water flows through a pipe with a diameter of 0.1 𝑚 with a velocity of 2 𝑚/𝑠, where the pipe is flowing full and water may be assumed to be incompressible. You may assume that the velocity is uniform over the pipe cross-section.</p>
+<p>a) At some point in the pipe, a constriction is installed that narrows the pipe diameter to 0.06 𝑚. Use the continuity equation to determine the discharge and  velocity in the narrow section.</p>
+<p>b) At another point, the 0.1 𝑚 pipe (with water flowing at the same velocity) reaches a junction and branches into two pipes with diameters of 0.03 𝑚. Use the Continuity Equation to determine the discharge and velocity in the smaller pipes</p>
+<p>c) Describe how your solution method would change if the flow velocity was not uniform over the cross-section of interest</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(a) \; 0.016 \; m^3/s, \; 5.56 \; m/s\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(b)\; 0.008 \; m^3/s, \; 11.11 \; m/s\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(c)\;\)</span> Integrate over the cross-sections</p>
+</div>
+</details><p><strong>Question 4 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the principle of conservation of mass. For incompressible flow, the flow rate (Q) must remain constant throughout the hose and the nozzle.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The equation for the conservation of mass can be used:</p>
+<div class="math notranslate nohighlight">
+\[ Q_{in}=Q_{out}\]</div>
+<p class="sd-card-text">and knowing that flow is <span class="math notranslate nohighlight">\(Q= V*A\)</span></p>
+<p class="sd-card-text">The following equation can be used to calculate the velocisy and flow in the constriction</p>
+<div class="math notranslate nohighlight">
+\[V_{in}*A_{in}=V_{out}*A_{out}\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{in} &amp;= 0.100 \; \;\textrm{(m)}
+\\[10pt]
+V_{in} &amp;= 2 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{out} &amp;= 0.060 \; \;\textrm{(m)}
+\\[10pt]
+Q_{in} &amp;= \pi \cdot \left( D_{in} \right) ^{ 2 } \cdot \frac{ V_{in} }{ 4 } \\&amp;= 3.142 \cdot \left( 0.100 \right) ^{ 2 } \cdot \frac{ 2 }{ 4 } \\&amp;= 0.016 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+V_{out} &amp;= \frac{ Q_{in} \cdot 4 }{ \pi \cdot \left( D_{out} \right) ^{ 2 } } \\&amp;= \frac{ 0.016 \cdot 4 }{ 3.142 \cdot \left( 0.060 \right) ^{ 2 } } \\&amp;= 5.556 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 4 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the principle of conservation of mass. For incompressible flow, the flow rate (Q) must remain constant throughout the hose and the nozzle.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The continuos equation in this exercise is</p>
+<div class="math notranslate nohighlight">
+\[Q_1=Q_2+Q_3\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_1\)</span> is the discharge in the larger pipe,
+<span class="math notranslate nohighlight">\(Q_2\)</span> and <span class="math notranslate nohighlight">\(Q_3\)</span> are the discharge in the two smaller pipes</p>
+<p class="sd-card-text">And the flow can also be expressed as</p>
+<div class="math notranslate nohighlight">
+\[Q= V*A\]</div>
+<div class="math notranslate nohighlight">
+\[Q_1=V_2*A_2+V_3*A_3\]</div>
+<p class="sd-card-text">Considering the two smaller pipes have the same diameter and flow, the velocity is going to be the same</p>
+<div class="math notranslate nohighlight">
+\[Q_1=2*V_2*A_2\]</div>
+<p class="sd-card-text">and <span class="math notranslate nohighlight">\(Q_2=Q_3\)</span></p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{s} &amp;= 0.030 \; \;\textrm{(m)}
+\\[10pt]
+V_{2} &amp;= Q_{in} \cdot \frac{ 4 }{ 2 \cdot \pi \cdot \left( D_{s} \right) ^{ 2 } } \\&amp;= 0.016 \cdot \frac{ 4 }{ 2 \cdot 3.142 \cdot \left( 0.030 \right) ^{ 2 } } \\&amp;= 11.111 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q_{2} &amp;= V_{2} \cdot \left( D_{s} \right) ^{ 2 } \cdot \frac{ \pi }{ 4 } \\&amp;= 11.111 \cdot \left( 0.030 \right) ^{ 2 } \cdot \frac{ 3.142 }{ 4 } \\&amp;= 0.008 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 4 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We would need to integrate over the cross-sections using the equation</p>
+<p class="sd-card-text">𝑄 = ∫ 𝑣𝑑𝐴, or in polar coordinates for a circular cross-section
+𝑄 = ∫ 𝑣 × 2𝜋𝑟𝑑r</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-5-r">
+<h3>Question 5 (**)[R]<a class="headerlink" href="#question-5-r" title="Link to this heading">#</a></h3>
+<p>The velocity profile for a liquid flowing in a channel is determined to be <span class="math notranslate nohighlight">\(𝑢 = 8𝑧^{1/3}\)</span>, where 𝑧 is the vertical coordinate in 𝑚 and 𝑢 is the horizontal velocity in 𝑚/𝑠. Assuming that the channel is 0.8 𝑚 deep and 1.2 𝑚 wide, calculate:</p>
+<p>a) The discharge in the channel.</p>
+<p>b) The average velocity in the channel.</p>
+<p>c) Sketch the vertical velocity profile.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(a) \; 5.34 \; m^3/s\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(b)\; 5.57 \; m/s\)</span></p>
+</div>
+</details><p><strong>Question 5 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Discharge is the volume flow rate (<span class="math notranslate nohighlight">\(Q\)</span>). You can calculate it by integrating the velocity across the entire cross-sectional area of the flow</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge in the channel can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=V A\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{A}^{}V dA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{A}^{}u(z) dA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.8}8𝑧^{1/3}(b) dz\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+y &amp;= 0.800 \; \;\textrm{(m)}
+\\[10pt]
+b &amp;= 1.200 \; \;\textrm{(m)}
+\\[10pt]
+Q &amp;= \left( \frac{ 24 }{ 4 } \cdot \left( 0.8 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot b \right) - \left( \frac{ 24 }{ 4 } \cdot \left( 0 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot b \right) \\&amp;= \left( \frac{ 24 }{ 4 } \cdot \left( 0.8 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot 1.200 \right) - \left( \frac{ 24 }{ 4 } \cdot \left( 0 \right) ^{ \left( \frac{ 4 }{ 3 } \right) } \cdot 1.200 \right) \\&amp;= 5.347 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The average velocity in the channel can be calculated with the flow rate and area.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The averiage velocity in the channel is:</p>
+<div class="math notranslate nohighlight">
+\[V=Q/A\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V &amp;= \frac{ Q }{ b \cdot y } \\&amp;= \frac{ 5.35 }{ 1.20 \cdot 0.80 } \\&amp;= 5.57 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You’ll need to integrate the vertical velocity profile. If you’re unsure about the
+sketch, try calculating the velocity at different vertical locations.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/4d899903cb604a90d9c03d30014e252379c2145a0bc915fb1d85fb4aeadc497a.png" src="_images/4d899903cb604a90d9c03d30014e252379c2145a0bc915fb1d85fb4aeadc497a.png" />
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id3">
+<h3>Question 6 (**)[R]<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>A small pipe with a diameter of D<sub>1</sub> = 8𝑐𝑚 attached to a pump injects water at a velocity of V<sub>1</sub> = 30𝑚/𝑠 into a larger pipe (D<sub>2</sub> = 25𝑐𝑚), entraining a secondary flow of V<sub>2</sub> = 3𝑚/𝑠 in the annular region around the small pipe. Some distance downstream, the two flows are fully mixed and the flow within the large pipe is approximately uniform. Calculate the average velocity in the fully mixed region of the large pipe.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(5.76 m/s\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Draw a diagram (this is really important for this problem!) and remember that the discharge cannot change if mass is conserved, assuming that the water is incompressible.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/e4515f7366a714091ca6c25b3a0b950190f805e07916b88ed57310bbee230fe4.png" src="_images/e4515f7366a714091ca6c25b3a0b950190f805e07916b88ed57310bbee230fe4.png" />
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The continuos equation in this exercise is</p>
+<div class="math notranslate nohighlight">
+\[Q_3=Q_1+Q_2\]</div>
+<p class="sd-card-text">And the flow can also be expressed as</p>
+<div class="math notranslate nohighlight">
+\[Q= V*A\]</div>
+<div class="math notranslate nohighlight">
+\[Q_3=V_1*A_1+V_2*A_2\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(A_2= \frac {\pi (D_2^2-D_1^2)}{4}\)</span></p>
+<p class="sd-card-text">Replacing all the equation in the conservation of mass, we have:</p>
+<div class="math notranslate nohighlight">
+\[Q_3=V_1*\frac {\pi (D_1^2)}{4}+V_2*\frac {\pi (D_2^2-D_1^2)}{4}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+d_{1} &amp;= 8 \; \;\textrm{(cm)}
+\\[10pt]
+V_{1} &amp;= 30 \; \;\textrm{(m/s)}
+\\[10pt]
+d_{2} &amp;= 25 \; \;\textrm{(cm)}
+\\[10pt]
+V_{2} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{1_{m}} &amp;= 0.08 \; \;\textrm{(m)}
+\\[10pt]
+D_{2_{m}} &amp;= 0.25 \; \;\textrm{(m)}
+\\[10pt]
+Q_{3} &amp;= \pi \cdot \left( D_{1_{m}} \right) ^{ 2 } \cdot \frac{ V_{1} }{ 4 } + \pi \cdot \left( \left( D_{2_{m}} \right) ^{ 2 } - \left( D_{1_{m}} \right) ^{ 2 } \right) \cdot \frac{ V_{2} }{ 4 } \\&amp;= 3.14 \cdot \left( 0.08 \right) ^{ 2 } \cdot \frac{ 30 }{ 4 } + 3.14 \cdot \left( \left( 0.25 \right) ^{ 2 } - \left( 0.08 \right) ^{ 2 } \right) \cdot \frac{ 3 }{ 4 } \\&amp;= 0.28 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+V_{3} &amp;= Q_{3} \cdot \frac{ 4 }{ \pi \cdot \left( D_{2_{m}} \right) ^{ 2 } } \\&amp;= 0.28 \cdot \frac{ 4 }{ 3.14 \cdot \left( 0.25 \right) ^{ 2 } } \\&amp;= 5.76 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id4">
+<h3>Question 7 (**)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Water flows between two flat plates, which are separated by a gap of 0.5 𝑚. The width of the plates is 2 𝑚. Calculate the discharge between the plates for the following velocity profiles (note that 𝑧 is the vertical coordinate 𝑧 = 0 at the bottom plate and flow is assumed to be uniform in the 𝑥 and 𝑦 directions):
+Hint: for (b) and (c) you will need to integrate the velocity profile in the vertical
+direction.</p>
+<p>a) 𝑢(𝑧) = 2 (i.e. a constant velocity of 2 𝑚/𝑠)</p>
+<p>b) 𝑢(𝑧) = 4𝑧 (i.e. a linear velocity distribution between the bottom and the top plate)</p>
+<p>c) <span class="math notranslate nohighlight">\(8𝑧^2\)</span> (i.e. a parabolic velocity distribution)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(a) \; 2\; m^3/s \)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(b)\; 1 \; m^3/s\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(c)\;0.67 \; m^3/s\)</span></p>
+</div>
+</details><p><strong>Question 7 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=z\cdot 2\cdot 2\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+z &amp;= 0.50 \; \;\textrm{(m)}
+\\[10pt]
+b &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+Q &amp;= \left( 0.5 \cdot 2 \cdot 2 \right) - \left( 0 \cdot 2 \cdot 2 \right) &amp;= 2.00 \; \;\textrm{(m3/s)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=8z^2/2\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+Q &amp;= \left( 8 \cdot \frac{ \left( 0.5 \right) ^{ 2 } }{ 2 } \right) - \left( 8 \cdot \frac{ \left( 0 \right) ^{ 2 } }{ 2 } \right) &amp;= 1.00 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The discharge between the plates can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}vdA\]</div>
+<div class="math notranslate nohighlight">
+\[Q=\int_{0}^{0.5}u(z)bdz=16z^3/3\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[
+\begin{aligned}
+Q &amp;= \left( 16 \cdot \frac{ \left( 0.5 \right) ^{ 3 } }{ 3 } \right) - \left( 16 \cdot \frac{ \left( 0 \right) ^{ 3 } }{ 3 } \right) &amp;= 0.67 \; \;\textrm{(m3/s)}
+\end{aligned}
+\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id5">
+<h3>Question 8 (**)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>A viscous fluid flows through a channel with a square cross-section (width and height of 0.5 𝑚) with a vertical velocity profile of 𝑢(𝑧) = 8𝑧<sup>2</sup> , where 𝑢 is the horizontal velocity and 𝑧 is the vertical coordinate. Determine the discharge in the channel.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(0.167 m^3/s\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Since the velocity only varies with height (<span class="math notranslate nohighlight">\(z\)</span>) and the channel has uniform width, we can integrate over (<span class="math notranslate nohighlight">\(z\)</span>)</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To find the discharge 𝑄 in the channel, we integrate the velocity profile 𝑢(𝑧) over the cross-sectional area of the channel.</p>
+<div class="math notranslate nohighlight">
+\[Q= \int u(z)dA\]</div>
+<p class="sd-card-text">Where:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(u(z)= 8z^2\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(dA= bdz\)</span></p>
+<p class="sd-card-text">The integration is carried out from the bottom of the channel to a height of 0.5 m</p>
+<div class="math notranslate nohighlight">
+\[Q= \int_0^h 8z^2 bdz\]</div>
+</div>
+</details><div class="cell tag_remove-input docutils container">
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The integration of</p>
+<div class="math notranslate nohighlight">
+\[Q = 8z^2b\]</div>
+<p class="sd-card-text">from (0) to (0.5m) is:</p>
+<div class="math notranslate nohighlight">
+\[Q= \int_{{0}}^{{h}} 8z^2b dz={0.167 \; m^3/s}\]</div>
+</div>
+</details></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1238,6 +1839,17 @@ a &amp;= \sqrt { \left( a_{x} \right) ^{ 2 } + \left( a_{y} \right) ^{ 2 } } \\&
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (**)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10-r">Question 10 (**)[R]</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11 (**)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-13-conservation-of-mass">Problems for Lecture 13 – Conservation of Mass</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 2 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 4 (*)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-r">Question 5 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 6 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 7 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 8 (**)</a></li>
 </ul>
 </li>
 </ul>
