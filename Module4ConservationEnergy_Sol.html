@@ -1173,19 +1173,12 @@ d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
 \[HGL=\frac{p}{\gamma}+z\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-D= 0.1 #m 
-V= 0.25 #m/s
-z= 2.5 #m
-p=120*1000 #Pa
-
-EGL= p/(rho_water*g)+V**2/(2*g)+z #m
-HGL= p/(rho_water*g)+z #m
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1204,6 +1197,7 @@ p &amp;= 120000 \; \;\textrm{(Pa)}
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1235,16 +1229,12 @@ V= \sqrt {2gh}
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
-D= 200 #mm 
-h= 4.5 #m 
-V= sqrt(h*2*g) #m/s
-Q= V*pi*(D/1000)**2/(4) #m3/s
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1259,6 +1249,7 @@ Q &amp;= V \cdot \pi \cdot \frac{ \left( \frac{ D }{ 1000 } \right) ^{ 2 } }{ 4 
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 2 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1276,17 +1267,16 @@ HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.2.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <img alt="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" src="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" />
 </div>
+</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1296,14 +1286,7 @@ HGL= \frac{p}{\gamma}+z
 <p>a. Calculate the discharge through the pipe.</p>
 <p>b. Calculate the pressure in the narrow section.</p>
 <p>c. Draw the EGL and HGL for this problem.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.3.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" src="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" />
 </div>
@@ -1330,20 +1313,12 @@ b) \;-29.4 \; kPa \; (gauge\;pressure)
 \[Q=V_3A_3\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4 
-h= 200/1000 #m
-D_1= 100/1000 #m
-D_2= 50/1000 #m
-D_3= 100/1000 #m
-
-V_3= sqrt(2*g*h) #m/s
-A_3= pi*D_3**2/4 #m2
-Q= V_3*A_3 #m3/s
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1364,6 +1339,7 @@ Q &amp;= V_{3} \cdot A_{3} \\&amp;= 1.9809 \cdot 0.0079 \\&amp;= 0.0156 \; \;\te
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 3 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1379,16 +1355,12 @@ Q &amp;= V_{3} \cdot A_{3} \\&amp;= 1.9809 \cdot 0.0079 \\&amp;= 0.0156 \; \;\te
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(V_1= 0 m/s\)</span> (because it is a reservoir)</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-V_2= Q/(pi*D_2**2/4) #m/s
-z_1=h #m
-p_2= (z_1-V_2**2/(2*g))*rho_water*g #Pa
-p_2_= p_2/1000 #kPa
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1403,6 +1375,7 @@ p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ -29430.00 }{ 1000 } \\&am
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 3 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1420,17 +1393,16 @@ HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.3S.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <img alt="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" src="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" />
 </div>
+</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1440,14 +1412,7 @@ HGL= \frac{p}{\gamma}+z
 <p>a. Construct the energy grade line and hydraulic grade line for the pipe, labelling the relevant quantities on your diagram.</p>
 <p>b. Using your solution to part (a), calculate the pressure and velocity within the 200mm diameter section of the pipe.</p>
 <p>c. State any assumptions you have made within your answers to (a) and (b)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.4.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" src="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" />
 </div>
@@ -1475,17 +1440,16 @@ HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.4S.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <img alt="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" src="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" />
 </div>
+</details>
 </div>
 <p><strong>Question 4 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1528,24 +1492,12 @@ z_1=\frac{p_2}{\gamma}+\frac{V_2^2}{2g}
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2 
-z_1= 5 #m 
-D_1= 200 #mm 
-D_2= 100 #mm
-D_3= 100#mm 
-z_t= 9 #m
-
-V_3= sqrt (2*g*z_t) #m/s
-Q_3= V_3*pi*(D_3/1000)**2/4 #m3/s
-
-V_2= Q_3*4/(pi*(D_1/1000)**2) #m/s
-
-p_2= ((z_1-V_2**2/(2*g))*rho_water*g)/1000 #kPa
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1570,6 +1522,7 @@ p_{2} &amp;= \frac{ \left( z_{1} - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 4 (c)</strong></p>
 <p><strong>Solution</strong></p>
@@ -1615,16 +1568,12 @@ c) \;1.72 \; m/s
 <span class="math notranslate nohighlight">\(V_1=0 Pa\)</span> (given in the question)</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 1 
-V_1=0 #m/s
-V_2= 2 #m/s
-
-p_2= ((V_2**2/(2*g))*rho_water*g)/1000 #kPa
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1637,6 +1586,7 @@ p_{2} &amp;= \frac{ \left( \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \ri
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1647,13 +1597,12 @@ p_{2} &amp;= \frac{ \left( \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \ri
 \[p=\rho gh\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3 
-h= p_2*1000/(rho_water*g) #m
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1662,6 +1611,7 @@ h &amp;= p_{2} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } \\&amp;= 2.000 \cdot 
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 5 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1672,14 +1622,12 @@ h &amp;= p_{2} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } \\&amp;= 2.000 \cdot 
 \[V=\sqrt{2gh}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2 
-h=150/1000 #m
-V= sqrt(2*g*h) #m/s
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1690,6 +1638,7 @@ V &amp;= \sqrt { 2 \cdot g \cdot h } \\&amp;= \sqrt { 2 \cdot 9.81 \cdot 0.15 } 
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 5 (d)</strong></p>
 <p><strong>Solution</strong></p>
@@ -1748,17 +1697,12 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2 
-D= 50 #mm
-h_pit=150#mm
-h_p=90 #mm 
-
-V= sqrt (2*g*((h_pit/1000)-h_p/1000)) #m/s
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1773,6 +1717,7 @@ V &amp;= \sqrt { 2 \cdot g \cdot \left( \left( \frac{ h_{pit} }{ 1000 } \right) 
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 6 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1785,13 +1730,12 @@ V &amp;= \sqrt { 2 \cdot g \cdot \left( \left( \frac{ h_{pit} }{ 1000 } \right) 
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 0
-Delta_p= rho_water*V**2/2 #Pa
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1800,6 +1744,7 @@ Delta_p= rho_water*V**2/2 #Pa
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 6 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1819,17 +1764,16 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 <p class="sd-card-text">We know that the Energy Grade Line (EGL) is 0.15 m and the Hydraulic Grade Line (HGL) is 0.09 m. Assuming there are no friction losses, both lines will be horizontal.</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.6.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <img alt="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" src="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" />
 </div>
+</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1838,14 +1782,7 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 <p>Water flows through the pipe shown in the figure with a velocity of 3 m/s (in the 200 mm section of the pipe).</p>
 <p>a. If the pressure in the 200 mm section of the pipe is 350 kPa, calculate the pressures in the other two sections of pipe.</p>
 <p>b. Draw the EGL and HGL for this problem.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.7.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" src="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" />
 </div>
@@ -1876,25 +1813,12 @@ a) \;319.78 \; kPa\;,\;178.72\; kPa
 \[V= \frac{Q}{A}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-V_1= 3 #m/s
-D_1= 200/1000 #m
-D_2= 120/1000 #m
-D_3= 80/1000 #m
-p_1=350*1000 #Pa
-
-Q= V_1*(pi*D_1**2/4) #m3/s
-V_2= Q/(pi*D_2**2/4) #m/s
-p_2= (p_1/(rho_water*g)+V_1**2/(2*g)-V_2**2/(2*g))*rho_water*g #Pa
-p_2_= p_2/1000 #kPa
-V_3= Q/(pi*D_3**2/4) #m/s
-p_3= (p_2/(rho_water*g)+V_2**2/(2*g)-V_3**2/(2*g))*rho_water*g #Pa
-p_3_= p_3/1000 #kPa
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -1925,6 +1849,7 @@ p_{3_{}} &amp;= \frac{ p_{3} }{ 1000 } \\&amp;= \frac{ 178718.75 }{ 1000 } \\&am
 \end{aligned}
 \end{split}\]</div>
 </div>
+</details>
 </div>
 <p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1942,17 +1867,16 @@ HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.7S.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
 <div class="cell_output docutils container">
 <img alt="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" src="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" />
 </div>
+</details>
 </div>
 </section>
 </section>
@@ -2587,14 +2511,7 @@ p_{1} &amp;= p_{2} + \Delta_{p} \\&amp;= 3690.810 + 784.800 \\&amp;= 4475.610 \;
 <section id="id12">
 <h4>Question 1 (*)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <p>Water flows up pipe AB (5 m long, 40 mm diameter) and along BC (3 m long, 30 mm diameter) at 1.75 L/s. If the measured pressure at A is 250 kPa, and the pipe friction loss between A and C is 1.45 m, find the pressure at C. Neglect local energy losses caused by the diameter change and bend at B.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/85.png&quot;</span><span class="p">)</span>
-<span class="n">img</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" src="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" />
 </div>
@@ -2630,34 +2547,11 @@ V= Q/A
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
-D_AB= 40 #mm 
-L_AB= 5#m 
-D_BC= 30 #mm 
-L_BC= 3#m 
-Q=1.75 #L/s
-p_A= 250 #kPa
-h_f_AC= 1.45 #m 
-
-Q_m=Q/1000 #m3/s
-D_AB_m=D_AB/1000 #m
-D_BC_m=D_BC/1000 #m 
-A_AB= pi*D_AB_m**2/4 #m2
-V_A= Q_m/A_AB #m/s
-A_BC= pi*D_BC_m**2/4 #m2
-V_C= Q_m/A_BC #m/s
-
-p_C= (p_A*1000/(rho_water*g)+V_A**2/(2*g)-h_f_AC-V_C**2/(2*g)-L_AB)*rho_water*g #Pa
-p_C_= p_C/1000 #kPa
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -2727,22 +2621,11 @@ p_{C_{}} &amp;= \frac{ p_{C} }{ 1000 } \\&amp;= \frac{ 184630.522 }{ 1000 } \\&a
 <p class="sd-card-text">You can assume the density of water is 1000 kg/m<sup>3</sup></p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
-D= 0.1 #m 
-V= 0.2 #m/s
-p= 120 #kPa
-
-pressure_m = (p*1000)/(rho_water*g) #m 
-velocity_m = V**2/(2*g) #m
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -2797,22 +2680,11 @@ p_B=(\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}-\frac{V_{B}^2}{2g}-z_{B})\rho g
 the conservation of mass.</p>
 <p class="sd-card-text">The pressure will reduce due to the increase in elevation</p>
 </div>
-</details><div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2 
-pressure_m=12.232 #m
-velocity_m=0.002 #m
-z_B=6 #m
-
-p_B= (pressure_m-z_B)*rho_water*g #Pa
-p_B_= p_B/1000 #kPa
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+</details><div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -2858,18 +2730,11 @@ a) \;0.46 \; m
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2 
-V= 3#m/s
-velocity_m= V**2/(2*g) #m
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -2884,6 +2749,7 @@ V &amp;= 3 \; \;\textrm{(m/s)}
 </details>
 </div>
 <p><strong>Question 4 (b)</strong></p>
+<p><strong>Solution</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2918,22 +2784,11 @@ velocity_{head}=\frac{V^2}{2g}
 \end{split}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-D= 0.1 #m 
-rho= 96 #kg/m3 
-Q= 0.06 #m3/s
-
-V= Q/(pi*D**2/4) #m3/s
-velocity_head= V**2/(2*g) #m
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -2962,19 +2817,11 @@ V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= 
 \[\frac{p}{\rho g}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-pressure_head=12 #m
-p= pressure_head*rho*g #Pa
-p_= p/1000 #kPa
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3043,22 +2890,11 @@ Q= V*A
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
-D_tank= 1.5 #m 
-h= 0.8 #m 
-D_small= 20 #mm
-
-V= sqrt(h*2*g) #m/s
-Q_a= V*pi*(D_small/1000)**2/(4) #m3/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3094,19 +2930,11 @@ Q= V*A
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 4
-h_b= 0.3 #m 
-V= sqrt(h_b*2*g) #m/s
-Q_b= V*pi*(D_small/1000)**2/(4) #m3/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3135,17 +2963,11 @@ A_1= \frac{\pi D^2}{4}
 <p class="sd-card-text">If the rate of change in water height is low, this confirms that the steady-flow assumption is valid</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-V_1= Q_a*4/(pi*D_tank**2)*1000 #mm/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3192,24 +3014,11 @@ b) \;4.49 \; kPa
 \[V_{pipe}= Q/A_{pipe}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
-D_pipe= 1 #m
-D_nozzle= 0.2 #m
-V_nozzle= 3 #m/s
-
-A_nozzle= pi*D_nozzle**2/4 #m2
-Q= V_nozzle*A_nozzle #m3/s
-A_pipe= pi*D_pipe**2/4 #m2
-V_pipe=Q/A_pipe #m/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3247,18 +3056,11 @@ V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{nozzle}=0 Pa\)</span> (it is exposed to atmospheric pressure)</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-p_pipe= (V_nozzle**2/(2*g)-V_pipe**2/(2*g))*rho_water*g #Pa
-p_pipe_= p_pipe/1000 #kPa
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3310,21 +3112,11 @@ V= \sqrt {2gh}
 \]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-D= 100 #mm
-z= 5#m 
-
-V= sqrt(z*2*g) #m/s
-Q_b= V*pi*(D/1000)**2/(4) #m3/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3368,24 +3160,11 @@ b) \;8.89 \; m/s\;,\; 254.61 \;kPa
 \[Q=V_1A_1\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 3
-rho= 940 #kg/m3
-D_1= 120/1000 #m
-D_2= 90/1000 #m
-p_1= 280*1000 #Pa
-V_1= 5 #m/s
-
-A_1= pi*D_1**2/4 #m2
-Q= V_1*A_1 #m3/s
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
@@ -3425,21 +3204,11 @@ Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{1}=z_{2}\)</span> (horizontal pipe)</p>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">render</span> long 2
-
-A_2= pi*D_2**2/4 #m2
-V_2= Q/A_2 #m/s
-p_2= (p_1/(rho*g)+V_1**2/(2*g)-V_2**2/(2*g))*rho*g #Pa
-p_2_= p_2/1000 #kPa
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
 <summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
