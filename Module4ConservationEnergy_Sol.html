@@ -379,6 +379,41 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-19-laminar-flow-in-pipes">Problems for Lecture 19: Laminar flow in pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reynolds-number">Reynolds number</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Question 2 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Question 3 (*)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laminar-pipe-friction-losses">Laminar pipe friction losses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-text">Question 5 <span class="math notranslate nohighlight">\(\text{(*)(***)}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-20-turbulent-flow-in-pipes">Problems for Lecture 20: Turbulent flow in pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbulent-pipe-friction-losses">Turbulent pipe friction losses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Question 2 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Question 3 (*)(**)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Question 4 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Question 5 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Question 6(***)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbulent-flow-rate">Turbulent flow rate</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Question 7(***)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-diameter">Pipe diameter</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (****)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (***)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -392,7 +427,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="module-4-conservation-of-mass-and-energy">
 <h1>Module 4: Conservation of Mass and Energy<a class="headerlink" href="#module-4-conservation-of-mass-and-energy" title="Link to this heading">#</a></h1>
-<p>The exercises in this module range from lecture 14 to lecture 15.</p>
+<p>The exercises in this module range from lecture 14 to lecture 20.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -412,6 +447,21 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 \end{split}\]</div>
 </div>
 </div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Automatically add &#39;remove-input&#39; tag to all cells</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">notebook</span> <span class="kn">import</span> <span class="n">notebookapp</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Javascript</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">def</span> <span class="nf">add_remove_input_tag</span><span class="p">():</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;notebook&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <section id="problems-for-lecture-14-the-bernoulli-equation">
 <h2>Problems for Lecture 14: The Bernoulli Equation<a class="headerlink" href="#problems-for-lecture-14-the-bernoulli-equation" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
@@ -420,17 +470,7 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 <p>Name each of the terms in the Bernoulli equation (stated below), and describe their interaction in the work-energy interpretation of this equation.</p>
 <div class="math notranslate nohighlight">
 \[H=\frac{p}{\rho g}+\frac{v^2}{2 g}+z\]</div>
-<p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">𝐻 is the total head, or the total available energy within the system.</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{p}{\rho g}\)</span> is the pressure head, representing buoyancy energy per unit weight.</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{v^2}{2 g}\)</span> is the velocity head, representing the kinetic energy per unit weight.</p>
-<p class="sd-card-text">𝑧 is the elevation head, representing the potential energy per unit weight of the fluid.</p>
-<p class="sd-card-text">Pressure and weight forces do work on a fluid to increase its kinetic energy.</p>
-</div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="question-2-r">
 <h3>Question 2 (*)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h3>
@@ -448,14 +488,15 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 <p class="sd-card-text">The pressure head can be calculated with the following equation:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{p}{\gamma}
+pressure_m = \frac{p}{\rho g}
 \]</div>
 <p class="sd-card-text">The velocity head can be calculated with the following equation:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{V^2}{2g}
+velocity_m = \frac{V^2}{2g}
 \]</div>
 <p class="sd-card-text">You can assume the density of water is 1000 kg/m<sup>3</sup></p>
+<p class="sd-card-text">The “m” in pressure_m and velocity_m shows that these are head values expressed in meters.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
@@ -468,12 +509,6 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D &amp;= 0.100 \; \;\textrm{(m)}
-\\[10pt]
-V &amp;= 0.200 \; \;\textrm{(m/s)}
-\\[10pt]
-p &amp;= 120 \; \;\textrm{(kPa)}
-\\[10pt]
 \mathrm{pressure}_{m} &amp;= \frac{ p \cdot 1000 }{ \rho_{water} \cdot g } \\&amp;= \frac{ 120 \cdot 1000 }{ 1000 \cdot 9.810 } \\&amp;= 12.232 \; \;\textrm{(m)}\\[10pt]
 \\[10pt]
 \mathrm{velocity}_{m} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 0.200 \right) ^{ 2 } }{ 2 \cdot 9.810 } \\&amp;= 0.002 \; \;\textrm{(m)}\\[10pt]
@@ -489,51 +524,17 @@ p &amp;= 120 \; \;\textrm{(kPa)}
 <p>For the pipe flow described in question 2, a section of the pipe was elevated by 6 m to avoid an obstruction. Calculate the change in pressure and velocity within the pipe, and justify your answer.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">From the Bernoulli equation we have:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}+z_{A}=\frac{p_B}{\rho g}+\frac{V_{B}^2}{2g}+z_{B}\\
-\end{split}\]</div>
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+ \;61.14 \; kPa \; ; \; the \; velocity \; doesn't \; change
+\)</span></p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The velocity doesn’t change, as this would require a change in discharge and would violate
-the conservation of mass.</p>
-<p class="sd-card-text">The pressure will reduce due to the increase in elevation</p>
-<p class="sd-card-text">Considering that <span class="math notranslate nohighlight">\(z_A=0\)</span> and solving for <span class="math notranslate nohighlight">\(p_B\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-p_B=(\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}-\frac{V_{B}^2}{2g}-z_{B})\rho g
-\]</div>
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use both mass and energy conservation principles in your answer. Note that you can assume that the diameter of the pipe is unchanged in the elevated section.</p>
 </div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{pressure}_{m} &amp;= 12.23 \; \;\textrm{(m)}
-\\[10pt]
-\mathrm{velocity}_{m} &amp;= 0.00 \; \;\textrm{(m)}
-\\[10pt]
-z_{B} &amp;= 6 \; \;\textrm{(m)}
-\\[10pt]
-p_{B} &amp;= \left( \mathrm{pressure}_{m} - z_{B} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 12.23 - 6 \right) \cdot 1000 \cdot 9.81 \\&amp;= 61135.92 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{B_{}} &amp;= \frac{ p_{B} }{ 1000 } \\&amp;= \frac{ 61135.92 }{ 1000 } \\&amp;= 61.14 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="question-4-r">
 <h3>Question 4 (*)[R]<a class="headerlink" href="#question-4-r" title="Link to this heading">#</a></h3>
@@ -554,8 +555,11 @@ a) \; 0.46 \; m
 <p class="sd-card-text">The velocity head can be calculated with the following equation:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{V^2}{2g}
+velocity_m =\frac{V^2}{2g}
 \]</div>
+<p class="sd-card-text">The “m” in velocity_m shows that these are head values expressed in meters.</p>
+<p class="sd-card-text">Estimation Tip:
+Before or after you dive into full calculations, try estimating the velocity head using <span class="math notranslate nohighlight">\(2g \approx 20\)</span>. It’s a useful way to check whether your answer falls within a reasonable range and to gradually build numerical intuition.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
@@ -568,8 +572,6 @@ a) \; 0.46 \; m
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-V &amp;= 3 \; \;\textrm{(m/s)}
-\\[10pt]
 \mathrm{velocity}_{m} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 0.46 \; \;\textrm{(m)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
@@ -604,68 +606,18 @@ b) \; 11.3 \; kPa
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Consider the following equations:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-V=\frac{Q}{A}\\
-velocity_{head}=\frac{V^2}{2g}
-\end{split}\]</div>
+<p class="sd-card-text">To determine the velocity head, you’ll first need to apply mass conservation to calculate the velocity in the pipe.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D &amp;= 0.10 \; \;\textrm{(m)}
-\\[10pt]
-\rho &amp;= 96 \; \;\textrm{(kg/m3)}
-\\[10pt]
-Q &amp;= 0.06 \; \;\textrm{(m3/s)}
-\\[10pt]
-V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.06 }{ 3.14 \cdot \frac{ \left( 0.10 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.64 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-\mathrm{velocity}_{head} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 7.64 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 2.97 \; \;\textrm{(m)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The pressure can be solved from the following equation of the pressure head:</p>
 <div class="math notranslate nohighlight">
-\[\frac{p}{\rho g}\]</div>
+\[pressure_m = \frac{p}{\rho g}\]</div>
+<p class="sd-card-text">The “m” in pressure_m shows that these are head values expressed in meters.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{pressure}_{head} &amp;= 12 \; \;\textrm{(m)}
-\\[10pt]
-p &amp;= \mathrm{pressure}_{head} \cdot \rho \cdot g \\&amp;= 12 \cdot 96 \cdot 9.81 \\&amp;= 11301.12 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{} &amp;= \frac{ p }{ 1000 } \\&amp;= \frac{ 11301.12 }{ 1000 } \\&amp;= 11.30 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="question-6">
 <h3>Question 6 (**)<a class="headerlink" href="#question-6" title="Link to this heading">#</a></h3>
@@ -687,11 +639,8 @@ b) \; 0.0008 \; m^3/s
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The Bernoulli equation can be used between the water in the surface and the free jet.</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{p_{atm}}{\gamma}+\frac{V_{1}^2}{2g}+z_{1}=\frac{p_{jet}}{\gamma}+\frac{V_{2}^2}{2g}+z_{2}
-\]</div>
+<p class="sd-card-text">Apply the Bernoulli equation between a point at the surface of the tank and in the free jet. Assume no energy losses.</p>
+<p class="sd-card-text">Consider whether pressure is atmospheric at either of these points.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -750,11 +699,7 @@ Q_{a} &amp;= V \cdot \pi \cdot \frac{ \left( \frac{ D_{small} }{ 1000 } \right) 
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Use the Torricelli equation:</p>
-<div class="math notranslate nohighlight">
-\[
-V= \sqrt {2gh}
-\]</div>
+<p class="sd-card-text">Use a similar approach to part a, recognising that the elevation of a point at the free surface will have reduced to 0.3 m.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_remove-input tag_hide-output docutils container">
@@ -781,17 +726,21 @@ Q_{b} &amp;= V \cdot \pi \cdot \frac{ \left( \frac{ D_{small} }{ 1000 } \right) 
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To assess whether the steady-flow assumption is reasonable, we need to consider whether the water level in the tank decreases slowly relative to the velocity of the outflow. For that reason, the velocity of the tank should be calculated.If the rate of change in water height is low, this confirms that the steady-flow assumption is valid.</p>
+<p class="sd-card-text">To assess whether the steady-flow assumpt
+ion is reasonable, we need to consider whether the water level in the tank decreases slowly relative to the velocity of the outflow. For that reason, the velocity at which the free surface falls needs to be calculated. You can apply the Continuity equation and a suitable control volume to calculate this.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split}
-Q= V_1*A_1\\
+\[
+Q= V_1*A_1 = V_2*A_2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 A_1= \frac{\pi D^2}{4}
-\end{split}\]</div>
+\]</div>
 </div>
 </details><div class="cell tag_hide-output tag_remove-input docutils container">
 <details class="hide above-output">
@@ -836,43 +785,9 @@ b) \; 4.49 \; kPa
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The discharge can be calculated using:</p>
-<div class="math notranslate nohighlight">
-\[Q=V_{nozzle} A_{nozzle}\]</div>
-<p class="sd-card-text">And the velicity of the pipe is equal to:</p>
-<div class="math notranslate nohighlight">
-\[V_{pipe}= Q/A_{pipe}\]</div>
+<p class="sd-card-text">Apply mass conservation to calculate these quantities.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D_{pipe} &amp;= 1 \; \;\textrm{(m)}
-\\[10pt]
-D_{nozzle} &amp;= 0.200 \; \;\textrm{(m)}
-\\[10pt]
-V_{nozzle} &amp;= 3 \; \;\textrm{(m/s)}
-\\[10pt]
-A_{nozzle} &amp;= \pi \cdot \frac{ \left( D_{nozzle} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.031 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= V_{nozzle} \cdot A_{nozzle} \\&amp;= 3 \cdot 0.031 \\&amp;= 0.094 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-A_{pipe} &amp;= \pi \cdot \frac{ \left( D_{pipe} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 1 \right) ^{ 2 } }{ 4 } \\&amp;= 0.785 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -881,41 +796,10 @@ V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
 \[
 \frac{p_{pipe}}{\gamma}+\frac{V_{pipe}^2}{2g}+z_{pipe}=\frac{p_{nozzle}}{\gamma}+\frac{V_{nozzle}^2}{2g}+z_{nozzle}
 \]</div>
+<p class="sd-card-text">Consider which (if any) of these terms can be cancelled in your calculations.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The assumptions for this problem are the following:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{pipe}=z_{nozzle}\)</span> (horizontal pipe)</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{nozzle}=0 Pa\)</span> (it is exposed to atmospheric pressure)</p>
-</div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-p_{pipe} &amp;= \left( \frac{ \left( V_{nozzle} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{pipe} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 0.12 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 4492.80 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \\&amp;= 4.49 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 7 (c)</strong></p>
-<p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Horizontal pipe, steady flow, incompressible water (and density of 1000 kg/m<sup>3</sup>), no energy losses through nozzle, jet diameter equal to nozzle diameter, uniform flow in both crosssections.</p>
-</div>
-</details><hr class="docutils" />
+</details><p><strong>Question 7 (c)</strong></p>
+<hr class="docutils" />
 </section>
 <section id="question-8-r">
 <h3>Question 8(*)[R]<a class="headerlink" href="#question-8-r" title="Link to this heading">#</a></h3>
@@ -929,12 +813,8 @@ p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We can use Bernoulli equation to calculate the discharge within the pipe:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{p_{atm}}{\gamma}+\frac{V_{1}^2}{2g}+z_{1}=\frac{p_{pipe}}{\gamma}+\frac{V_{2}^2}{2g}+z_{2}
-\]</div>
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the Bernoulli equation to determine the velocity. When calculating the discharge, you may assume that the free jet has the same diameter as the pipe.</p>
 </div>
 </details><p><strong>Solution</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -944,7 +824,7 @@ p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{atm}\)</span>= 0 Pa
 <span class="math notranslate nohighlight">\(V_1\)</span>= is near 0 m/s because the reservoir is large
 <span class="math notranslate nohighlight">\(p_{pipe}\)</span>= 0 Pa because it is exposed to atmospheric pressure</p>
-<p class="sd-card-text">Considering this assumptions, the Toricelli equation can be used</p>
+<p class="sd-card-text">Considering these simplifications, the Bernoulli equation simplifies to the Toricelli equation</p>
 <div class="math notranslate nohighlight">
 \[
 V= \sqrt {2gh}
@@ -983,7 +863,7 @@ Q_{b} &amp;= V \cdot \pi \cdot \frac{ \left( \frac{ D }{ 1000 } \right) ^{ 2 } }
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(
-a) 0.57 \; m^3/s \; ; 0.120 \; m/s \;
+a) 0.057 \; m^3/s \; 
 \)</span></p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(
 b) 8.89 \; m/s \; ; 254.61 \; kPa \; 
@@ -997,36 +877,7 @@ b) 8.89 \; m/s \; ; 254.61 \; kPa \;
 <div class="math notranslate nohighlight">
 \[Q=V_1A_1\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\rho &amp;= 940 \; \;\textrm{(kg/m3)}
-\\[10pt]
-D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 90 }{ 1000 } &amp;= 0.090 \; \;\textrm{(m)}
-\\[10pt]
-p_{1} &amp;= 280 \cdot 1000 &amp;= 280000 \; \;\textrm{(Pa)}
-\\[10pt]
-V_{1} &amp;= 5 \; \;\textrm{(m/s)}
-\\[10pt]
-A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1039,36 +890,7 @@ Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m
 \frac{p_{1}}{\gamma}+\frac{V_{1}^2}{2g}+z_{1}=\frac{p_{2}}{\gamma}+\frac{V_{2}^2}{2g}+z_{2}
 \]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The assumptions for this problem are:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{1}=z_{2}\)</span> (horizontal pipe)</p>
-</div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.09 \right) ^{ 2 } }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{2} &amp;= \frac{ Q }{ A_{2} } \\&amp;= \frac{ 0.06 }{ 0.01 } \\&amp;= 8.89 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-p_{2} &amp;= \left( \frac{ p_{1} }{ \rho \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho \cdot g \\&amp;= \left( \frac{ 280000 }{ 940 \cdot 9.81 } + \frac{ \left( 5 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.89 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 940 \cdot 9.81 \\&amp;= 254614.20 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 254614.20 }{ 1000 } \\&amp;= 254.61 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="question-10">
 <h3>Question 10(***)<a class="headerlink" href="#question-10" title="Link to this heading">#</a></h3>
@@ -1077,21 +899,18 @@ can be expressed as: <span class="math notranslate nohighlight">\(d_B= \frac{V_A
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We can use Bernoulli equation to show that the water depth can be expressed as the equation showed in the question.</p>
+<p class="sd-card-text">Use the Continuity equation to relate the velocities at points A and B:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{p_{A}}{\gamma}+\frac{V_{A}^2}{2g}+z_{A}=\frac{p_{B}}{\gamma}+\frac{V_{B}^2}{2g}+z_{B}
-\]</div>
-<p class="sd-card-text">The assumptions are the following</p>
+\[V_A * (d_A * b) = V_B * (d_B * b)\]</div>
 <div class="math notranslate nohighlight">
-\[
-z_B= 0 m
-\]</div>
-<p class="sd-card-text">The pressure in point 1 and 2 can be expressed with the following equation</p>
+\[V_A * d_A = V_B * d_B\]</div>
+<p class="sd-card-text">Then use this to substitute into the Bernoulli equation:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-p_A= \rho gd_A\\
-p_B=\rho gd_B\\
+\[p_A/γ + V_A^2/(2g) + z_A = p_B/γ + V_B^2/(2g) + z_B\]</div>
+<p class="sd-card-text">Replace the pressure terms using:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p_A = ρ * g * d_A\\
+p_B = ρ * g * d_B
 \end{split}\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
@@ -1144,7 +963,8 @@ d_A +\frac{V_{A}^2}{2g}+z_A= d_B+\frac{V_A^2*d_A^2}{d_B^22g}
 \[\begin{split}
 2g(d_A+1)+V_A^2= \frac {V_A^2d_A^2}{d_B^2}+db*2g\\
 2g(d_A+1-d_B)+V_A^2= \frac {V_A^2d_A^2}{d_B^2}\\
-d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
+d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}\\
+d_B= \frac{V_Ad_A}{\sqrt{V_A^2+2g(d_A+1-d_B)}}
 \end{split}\]</div>
 </div>
 </details></section>
@@ -1172,34 +992,7 @@ d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
 <div class="math notranslate nohighlight">
 \[HGL=\frac{p}{\gamma}+z\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_remove-input tag_hide-output docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D &amp;= 0.10 \; \;\textrm{(m)}
-\\[10pt]
-V &amp;= 0.25 \; \;\textrm{(m/s)}
-\\[10pt]
-z &amp;= 2.50 \; \;\textrm{(m)}
-\\[10pt]
-p &amp;= 120000 \; \;\textrm{(Pa)}
-\\[10pt]
-\mathrm{EGL} &amp;= \frac{ p }{ \rho_{water} \cdot g } + \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } + z \\&amp;= \frac{ 120000 }{ 1000 \cdot 9.81 } + \frac{ \left( 0.25 \right) ^{ 2 } }{ 2 \cdot 9.81 } + 2.50 \\&amp;= 14.74 \; \;\textrm{(m)}\\[10pt]
-\\[10pt]
-\mathrm{HGL} &amp;= \frac{ p }{ \rho_{water} \cdot g } + z \\&amp;= \frac{ 120000 }{ 1000 \cdot 9.81 } + 2.50 \\&amp;= 14.73 \; \;\textrm{(m)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="question-2">
 <h3>Question 2 (*)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h3>
@@ -1274,7 +1067,23 @@ HGL= \frac{p}{\gamma}+z
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" src="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.2.png&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">img</span>
+
+<span class="nn">File C:\ProgramData\anaconda3\Lib\site-packages\PIL\Image.py:3227,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3224</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
+<span class="g g-Whitespace">   </span><span class="mi">3226</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3227</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3228</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">3230</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;figures/14.2.png&#39;
+</pre></div>
+</div>
 </div>
 </details>
 </div>
@@ -1288,7 +1097,23 @@ HGL= \frac{p}{\gamma}+z
 <p>c. Draw the EGL and HGL for this problem.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" src="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.3.png&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">img</span>
+
+<span class="nn">File C:\ProgramData\anaconda3\Lib\site-packages\PIL\Image.py:3227,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3224</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
+<span class="g g-Whitespace">   </span><span class="mi">3226</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3227</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3228</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">3230</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;figures/14.3.png&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1312,36 +1137,7 @@ b) \;-29.4 \; kPa \; (gauge\;pressure)
 <div class="math notranslate nohighlight">
 \[Q=V_3A_3\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-h &amp;= \frac{ 200 }{ 1000 } &amp;= 0.2000 \; \;\textrm{(m)}
-\\[10pt]
-D_{1} &amp;= \frac{ 100 }{ 1000 } &amp;= 0.1000 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.0500 \; \;\textrm{(m)}
-\\[10pt]
-D_{3} &amp;= \frac{ 100 }{ 1000 } &amp;= 0.1000 \; \;\textrm{(m)}
-\\[10pt]
-V_{3} &amp;= \sqrt { 2 \cdot g \cdot h } \\&amp;= \sqrt { 2 \cdot 9.8100 \cdot 0.2000 } \\&amp;= 1.9809 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-A_{3} &amp;= \pi \cdot \frac{ \left( D_{3} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.1000 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0079 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= V_{3} \cdot A_{3} \\&amp;= 1.9809 \cdot 0.0079 \\&amp;= 0.0156 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 3 (b)</strong></p>
+</details><p><strong>Question 3 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1354,30 +1150,7 @@ Q &amp;= V_{3} \cdot A_{3} \\&amp;= 1.9809 \cdot 0.0079 \\&amp;= 0.0156 \; \;\te
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_1=0 Pa\)</span>  (atmosferic presure)</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(V_1= 0 m/s\)</span> (because it is a reservoir)</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-V_{2} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.02 }{ 3.14 \cdot \frac{ \left( 0.05 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.92 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-z_{1} &amp;= 0.20 \; \;\textrm{(m)}
-\\[10pt]
-p_{2} &amp;= \left( z_{1} - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 0.20 - \frac{ \left( 7.92 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= -29430.00 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ -29430.00 }{ 1000 } \\&amp;= -29.43 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 3 (c)</strong></p>
+</details><p><strong>Question 3 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1392,19 +1165,7 @@ EGL= \frac{p}{\gamma}+\frac{V^2}{2g} +z
 HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<img alt="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" src="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" />
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id2">
 <h3>Question 4 (**)[R]<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
@@ -1413,9 +1174,6 @@ HGL= \frac{p}{\gamma}+z
 <p>b. Using your solution to part (a), calculate the pressure and velocity within the 200mm diameter section of the pipe.</p>
 <p>c. State any assumptions you have made within your answers to (a) and (b)</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" src="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" />
-</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1441,15 +1199,6 @@ HGL= \frac{p}{\gamma}+z
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<img alt="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" src="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" />
-</div>
-</details>
 </div>
 <p><strong>Question 4 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1567,28 +1316,7 @@ c) \;1.72 \; m/s
 <span class="math notranslate nohighlight">\(z_1=z_2=0 m\)</span> (horizontal channel)<br />
 <span class="math notranslate nohighlight">\(V_1=0 Pa\)</span> (given in the question)</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-V_{1} &amp;= 0 \; \;\textrm{(m/s)}
-\\[10pt]
-V_{2} &amp;= 2 \; \;\textrm{(m/s)}
-\\[10pt]
-p_{2} &amp;= \frac{ \left( \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g }{ 1000 } \\&amp;= \frac{ \left( \frac{ \left( 2 \right) ^{ 2 } }{ 2 \cdot 9.8 } \right) \cdot 1000 \cdot 9.8 }{ 1000 } \\&amp;= 2.0 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1597,22 +1325,6 @@ p_{2} &amp;= \frac{ \left( \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \ri
 \[p=\rho gh\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-h &amp;= p_{2} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } \\&amp;= 2.000 \cdot \frac{ 1000 }{ 1000 \cdot 9.810 } \\&amp;= 0.204 \; \;\textrm{(m)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
 <p><strong>Question 5 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1621,33 +1333,8 @@ h &amp;= p_{2} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } \\&amp;= 2.000 \cdot 
 <div class="math notranslate nohighlight">
 \[V=\sqrt{2gh}\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-h &amp;= 0.15 \; \;\textrm{(m)}
-\\[10pt]
-V &amp;= \sqrt { 2 \cdot g \cdot h } \\&amp;= \sqrt { 2 \cdot 9.81 \cdot 0.15 } \\&amp;= 1.72 \; \;\textrm{(m/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 5 (d)</strong></p>
-<p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The water level in the pitot tube represents the EGL, while the water level in the channel represents the HGL.</p>
-</div>
-</details><hr class="docutils" />
+</details><p><strong>Question 5 (d)</strong></p>
+<hr class="docutils" />
 </section>
 <section id="question-6-r">
 <h3>Question 6 (**)[R]<a class="headerlink" href="#question-6-r" title="Link to this heading">#</a></h3>
@@ -1765,15 +1452,6 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<img alt="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" src="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" />
-</div>
-</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1783,9 +1461,6 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 <p>a. If the pressure in the 200 mm section of the pipe is 350 kPa, calculate the pressures in the other two sections of pipe.</p>
 <p>b. Draw the EGL and HGL for this problem.</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" src="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" />
-</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1812,46 +1487,7 @@ a) \;319.78 \; kPa\;,\;178.72\; kPa
 <div class="math notranslate nohighlight">
 \[V= \frac{Q}{A}\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-V_{1} &amp;= 3 \; \;\textrm{(m/s)}
-\\[10pt]
-D_{1} &amp;= \frac{ 200 }{ 1000 } &amp;= 0.20 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.12 \; \;\textrm{(m)}
-\\[10pt]
-D_{3} &amp;= \frac{ 80 }{ 1000 } &amp;= 0.08 \; \;\textrm{(m)}
-\\[10pt]
-p_{1} &amp;= 350000 \; \;\textrm{(Pa)}
-\\[10pt]
-Q &amp;= V_{1} \cdot \left( \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \right) \\&amp;= 3 \cdot \left( 3.14 \cdot \frac{ \left( 0.20 \right) ^{ 2 } }{ 4 } \right) \\&amp;= 0.09 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-V_{2} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.09 }{ 3.14 \cdot \frac{ \left( 0.12 \right) ^{ 2 } }{ 4 } } \\&amp;= 8.33 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-p_{2} &amp;= \left( \frac{ p_{1} }{ \rho_{water} \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ 350000 }{ 1000 \cdot 9.81 } + \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.33 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 319777.78 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 319777.78 }{ 1000 } \\&amp;= 319.78 \; \;\textrm{(kPa)}\\[10pt]
-\\[10pt]
-V_{3} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{3} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.09 }{ 3.14 \cdot \frac{ \left( 0.08 \right) ^{ 2 } }{ 4 } } \\&amp;= 18.75 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-p_{3} &amp;= \left( \frac{ p_{2} }{ \rho_{water} \cdot g } + \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{3} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ 319777.78 }{ 1000 \cdot 9.81 } + \frac{ \left( 8.33 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 18.75 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 178718.75 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{3_{}} &amp;= \frac{ p_{3} }{ 1000 } \\&amp;= \frac{ 178718.75 }{ 1000 } \\&amp;= 178.72 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1866,19 +1502,7 @@ EGL= \frac{p}{\gamma}+\frac{V^2}{2g} +z
 HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<img alt="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" src="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" />
-</div>
-</details>
-</div>
-</section>
+</details></section>
 </section>
 <section id="problems-for-lecture-16-flow-measurement">
 <h2>Problems for Lecture 16: Flow Measurement<a class="headerlink" href="#problems-for-lecture-16-flow-measurement" title="Link to this heading">#</a></h2>
@@ -1898,45 +1522,7 @@ HGL= \frac{p}{\gamma}+z
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">To calculate the discharge coefficient (𝐶𝑑), we need to compare the actual discharge with the theoretical discharge obtained from the Venturi meter.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[
-C_d= \frac{Q_a}{Q_t}
-\]</div>
-<p class="sd-card-text">The actual discharge flow can be calcualted as</p>
-<div class="math notranslate nohighlight">
-\[
-Q= \frac{Vol}{t}
-\]</div>
-</div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q_{t} &amp;= 24 \; \;\textrm{(L/s)}
-\\[10pt]
-V &amp;= 4 \; \;\textrm{(m3)}
-\\[10pt]
-t &amp;= 3 \; \;\textrm{(min)}
-\\[10pt]
-Q_{a} &amp;= \frac{ V \cdot 1000 }{ t \cdot 60 } \\&amp;= \frac{ 4 \cdot 1000 }{ 3 \cdot 60 } \\&amp;= 22.222 \; \;\textrm{(L/s)}\\[10pt]
-\\[10pt]
-C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 22.222 }{ 24 } \\&amp;= 0.926  \\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id4">
 <h3>Question 2 (*)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -1977,12 +1563,6 @@ Q_a= AV
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-Q_{t} &amp;= \frac{ 3 }{ 1000 } &amp;= 0.003 \; \;\textrm{(m3/s)}
-\\[10pt]
-A &amp;= 0.400 \; \;\textrm{(m2)}
-\\[10pt]
-V &amp;= \frac{ 4 }{ 1000 } &amp;= 0.004 \; \;\textrm{(m/s)}
-\\[10pt]
 Q_{a} &amp;= A \cdot V \\&amp;= 0.400 \cdot 0.004 \\&amp;= 0.002 \; \;\textrm{(m3/s)}\\[10pt]
 \\[10pt]
 C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 0.002 }{ 0.003 } \\&amp;= 0.533  \\[10pt]
@@ -2008,56 +1588,7 @@ C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 0.002 }{ 0.003 } \\&amp;= 0
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The water level in the piezometer is the GHL and the water level in the pitot tube is the EGL. The difference between those two water levels (EGL and HGL) is the velocity head.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Calculate the Velocity from the Pitot Tube Measurement:</p>
-<div class="math notranslate nohighlight">
-\[
-V= \sqrt {2g\Delta h}
-\]</div>
-<p class="sd-card-text">An then the actual discharge can be calculated:</p>
-<div class="math notranslate nohighlight">
-\[
-Q_a= VA
-\]</div>
-<p class="sd-card-text">Additionally, the following change of units must be performed:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-h= mm to m \\
-Q_a= L/s to m^3/s
-\end{split}\]</div>
-</div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q_{t} &amp;= 13 \; \;\textrm{(L/s)}
-\\[10pt]
-h &amp;= 70 \; \;\textrm{(mm)}
-\\[10pt]
-D &amp;= 0.100 \; \;\textrm{(m)}
-\\[10pt]
-V &amp;= \sqrt { 2 \cdot g \cdot \left( \frac{ h }{ 1000 } \right) } \\&amp;= \sqrt { 2 \cdot 9.810 \cdot \left( \frac{ 70 }{ 1000 } \right) } \\&amp;= 1.172 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-Q_{a} &amp;= V \cdot \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 1.172 \cdot 3.142 \cdot \frac{ \left( 0.100 \right) ^{ 2 } }{ 4 } \\&amp;= 0.009 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-Q_{a_{m}} &amp;= Q_{a} \cdot 1000 \\&amp;= 0.009 \cdot 1000 \\&amp;= 9.204 \; \;\textrm{(L/s)}\\[10pt]
-\\[10pt]
-C_{d} &amp;= \frac{ Q_{a_{m}} }{ Q_{t} } \\&amp;= \frac{ 9.204 }{ 13 } \\&amp;= 0.708  \\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id5">
 <h3>Question 4 (**)[R]<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
@@ -2074,67 +1605,7 @@ C_{d} &amp;= \frac{ Q_{a_{m}} }{ Q_{t} } \\&amp;= \frac{ 9.204 }{ 13 } \\&amp;= 
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Use a combination of the Bernoulli equation and the continuity equation. The cross-sectional area is given by the water depth multiplied by the channel width</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Conservation of energy:</p>
-<div class="math notranslate nohighlight">
-\[E_1=E_2\]</div>
-<div class="math notranslate nohighlight">
-\[y_1+ \frac{V_1^2}{2g}=y_2+ \frac{V_2^2}{2g}\]</div>
-<p class="sd-card-text">Conservation of mass:</p>
-<div class="math notranslate nohighlight">
-\[Q_1=Q_2\]</div>
-<div class="math notranslate nohighlight">
-\[V_1 \cdot A_1=V_2 \cdot A_2\]</div>
-<div class="math notranslate nohighlight">
-\[V_1 \cdot b \cdot y_1=V_2 \cdot b \cdot y_2\]</div>
-<div class="math notranslate nohighlight">
-\[ V= \frac {Q}{A}\]</div>
-<p class="sd-card-text">Reeplace the velocity equation in the Bernoulli eqution:</p>
-<div class="math notranslate nohighlight">
-\[y_1+ \frac{\frac {Q^2}{A_1^2}}{2g}=y_2+ \frac{\frac {Q^2}{A_2^2}}{2g}\]</div>
-<p class="sd-card-text">The area is:</p>
-<div class="math notranslate nohighlight">
-\[
-A= b \cdot y 
-\]</div>
-<p class="sd-card-text">Substituting the area and rearranging the equation</p>
-<div class="math notranslate nohighlight">
-\[
-Q= b \cdot \sqrt {2 \cdot g \cdot (y_1 -y_2)} \cdot (\frac {y_1 \cdot y_2}{\sqrt {y_1 ^2 - y_2^2}})
-\]</div>
-</div>
-</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-b &amp;= 2 \; \;\textrm{(m)}
-\\[10pt]
-z &amp;= 1 \; \;\textrm{(m)}
-\\[10pt]
-y_{1} &amp;= 2.500 \; \;\textrm{(m)}
-\\[10pt]
-y_{2} &amp;= 0.500 \; \;\textrm{(m)}
-\\[10pt]
-A_{1} &amp;= b \cdot y_{1} \\&amp;= 2 \cdot 2.500 \\&amp;= 5.000 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-A_{2} &amp;= b \cdot y_{2} \\&amp;= 2 \cdot 0.500 \\&amp;= 1.000 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q_{t} &amp;= b \cdot \sqrt { 2 \cdot g \cdot \left( y_{1} - y_{2} \right) } \cdot \left( \frac{ y_{1} \cdot y_{2} }{ \sqrt { \left( y_{1} \right) ^{ 2 } - \left( y_{2} \right) ^{ 2 } } } \right) \\&amp;= 2 \cdot \sqrt { 2 \cdot 9.810 \cdot \left( 2.500 - 0.500 \right) } \cdot \left( \frac{ 2.500 \cdot 0.500 }{ \sqrt { \left( 2.500 \right) ^{ 2 } - \left( 0.500 \right) ^{ 2 } } } \right) \\&amp;= 6.393 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id6">
 <h3>Question 5 (**)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
@@ -2170,14 +1641,6 @@ Q= b \cdot \sqrt {2 \cdot g \cdot (y_1 -y_2)} \cdot (\frac {y_1 \cdot y_2}{\sqrt
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-b &amp;= 1.200 \; \;\textrm{(m)}
-\\[10pt]
-y_{1} &amp;= 1.200 \; \;\textrm{(m)}
-\\[10pt]
-y_{2} &amp;= 0.400 \; \;\textrm{(m)}
-\\[10pt]
-Q_{a} &amp;= 1.600 \; \;\textrm{(m3/s)}
-\\[10pt]
 Q_{t} &amp;= b \cdot \sqrt { 2 \cdot g \cdot \left( y_{1} - y_{2} \right) } \cdot \left( \frac{ y_{1} \cdot y_{2} }{ \sqrt { \left( y_{1} \right) ^{ 2 } - \left( y_{2} \right) ^{ 2 } } } \right) \\&amp;= 1.200 \cdot \sqrt { 2 \cdot 9.810 \cdot \left( 1.200 - 0.400 \right) } \cdot \left( \frac{ 1.200 \cdot 0.400 }{ \sqrt { \left( 1.200 \right) ^{ 2 } - \left( 0.400 \right) ^{ 2 } } } \right) \\&amp;= 2.017 \; \;\textrm{(m3/s)}\\[10pt]
 \\[10pt]
 C_{d} &amp;= 0.793 \; 
@@ -2214,12 +1677,6 @@ C_{d} &amp;= 0.793 \;
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.050 \; \;\textrm{(m)}
-\\[10pt]
-h_{p} &amp;= 0.050 \; \;\textrm{(m)}
-\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.050 \right) ^{ 2 } }{ 4 } \\&amp;= 0.002 \; \;\textrm{(m2)}\\[10pt]
@@ -2248,40 +1705,7 @@ through the Venturi Meter.</p>
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The difference between this and the last exercise is that the last one is with piezometers and this one with differential manometer. For that reason, you can not use <span class="math notranslate nohighlight">\(\Delta h\)</span> because that is the height of the mercury. The first step is to change <span class="math notranslate nohighlight">\(\Delta h\)</span> to <span class="math notranslate nohighlight">\(\Delta p\)</span>.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D_{1} &amp;= 120 \; \;\textrm{(mm)}
-\\[10pt]
-D_{2} &amp;= 50 \; \;\textrm{(mm)}
-\\[10pt]
-\mathrm{SG} &amp;= 13.500 \; 
-\\[10pt]
-\Delta_{h} &amp;= 20 \; \;\textrm{(mm)}
-\\[10pt]
-A_{1} &amp;= \pi \cdot \frac{ \left( \frac{ D_{1} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( \frac{ 120 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-A_{2} &amp;= \pi \cdot \frac{ \left( \frac{ D_{2} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( \frac{ 50 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.002 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-\rho_{Hg} &amp;= \mathrm{SG} \cdot \rho_{water} \\&amp;= 13.500 \cdot 1000 \\&amp;= 13500.000 \; \;\textrm{(kg/m3)}\\[10pt]
-\\[10pt]
-\Delta_{p} &amp;= \left( \rho_{Hg} - \rho_{water} \right) \cdot g \cdot \left( \frac{ \Delta_{h} }{ 1000 } \right) \\&amp;= \left( 13500.000 - 1000 \right) \cdot 9.810 \cdot \left( \frac{ 20 }{ 1000 } \right) \\&amp;= 2452.500 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-Q &amp;= \sqrt { 2 \cdot \left( \frac{ \Delta_{p} }{ \rho_{water} } \right) } \cdot \left( \frac{ A_{1} \cdot A_{2} }{ \sqrt { \left( A_{1} \right) ^{ 2 } - \left( A_{2} \right) ^{ 2 } } } \right) \\&amp;= \sqrt { 2 \cdot \left( \frac{ 2452.500 }{ 1000 } \right) } \cdot \left( \frac{ 0.011 \cdot 0.002 }{ \sqrt { \left( 0.011 \right) ^{ 2 } - \left( 0.002 \right) ^{ 2 } } } \right) \\&amp;= 0.004 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id9">
 <h3>Question 8 (**)[R]<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
@@ -2313,14 +1737,6 @@ discharge in the Venturi Meter.</p>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{1} &amp;= \frac{ 180 }{ 1000 } &amp;= 0.18 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 60 }{ 1000 } &amp;= 0.06 \; \;\textrm{(m)}
-\\[10pt]
-h &amp;= \frac{ 70 }{ 1000 } &amp;= 0.07 \; \;\textrm{(m)}
-\\[10pt]
-C_{d} &amp;= 0.95 \; 
-\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.18 \right) ^{ 2 } }{ 4 } \\&amp;= 0.03 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.06 \right) ^{ 2 } }{ 4 } \\&amp;= 0.00 \; \;\textrm{(m2)}\\[10pt]
@@ -2353,61 +1769,13 @@ Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.95 \cdot 3.33 \\&amp;= 3.17 \; \;\text
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Calculate the theoretical discharge with the Equation for flow rate through an orifice. Then use the discharge coefficient to calculate the actual discharge.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D_{o} &amp;= 30 \; \;\textrm{(mm)}
-\\[10pt]
-D_{p} &amp;= 80 \; \;\textrm{(mm)}
-\\[10pt]
-\Delta_{h} &amp;= 300 \; \;\textrm{(mm)}
-\\[10pt]
-C_{d} &amp;= 0.6000 \; 
-\\[10pt]
-A_{1} &amp;= \pi \cdot \frac{ \left( \frac{ D_{p} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( \frac{ 80 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.0050 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-A_{2} &amp;= \pi \cdot \frac{ \left( \frac{ D_{o} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( \frac{ 30 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.0007 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q_{t} &amp;= \sqrt { 2 \cdot g \cdot \frac{ \Delta_{h} }{ 1000 } } \cdot \left( \frac{ A_{1} \cdot A_{2} }{ \sqrt { \left( A_{1} \right) ^{ 2 } - \left( A_{2} \right) ^{ 2 } } } \right) \\&amp;= \sqrt { 2 \cdot 9.8100 \cdot \frac{ 300 }{ 1000 } } \cdot \left( \frac{ 0.0050 \cdot 0.0007 }{ \sqrt { \left( 0.0050 \right) ^{ 2 } - \left( 0.0007 \right) ^{ 2 } } } \right) \\&amp;= 0.0017 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.6000 \cdot 0.0017 \\&amp;= 0.0010 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The main source of energy loss when water flows through an orifice plate is due to the sudden contraction and expansion of the flow as it passes through the orifice. This energy loss is associated with flow separation at the edges of the orifice, leading to turbulent eddies and vortex formation.</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The main source of the energy loss is the flow separation from the sharp edge of the Orifice Plate. The piezometer locations are shown on the sketch below. Experimental  evidence shows that the pressure in the separation region is the same as the pressure at point 2 (the constriction in the orifice plate itself), which is why we can use these in a similar manner to those in the pipe and throat of a Venturi Meter.</p>
-</div>
-</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<img alt="_images/24b6ff5308e1911f3292c713bb078415b32f7490ad3d59c04cd62b7469ba831d.png" src="_images/24b6ff5308e1911f3292c713bb078415b32f7490ad3d59c04cd62b7469ba831d.png" />
-</div>
-</details>
-</div>
-<hr class="docutils" />
+</details><hr class="docutils" />
 </section>
 <section id="id11">
 <h3>Question 10 (***)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
@@ -2437,16 +1805,6 @@ Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.6000 \cdot 0.0017 \\&amp;= 0.0010 \; \
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.1200 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.0500 \; \;\textrm{(m)}
-\\[10pt]
-\Delta_{h} &amp;= \frac{ 80 }{ 1000 } &amp;= 0.0800 \; \;\textrm{(m)}
-\\[10pt]
-V_{jet} &amp;= 3 \; \;\textrm{(m/s)}
-\\[10pt]
-D_{jet} &amp;= 0.0200 \; \;\textrm{(m)}
-\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.1200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0113 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0500 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0020 \; \;\textrm{(m2)}\\[10pt]
@@ -2512,9 +1870,6 @@ p_{1} &amp;= p_{2} + \Delta_{p} \\&amp;= 3690.810 + 784.800 \\&amp;= 4475.610 \;
 <h4>Question 1 (*)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <p>Water flows up pipe AB (5 m long, 40 mm diameter) and along BC (3 m long, 30 mm diameter) at 1.75 L/s. If the measured pressure at A is 250 kPa, and the pipe friction loss between A and C is 1.45 m, find the pressure at C. Neglect local energy losses caused by the diameter change and bend at B.</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" src="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" />
-</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -2546,54 +1901,7 @@ z= [m]
 V= Q/A
 \]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D_{AB} &amp;= 40 \; \;\textrm{(mm)}
-\\[10pt]
-L_{AB} &amp;= 5 \; \;\textrm{(m)}
-\\[10pt]
-D_{BC} &amp;= 30 \; \;\textrm{(mm)}
-\\[10pt]
-L_{BC} &amp;= 3 \; \;\textrm{(m)}
-\\[10pt]
-Q &amp;= 1.750 \; \;\textrm{(L/s)}
-\\[10pt]
-p_{A} &amp;= 250 \; \;\textrm{(kPa)}
-\\[10pt]
-h_{f_{AC}} &amp;= 1.450 \; \;\textrm{(m)}
-\\[10pt]
-Q_{m} &amp;= 0.002 \; \;\textrm{(m3/s)}
-\\[10pt]
-D_{AB_{m}} &amp;= 0.040 \; \;\textrm{(m)}
-\\[10pt]
-D_{BC_{m}} &amp;= 0.030 \; \;\textrm{(m)}
-\\[10pt]
-A_{AB} &amp;= \pi \cdot \frac{ \left( D_{AB_{m}} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.040 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{A} &amp;= \frac{ Q_{m} }{ A_{AB} } \\&amp;= \frac{ 0.002 }{ 0.001 } \\&amp;= 1.393 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-A_{BC} &amp;= \pi \cdot \frac{ \left( D_{BC_{m}} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.030 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{C} &amp;= \frac{ Q_{m} }{ A_{BC} } \\&amp;= \frac{ 0.002 }{ 0.001 } \\&amp;= 2.476 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-p_{C} &amp;= \left( p_{A} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } + \frac{ \left( V_{A} \right) ^{ 2 } }{ 2 \cdot g } - h_{f_{AC}} - \frac{ \left( V_{C} \right) ^{ 2 } }{ 2 \cdot g } - L_{AB} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 250 \cdot \frac{ 1000 }{ 1000 \cdot 9.810 } + \frac{ \left( 1.393 \right) ^{ 2 } }{ 2 \cdot 9.810 } - 1.450 - \frac{ \left( 2.476 \right) ^{ 2 } }{ 2 \cdot 9.810 } - 5 \right) \cdot 1000 \cdot 9.810 \\&amp;= 184630.522 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{C_{}} &amp;= \frac{ p_{C} }{ 1000 } \\&amp;= \frac{ 184630.522 }{ 1000 } \\&amp;= 184.631 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-</section>
+</details></section>
 <hr class="docutils" />
 <section id="id13">
 <h4>Question 2 (*)[R]<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
@@ -2672,39 +1980,7 @@ the velocity doesn’t change</p>
 p_B=(\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}-\frac{V_{B}^2}{2g}-z_{B})\rho g
 \]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The velocity doesn’t change, as this would require a change in discharge and would violate
-the conservation of mass.</p>
-<p class="sd-card-text">The pressure will reduce due to the increase in elevation</p>
-</div>
-</details><div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{pressure}_{m} &amp;= 12.23 \; \;\textrm{(m)}
-\\[10pt]
-\mathrm{velocity}_{m} &amp;= 0.00 \; \;\textrm{(m)}
-\\[10pt]
-z_{B} &amp;= 6 \; \;\textrm{(m)}
-\\[10pt]
-p_{B} &amp;= \left( \mathrm{pressure}_{m} - z_{B} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 12.23 - 6 \right) \cdot 1000 \cdot 9.81 \\&amp;= 61135.92 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{B_{}} &amp;= \frac{ p_{B} }{ 1000 } \\&amp;= \frac{ 61135.92 }{ 1000 } \\&amp;= 61.14 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-</section>
+</details></section>
 <hr class="docutils" />
 <section id="id15">
 <h4>Question 4 (*)[R]<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
@@ -2783,32 +2059,7 @@ V=\frac{Q}{A}\\
 velocity_{head}=\frac{V^2}{2g}
 \end{split}\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D &amp;= 0.10 \; \;\textrm{(m)}
-\\[10pt]
-\rho &amp;= 96 \; \;\textrm{(kg/m3)}
-\\[10pt]
-Q &amp;= 0.06 \; \;\textrm{(m3/s)}
-\\[10pt]
-V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.06 }{ 3.14 \cdot \frac{ \left( 0.10 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.64 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-\mathrm{velocity}_{head} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 7.64 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 2.97 \; \;\textrm{(m)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2816,28 +2067,7 @@ V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= 
 <div class="math notranslate nohighlight">
 \[\frac{p}{\rho g}\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mathrm{pressure}_{head} &amp;= 12 \; \;\textrm{(m)}
-\\[10pt]
-p &amp;= \mathrm{pressure}_{head} \cdot \rho \cdot g \\&amp;= 12 \cdot 96 \cdot 9.81 \\&amp;= 11301.12 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{} &amp;= \frac{ p }{ 1000 } \\&amp;= \frac{ 11301.12 }{ 1000 } \\&amp;= 11.30 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-</section>
+</details></section>
 <hr class="docutils" />
 <section id="id17">
 <h4>Question 6 (**)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
@@ -3013,36 +2243,7 @@ b) \;4.49 \; kPa
 <div class="math notranslate nohighlight">
 \[V_{pipe}= Q/A_{pipe}\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-D_{pipe} &amp;= 1 \; \;\textrm{(m)}
-\\[10pt]
-D_{nozzle} &amp;= 0.200 \; \;\textrm{(m)}
-\\[10pt]
-V_{nozzle} &amp;= 3 \; \;\textrm{(m/s)}
-\\[10pt]
-A_{nozzle} &amp;= \pi \cdot \frac{ \left( D_{nozzle} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.031 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= V_{nozzle} \cdot A_{nozzle} \\&amp;= 3 \cdot 0.031 \\&amp;= 0.094 \; \;\textrm{(m3/s)}\\[10pt]
-\\[10pt]
-A_{pipe} &amp;= \pi \cdot \frac{ \left( D_{pipe} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 1 \right) ^{ 2 } }{ 4 } \\&amp;= 0.785 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -3055,33 +2256,8 @@ V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{pipe}=z_{nozzle}\)</span> (horizontal pipe)</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{nozzle}=0 Pa\)</span> (it is exposed to atmospheric pressure)</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-p_{pipe} &amp;= \left( \frac{ \left( V_{nozzle} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{pipe} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 0.12 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 4492.80 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \\&amp;= 4.49 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 7 (c)</strong></p>
-<p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Horizontal pipe, steady flow, incompressible water (and density of 1000 kg/m<sup>3</sup>), no energy losses through nozzle, jet diameter equal to nozzle diameter, uniform flow in both crosssections.</p>
-</div>
-</details></section>
+</details><p><strong>Question 7 (c)</strong></p>
+</section>
 <hr class="docutils" />
 <section id="id19">
 <h4>Question 8(*)[R]<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
@@ -3159,36 +2335,7 @@ b) \;8.89 \; m/s\;,\; 254.61 \;kPa
 <div class="math notranslate nohighlight">
 \[Q=V_1A_1\]</div>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\rho &amp;= 940 \; \;\textrm{(kg/m3)}
-\\[10pt]
-D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
-\\[10pt]
-D_{2} &amp;= \frac{ 90 }{ 1000 } &amp;= 0.090 \; \;\textrm{(m)}
-\\[10pt]
-p_{1} &amp;= 280 \cdot 1000 &amp;= 280000 \; \;\textrm{(Pa)}
-\\[10pt]
-V_{1} &amp;= 5 \; \;\textrm{(m/s)}
-\\[10pt]
-A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m3/s)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-<p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -3203,30 +2350,7 @@ Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m
 <p class="sd-card-text">Where the assumptions are:</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{1}=z_{2}\)</span> (horizontal pipe)</p>
 </div>
-</details><p><strong>Solution</strong></p>
-<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
-<details class="hide above-output">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell outputs</span>
-<span class="expanded">Hide code cell outputs</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.09 \right) ^{ 2 } }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m2)}\\[10pt]
-\\[10pt]
-V_{2} &amp;= \frac{ Q }{ A_{2} } \\&amp;= \frac{ 0.06 }{ 0.01 } \\&amp;= 8.89 \; \;\textrm{(m/s)}\\[10pt]
-\\[10pt]
-p_{2} &amp;= \left( \frac{ p_{1} }{ \rho \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho \cdot g \\&amp;= \left( \frac{ 280000 }{ 940 \cdot 9.81 } + \frac{ \left( 5 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.89 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 940 \cdot 9.81 \\&amp;= 254614.20 \; \;\textrm{(Pa)}\\[10pt]
-\\[10pt]
-p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 254614.20 }{ 1000 } \\&amp;= 254.61 \; \;\textrm{(kPa)}\\[10pt]
-\end{aligned}
-\end{split}\]</div>
-</div>
-</details>
-</div>
-</section>
+</details></section>
 <hr class="docutils" />
 <section id="id21">
 <h4>Question 10(***)<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
@@ -3304,6 +2428,895 @@ d_A +\frac{V_{A}^2}{2g}+z_A= d_B+\frac{V_A^2*d_A^2}{d_B^22g}
 2g(d_A+1-d_B)+V_A^2= \frac {V_A^2d_A^2}{d_B^2}\\
 d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
 \end{split}\]</div>
+</div>
+</details></section>
+</section>
+</section>
+<section id="problems-for-lecture-19-laminar-flow-in-pipes">
+<h2>Problems for Lecture 19: Laminar flow in pipes<a class="headerlink" href="#problems-for-lecture-19-laminar-flow-in-pipes" title="Link to this heading">#</a></h2>
+<section id="reynolds-number">
+<h3>Reynolds number<a class="headerlink" href="#reynolds-number" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="id22">
+<h4>Question 1 (*)<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<p>Crude oil with a kinematic viscosity of 1 x 10-3 m<sup>2</sup>/s flows through a 100 mm pipe at 5 m/s. Calculate the Reynolds number of the flow. Will the flow be laminar or turbulent?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+\;500 \;;\;laminar
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The reynolds number can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+Re= \frac{VD}{\nu}
+\]</div>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="id23">
+<h4>Question 2 (*)<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p>Water at 15 °C flows through a 100 mm pipe at 5 m/s. Calculate the Reynolds number of the flow. Will the flow be laminar or turbulent?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+ \;438 \;, \; 596 \;;\;turbulent
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In Table A.1 the viscosity of water at 15 °C is 1.14 x10<sup>-6</sup> m<sup>2</sup>/s</p>
+<div class="math notranslate nohighlight">
+\[
+Re= \frac{VD}{\nu}
+\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 100 }{ 1000 } &amp;= 0 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+T &amp;= 15 \; \;\textrm{(°C)}
+\\[10pt]
+\nu &amp;= 1.14 \cdot \left( 10 \right) ^{ -6 } &amp;= 0 \; \;\textrm{(m2/s)}
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D }{ \nu } \\&amp;= 5 \cdot \frac{ 0 }{ 0 } \\&amp;= 438596  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">As Re is &gt; 4000, the flow is turbulent.</p>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="id24">
+<h4>Question 3 (*)[R]<a class="headerlink" href="#id24" title="Link to this heading">#</a></h4>
+<p>Water at 15 °C flows through a 100 mm pipe. What is the maximum velocity and flow rate for the flow to be laminar?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+ \;0.023 \; m/s \; ; \; 0.179 \;L/s
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In Table A.1 the viscosity of water at 15 °C is 1.14 x10<sup>-6</sup> m<sup>2</sup>/s</p>
+<div class="math notranslate nohighlight">
+\[
+Re= \frac{VD}{\nu}
+\]</div>
+</div>
+</details></section>
+</section>
+<section id="laminar-pipe-friction-losses">
+<h3>Laminar pipe friction losses<a class="headerlink" href="#laminar-pipe-friction-losses" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-4">
+<h4>Question 4 (*)<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h4>
+<p>A pipe with diameter 100 mm and length 1000 m carries water at 15 °C. Calculate:</p>
+<p>a. The maximum flow rate to which laminar flow will occur in the pipe.</p>
+<p>b. The head loss in the pipe at this flowrate.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;0.18 \; L/s
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;0.0085 \; m
+\)</span></p>
+</div>
+</details><p><strong>Question 4 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In Table A.1 the viscosity of water at 15 °C is 1.14 x10<sup>-6</sup> m<sup>2</sup>/s</p>
+<p class="sd-card-text">To calculate the maximum flow rate consider the following equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Re= \frac{VD}{\nu}\\
+V=\frac{Re*\nu}{D}\\
+Q=VA
+\end{split}\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 100 }{ 1000 } &amp;= 0.10 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= 2000 \cdot \frac{ \nu }{ D } \\&amp;= 2000 \cdot \frac{ 0.00 }{ 0.10 } \\&amp;= 0.02 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.10 \right) ^{ 2 } }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V \cdot A \\&amp;= 0.02 \cdot 0.01 \\&amp;= 0.00 \; \;\textrm{(M3/s)}\\[10pt]
+\\[10pt]
+Q_{} &amp;= Q \cdot 1000 \\&amp;= 0.00 \cdot 1000 \\&amp;= 0.18 \; \;\textrm{(L/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 4 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">As it is laminar flow we can calculate the head loss with following equation:</p>
+<div class="math notranslate nohighlight">
+\[
+h_f = 32  \nu  V  \frac{L}{g  \left(\frac{D}{1000}\right)^2}
+\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h_{f} &amp;= 32 \cdot \nu \cdot V \cdot \frac{ L }{ g \cdot \left( D \right) ^{ 2 } } \\&amp;= 32 \cdot 0.0000 \cdot 0.0228 \cdot \frac{ 1000 }{ 9.8100 \cdot \left( 0.1000 \right) ^{ 2 } } \\&amp;= 0.0085 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-5-text">
+<h4>Question 5 <span class="math notranslate nohighlight">\(\text{(*)(***)}\)</span><a class="headerlink" href="#question-5-text" title="Link to this heading">#</a></h4>
+<p>Oil with μ = 4.8 x 10-2 kg/ m and ρ = 800 kg/m<sup>3</sup> flows through a 25 mm diameter pipe with a mean velocity of 0.3 m/s. Check that the flow in the pipe is laminar and then calculate (a) the head loss in a pipe with a length of 45 m, and (b) the maximum velocity in the pipe cross section. {4.23 m of oil; 0.6 m/s}</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;4.23 \; m \;of \;oil
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \; 0.6 \;m/s
+\)</span></p>
+</div>
+</details><p><strong>Question 5 (a)</strong><span class="math notranslate nohighlight">\(\text{(*)}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To determine the head loss and maximum velocity, it is essential to first identify the type of flow using the Reynolds equation</p>
+<div class="math notranslate nohighlight">
+\[
+Re= \frac{VD}{\nu}
+\]</div>
+<p class="sd-card-text">For laminar flow: Re &lt; 2000</p>
+<div class="math notranslate nohighlight">
+\[ 
+f=\frac {64}{Re}
+\]</div>
+<p class="sd-card-text">For turbulent flow Re &gt; 4000</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\sqrt {f}}= -2 log (\frac{5.74}{Re^{0.9}} + \frac {e}{3.7D})
+\]</div>
+<p class="sd-card-text">The head loss is</p>
+<div class="math notranslate nohighlight">
+\[ 
+h_f= fL \frac {V^2}{2gD}
+\]</div>
+</div>
+</details><p><strong>Question 5 (b)</strong><span class="math notranslate nohighlight">\(\text{(***)}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To find the maximum velocity the following equation is used:</p>
+<div class="math notranslate nohighlight">
+\[
+u_r=-\frac{1}{4\mu}\frac{dp*}{dL}(R^{2}-r^{2})
+\]</div>
+<p class="sd-card-text">As the maximum velocity ocurrs at the pipe centreline:</p>
+<div class="math notranslate nohighlight">
+\[
+r=0
+\]</div>
+</div>
+</details></section>
+</section>
+</section>
+<section id="problems-for-lecture-20-turbulent-flow-in-pipes">
+<h2>Problems for Lecture 20: Turbulent flow in pipes<a class="headerlink" href="#problems-for-lecture-20-turbulent-flow-in-pipes" title="Link to this heading">#</a></h2>
+<section id="turbulent-pipe-friction-losses">
+<h3>Turbulent pipe friction losses<a class="headerlink" href="#turbulent-pipe-friction-losses" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="id25">
+<h4>Question 1 (*)<a class="headerlink" href="#id25" title="Link to this heading">#</a></h4>
+<p>Calculate the head loss in the pipes below for Reynolds numbers of 1 500 and 150 000</p>
+<p>a)	A 100 mm internal diameter pipe with a length of 1000 m and an absolute roughness of 0.01 mm.</p>
+<p>b)	A 200 mm internal diameter pipe with a length of 1000 m and an absolute roughness of 0.1 mm.</p>
+<p>c)	A 150 mm internal diameter pipe with a length of 2000 m and an absolute roughness of 0.01 mm.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;6.36 \; × \; 10^{-3} \;m \; ; \; 25.60 \; m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;0.8 \; × \; 10^{-3} \;m \; ; \; 3.63 \; m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;3.77 \; × \; 10^{-3} \;m \; ; \; 14.96 \; m
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A Reynolds number of 1500 means the flow is laminar, while a Reynolds number of 150000 is for turbulent flow. For that reason, for each question two answers must be provided.</p>
+<p class="sd-card-text">The first step is to calculate the flow velocity with Reynolds equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Re= \frac{VD}{\nu}\\
+V= \frac {Re\nu}{D}
+\end{split}\]</div>
+<p class="sd-card-text">Once the flow velocity is determined, the friction factor and head loss can be calculated using the following equations, depending on the type of flow.</p>
+<p class="sd-card-text">The equation for laminar flow is:</p>
+<div class="math notranslate nohighlight">
+\[ 
+f=\frac {64}{Re}
+\]</div>
+<p class="sd-card-text">The equation for turbulent flow is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\sqrt {f}}= -2 log (\frac{5.74}{Re^{0.9}} + \frac {e}{3.7D})
+\]</div>
+<p class="sd-card-text">The head loss is</p>
+<div class="math notranslate nohighlight">
+\[ 
+h_f= fL \frac {V^2}{2gD}
+\]</div>
+</div>
+</details><p><strong>Question 1 (a)</strong></p>
+<p><strong>Question 1 (b)</strong></p>
+<p><strong>Question 1 (c)</strong></p>
+</section>
+<hr class="docutils" />
+<section id="id26">
+<h4>Question 2 (**)<a class="headerlink" href="#id26" title="Link to this heading">#</a></h4>
+<p>Determine i) the flow regime (laminar, transitional, smooth turbulent, transitional turbulent or rough turbulent) and ii) the headloss for each of the systems described below:</p>
+<p>a. A pipe with diameter 200 mm carries water at 10 °C with a velocity of 0.01 m/s. The pipe has an absolute roughness of 0.2 mm and a length of 1000 m.</p>
+<p>b. A pipe with diameter 200 mm carries water at 10 °C with a velocity of 0.1 m/s. The pipe has an absolute roughness of 0.2 mm and a length of 1000 m.</p>
+<p>c. A pipe with diameter 200 mm carries water at 10 °C with a velocity of 10 m/s. The pipe has an absolute roughness of 0.2 mm and a length of 1000 m.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;laminar \;0.0011 \; m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;transitional\; turbulent \;0.074 \; m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;505.86 \; m
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The flow regime can be determined with the Reynolds number and the Moody diagram considering:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Re= \frac{VD}{\nu}\\
+Relative Roughness= \frac{e}{D}\\
+\end{split}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(e\)</span> is the pipe absolute roughness and <span class="math notranslate nohighlight">\(\nu\)</span> can be found in Table A.1.</p>
+<p class="sd-card-text">If the flow regime is laminar the head loss can be calculated using the following equation:</p>
+<div class="math notranslate nohighlight">
+\[
+h_f = 32  \nu  V  \frac{L}{g  \left(\frac{D}{1000}\right)^2}
+\]</div>
+<p class="sd-card-text">for the others flow regimes the head loss can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+h_f = f  L  \frac{V^2}{2  g  D}
+\]</div>
+<p class="sd-card-text">where:</p>
+<div class="math notranslate nohighlight">
+\[
+f = \left( \frac{1}{-1.8  \log_{10} \left( \left( \frac{\varepsilon}{3.7  D} \right)^{1.11} + \frac{6.9}{Re} \right)} \right)^2
+\]</div>
+</div>
+</details><p><strong>Question 2 (a)</strong></p>
+<p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.2000000 \; \;\textrm{(m)}
+\\[10pt]
+T &amp;= 10 \; \;\textrm{(°C)}
+\\[10pt]
+V &amp;= 0.0100000 \; \;\textrm{(m/s)}
+\\[10pt]
+e &amp;= 0.0002000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+\nu &amp;= 0.0000013 \; \;\textrm{(m2/s)}
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D }{ \nu } \\&amp;= 0.0100000 \cdot \frac{ 0.2000000 }{ 0.0000013 } \\&amp;= 1531.3935681 \; \;\textrm{(laminar)}\\[10pt]
+\\[10pt]
+h_{f} &amp;= \frac{ 32 \cdot \nu \cdot V \cdot L }{ g \cdot \left( D \right) ^{ 2 } } \\&amp;= \frac{ 32 \cdot 0.0000013 \cdot 0.0100000 \cdot 1000 }{ 9.8100000 \cdot \left( 0.2000000 \right) ^{ 2 } } \\&amp;= 0.0010650 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 2 (b)</strong></p>
+<p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.200 \; \;\textrm{(m)}
+\\[10pt]
+T &amp;= 10 \; \;\textrm{(°C)}
+\\[10pt]
+V &amp;= 0.100 \; \;\textrm{(m/s)}
+\\[10pt]
+e &amp;= 0.000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D }{ \nu } \\&amp;= 0.100 \cdot \frac{ 0.200 }{ 0.000 } \\&amp;= 15313.936  \\[10pt]
+\\[10pt]
+\mathrm{RelativeRoughness} &amp;= \frac{ e }{ D } \\&amp;= \frac{ 0.000 }{ 0.200 } \\&amp;= 0.001  \\[10pt]
+\\[10pt]
+f &amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ e }{ 3.7 \cdot D } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ \mathrm{Re} } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ 0.000 }{ 3.7 \cdot 0.200 } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ 15313.936 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.029  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.029 \cdot 1000 \cdot \frac{ \left( 0.100 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.200 } \\&amp;= 0.074 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 2 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.200 \; \;\textrm{(m)}
+\\[10pt]
+T &amp;= 10 \; \;\textrm{(°C)}
+\\[10pt]
+V &amp;= 10 \; \;\textrm{(m/s)}
+\\[10pt]
+e &amp;= 0.000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D }{ \nu } \\&amp;= 10 \cdot \frac{ 0.200 }{ 0.000 } \\&amp;= 1531393.568 \; \;\textrm{(turbulent)}\\[10pt]
+\\[10pt]
+f &amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ e }{ 3.7 \cdot D } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ \mathrm{Re} } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ 0.000 }{ 3.7 \cdot 0.200 } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ 1531393.568 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.020  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.020 \cdot 1000 \cdot \frac{ \left( 10 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.200 } \\&amp;= 505.861 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id27">
+<h4>Question 3 (*)(**)[R]<a class="headerlink" href="#id27" title="Link to this heading">#</a></h4>
+<p>A pipe with diameter 150 mm has an absolute roughness of 0.2 mm and a length of 500 m carries water at 15 °C.</p>
+<p>a)	*What is the maximum flow rate at which the water flow in the pipe will be laminar, and what will the head loss through the pipe be at this flow rate?</p>
+<p>b)	*If the velocity of water in the pipe is 2 m/s, what will the head loss in the pipe be?</p>
+<p>c)	**If the Reynolds number of the flow in the pipe is 100 000, what will the head loss of the pipe be per kilometer of pipe?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;0.27 \; L/s \; ; \; 0.001 \;m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;15 \; m
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;2.3 \; m
+\)</span></p>
+</div>
+</details><p><strong>Question 3 (a)</strong><span class="math notranslate nohighlight">\(\; \text{Laminar Re= 2000}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The first step is calculated the flow velocity using Reynolds equation:</p>
+<div class="math notranslate nohighlight">
+\[ 
+V= \frac {Re\nu}{D}
+\]</div>
+<p class="sd-card-text">The flow rate is</p>
+<div class="math notranslate nohighlight">
+\[Q=V*A\]</div>
+<p class="sd-card-text">And the head loss in laminar flow is:</p>
+<div class="math notranslate nohighlight">
+\[ 
+h_f= 32vV \frac {L}{gD^2}
+\]</div>
+</div>
+</details><p><strong>Question 3 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The friction loss for turbulent flow is</p>
+<div class="math notranslate nohighlight">
+\[
+f=(\frac {1}{-2log_{10}(\frac {5.47}{Re^{0.9}}+ \frac {e}{3.7D})})^2
+\]</div>
+<p class="sd-card-text">The head loss is</p>
+<div class="math notranslate nohighlight">
+\[
+h_f= fL\frac {V^2}{2gD}
+\]</div>
+</div>
+</details><p><strong>Question 3 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The first step is calculate the flow velocity with the Reynolds number</p>
+<div class="math notranslate nohighlight">
+\[ V=\frac {Re\nu}{D}\]</div>
+<p class="sd-card-text">Once the velocity is calculated, the friction factor and head loss can be determined using the following equations applicable to turbulent flow</p>
+<div class="math notranslate nohighlight">
+\[
+f=(\frac {1}{-2log_{10}(\frac {5.47}{Re^{0.9}}+ \frac {e}{3.7D})})^2
+\]</div>
+<p class="sd-card-text">The head loss is</p>
+<div class="math notranslate nohighlight">
+\[
+h_f= fL\frac {V^2}{2gD}
+\]</div>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="id28">
+<h4>Question 4 (**)<a class="headerlink" href="#id28" title="Link to this heading">#</a></h4>
+<p>Select any pipe diameter between 20 and 500 mm. Assume a pipe roughness of 0.2 mm
+and a length of 1 km. Ensure that you cover the full range from laminar to rough turbulent
+flow and calculate both laminar and turbulent head loss in the transitional zone. Plot the
+following parameters as a function of the Reynolds number:<br />
+• Velocity<br />
+• Flow rate<br />
+• Darcy-Weisbach friction factor f (for turbulent flow only - plot it on a copy of the
+Moody diagram)<br />
+• Pipe head loss</p>
+<p>Indicate the following areas on your graphs:<br />
+• Laminar, transitional and turbulent flow<br />
+• Smooth turbulent, transitional turbulent and rough turbulent flow</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We can assum <span class="math notranslate nohighlight">\(\nu=1.14*10^{-6} (m/s^2)\)</span>, select different diameters within the given range and then calculate the parameters using the following equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q=V*A\\
+\end{split}\]</div>
+<p class="sd-card-text">for laminar flow:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f=64/Re\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_f= \frac{fLV^2}{2gD}\\
+\end{split}\]</div>
+<p class="sd-card-text">for turbulent flow:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f=(\frac{1}{-2 log (\frac{5.74}{Re^{0.9}} + \frac {e}{3.7D})})^2\\
+\end{split}\]</div>
+<p class="sd-card-text">Alternatively <span class="math notranslate nohighlight">\(f\)</span> can be estimated using the Moody diagram.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_f= \frac{fLV^2}{2gD}\\
+\end{split}\]</div>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="id29">
+<h4>Question 5 (**)<a class="headerlink" href="#id29" title="Link to this heading">#</a></h4>
+<p>A 200 mm diameter reinforced siphon is drawing water at 20°C from the reservoir as shown below. The friction factor of the siphon f = 0.023 and its length from the inlet to Point 2 is equal to 3 m. Assume standard sea level atmospheric conditions and that the siphon between points 2 and 3 hangs vertically down. Calculate the minimum value of z at which cavitation in the system will occur. What will the system flow rate be?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+ \;30.86 \; m \; ;\; 342.4 \; L/s
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint for Velocity 2</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To calculate the minimum value of z and the flow rate the Bernoulli equation needs to be used for points 1 and 2 and then point one and three.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_1}{\gamma}+z_1+\frac{V_1^2}{2g}=\frac{p_2}{\gamma}+z_2+\frac{V_2^2}{2g}+h_f
+\]</div>
+<p class="sd-card-text">In the reservoir it can be considered that there is atmospheric pressure and that the velocity is zero.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}=\frac{p_{vap}}{\gamma}+z_2+\frac{V_2^2}{2g}+\frac{f*V_2^2*L}{2*g*D}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}=\frac{p_{vap}}{\gamma}+z_2+\frac{V_2^2}{2*9.81}+\frac{0.023*V_2^2*3}{2*9.81*0.2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}=\frac{p_{vap}}{\gamma}+z_2+ 0.0510V_2^2+0.0176V_2^2
+\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Bernoulli between points one and three</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}+z_1+\frac{V_1^2}{2g}=\frac{P_{3}}{\gamma}+z_3+\frac{V_3^2}{2g}+h_f
+\]</div>
+<p class="sd-card-text">At the end of the pipe there is also atmospheric pressure. Velocity in point two and three is the same.</p>
+<div class="math notranslate nohighlight">
+\[
+0=z_3+\frac{V_3^2}{2g}+\frac{0.023*V_3^2*L_T}{2*9.81*0.2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L_T = 3+2+z_3\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0=z_3+\frac{V_3^2}{2*9.81}+\frac{0.023*V_3^2*(5+z_3)}{2*9.81*0.2}\\
+\end{split}\]</div>
+<p class="sd-card-text">Doing every term separately:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{V_3^2}{2*9.81}= \frac{10.89^2}{2*9.81} =6.055 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{0.023*V_3^2*(5+z_3)}{2*9.81*0.2}=\frac{0.023*10.89^2*(5)}{2*9.81*0.2}= 3.482 
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{0.023*V_3^2*(5+z_3)}{2*9.81*0.2}=\frac{0.023*10.89^2*(z_3)}{2*9.81*0.2}= 0.692*z_3\\
+\end{split}\]</div>
+<p class="sd-card-text">At the end we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-z+6.055 + 3.482+ 0.296*z=0\\
+z= \frac {9.537}{0.309}
+\end{split}\]</div>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="id30">
+<h4>Question 6(***)[R]<a class="headerlink" href="#id30" title="Link to this heading">#</a></h4>
+<p>If the diameter of a pipe is doubled, what effect does this have on the flow rate
+for a given headloss if the flow is</p>
+<p>a) laminar and<br />
+b) rough turbulent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;increase \;flow \; by \; a \; ratio \; of\;16
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;5.7 
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To see the effect of diameter on the flow rate given a headloss, we must write the headloss in terms of the diameter and flow rate, i.e., replacing velocity with:</p>
+<div class="math notranslate nohighlight">
+\[V=\frac{Q}{\frac{\pi D^2}{4}}\]</div>
+<p class="sd-card-text">For laminar flow:</p>
+<div class="math notranslate nohighlight">
+\[
+h_f= \frac{32\nu VL}{gD^2}
+\]</div>
+<p class="sd-card-text">For turbulent flow:</p>
+<div class="math notranslate nohighlight">
+\[
+h_f= \frac{fLV^2}{2gD}
+\]</div>
+</div>
+</details><p><strong>Question 6 (a)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_f= \frac{32\nu VL}{gD^2}\\
+= \frac{32\nu (\frac{Q}{A})L}{gD^2}\\
+= \frac{32\nu (\frac{Q}{\frac{\pi D^2}{4}})L}{gD^2}\\
+= \frac{32\nu 4QL}{\pi gD^4}\\
+\end{split}\]</div>
+<p class="sd-card-text">If the head loss is given, the flow rate is proportonial to:</p>
+<div class="math notranslate nohighlight">
+\[
+Q \propto D^4
+\]</div>
+<p class="sd-card-text">If the diameter is double, the flow rate will increase by a ratio of 16</p>
+<div class="math notranslate nohighlight">
+\[
+Q \propto 2^4=16
+\]</div>
+</div>
+</details><p><strong>Question 6 (b)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_f= \frac{fLV^2}{2gD}\\
+= \frac{fL(\frac{Q}{A})^2}{2gD}\\
+= \frac{fL(\frac{Q}{\frac{\pi D^2}{4}})^2}{2gD}\\
+= \frac{fLQ^2}{2gD(\frac{\pi D^2}{4})^2}\\
+= \frac{fLQ^2}{2gD^5\frac{\pi^2}{16}}\\
+\end{split}\]</div>
+<p class="sd-card-text">If the head loss is given, the flow rate is proportonial to:</p>
+<div class="math notranslate nohighlight">
+\[
+Q \propto \sqrt{D^5}
+\]</div>
+<p class="sd-card-text">If the diameter is double, the flow rate will increase by a ratio of 5.7</p>
+<div class="math notranslate nohighlight">
+\[
+Q \propto \sqrt{2^5}=5.6568
+\]</div>
+</div>
+</details></section>
+</section>
+<section id="turbulent-flow-rate">
+<h3>Turbulent flow rate<a class="headerlink" href="#turbulent-flow-rate" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="id31">
+<h4>Question 7(***)<a class="headerlink" href="#id31" title="Link to this heading">#</a></h4>
+<p>The system shown below has a pipe diameter of 350 mm, a friction coefficient f = 0.016. The distances BC is 12 m, DE is 920 m and <span class="math notranslate nohighlight">\( \Delta z\)</span> is 48 m. Find the maximum theoretical flow rate if water at 15 °C is pumped in the system at an altitude of 1000 m above sea level. Point C is 6 m above the lower water surface. Work from basic principles and assume f remains constant.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/14752e47ec9a40c51ad800b2817be029920e0000152131c0ad75155d92ab4aa9.png" src="_images/14752e47ec9a40c51ad800b2817be029920e0000152131c0ad75155d92ab4aa9.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+\;0.59 \; m^3/s
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Table A.1, water in 15°C the <span class="math notranslate nohighlight">\(\frac{p_v}{\gamma}\)</span>= 0.17 m</p>
+<p class="sd-card-text">Table A.3 for 1000 m elevation <span class="math notranslate nohighlight">\(p_{atm}\)</span>= 89.876 kPa abs</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}=89.9 /9.81= 9.16 m
+\]</div>
+<p class="sd-card-text">Using Bernoulli equation between water surface A to pump intake C using absolute pressure heads when <span class="math notranslate nohighlight">\(p_C=p_v\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}+z_1+\frac{V_1^2}{2g}=\frac{p_{3}}{\gamma}+z_c+\frac{V_3^2}{2g}+h_f
+\]</div>
+<p class="sd-card-text">The velocity in those to points is the same:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{atm}}{\gamma}+\frac{V^2}{2g}=\frac{p_{v}}{\gamma}+z_c+\frac{V^2}{2g}+\frac {fLV^2}{2gD}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+9.16=0.17+6+\frac{V^2}{2g}+\frac {0.016*12V^2}{2*9.81*0.35}
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+9.16-6-0.17 =\frac{V^2}{2g}(0.549+1)\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+2.99= 1.549\frac{V^2}{2g}
+\]</div>
+</div>
+</details></section>
+</section>
+<section id="pipe-diameter">
+<h3>Pipe diameter<a class="headerlink" href="#pipe-diameter" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="question-8">
+<h4>Question 8 (****)<a class="headerlink" href="#question-8" title="Link to this heading">#</a></h4>
+<p>Calculate the flow rate through a 160 mm diameter pipe with length 2000 m and absolute roughness 0.01 mm if the head loss in the pipe is 35 m. In what turbulent flow zone will this flow fall? Use water at 15°C {38.0 l/s, transitional turbulent}</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+ \;38.0 \; l/s \;, \;transitional \;turbulent
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">As the relative roughness is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{e}{D}=\frac{0.00001 m}{0.16 m}=6.25*10^{-5}
+\]</div>
+<p class="sd-card-text">From the Moddy diagram,</p>
+<div class="math notranslate nohighlight">
+\[
+0.011&lt;f&lt;0.04
+\]</div>
+<p class="sd-card-text">We select one value of f from the range, then we calculate the following until f doesn’t change:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+V_1= (\frac{2gDh_f}{fL})^{0.5}\\
+Re_1=\frac{VD}{\nu}\\
+f_2=(\frac{1}{-2 log (\frac{5.74}{Re^{0.9}} + \frac {e}{3.7D})})^2\\
+\end{split}\]</div>
+<p class="sd-card-text">Once we have found f, we can calculate the flow rate as <span class="math notranslate nohighlight">\(Q=VA\)</span></p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.16000 \; \;\textrm{(m)}
+ &amp;L &amp;= 2000 \; \;\textrm{(m)}
+ &amp;e &amp;= 0.00001 \; \;\textrm{(m)}
+\\[10pt]
+ h_{f} &amp;= 35 \; \;\textrm{(m)}
+ &amp;T &amp;= 15 \; \;\textrm{(°C)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iteration: 1 , f1: 0.0153 , V1: 2.235 , Re1: 313651.5 , f2: 0.015 , V2: 1.916 , Re2: 268918.4 , f3: 0.0153246 , df: 0.000360659
+iteration: 2 , f1: 0.0154 , V1: 1.893 , Re1: 265735.1 , f2: 0.0154 , V2: 1.892 , Re2: 265485.2 , f3: 0.0153558 , df: 2.2861e-06
+iteration: 3 , f1: 0.0154 , V1: 1.891 , Re1: 265465.4 , f2: 0.0154 , V2: 1.891 , Re2: 265463.9 , f3: 0.015356 , df: 1.43e-08
+iteration: 4 , f1: 0.0154 , V1: 1.891 , Re1: 265463.8 , f2: 0.0154 , V2: 1.891 , Re2: 265463.7 , f3: 0.015356 , df: 1e-10
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.16 \right) ^{ 2 } }{ 4 } \\&amp;= 0.02 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{2} \cdot A \\&amp;= 1.89 \cdot 0.02 \\&amp;= 0.04 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{} &amp;= Q \cdot 1000 \\&amp;= 0.04 \cdot 1000 \\&amp;= 38.03 \; \;\textrm{(L/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+<hr class="docutils" />
+<section id="question-9">
+<h4>Question 9 (***)<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h4>
+<p>A steel pipe (e = 0.065 mm) is 4 200 m long and is to convey oil (ν = 5.2 x 10-5 m2/s) at 300 L/s from a reservoir with a surface elevation of 247 m to one with a surface elevation of 156 m. What pipe diameter is required? {392 mm}</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+\;392 \; mm
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is an iterative process to find D. Using the following equations:</p>
+<p class="sd-card-text">For turbulent flow</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\sqrt {f}}= -2 log (\frac{5.74}{Re^{0.9}} + \frac {e}{3.7D})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+h_f= \frac {fLV^2}{2gD}
+\]</div>
 </div>
 </details></section>
 </section>
@@ -3413,6 +3426,41 @@ d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Question 8(*)[R]</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Question 9 (**)[R]</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Question 10(***)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-19-laminar-flow-in-pipes">Problems for Lecture 19: Laminar flow in pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reynolds-number">Reynolds number</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Question 2 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Question 3 (*)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laminar-pipe-friction-losses">Laminar pipe friction losses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5-text">Question 5 <span class="math notranslate nohighlight">\(\text{(*)(***)}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-20-turbulent-flow-in-pipes">Problems for Lecture 20: Turbulent flow in pipes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbulent-pipe-friction-losses">Turbulent pipe friction losses</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Question 1 (*)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Question 2 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Question 3 (*)(**)[R]</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Question 4 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Question 5 (**)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Question 6(***)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbulent-flow-rate">Turbulent flow rate</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Question 7(***)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-diameter">Pipe diameter</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (****)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9 (***)</a></li>
 </ul>
 </li>
 </ul>

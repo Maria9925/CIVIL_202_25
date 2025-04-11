@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 721, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#Automatically add 'remove-input' tag to all cells
+
+from notebook import notebookapp
+from IPython.display import display, Javascript
+
+def add_remove_input_tag():
+    display(Javascript('''
+        var cells = Jupyter.notebook.get_cells();
+        cells.forEach(function(cell) {
+            cell.metadata.tags = cell.metadata.tags || [];
+            if (cell.metadata.tags.indexOf('remove-input') === -1) {
+                cell.metadata.tags.push('remove-input');
+            }
+        });
+        Jupyter.notebook.save_notebook();
+    '''))
+
+add_remove_input_tag()
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[4], line 3[0m
+[0;32m      1[0m [38;5;66;03m#Automatically add 'remove-input' tag to all cells[39;00m
+[1;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mnotebook[39;00m [38;5;28;01mimport[39;00m notebookapp
+[0;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m display, Javascript
+[0;32m      6[0m [38;5;28;01mdef[39;00m [38;5;21madd_remove_input_tag[39m():
+
+[1;31mModuleNotFoundError[0m: No module named 'notebook'
+
