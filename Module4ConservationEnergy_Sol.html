@@ -447,21 +447,6 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 \end{split}\]</div>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Automatically add &#39;remove-input&#39; tag to all cells</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">notebook</span> <span class="kn">import</span> <span class="n">notebookapp</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Javascript</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">def</span> <span class="nf">add_remove_input_tag</span><span class="p">():</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;notebook&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <section id="problems-for-lecture-14-the-bernoulli-equation">
 <h2>Problems for Lecture 14: The Bernoulli Equation<a class="headerlink" href="#problems-for-lecture-14-the-bernoulli-equation" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
@@ -509,6 +494,12 @@ velocity_m = \frac{V^2}{2g}
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+D &amp;= 0.100 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= 0.200 \; \;\textrm{(m/s)}
+\\[10pt]
+p &amp;= 120 \; \;\textrm{(kPa)}
+\\[10pt]
 \mathrm{pressure}_{m} &amp;= \frac{ p \cdot 1000 }{ \rho_{water} \cdot g } \\&amp;= \frac{ 120 \cdot 1000 }{ 1000 \cdot 9.810 } \\&amp;= 12.232 \; \;\textrm{(m)}\\[10pt]
 \\[10pt]
 \mathrm{velocity}_{m} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 0.200 \right) ^{ 2 } }{ 2 \cdot 9.810 } \\&amp;= 0.002 \; \;\textrm{(m)}\\[10pt]
@@ -572,6 +563,8 @@ Before or after you dive into full calculations, try estimating the velocity hea
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+V &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
 \mathrm{velocity}_{m} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 0.46 \; \;\textrm{(m)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
@@ -1067,23 +1060,7 @@ HGL= \frac{p}{\gamma}+z
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.2.png&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">img</span>
-
-<span class="nn">File C:\ProgramData\anaconda3\Lib\site-packages\PIL\Image.py:3227,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3224</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
-<span class="g g-Whitespace">   </span><span class="mi">3226</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3227</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3228</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">3230</span> <span class="k">try</span><span class="p">:</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;figures/14.2.png&#39;
-</pre></div>
-</div>
+<img alt="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" src="_images/68845b96fc5b48d16f554950c94fe0a748fb39475543f5d8f5a1ad4094aee920.png" />
 </div>
 </details>
 </div>
@@ -1097,23 +1074,7 @@ HGL= \frac{p}{\gamma}+z
 <p>c. Draw the EGL and HGL for this problem.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/14.3.png&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">img</span>
-
-<span class="nn">File C:\ProgramData\anaconda3\Lib\site-packages\PIL\Image.py:3227,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3224</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
-<span class="g g-Whitespace">   </span><span class="mi">3226</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3227</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3228</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">3230</span> <span class="k">try</span><span class="p">:</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;figures/14.3.png&#39;
-</pre></div>
-</div>
+<img alt="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" src="_images/1c3ade8ad965d66ae97b39184fa2dc20d7f9077f46ab5a16254b4d14362da2d3.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1174,6 +1135,9 @@ HGL= \frac{p}{\gamma}+z
 <p>b. Using your solution to part (a), calculate the pressure and velocity within the 200mm diameter section of the pipe.</p>
 <p>c. State any assumptions you have made within your answers to (a) and (b)</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" src="_images/23da47db736a28c0d2e6d60bbeb4d52be9dc8fd004611daf8a1fa445923fef85.png" />
+</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1199,6 +1163,15 @@ HGL= \frac{p}{\gamma}+z
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" src="_images/37144bc45eda95c175fa3ab8c9bb11d9f0dd3108693b893a766d27b72a5f5b17.png" />
+</div>
+</details>
 </div>
 <p><strong>Question 4 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1452,6 +1425,15 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 </div>
 </details><p><strong>Solution</strong></p>
 <div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" src="_images/1a674d08e4d4bd62f82d049737ebca4bc5cc7cc16c7307892c2126cdfc79e4cf.png" />
+</div>
+</details>
 </div>
 <hr class="docutils" />
 </section>
@@ -1461,6 +1443,9 @@ EGL= \frac{p}{\gamma} + \frac{V^2}{2g}+ z
 <p>a. If the pressure in the 200 mm section of the pipe is 350 kPa, calculate the pressures in the other two sections of pipe.</p>
 <p>b. Draw the EGL and HGL for this problem.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" src="_images/f7cba3b6e73120918a181f555485bf8bfb8bffca68438151d6818c45e30fd58b.png" />
+</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1563,6 +1548,12 @@ Q_a= AV
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+Q_{t} &amp;= \frac{ 3 }{ 1000 } &amp;= 0.003 \; \;\textrm{(m3/s)}
+\\[10pt]
+A &amp;= 0.400 \; \;\textrm{(m2)}
+\\[10pt]
+V &amp;= \frac{ 4 }{ 1000 } &amp;= 0.004 \; \;\textrm{(m/s)}
+\\[10pt]
 Q_{a} &amp;= A \cdot V \\&amp;= 0.400 \cdot 0.004 \\&amp;= 0.002 \; \;\textrm{(m3/s)}\\[10pt]
 \\[10pt]
 C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 0.002 }{ 0.003 } \\&amp;= 0.533  \\[10pt]
@@ -1641,6 +1632,14 @@ Q= b \cdot \sqrt {2 \cdot g \cdot (y_1 -y_2)} \cdot (\frac {y_1 \cdot y_2}{\sqrt
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+b &amp;= 1.200 \; \;\textrm{(m)}
+\\[10pt]
+y_{1} &amp;= 1.200 \; \;\textrm{(m)}
+\\[10pt]
+y_{2} &amp;= 0.400 \; \;\textrm{(m)}
+\\[10pt]
+Q_{a} &amp;= 1.600 \; \;\textrm{(m3/s)}
+\\[10pt]
 Q_{t} &amp;= b \cdot \sqrt { 2 \cdot g \cdot \left( y_{1} - y_{2} \right) } \cdot \left( \frac{ y_{1} \cdot y_{2} }{ \sqrt { \left( y_{1} \right) ^{ 2 } - \left( y_{2} \right) ^{ 2 } } } \right) \\&amp;= 1.200 \cdot \sqrt { 2 \cdot 9.810 \cdot \left( 1.200 - 0.400 \right) } \cdot \left( \frac{ 1.200 \cdot 0.400 }{ \sqrt { \left( 1.200 \right) ^{ 2 } - \left( 0.400 \right) ^{ 2 } } } \right) \\&amp;= 2.017 \; \;\textrm{(m3/s)}\\[10pt]
 \\[10pt]
 C_{d} &amp;= 0.793 \; 
@@ -1677,6 +1676,12 @@ C_{d} &amp;= 0.793 \;
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.050 \; \;\textrm{(m)}
+\\[10pt]
+h_{p} &amp;= 0.050 \; \;\textrm{(m)}
+\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.050 \right) ^{ 2 } }{ 4 } \\&amp;= 0.002 \; \;\textrm{(m2)}\\[10pt]
@@ -1737,6 +1742,14 @@ discharge in the Venturi Meter.</p>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+D_{1} &amp;= \frac{ 180 }{ 1000 } &amp;= 0.18 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 60 }{ 1000 } &amp;= 0.06 \; \;\textrm{(m)}
+\\[10pt]
+h &amp;= \frac{ 70 }{ 1000 } &amp;= 0.07 \; \;\textrm{(m)}
+\\[10pt]
+C_{d} &amp;= 0.95 \; 
+\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.18 \right) ^{ 2 } }{ 4 } \\&amp;= 0.03 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.06 \right) ^{ 2 } }{ 4 } \\&amp;= 0.00 \; \;\textrm{(m2)}\\[10pt]
@@ -1805,6 +1818,16 @@ Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.95 \cdot 3.33 \\&amp;= 3.17 \; \;\text
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
+D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.1200 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.0500 \; \;\textrm{(m)}
+\\[10pt]
+\Delta_{h} &amp;= \frac{ 80 }{ 1000 } &amp;= 0.0800 \; \;\textrm{(m)}
+\\[10pt]
+V_{jet} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{jet} &amp;= 0.0200 \; \;\textrm{(m)}
+\\[10pt]
 A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.1200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0113 \; \;\textrm{(m2)}\\[10pt]
 \\[10pt]
 A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0500 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0020 \; \;\textrm{(m2)}\\[10pt]
@@ -1870,6 +1893,9 @@ p_{1} &amp;= p_{2} + \Delta_{p} \\&amp;= 3690.810 + 784.800 \\&amp;= 4475.610 \;
 <h4>Question 1 (*)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <p>Water flows up pipe AB (5 m long, 40 mm diameter) and along BC (3 m long, 30 mm diameter) at 1.75 L/s. If the measured pressure at A is 250 kPa, and the pipe friction loss between A and C is 1.45 m, find the pressure at C. Neglect local energy losses caused by the diameter change and bend at B.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" src="_images/4045aa5006423e04cd20de7c27e444f4083a4781ddb79d93a39062099f9a53fe.png" />
+</div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -3155,7 +3181,7 @@ Q \propto \sqrt{2^5}=5.6568
 <p>The system shown below has a pipe diameter of 350 mm, a friction coefficient f = 0.016. The distances BC is 12 m, DE is 920 m and <span class="math notranslate nohighlight">\( \Delta z\)</span> is 48 m. Find the maximum theoretical flow rate if water at 15 °C is pumped in the system at an altitude of 1000 m above sea level. Point C is 6 m above the lower water surface. Work from basic principles and assume f remains constant.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/14752e47ec9a40c51ad800b2817be029920e0000152131c0ad75155d92ab4aa9.png" src="_images/14752e47ec9a40c51ad800b2817be029920e0000152131c0ad75155d92ab4aa9.png" />
+<img alt="_images/febe246144ad7ac4cca42345452f6d28dec9d4850291c6a4e228cb7beecb32f3.png" src="_images/febe246144ad7ac4cca42345452f6d28dec9d4850291c6a4e228cb7beecb32f3.png" />
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
