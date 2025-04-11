@@ -455,7 +455,17 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 <p>Name each of the terms in the Bernoulli equation (stated below), and describe their interaction in the work-energy interpretation of this equation.</p>
 <div class="math notranslate nohighlight">
 \[H=\frac{p}{\rho g}+\frac{v^2}{2 g}+z\]</div>
-<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">𝐻 is the total head, or the total available energy within the system.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{p}{\rho g}\)</span> is the pressure head, representing buoyancy energy per unit weight.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\frac{v^2}{2 g}\)</span> is the velocity head, representing the kinetic energy per unit weight.</p>
+<p class="sd-card-text">𝑧 is the elevation head, representing the potential energy per unit weight of the fluid.</p>
+<p class="sd-card-text">Pressure and weight forces do work on a fluid to increase its kinetic energy.</p>
+</div>
+</details><hr class="docutils" />
 </section>
 <section id="question-2-r">
 <h3>Question 2 (*)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h3>
@@ -525,7 +535,42 @@ p &amp;= 120 \; \;\textrm{(kPa)}
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Use both mass and energy conservation principles in your answer. Note that you can assume that the diameter of the pipe is unchanged in the elevated section.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The velocity doesn’t change, as this would require a change in discharge and would violate
+the conservation of mass.</p>
+<p class="sd-card-text">The pressure will reduce due to the increase in elevation</p>
+<p class="sd-card-text">Considering that <span class="math notranslate nohighlight">\(z_A=0\)</span> and solving for <span class="math notranslate nohighlight">\(p_B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+p_B=(\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}-\frac{V_{B}^2}{2g}-z_{B})\rho g
+\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{pressure}_{m} &amp;= 12.23 \; \;\textrm{(m)}
+\\[10pt]
+z_{B} &amp;= 6 \; \;\textrm{(m)}
+\\[10pt]
+p_{B} &amp;= \left( \mathrm{pressure}_{m} - z_{B} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 12.23 - 6 \right) \cdot 1000 \cdot 9.81 \\&amp;= 61135.92 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{B_{}} &amp;= \frac{ p_{B} }{ 1000 } \\&amp;= \frac{ 61135.92 }{ 1000 } \\&amp;= 61.14 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="question-4-r">
 <h3>Question 4 (*)[R]<a class="headerlink" href="#question-4-r" title="Link to this heading">#</a></h3>
@@ -601,7 +646,32 @@ b) \; 11.3 \; kPa
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">To determine the velocity head, you’ll first need to apply mass conservation to calculate the velocity in the pipe.</p>
 </div>
-</details><p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.10 \; \;\textrm{(m)}
+\\[10pt]
+\rho &amp;= 96 \; \;\textrm{(kg/m3)}
+\\[10pt]
+Q &amp;= 0.06 \; \;\textrm{(m3/s)}
+\\[10pt]
+V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.06 }{ 3.14 \cdot \frac{ \left( 0.10 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.64 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+\mathrm{velocity}_{m} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 7.64 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 2.97 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -610,7 +680,28 @@ b) \; 11.3 \; kPa
 \[pressure_m = \frac{p}{\rho g}\]</div>
 <p class="sd-card-text">The “m” in pressure_m shows that these are head values expressed in meters.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{pressure}_{m} &amp;= 12 \; \;\textrm{(m)}
+\\[10pt]
+p &amp;= \mathrm{pressure}_{m} \cdot \rho \cdot g \\&amp;= 12 \cdot 96 \cdot 9.81 \\&amp;= 11301.12 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{} &amp;= \frac{ p }{ 1000 } \\&amp;= \frac{ 11301.12 }{ 1000 } \\&amp;= 11.30 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="question-6">
 <h3>Question 6 (**)<a class="headerlink" href="#question-6" title="Link to this heading">#</a></h3>
@@ -780,7 +871,36 @@ b) \; 4.49 \; kPa
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Apply mass conservation to calculate these quantities.</p>
 </div>
-</details><p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{pipe} &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+D_{nozzle} &amp;= 0.200 \; \;\textrm{(m)}
+\\[10pt]
+V_{nozzle} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{nozzle} &amp;= \pi \cdot \frac{ \left( D_{nozzle} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.031 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{nozzle} \cdot A_{nozzle} \\&amp;= 3 \cdot 0.031 \\&amp;= 0.094 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+A_{pipe} &amp;= \pi \cdot \frac{ \left( D_{pipe} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 1 \right) ^{ 2 } }{ 4 } \\&amp;= 0.785 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -791,8 +911,40 @@ b) \; 4.49 \; kPa
 \]</div>
 <p class="sd-card-text">Consider which (if any) of these terms can be cancelled in your calculations.</p>
 </div>
-</details><p><strong>Question 7 (c)</strong></p>
-<hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The assumptions for this problem are the following:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{pipe}=z_{nozzle}\)</span> (horizontal pipe)</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{nozzle}=0 Pa\)</span> (it is exposed to atmospheric pressure)</p>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{pipe} &amp;= \left( \frac{ \left( V_{nozzle} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{pipe} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 0.12 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 4492.80 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \\&amp;= 4.49 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Horizontal pipe, steady flow, incompressible water (and density of 1000 kg/m<sup>3</sup>), no energy losses through nozzle, jet diameter equal to nozzle diameter, uniform flow in both cross sections.</p>
+</div>
+</details><hr class="docutils" />
 </section>
 <section id="question-8-r">
 <h3>Question 8(*)[R]<a class="headerlink" href="#question-8-r" title="Link to this heading">#</a></h3>
@@ -870,7 +1022,36 @@ b) 8.89 \; m/s \; ; 254.61 \; kPa \;
 <div class="math notranslate nohighlight">
 \[Q=V_1A_1\]</div>
 </div>
-</details><p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= 940 \; \;\textrm{(kg/m3)}
+\\[10pt]
+D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 90 }{ 1000 } &amp;= 0.090 \; \;\textrm{(m)}
+\\[10pt]
+p_{1} &amp;= 280 \cdot 1000 &amp;= 280000 \; \;\textrm{(Pa)}
+\\[10pt]
+V_{1} &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -883,7 +1064,36 @@ b) 8.89 \; m/s \; ; 254.61 \; kPa \;
 \frac{p_{1}}{\gamma}+\frac{V_{1}^2}{2g}+z_{1}=\frac{p_{2}}{\gamma}+\frac{V_{2}^2}{2g}+z_{2}
 \]</div>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The assumptions for this problem are:</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{1}=z_{2}\)</span> (horizontal pipe)</p>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.09 \right) ^{ 2 } }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{2} &amp;= \frac{ Q }{ A_{2} } \\&amp;= \frac{ 0.06 }{ 0.01 } \\&amp;= 8.89 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= \left( \frac{ p_{1} }{ \rho \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho \cdot g \\&amp;= \left( \frac{ 280000 }{ 940 \cdot 9.81 } + \frac{ \left( 5 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.89 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 940 \cdot 9.81 \\&amp;= 254614.20 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 254614.20 }{ 1000 } \\&amp;= 254.61 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="question-10">
 <h3>Question 10(***)<a class="headerlink" href="#question-10" title="Link to this heading">#</a></h3>
@@ -985,7 +1195,34 @@ d_B= \frac{V_Ad_A}{\sqrt{V_A^2+2g(d_A+1-d_B)}}
 <div class="math notranslate nohighlight">
 \[HGL=\frac{p}{\gamma}+z\]</div>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.10 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= 0.25 \; \;\textrm{(m/s)}
+\\[10pt]
+z &amp;= 2.50 \; \;\textrm{(m)}
+\\[10pt]
+p &amp;= 120000 \; \;\textrm{(Pa)}
+\\[10pt]
+\mathrm{EGL} &amp;= \frac{ p }{ \rho_{water} \cdot g } + \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } + z \\&amp;= \frac{ 120000 }{ 1000 \cdot 9.81 } + \frac{ \left( 0.25 \right) ^{ 2 } }{ 2 \cdot 9.81 } + 2.50 \\&amp;= 14.74 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+\mathrm{HGL} &amp;= \frac{ p }{ \rho_{water} \cdot g } + z \\&amp;= \frac{ 120000 }{ 1000 \cdot 9.81 } + 2.50 \\&amp;= 14.73 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="question-2">
 <h3>Question 2 (*)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h3>
@@ -1098,7 +1335,36 @@ b) \;-29.4 \; kPa \; (gauge\;pressure)
 <div class="math notranslate nohighlight">
 \[Q=V_3A_3\]</div>
 </div>
-</details><p><strong>Question 3 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h &amp;= \frac{ 200 }{ 1000 } &amp;= 0.2000 \; \;\textrm{(m)}
+\\[10pt]
+D_{1} &amp;= \frac{ 100 }{ 1000 } &amp;= 0.1000 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 50 }{ 1000 } &amp;= 0.0500 \; \;\textrm{(m)}
+\\[10pt]
+D_{3} &amp;= \frac{ 100 }{ 1000 } &amp;= 0.1000 \; \;\textrm{(m)}
+\\[10pt]
+V_{3} &amp;= \sqrt { 2 \cdot g \cdot h } \\&amp;= \sqrt { 2 \cdot 9.8100 \cdot 0.2000 } \\&amp;= 1.9809 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A_{3} &amp;= \pi \cdot \frac{ \left( D_{3} \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.1000 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0079 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{3} \cdot A_{3} \\&amp;= 1.9809 \cdot 0.0079 \\&amp;= 0.0156 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 3 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1111,7 +1377,30 @@ b) \;-29.4 \; kPa \; (gauge\;pressure)
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_1=0 Pa\)</span>  (atmosferic presure)</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(V_1= 0 m/s\)</span> (because it is a reservoir)</p>
 </div>
-</details><p><strong>Question 3 (c)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{2} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.02 }{ 3.14 \cdot \frac{ \left( 0.05 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.92 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+z_{1} &amp;= 0.20 \; \;\textrm{(m)}
+\\[10pt]
+p_{2} &amp;= \left( z_{1} - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 0.20 - \frac{ \left( 7.92 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= -29430.00 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ -29430.00 }{ 1000 } \\&amp;= -29.43 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 3 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1126,7 +1415,19 @@ EGL= \frac{p}{\gamma}+\frac{V^2}{2g} +z
 HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" src="_images/7f4243c2e04a8a56e252d256322e08373650606a69ade289e1d0e8d38ee1b202.png" />
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id2">
 <h3>Question 4 (**)[R]<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
@@ -1289,7 +1590,28 @@ c) \;1.72 \; m/s
 <span class="math notranslate nohighlight">\(z_1=z_2=0 m\)</span> (horizontal channel)<br />
 <span class="math notranslate nohighlight">\(V_1=0 Pa\)</span> (given in the question)</p>
 </div>
-</details><p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{1} &amp;= 0 \; \;\textrm{(m/s)}
+\\[10pt]
+V_{2} &amp;= 2 \; \;\textrm{(m/s)}
+\\[10pt]
+p_{2} &amp;= \frac{ \left( \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g }{ 1000 } \\&amp;= \frac{ \left( \frac{ \left( 2 \right) ^{ 2 } }{ 2 \cdot 9.8 } \right) \cdot 1000 \cdot 9.8 }{ 1000 } \\&amp;= 2.0 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1298,6 +1620,22 @@ c) \;1.72 \; m/s
 \[p=\rho gh\]</div>
 </div>
 </details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h &amp;= p_{2} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } \\&amp;= 2.000 \cdot \frac{ 1000 }{ 1000 \cdot 9.810 } \\&amp;= 0.204 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
 <p><strong>Question 5 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1306,8 +1644,33 @@ c) \;1.72 \; m/s
 <div class="math notranslate nohighlight">
 \[V=\sqrt{2gh}\]</div>
 </div>
-</details><p><strong>Question 5 (d)</strong></p>
-<hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+h &amp;= 0.15 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= \sqrt { 2 \cdot g \cdot h } \\&amp;= \sqrt { 2 \cdot 9.81 \cdot 0.15 } \\&amp;= 1.72 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (d)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The water level in the pitot tube represents the EGL, while the water level in the channel represents the HGL.</p>
+</div>
+</details><hr class="docutils" />
 </section>
 <section id="question-6-r">
 <h3>Question 6 (**)[R]<a class="headerlink" href="#question-6-r" title="Link to this heading">#</a></h3>
@@ -1472,7 +1835,46 @@ a) \;319.78 \; kPa\;,\;178.72\; kPa
 <div class="math notranslate nohighlight">
 \[V= \frac{Q}{A}\]</div>
 </div>
-</details><p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{1} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{1} &amp;= \frac{ 200 }{ 1000 } &amp;= 0.20 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.12 \; \;\textrm{(m)}
+\\[10pt]
+D_{3} &amp;= \frac{ 80 }{ 1000 } &amp;= 0.08 \; \;\textrm{(m)}
+\\[10pt]
+p_{1} &amp;= 350000 \; \;\textrm{(Pa)}
+\\[10pt]
+Q &amp;= V_{1} \cdot \left( \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \right) \\&amp;= 3 \cdot \left( 3.14 \cdot \frac{ \left( 0.20 \right) ^{ 2 } }{ 4 } \right) \\&amp;= 0.09 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+V_{2} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.09 }{ 3.14 \cdot \frac{ \left( 0.12 \right) ^{ 2 } }{ 4 } } \\&amp;= 8.33 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= \left( \frac{ p_{1} }{ \rho_{water} \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ 350000 }{ 1000 \cdot 9.81 } + \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.33 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 319777.78 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 319777.78 }{ 1000 } \\&amp;= 319.78 \; \;\textrm{(kPa)}\\[10pt]
+\\[10pt]
+V_{3} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{3} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.09 }{ 3.14 \cdot \frac{ \left( 0.08 \right) ^{ 2 } }{ 4 } } \\&amp;= 18.75 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{3} &amp;= \left( \frac{ p_{2} }{ \rho_{water} \cdot g } + \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{3} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ 319777.78 }{ 1000 \cdot 9.81 } + \frac{ \left( 8.33 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 18.75 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 178718.75 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{3_{}} &amp;= \frac{ p_{3} }{ 1000 } \\&amp;= \frac{ 178718.75 }{ 1000 } \\&amp;= 178.72 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -1487,7 +1889,19 @@ EGL= \frac{p}{\gamma}+\frac{V^2}{2g} +z
 HGL= \frac{p}{\gamma}+z
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" src="_images/0eb0dcf029fcc52084351b3f881f5d3c3bcf766ae9c33bd463205451066e3458.png" />
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="problems-for-lecture-16-flow-measurement">
 <h2>Problems for Lecture 16: Flow Measurement<a class="headerlink" href="#problems-for-lecture-16-flow-measurement" title="Link to this heading">#</a></h2>
@@ -1507,7 +1921,45 @@ HGL= \frac{p}{\gamma}+z
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">To calculate the discharge coefficient (𝐶𝑑), we need to compare the actual discharge with the theoretical discharge obtained from the Venturi meter.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[
+C_d= \frac{Q_a}{Q_t}
+\]</div>
+<p class="sd-card-text">The actual discharge flow can be calcualted as</p>
+<div class="math notranslate nohighlight">
+\[
+Q= \frac{Vol}{t}
+\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{t} &amp;= 24 \; \;\textrm{(L/s)}
+\\[10pt]
+V &amp;= 4 \; \;\textrm{(m3)}
+\\[10pt]
+t &amp;= 3 \; \;\textrm{(min)}
+\\[10pt]
+Q_{a} &amp;= \frac{ V \cdot 1000 }{ t \cdot 60 } \\&amp;= \frac{ 4 \cdot 1000 }{ 3 \cdot 60 } \\&amp;= 22.222 \; \;\textrm{(L/s)}\\[10pt]
+\\[10pt]
+C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 22.222 }{ 24 } \\&amp;= 0.926  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id4">
 <h3>Question 2 (*)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -1579,7 +2031,56 @@ C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 0.002 }{ 0.003 } \\&amp;= 0
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The water level in the piezometer is the GHL and the water level in the pitot tube is the EGL. The difference between those two water levels (EGL and HGL) is the velocity head.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Calculate the Velocity from the Pitot Tube Measurement:</p>
+<div class="math notranslate nohighlight">
+\[
+V= \sqrt {2g\Delta h}
+\]</div>
+<p class="sd-card-text">An then the actual discharge can be calculated:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_a= VA
+\]</div>
+<p class="sd-card-text">Additionally, the following change of units must be performed:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h= mm to m \\
+Q_a= L/s to m^3/s
+\end{split}\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{t} &amp;= 13 \; \;\textrm{(L/s)}
+\\[10pt]
+h &amp;= 70 \; \;\textrm{(mm)}
+\\[10pt]
+D &amp;= 0.100 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= \sqrt { 2 \cdot g \cdot \left( \frac{ h }{ 1000 } \right) } \\&amp;= \sqrt { 2 \cdot 9.810 \cdot \left( \frac{ 70 }{ 1000 } \right) } \\&amp;= 1.172 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q_{a} &amp;= V \cdot \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 1.172 \cdot 3.142 \cdot \frac{ \left( 0.100 \right) ^{ 2 } }{ 4 } \\&amp;= 0.009 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{a_{m}} &amp;= Q_{a} \cdot 1000 \\&amp;= 0.009 \cdot 1000 \\&amp;= 9.204 \; \;\textrm{(L/s)}\\[10pt]
+\\[10pt]
+C_{d} &amp;= \frac{ Q_{a_{m}} }{ Q_{t} } \\&amp;= \frac{ 9.204 }{ 13 } \\&amp;= 0.708  \\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id5">
 <h3>Question 4 (**)[R]<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
@@ -1596,7 +2097,67 @@ C_{d} &amp;= \frac{ Q_{a} }{ Q_{t} } \\&amp;= \frac{ 0.002 }{ 0.003 } \\&amp;= 0
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Use a combination of the Bernoulli equation and the continuity equation. The cross-sectional area is given by the water depth multiplied by the channel width</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[E_1=E_2\]</div>
+<div class="math notranslate nohighlight">
+\[y_1+ \frac{V_1^2}{2g}=y_2+ \frac{V_2^2}{2g}\]</div>
+<p class="sd-card-text">Conservation of mass:</p>
+<div class="math notranslate nohighlight">
+\[Q_1=Q_2\]</div>
+<div class="math notranslate nohighlight">
+\[V_1 \cdot A_1=V_2 \cdot A_2\]</div>
+<div class="math notranslate nohighlight">
+\[V_1 \cdot b \cdot y_1=V_2 \cdot b \cdot y_2\]</div>
+<div class="math notranslate nohighlight">
+\[ V= \frac {Q}{A}\]</div>
+<p class="sd-card-text">Reeplace the velocity equation in the Bernoulli eqution:</p>
+<div class="math notranslate nohighlight">
+\[y_1+ \frac{\frac {Q^2}{A_1^2}}{2g}=y_2+ \frac{\frac {Q^2}{A_2^2}}{2g}\]</div>
+<p class="sd-card-text">The area is:</p>
+<div class="math notranslate nohighlight">
+\[
+A= b \cdot y 
+\]</div>
+<p class="sd-card-text">Substituting the area and rearranging the equation</p>
+<div class="math notranslate nohighlight">
+\[
+Q= b \cdot \sqrt {2 \cdot g \cdot (y_1 -y_2)} \cdot (\frac {y_1 \cdot y_2}{\sqrt {y_1 ^2 - y_2^2}})
+\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+b &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+z &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+y_{1} &amp;= 2.500 \; \;\textrm{(m)}
+\\[10pt]
+y_{2} &amp;= 0.500 \; \;\textrm{(m)}
+\\[10pt]
+A_{1} &amp;= b \cdot y_{1} \\&amp;= 2 \cdot 2.500 \\&amp;= 5.000 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= b \cdot y_{2} \\&amp;= 2 \cdot 0.500 \\&amp;= 1.000 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q_{t} &amp;= b \cdot \sqrt { 2 \cdot g \cdot \left( y_{1} - y_{2} \right) } \cdot \left( \frac{ y_{1} \cdot y_{2} }{ \sqrt { \left( y_{1} \right) ^{ 2 } - \left( y_{2} \right) ^{ 2 } } } \right) \\&amp;= 2 \cdot \sqrt { 2 \cdot 9.810 \cdot \left( 2.500 - 0.500 \right) } \cdot \left( \frac{ 2.500 \cdot 0.500 }{ \sqrt { \left( 2.500 \right) ^{ 2 } - \left( 0.500 \right) ^{ 2 } } } \right) \\&amp;= 6.393 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id6">
 <h3>Question 5 (**)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
@@ -1710,7 +2271,40 @@ through the Venturi Meter.</p>
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The difference between this and the last exercise is that the last one is with piezometers and this one with differential manometer. For that reason, you can not use <span class="math notranslate nohighlight">\(\Delta h\)</span> because that is the height of the mercury. The first step is to change <span class="math notranslate nohighlight">\(\Delta h\)</span> to <span class="math notranslate nohighlight">\(\Delta p\)</span>.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{1} &amp;= 120 \; \;\textrm{(mm)}
+\\[10pt]
+D_{2} &amp;= 50 \; \;\textrm{(mm)}
+\\[10pt]
+\mathrm{SG} &amp;= 13.500 \; 
+\\[10pt]
+\Delta_{h} &amp;= 20 \; \;\textrm{(mm)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( \frac{ D_{1} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( \frac{ 120 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \pi \cdot \frac{ \left( \frac{ D_{2} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( \frac{ 50 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.002 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+\rho_{Hg} &amp;= \mathrm{SG} \cdot \rho_{water} \\&amp;= 13.500 \cdot 1000 \\&amp;= 13500.000 \; \;\textrm{(kg/m3)}\\[10pt]
+\\[10pt]
+\Delta_{p} &amp;= \left( \rho_{Hg} - \rho_{water} \right) \cdot g \cdot \left( \frac{ \Delta_{h} }{ 1000 } \right) \\&amp;= \left( 13500.000 - 1000 \right) \cdot 9.810 \cdot \left( \frac{ 20 }{ 1000 } \right) \\&amp;= 2452.500 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+Q &amp;= \sqrt { 2 \cdot \left( \frac{ \Delta_{p} }{ \rho_{water} } \right) } \cdot \left( \frac{ A_{1} \cdot A_{2} }{ \sqrt { \left( A_{1} \right) ^{ 2 } - \left( A_{2} \right) ^{ 2 } } } \right) \\&amp;= \sqrt { 2 \cdot \left( \frac{ 2452.500 }{ 1000 } \right) } \cdot \left( \frac{ 0.011 \cdot 0.002 }{ \sqrt { \left( 0.011 \right) ^{ 2 } - \left( 0.002 \right) ^{ 2 } } } \right) \\&amp;= 0.004 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id9">
 <h3>Question 8 (**)[R]<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
@@ -1782,13 +2376,61 @@ Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.95 \cdot 3.33 \\&amp;= 3.17 \; \;\text
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Calculate the theoretical discharge with the Equation for flow rate through an orifice. Then use the discharge coefficient to calculate the actual discharge.</p>
 </div>
-</details><p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_hide-output tag_remove-input tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{o} &amp;= 30 \; \;\textrm{(mm)}
+\\[10pt]
+D_{p} &amp;= 80 \; \;\textrm{(mm)}
+\\[10pt]
+\Delta_{h} &amp;= 300 \; \;\textrm{(mm)}
+\\[10pt]
+C_{d} &amp;= 0.6000 \; 
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( \frac{ D_{p} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( \frac{ 80 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.0050 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \pi \cdot \frac{ \left( \frac{ D_{o} }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( \frac{ 30 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.0007 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q_{t} &amp;= \sqrt { 2 \cdot g \cdot \frac{ \Delta_{h} }{ 1000 } } \cdot \left( \frac{ A_{1} \cdot A_{2} }{ \sqrt { \left( A_{1} \right) ^{ 2 } - \left( A_{2} \right) ^{ 2 } } } \right) \\&amp;= \sqrt { 2 \cdot 9.8100 \cdot \frac{ 300 }{ 1000 } } \cdot \left( \frac{ 0.0050 \cdot 0.0007 }{ \sqrt { \left( 0.0050 \right) ^{ 2 } - \left( 0.0007 \right) ^{ 2 } } } \right) \\&amp;= 0.0017 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{a} &amp;= C_{d} \cdot Q_{t} \\&amp;= 0.6000 \cdot 0.0017 \\&amp;= 0.0010 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The main source of energy loss when water flows through an orifice plate is due to the sudden contraction and expansion of the flow as it passes through the orifice. This energy loss is associated with flow separation at the edges of the orifice, leading to turbulent eddies and vortex formation.</p>
 </div>
-</details><hr class="docutils" />
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The main source of the energy loss is the flow separation from the sharp edge of the Orifice Plate. The piezometer locations are shown on the sketch below. Experimental  evidence shows that the pressure in the separation region is the same as the pressure at point 2 (the constriction in the orifice plate itself), which is why we can use these in a similar manner to those in the pipe and throat of a Venturi Meter.</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/24b6ff5308e1911f3292c713bb078415b32f7490ad3d59c04cd62b7469ba831d.png" src="_images/24b6ff5308e1911f3292c713bb078415b32f7490ad3d59c04cd62b7469ba831d.png" />
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id11">
 <h3>Question 10 (***)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
@@ -1927,7 +2569,54 @@ z= [m]
 V= Q/A
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{AB} &amp;= 40 \; \;\textrm{(mm)}
+\\[10pt]
+L_{AB} &amp;= 5 \; \;\textrm{(m)}
+\\[10pt]
+D_{BC} &amp;= 30 \; \;\textrm{(mm)}
+\\[10pt]
+L_{BC} &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+Q &amp;= 1.750 \; \;\textrm{(L/s)}
+\\[10pt]
+p_{A} &amp;= 250 \; \;\textrm{(kPa)}
+\\[10pt]
+h_{f_{AC}} &amp;= 1.450 \; \;\textrm{(m)}
+\\[10pt]
+Q_{m} &amp;= 0.002 \; \;\textrm{(m3/s)}
+\\[10pt]
+D_{AB_{m}} &amp;= 0.040 \; \;\textrm{(m)}
+\\[10pt]
+D_{BC_{m}} &amp;= 0.030 \; \;\textrm{(m)}
+\\[10pt]
+A_{AB} &amp;= \pi \cdot \frac{ \left( D_{AB_{m}} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.040 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{A} &amp;= \frac{ Q_{m} }{ A_{AB} } \\&amp;= \frac{ 0.002 }{ 0.001 } \\&amp;= 1.393 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A_{BC} &amp;= \pi \cdot \frac{ \left( D_{BC_{m}} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.030 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{C} &amp;= \frac{ Q_{m} }{ A_{BC} } \\&amp;= \frac{ 0.002 }{ 0.001 } \\&amp;= 2.476 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{C} &amp;= \left( p_{A} \cdot \frac{ 1000 }{ \rho_{water} \cdot g } + \frac{ \left( V_{A} \right) ^{ 2 } }{ 2 \cdot g } - h_{f_{AC}} - \frac{ \left( V_{C} \right) ^{ 2 } }{ 2 \cdot g } - L_{AB} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 250 \cdot \frac{ 1000 }{ 1000 \cdot 9.810 } + \frac{ \left( 1.393 \right) ^{ 2 } }{ 2 \cdot 9.810 } - 1.450 - \frac{ \left( 2.476 \right) ^{ 2 } }{ 2 \cdot 9.810 } - 5 \right) \cdot 1000 \cdot 9.810 \\&amp;= 184630.522 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{C_{}} &amp;= \frac{ p_{C} }{ 1000 } \\&amp;= \frac{ 184630.522 }{ 1000 } \\&amp;= 184.631 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id13">
 <h4>Question 2 (*)[R]<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
@@ -2006,7 +2695,39 @@ the velocity doesn’t change</p>
 p_B=(\frac{p_A}{\rho g}+\frac{V_{A}^2}{2g}-\frac{V_{B}^2}{2g}-z_{B})\rho g
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The velocity doesn’t change, as this would require a change in discharge and would violate
+the conservation of mass.</p>
+<p class="sd-card-text">The pressure will reduce due to the increase in elevation</p>
+</div>
+</details><div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{pressure}_{m} &amp;= 12.23 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{velocity}_{m} &amp;= 0.00 \; \;\textrm{(m)}
+\\[10pt]
+z_{B} &amp;= 6 \; \;\textrm{(m)}
+\\[10pt]
+p_{B} &amp;= \left( \mathrm{pressure}_{m} - z_{B} \right) \cdot \rho_{water} \cdot g \\&amp;= \left( 12.23 - 6 \right) \cdot 1000 \cdot 9.81 \\&amp;= 61135.92 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{B_{}} &amp;= \frac{ p_{B} }{ 1000 } \\&amp;= \frac{ 61135.92 }{ 1000 } \\&amp;= 61.14 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id15">
 <h4>Question 4 (*)[R]<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
@@ -2085,7 +2806,32 @@ V=\frac{Q}{A}\\
 velocity_{head}=\frac{V^2}{2g}
 \end{split}\]</div>
 </div>
-</details><p><strong>Question 5 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= 0.10 \; \;\textrm{(m)}
+\\[10pt]
+\rho &amp;= 96 \; \;\textrm{(kg/m3)}
+\\[10pt]
+Q &amp;= 0.06 \; \;\textrm{(m3/s)}
+\\[10pt]
+V &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.06 }{ 3.14 \cdot \frac{ \left( 0.10 \right) ^{ 2 } }{ 4 } } \\&amp;= 7.64 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+\mathrm{velocity}_{head} &amp;= \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g } \\&amp;= \frac{ \left( 7.64 \right) ^{ 2 } }{ 2 \cdot 9.81 } \\&amp;= 2.97 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2093,7 +2839,28 @@ velocity_{head}=\frac{V^2}{2g}
 <div class="math notranslate nohighlight">
 \[\frac{p}{\rho g}\]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{pressure}_{head} &amp;= 12 \; \;\textrm{(m)}
+\\[10pt]
+p &amp;= \mathrm{pressure}_{head} \cdot \rho \cdot g \\&amp;= 12 \cdot 96 \cdot 9.81 \\&amp;= 11301.12 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{} &amp;= \frac{ p }{ 1000 } \\&amp;= \frac{ 11301.12 }{ 1000 } \\&amp;= 11.30 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id17">
 <h4>Question 6 (**)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
@@ -2269,7 +3036,36 @@ b) \;4.49 \; kPa
 <div class="math notranslate nohighlight">
 \[V_{pipe}= Q/A_{pipe}\]</div>
 </div>
-</details><p><strong>Question 7 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{pipe} &amp;= 1 \; \;\textrm{(m)}
+\\[10pt]
+D_{nozzle} &amp;= 0.200 \; \;\textrm{(m)}
+\\[10pt]
+V_{nozzle} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{nozzle} &amp;= \pi \cdot \frac{ \left( D_{nozzle} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.031 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{nozzle} \cdot A_{nozzle} \\&amp;= 3 \cdot 0.031 \\&amp;= 0.094 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+A_{pipe} &amp;= \pi \cdot \frac{ \left( D_{pipe} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 1 \right) ^{ 2 } }{ 4 } \\&amp;= 0.785 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{pipe} &amp;= 0.120 \; \;\textrm{(m/s)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2282,8 +3078,33 @@ b) \;4.49 \; kPa
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{pipe}=z_{nozzle}\)</span> (horizontal pipe)</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(p_{nozzle}=0 Pa\)</span> (it is exposed to atmospheric pressure)</p>
 </div>
-</details><p><strong>Question 7 (c)</strong></p>
-</section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{pipe} &amp;= \left( \frac{ \left( V_{nozzle} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{pipe} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 0.12 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 1000 \cdot 9.81 \\&amp;= 4492.80 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{pipe_{}} &amp;= \frac{ p_{pipe} }{ 1000 } \\&amp;= \frac{ 4492.80 }{ 1000 } \\&amp;= 4.49 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 7 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Horizontal pipe, steady flow, incompressible water (and density of 1000 kg/m<sup>3</sup>), no energy losses through nozzle, jet diameter equal to nozzle diameter, uniform flow in both crosssections.</p>
+</div>
+</details></section>
 <hr class="docutils" />
 <section id="id19">
 <h4>Question 8(*)[R]<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
@@ -2361,7 +3182,36 @@ b) \;8.89 \; m/s\;,\; 254.61 \;kPa
 <div class="math notranslate nohighlight">
 \[Q=V_1A_1\]</div>
 </div>
-</details><p><strong>Question 9 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho &amp;= 940 \; \;\textrm{(kg/m3)}
+\\[10pt]
+D_{1} &amp;= \frac{ 120 }{ 1000 } &amp;= 0.120 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 90 }{ 1000 } &amp;= 0.090 \; \;\textrm{(m)}
+\\[10pt]
+p_{1} &amp;= 280 \cdot 1000 &amp;= 280000 \; \;\textrm{(Pa)}
+\\[10pt]
+V_{1} &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.120 \right) ^{ 2 } }{ 4 } \\&amp;= 0.011 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{1} \cdot A_{1} \\&amp;= 5 \cdot 0.011 \\&amp;= 0.057 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 9 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2376,7 +3226,30 @@ b) \;8.89 \; m/s\;,\; 254.61 \;kPa
 <p class="sd-card-text">Where the assumptions are:</p>
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(z_{1}=z_{2}\)</span> (horizontal pipe)</p>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.09 \right) ^{ 2 } }{ 4 } \\&amp;= 0.01 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+V_{2} &amp;= \frac{ Q }{ A_{2} } \\&amp;= \frac{ 0.06 }{ 0.01 } \\&amp;= 8.89 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= \left( \frac{ p_{1} }{ \rho \cdot g } + \frac{ \left( V_{1} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot \rho \cdot g \\&amp;= \left( \frac{ 280000 }{ 940 \cdot 9.81 } + \frac{ \left( 5 \right) ^{ 2 } }{ 2 \cdot 9.81 } - \frac{ \left( 8.89 \right) ^{ 2 } }{ 2 \cdot 9.81 } \right) \cdot 940 \cdot 9.81 \\&amp;= 254614.20 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+p_{2_{}} &amp;= \frac{ p_{2} }{ 1000 } \\&amp;= \frac{ 254614.20 }{ 1000 } \\&amp;= 254.61 \; \;\textrm{(kPa)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id21">
 <h4>Question 10(***)<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
@@ -2482,7 +3355,32 @@ d_B^2=V_A^2d_A^2\frac{1}{V_A^2+2g(d_A+1-d_B)}
 Re= \frac{VD}{\nu}
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\nu &amp;= 1 \cdot \left( 10 \right) ^{ -3 } &amp;= 0.0 \; \;\textrm{(m2/s)}
+\\[10pt]
+D &amp;= 100 \; \;\textrm{(mm)}
+\\[10pt]
+V &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{m} &amp;= 0.1 \; 
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D_{m} }{ \nu } \\&amp;= 5 \cdot \frac{ 0.1 }{ 0.0 } \\&amp;= 500.0 \; \;\textrm{(Laminar)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id23">
 <h4>Question 2 (*)<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
@@ -2554,7 +3452,34 @@ T &amp;= 15 \; \;\textrm{(°C)}
 Re= \frac{VD}{\nu}
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\nu &amp;= 0.000 \; 
+\\[10pt]
+D &amp;= 100 \; \;\textrm{(mm)}
+\\[10pt]
+\mathrm{Re}_{max} &amp;= 2000 \; 
+\\[10pt]
+V &amp;= \nu \cdot \frac{ \mathrm{Re}_{max} }{ \frac{ D }{ 1000 } } \\&amp;= 0.000 \cdot \frac{ 2000 }{ \frac{ 100 }{ 1000 } } \\&amp;= 0.023 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( \frac{ D }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( \frac{ 100 }{ 1000 } \right) ^{ 2 } }{ 4 } \\&amp;= 0.008 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V \cdot A \cdot 1000 \\&amp;= 0.023 \cdot 0.008 \cdot 1000 \\&amp;= 0.179 \; \;\textrm{(L/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="laminar-pipe-friction-losses">
 <h3>Laminar pipe friction losses<a class="headerlink" href="#laminar-pipe-friction-losses" title="Link to this heading">#</a></h3>
@@ -2681,7 +3606,36 @@ f=\frac {64}{Re}
 h_f= fL \frac {V^2}{2gD}
 \]</div>
 </div>
-</details><p><strong>Question 5 (b)</strong><span class="math notranslate nohighlight">\(\text{(***)}\)</span></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mu &amp;= 0.05 \; \;\textrm{(kg/3)}
+\\[10pt]
+\rho &amp;= 800 \; \;\textrm{(kg/m3)}
+\\[10pt]
+D &amp;= 0.03 \; 
+\\[10pt]
+V &amp;= 0.30 \; \;\textrm{(m/s)}
+\\[10pt]
+L &amp;= 45 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re} &amp;= \rho \cdot D \cdot \frac{ V }{ \mu } \\&amp;= 800 \cdot 0.03 \cdot \frac{ 0.30 }{ 0.05 } \\&amp;= 125.00  \\[10pt]
+\\[10pt]
+h_{f} &amp;= \frac{ 32 \cdot \mu \cdot L \cdot V }{ \rho \cdot g \cdot \left( D \right) ^{ 2 } } \\&amp;= \frac{ 32 \cdot 0.05 \cdot 45 \cdot 0.30 }{ 800 \cdot 9.81 \cdot \left( 0.03 \right) ^{ 2 } } \\&amp;= 4.23 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 5 (b)</strong><span class="math notranslate nohighlight">\(\text{(***)}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2696,7 +3650,32 @@ u_r=-\frac{1}{4\mu}\frac{dp*}{dL}(R^{2}-r^{2})
 r=0
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+r &amp;= 0 \; 
+\\[10pt]
+\mathrm{dp} &amp;= \left( - \rho \right) \cdot g \cdot h_{f} \\&amp;= \left( - 800 \right) \cdot 9.81 \cdot 4.23 \\&amp;= -33177.60 \; \;\textrm{(N/m2)}\\[10pt]
+\\[10pt]
+\mathrm{dL} &amp;= 45 \; \;\textrm{(m)}
+\\[10pt]
+R &amp;= \frac{ D }{ 2 } \\&amp;= \frac{ 0.03 }{ 2 } \\&amp;= 0.01 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+U_{max} &amp;= \frac{ \left( - 1 \right) }{ 4 \cdot \mu } \cdot \left( \frac{ \mathrm{dp} }{ \mathrm{dL} } \right) \cdot \left( R \right) ^{ 2 } \\&amp;= \frac{ \left( - 1 \right) }{ 4 \cdot 0.05 } \cdot \left( \frac{ -33177.60 }{ 45 } \right) \cdot \left( 0.01 \right) ^{ 2 } \\&amp;= 0.60 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 </section>
 </section>
 <section id="problems-for-lecture-20-turbulent-flow-in-pipes">
@@ -2751,8 +3730,185 @@ h_f= fL \frac {V^2}{2gD}
 \]</div>
 </div>
 </details><p><strong>Question 1 (a)</strong></p>
+<p><strong>Solution</strong></p>
+<ol class="arabic simple">
+<li><p>For Re<sub>L</sub> = 1500 (Laminar)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 100 }{ 1000 } &amp;= 0.100 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+e &amp;= \frac{ 0.01 }{ 1000 } &amp;= 0.000 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re}_{L} &amp;= 1500 \; \;\textrm{(Laminar)}
+\\[10pt]
+\mathrm{Re}_{T} &amp;= 150000 \; \;\textrm{(Turbulent)}
+\\[10pt]
+\nu &amp;= 1.14 \cdot \left( 10 \right) ^{ -6 } &amp;= 0.000 \; \;\textrm{(m/s2)}
+\\[10pt]
+V &amp;= \mathrm{Re}_{L} \cdot \frac{ \nu }{ D } \\&amp;= 1500 \cdot \frac{ 0.000 }{ 0.100 } \\&amp;= 0.017 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+f &amp;= \frac{ 64 }{ \mathrm{Re}_{L} } \\&amp;= \frac{ 64 }{ 1500 } \\&amp;= 0.043  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.043 \cdot 1000 \cdot \frac{ \left( 0.017 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.100 } \\&amp;= 0.006 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>For Re<sub>T</sub> = 15000 (Turbulent)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re}_{T} \right) ^{ 0.9 } } + \left( \frac{ e }{ 3.7 \cdot D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 150000 \right) ^{ 0.9 } } + \left( \frac{ 0.000 }{ 3.7 \cdot 0.100 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.017  \\[10pt]
+\\[10pt]
+V &amp;= \mathrm{Re}_{T} \cdot \frac{ \nu }{ D } \\&amp;= 150000 \cdot \frac{ 0.000 }{ 0.100 } \\&amp;= 1.710 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.017 \cdot 1000 \cdot \frac{ \left( 1.710 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.100 } \\&amp;= 25.598 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
 <p><strong>Question 1 (b)</strong></p>
+<p><strong>Solution</strong></p>
+<ol class="arabic simple">
+<li><p>For Re<sub>L</sub> = 1500 (Laminar)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 200 }{ 1000 } &amp;= 0.20000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+e &amp;= \frac{ 0.1 }{ 1000 } &amp;= 0.00010 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re}_{L} &amp;= 1500 \; \;\textrm{(Laminar)}
+\\[10pt]
+\mathrm{Re}_{T} &amp;= 150000 \; \;\textrm{(Turbulent)}
+\\[10pt]
+\nu &amp;= 1.14 \cdot \left( 10 \right) ^{ -6 } &amp;= 0.00000 \; \;\textrm{(m/s2)}
+\\[10pt]
+V &amp;= \mathrm{Re}_{L} \cdot \frac{ \nu }{ D } \\&amp;= 1500 \cdot \frac{ 0.00000 }{ 0.20000 } \\&amp;= 0.00855 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+f &amp;= \frac{ 64 }{ \mathrm{Re}_{L} } \\&amp;= \frac{ 64 }{ 1500 } \\&amp;= 0.04267  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.04267 \cdot 1000 \cdot \frac{ \left( 0.00855 \right) ^{ 2 } }{ 2 \cdot 9.81000 \cdot 0.20000 } \\&amp;= 0.00079 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>For Re<sub>T</sub> = 15000 (Turbulent)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re}_{T} \right) ^{ 0.9 } } + \left( \frac{ e }{ 3.7 \cdot D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 150000 \right) ^{ 0.9 } } + \left( \frac{ 0.000 }{ 3.7 \cdot 0.200 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.019  \\[10pt]
+\\[10pt]
+V &amp;= \mathrm{Re}_{T} \cdot \frac{ \nu }{ D } \\&amp;= 150000 \cdot \frac{ 0.000 }{ 0.200 } \\&amp;= 0.855 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.019 \cdot 1000 \cdot \frac{ \left( 0.855 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.200 } \\&amp;= 3.628 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
 <p><strong>Question 1 (c)</strong></p>
+<p><strong>Solution</strong></p>
+<ol class="arabic simple">
+<li><p>For Re<sub>L</sub> = 1500 (Laminar)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 150 }{ 1000 } &amp;= 0.15000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 2000 \; \;\textrm{(m)}
+\\[10pt]
+e &amp;= \frac{ 0.01 }{ 1000 } &amp;= 0.00001 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{Re}_{L} &amp;= 1500 \; \;\textrm{(Laminar)}
+\\[10pt]
+\mathrm{Re}_{T} &amp;= 150000 \; \;\textrm{(Turbulent)}
+\\[10pt]
+\nu &amp;= 1.14 \cdot \left( 10 \right) ^{ -6 } &amp;= 0.00000 \; \;\textrm{(m/s2)}
+\\[10pt]
+V &amp;= \mathrm{Re}_{L} \cdot \frac{ \nu }{ D } \\&amp;= 1500 \cdot \frac{ 0.00000 }{ 0.15000 } \\&amp;= 0.01140 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+f &amp;= \frac{ 64 }{ \mathrm{Re}_{L} } \\&amp;= \frac{ 64 }{ 1500 } \\&amp;= 0.04267  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.04267 \cdot 2000 \cdot \frac{ \left( 0.01140 \right) ^{ 2 } }{ 2 \cdot 9.81000 \cdot 0.15000 } \\&amp;= 0.00377 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>For Re<sub>T</sub> = 15000 (Turbulent)</p></li>
+</ol>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re}_{T} \right) ^{ 0.9 } } + \left( \frac{ e }{ 3.7 \cdot D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 150000 \right) ^{ 0.9 } } + \left( \frac{ 0.000 }{ 3.7 \cdot 0.150 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.017  \\[10pt]
+\\[10pt]
+V &amp;= \mathrm{Re}_{T} \cdot \frac{ \nu }{ D } \\&amp;= 150000 \cdot \frac{ 0.000 }{ 0.150 } \\&amp;= 1.140 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.017 \cdot 2000 \cdot \frac{ \left( 1.140 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.150 } \\&amp;= 14.962 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
 </section>
 <hr class="docutils" />
 <section id="id26">
@@ -2937,7 +4093,42 @@ V= \frac {Re\nu}{D}
 h_f= 32vV \frac {L}{gD^2}
 \]</div>
 </div>
-</details><p><strong>Question 3 (b)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 150 }{ 1000 } &amp;= 0.150 \; \;\textrm{(m)}
+\\[10pt]
+e &amp;= \frac{ 0.2 }{ 1000 } &amp;= 0.000 \; \;\textrm{(m)}
+\\[10pt]
+L &amp;= 500 \; \;\textrm{(m)}
+\\[10pt]
+\nu &amp;= 0.000 \; \;\textrm{(m/s2)}
+\\[10pt]
+\mathrm{Re} &amp;= 2000 \; 
+\\[10pt]
+V &amp;= \mathrm{Re} \cdot \frac{ \nu }{ D } \\&amp;= 2000 \cdot \frac{ 0.000 }{ 0.150 } \\&amp;= 0.015 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.150 \right) ^{ 2 } }{ 4 } \\&amp;= 0.018 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V \cdot A \\&amp;= 0.015 \cdot 0.018 \\&amp;= 0.000 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{L} &amp;= Q \cdot 1000 \\&amp;= 0.000 \cdot 1000 \\&amp;= 0.269 \; \;\textrm{(L/s)}\\[10pt]
+\\[10pt]
+h_{f} &amp;= 32 \cdot \nu \cdot V \cdot \frac{ L }{ g \cdot \left( D \right) ^{ 2 } } \\&amp;= 32 \cdot 0.000 \cdot 0.015 \cdot \frac{ 500 }{ 9.810 \cdot \left( 0.150 \right) ^{ 2 } } \\&amp;= 0.001 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 3 (b)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2952,7 +4143,30 @@ f=(\frac {1}{-2log_{10}(\frac {5.47}{Re^{0.9}}+ \frac {e}{3.7D})})^2
 h_f= fL\frac {V^2}{2gD}
 \]</div>
 </div>
-</details><p><strong>Question 3 (c)</strong></p>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V &amp;= 2 \; \;\textrm{(m/s)}
+\\[10pt]
+\mathrm{Re} &amp;= V \cdot \frac{ D }{ \nu } \\&amp;= 2 \cdot \frac{ 0.150 }{ 0.000 } \\&amp;= 263157.895 \; \;\textrm{(Turbulent)}\\[10pt]
+\\[10pt]
+f &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re} \right) ^{ 0.9 } } + \left( \frac{ e }{ 3.7 \cdot D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 263157.895 \right) ^{ 0.9 } } + \left( \frac{ 0.000 }{ 3.7 \cdot 0.150 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.022  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.022 \cdot 500 \cdot \frac{ \left( 2 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.150 } \\&amp;= 15.047 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p><strong>Question 3 (c)</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -2970,7 +4184,30 @@ f=(\frac {1}{-2log_{10}(\frac {5.47}{Re^{0.9}}+ \frac {e}{3.7D})})^2
 h_f= fL\frac {V^2}{2gD}
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Re} &amp;= 100000 \; 
+\\[10pt]
+V &amp;= \mathrm{Re} \cdot \frac{ \nu }{ D } \\&amp;= 100000 \cdot \frac{ 0.000 }{ 0.150 } \\&amp;= 0.760 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+f &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re} \right) ^{ 0.9 } } + \left( \frac{ e }{ 3.7 \cdot D } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 100000 \right) ^{ 0.9 } } + \left( \frac{ 0.000 }{ 3.7 \cdot 0.150 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.023  \\[10pt]
+\\[10pt]
+h_{f} &amp;= f \cdot L \cdot \frac{ \left( V \right) ^{ 2 } }{ 2 \cdot g \cdot D } \\&amp;= 0.023 \cdot 500 \cdot \frac{ \left( 0.760 \right) ^{ 2 } }{ 2 \cdot 9.810 \cdot 0.150 } \\&amp;= 2.300 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id28">
 <h4>Question 4 (**)<a class="headerlink" href="#id28" title="Link to this heading">#</a></h4>
@@ -3048,7 +4285,34 @@ h_f= \frac{fLV^2}{2gD}\\
 \frac{p_{atm}}{\gamma}=\frac{p_{vap}}{\gamma}+z_2+ 0.0510V_2^2+0.0176V_2^2
 \]</div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><p><strong>Solution V2</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 200 }{ 1000 } &amp;= 0.2000 \; \;\textrm{(m)}
+\\[10pt]
+f &amp;= 0.0230 \; 
+\\[10pt]
+L &amp;= 3 \; \;\textrm{(m)}
+\\[10pt]
+z_{2} &amp;= 2 \; \;\textrm{(m)}
+\\[10pt]
+p_{vap} &amp;= 2.34 \cdot 1000 &amp;= 2340.0000 \; \;\textrm{(Pa)}
+\\[10pt]
+V_{2} &amp;= \left( \frac{ \left( \frac{ p_{atm} }{ \rho_{water} \cdot g } \right) - \frac{ p_{vap} }{ \rho_{water} \cdot g } - z_{2} }{ 0.0681 } \right) ^{ 0.5 } \\&amp;= \left( \frac{ \left( \frac{ 101325 }{ 1000 \cdot 9.8100 } \right) - \frac{ 2340.0000 }{ 1000 \cdot 9.8100 } - 2 }{ 0.0681 } \right) ^{ 0.5 } \\&amp;= 10.8995 \; \;\textrm{(m/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Bernoulli between points one and three</p>
@@ -3089,7 +4353,32 @@ L_T = 3+2+z_3\\
 z= \frac {9.537}{0.309}
 \end{split}\]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{terms} &amp;= \frac{ \left( V_{2} \right) ^{ 2 } }{ 2 \cdot g } + f \cdot \left( V_{2} \right) ^{ 2 } \cdot \frac{ 5 }{ 2 \cdot g \cdot D } \\&amp;= \frac{ \left( 10.899 \right) ^{ 2 } }{ 2 \cdot 9.810 } + 0.023 \cdot \left( 10.899 \right) ^{ 2 } \cdot \frac{ 5 }{ 2 \cdot 9.810 \cdot 0.200 } \\&amp;= 9.537  \\[10pt]
+\\[10pt]
+Z &amp;= \frac{ \mathrm{terms} }{ 0.309 } \\&amp;= \frac{ 9.537 }{ 0.309 } \\&amp;= 30.863 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.031 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V_{2} \cdot A \\&amp;= 10.899 \cdot 0.031 \\&amp;= 0.342 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{} &amp;= Q \cdot 1000 \\&amp;= 0.342 \cdot 1000 \\&amp;= 342.418 \; \;\textrm{(L/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 <hr class="docutils" />
 <section id="id30">
 <h4>Question 6(***)[R]<a class="headerlink" href="#id30" title="Link to this heading">#</a></h4>
@@ -3223,7 +4512,42 @@ Q \propto \sqrt{2^5}=5.6568
 2.99= 1.549\frac{V^2}{2g}
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D &amp;= \frac{ 350 }{ 1000 } &amp;= 0.35 \; \;\textrm{(m)}
+\\[10pt]
+f &amp;= 0.02 \; 
+\\[10pt]
+L_{BC} &amp;= 12 \; \;\textrm{(m)}
+\\[10pt]
+L_{DE} &amp;= 920 \; \;\textrm{(m)}
+\\[10pt]
+\Delta_{z} &amp;= 48 \; \;\textrm{(m)}
+\\[10pt]
+H &amp;= 1000 \; \;\textrm{(m)}
+\\[10pt]
+z_{c} &amp;= 6 \; \;\textrm{(m)}
+\\[10pt]
+V &amp;= \left( \left( \frac{ 2.99 }{ 1.549 } \right) \cdot 2 \cdot g \right) ^{ 0.5 } \\&amp;= \left( \left( \frac{ 2.99 }{ 1.549 } \right) \cdot 2 \cdot 9.81 \right) ^{ 0.5 } \\&amp;= 6.15 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.35 \right) ^{ 2 } }{ 4 } \\&amp;= 0.10 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= V \cdot A \\&amp;= 6.15 \cdot 0.10 \\&amp;= 0.59 \; \;\textrm{(m3/s)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="pipe-diameter">
 <h3>Pipe diameter<a class="headerlink" href="#pipe-diameter" title="Link to this heading">#</a></h3>
@@ -3344,7 +4668,235 @@ Q_{} &amp;= Q \cdot 1000 \\&amp;= 0.04 \cdot 1000 \\&amp;= 38.03 \; \;\textrm{(L
 h_f= \frac {fLV^2}{2gD}
 \]</div>
 </div>
-</details></section>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+e &amp;= 0.00007 \; \;\textrm{(m)}
+ &amp;L &amp;= 4200 \; \;\textrm{(m)}
+ &amp;\nu &amp;= 0.00005 \; \;\textrm{(m/s2)}
+\\[10pt]
+ Q &amp;= 0.30000 \; \;\textrm{(m3/s)}
+ &amp;H_{0} &amp;= 247 \; \;\textrm{(m)}
+ &amp;H_{1} &amp;= 156 \; \;\textrm{(m)}
+\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<div class="cell tag_solution tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iteration: 1 , hf: 2279.6018 , V: 9.549 , Re: 36728.1 , f: 0.0234 , df: 2188.6018068739 , D: 0.2
+iteration: 2 , hf: 2225.1926 , V: 9.455 , Re: 36545.3 , f: 0.0234 , df: 2134.1925976828 , D: 0.201
+iteration: 3 , hf: 2172.3501 , V: 9.361 , Re: 36364.4 , f: 0.0234 , df: 2081.3501139858 , D: 0.202
+iteration: 4 , hf: 2121.0216 , V: 9.269 , Re: 36185.3 , f: 0.0234 , df: 2030.0216036326 , D: 0.203
+iteration: 5 , hf: 2071.1563 , V: 9.178 , Re: 36007.9 , f: 0.0234 , df: 1980.1563450593 , D: 0.204
+iteration: 6 , hf: 2022.7056 , V: 9.089 , Re: 35832.3 , f: 0.0234 , df: 1931.7055594395 , D: 0.205
+iteration: 7 , hf: 1975.6223 , V: 9.001 , Re: 35658.3 , f: 0.0235 , df: 1884.622327051 , D: 0.206
+iteration: 8 , hf: 1929.8615 , V: 8.914 , Re: 35486.1 , f: 0.0235 , df: 1838.8615076344 , D: 0.207
+iteration: 9 , hf: 1885.3797 , V: 8.829 , Re: 35315.4 , f: 0.0235 , df: 1794.3796645365 , D: 0.208
+iteration: 10 , hf: 1842.135 , V: 8.745 , Re: 35146.5 , f: 0.0235 , df: 1751.1349924399 , D: 0.209
+iteration: 11 , hf: 1800.0872 , V: 8.661 , Re: 34979.1 , f: 0.0235 , df: 1709.0872484932 , D: 0.21
+iteration: 12 , hf: 1759.1977 , V: 8.58 , Re: 34813.3 , f: 0.0236 , df: 1668.1976866663 , D: 0.211
+iteration: 13 , hf: 1719.429 , V: 8.499 , Re: 34649.1 , f: 0.0236 , df: 1628.4289951647 , D: 0.212
+iteration: 14 , hf: 1680.7452 , V: 8.419 , Re: 34486.4 , f: 0.0236 , df: 1589.7452367463 , D: 0.213
+iteration: 15 , hf: 1643.1118 , V: 8.341 , Re: 34325.3 , f: 0.0236 , df: 1552.1117917942 , D: 0.214
+iteration: 16 , hf: 1606.4953 , V: 8.263 , Re: 34165.6 , f: 0.0236 , df: 1515.495304004 , D: 0.215
+iteration: 17 , hf: 1570.8636 , V: 8.187 , Re: 34007.5 , f: 0.0236 , df: 1479.863628555 , D: 0.216
+iteration: 18 , hf: 1536.1858 , V: 8.112 , Re: 33850.8 , f: 0.0237 , df: 1445.1857826401 , D: 0.217
+iteration: 19 , hf: 1502.4319 , V: 8.037 , Re: 33695.5 , f: 0.0237 , df: 1411.4318982375 , D: 0.218
+iteration: 20 , hf: 1469.5732 , V: 7.964 , Re: 33541.6 , f: 0.0237 , df: 1378.5731770113 , D: 0.219
+iteration: 21 , hf: 1437.5818 , V: 7.892 , Re: 33389.1 , f: 0.0237 , df: 1346.5818472367 , D: 0.22
+iteration: 22 , hf: 1406.4311 , V: 7.821 , Re: 33238.1 , f: 0.0237 , df: 1315.4311226492 , D: 0.221
+iteration: 23 , hf: 1376.0952 , V: 7.75 , Re: 33088.3 , f: 0.0238 , df: 1285.0951631253 , D: 0.222
+iteration: 24 , hf: 1346.549 , V: 7.681 , Re: 32940.0 , f: 0.0238 , df: 1255.5490371021 , D: 0.223
+iteration: 25 , hf: 1317.7687 , V: 7.613 , Re: 32792.9 , f: 0.0238 , df: 1226.7686856544 , D: 0.224
+iteration: 26 , hf: 1289.7309 , V: 7.545 , Re: 32647.2 , f: 0.0238 , df: 1198.7308881479 , D: 0.225
+iteration: 27 , hf: 1262.4132 , V: 7.478 , Re: 32502.7 , f: 0.0238 , df: 1171.4132293915 , D: 0.226
+iteration: 28 , hf: 1235.7941 , V: 7.413 , Re: 32359.5 , f: 0.0238 , df: 1144.7940682189 , D: 0.227
+iteration: 29 , hf: 1209.8525 , V: 7.348 , Re: 32217.6 , f: 0.0239 , df: 1118.8525074295 , D: 0.228
+iteration: 30 , hf: 1184.5684 , V: 7.284 , Re: 32076.9 , f: 0.0239 , df: 1093.5683650255 , D: 0.229
+iteration: 31 , hf: 1159.9221 , V: 7.221 , Re: 31937.4 , f: 0.0239 , df: 1068.9221466821 , D: 0.23
+iteration: 32 , hf: 1135.895 , V: 7.158 , Re: 31799.2 , f: 0.0239 , df: 1044.8950193946 , D: 0.231
+iteration: 33 , hf: 1112.4688 , V: 7.097 , Re: 31662.1 , f: 0.0239 , df: 1021.4687862457 , D: 0.232
+iteration: 34 , hf: 1089.6259 , V: 7.036 , Re: 31526.2 , f: 0.024 , df: 998.6258622418 , D: 0.233
+iteration: 35 , hf: 1067.3493 , V: 6.976 , Re: 31391.5 , f: 0.024 , df: 976.3492511673 , D: 0.234
+iteration: 36 , hf: 1045.6225 , V: 6.917 , Re: 31257.9 , f: 0.024 , df: 954.6225234118 , D: 0.235
+iteration: 37 , hf: 1024.4298 , V: 6.858 , Re: 31125.5 , f: 0.024 , df: 933.4297947227 , D: 0.236
+iteration: 38 , hf: 1003.7557 , V: 6.8 , Re: 30994.1 , f: 0.024 , df: 912.7557058432 , D: 0.237
+iteration: 39 , hf: 983.5854 , V: 6.743 , Re: 30863.9 , f: 0.024 , df: 892.5854029938 , D: 0.238
+iteration: 40 , hf: 963.9045 , V: 6.687 , Re: 30734.8 , f: 0.0241 , df: 872.904519159 , D: 0.239
+iteration: 41 , hf: 944.6992 , V: 6.631 , Re: 30606.7 , f: 0.0241 , df: 853.6991561436 , D: 0.24
+iteration: 42 , hf: 925.9559 , V: 6.577 , Re: 30479.7 , f: 0.0241 , df: 834.9558673627 , D: 0.241
+iteration: 43 , hf: 907.6616 , V: 6.522 , Re: 30353.8 , f: 0.0241 , df: 816.6616413332 , D: 0.242
+iteration: 44 , hf: 889.8039 , V: 6.469 , Re: 30228.9 , f: 0.0241 , df: 798.8038858354 , D: 0.243
+iteration: 45 , hf: 872.3704 , V: 6.416 , Re: 30105.0 , f: 0.0242 , df: 781.3704127142 , D: 0.244
+iteration: 46 , hf: 855.3494 , V: 6.364 , Re: 29982.1 , f: 0.0242 , df: 764.3494232924 , D: 0.245
+iteration: 47 , hf: 838.7295 , V: 6.312 , Re: 29860.2 , f: 0.0242 , df: 747.7294943682 , D: 0.246
+iteration: 48 , hf: 822.4996 , V: 6.261 , Re: 29739.3 , f: 0.0242 , df: 731.4995647717 , D: 0.247
+iteration: 49 , hf: 806.6489 , V: 6.211 , Re: 29619.4 , f: 0.0242 , df: 715.6489224562 , D: 0.248
+iteration: 50 , hf: 791.1672 , V: 6.161 , Re: 29500.5 , f: 0.0242 , df: 700.1671920996 , D: 0.249
+iteration: 51 , hf: 776.0443 , V: 6.112 , Re: 29382.5 , f: 0.0243 , df: 685.0443231955 , D: 0.25
+iteration: 52 , hf: 761.2706 , V: 6.063 , Re: 29265.4 , f: 0.0243 , df: 670.2705786115 , D: 0.251
+iteration: 53 , hf: 746.8365 , V: 6.015 , Re: 29149.3 , f: 0.0243 , df: 655.8365235953 , D: 0.252
+iteration: 54 , hf: 732.733 , V: 5.967 , Re: 29034.0 , f: 0.0243 , df: 641.7330152084 , D: 0.253
+iteration: 55 , hf: 718.9512 , V: 5.921 , Re: 28919.7 , f: 0.0243 , df: 627.9511921707 , D: 0.254
+iteration: 56 , hf: 705.4825 , V: 5.874 , Re: 28806.3 , f: 0.0244 , df: 614.4824650963 , D: 0.255
+iteration: 57 , hf: 692.3185 , V: 5.828 , Re: 28693.8 , f: 0.0244 , df: 601.3185071067 , D: 0.256
+iteration: 58 , hf: 679.4512 , V: 5.783 , Re: 28582.2 , f: 0.0244 , df: 588.4512448023 , D: 0.257
+iteration: 59 , hf: 666.8728 , V: 5.738 , Re: 28471.4 , f: 0.0244 , df: 575.8728495798 , D: 0.258
+iteration: 60 , hf: 654.5757 , V: 5.694 , Re: 28361.4 , f: 0.0244 , df: 563.5757292793 , D: 0.259
+iteration: 61 , hf: 642.5525 , V: 5.65 , Re: 28252.4 , f: 0.0244 , df: 551.5525201479 , D: 0.26
+iteration: 62 , hf: 630.7961 , V: 5.607 , Re: 28144.1 , f: 0.0245 , df: 539.796079107 , D: 0.261
+iteration: 63 , hf: 619.2995 , V: 5.565 , Re: 28036.7 , f: 0.0245 , df: 528.29947631 , D: 0.262
+iteration: 64 , hf: 608.056 , V: 5.522 , Re: 27930.1 , f: 0.0245 , df: 517.0559879787 , D: 0.263
+iteration: 65 , hf: 597.0591 , V: 5.481 , Re: 27824.3 , f: 0.0245 , df: 506.0590895072 , D: 0.264
+iteration: 66 , hf: 586.3024 , V: 5.439 , Re: 27719.3 , f: 0.0245 , df: 495.302448822 , D: 0.265
+iteration: 67 , hf: 575.7799 , V: 5.398 , Re: 27615.1 , f: 0.0246 , df: 484.7799199875 , D: 0.266
+iteration: 68 , hf: 565.4855 , V: 5.358 , Re: 27511.7 , f: 0.0246 , df: 474.4855370484 , D: 0.267
+iteration: 69 , hf: 555.4135 , V: 5.318 , Re: 27409.0 , f: 0.0246 , df: 464.4135080969 , D: 0.268
+iteration: 70 , hf: 545.5582 , V: 5.279 , Re: 27307.1 , f: 0.0246 , df: 454.5582095587 , D: 0.269
+iteration: 71 , hf: 535.9142 , V: 5.24 , Re: 27206.0 , f: 0.0246 , df: 444.9141806858 , D: 0.27
+iteration: 72 , hf: 526.4761 , V: 5.201 , Re: 27105.6 , f: 0.0246 , df: 435.4761182506 , D: 0.271
+iteration: 73 , hf: 517.2389 , V: 5.163 , Re: 27005.9 , f: 0.0247 , df: 426.2388714312 , D: 0.272
+iteration: 74 , hf: 508.1974 , V: 5.125 , Re: 26907.0 , f: 0.0247 , df: 417.1974368819 , D: 0.273
+iteration: 75 , hf: 499.347 , V: 5.088 , Re: 26808.8 , f: 0.0247 , df: 408.3469539802 , D: 0.274
+iteration: 76 , hf: 490.6827 , V: 5.051 , Re: 26711.3 , f: 0.0247 , df: 399.682700244 , D: 0.275
+iteration: 77 , hf: 482.2001 , V: 5.014 , Re: 26614.5 , f: 0.0247 , df: 391.2000869128 , D: 0.276
+iteration: 78 , hf: 473.8947 , V: 4.978 , Re: 26518.5 , f: 0.0247 , df: 382.8946546851 , D: 0.277
+iteration: 79 , hf: 465.7621 , V: 4.942 , Re: 26423.1 , f: 0.0248 , df: 374.7620696074 , D: 0.278
+iteration: 80 , hf: 457.7981 , V: 4.907 , Re: 26328.4 , f: 0.0248 , df: 366.798119108 , D: 0.279
+iteration: 81 , hf: 449.9987 , V: 4.872 , Re: 26234.3 , f: 0.0248 , df: 358.9987081697 , D: 0.28
+iteration: 82 , hf: 442.3599 , V: 4.837 , Re: 26141.0 , f: 0.0248 , df: 351.3598556376 , D: 0.281
+iteration: 83 , hf: 434.8777 , V: 4.803 , Re: 26048.3 , f: 0.0248 , df: 343.8776906547 , D: 0.282
+iteration: 84 , hf: 427.5484 , V: 4.769 , Re: 25956.2 , f: 0.0248 , df: 336.548449222 , D: 0.283
+iteration: 85 , hf: 420.3685 , V: 4.736 , Re: 25864.8 , f: 0.0249 , df: 329.3684708776 , D: 0.284
+iteration: 86 , hf: 413.3342 , V: 4.703 , Re: 25774.1 , f: 0.0249 , df: 322.3341954906 , D: 0.285
+iteration: 87 , hf: 406.4422 , V: 4.67 , Re: 25684.0 , f: 0.0249 , df: 315.4421601649 , D: 0.286
+iteration: 88 , hf: 399.689 , V: 4.637 , Re: 25594.5 , f: 0.0249 , df: 308.68899625 , D: 0.287
+iteration: 89 , hf: 393.0714 , V: 4.605 , Re: 25505.6 , f: 0.0249 , df: 302.0714264527 , D: 0.288
+iteration: 90 , hf: 386.5863 , V: 4.573 , Re: 25417.3 , f: 0.025 , df: 295.5862620479 , D: 0.289
+iteration: 91 , hf: 380.2304 , V: 4.542 , Re: 25329.7 , f: 0.025 , df: 289.2304001842 , D: 0.29
+iteration: 92 , hf: 374.0008 , V: 4.511 , Re: 25242.7 , f: 0.025 , df: 283.0008212799 , D: 0.291
+iteration: 93 , hf: 367.8946 , V: 4.48 , Re: 25156.2 , f: 0.025 , df: 276.8945865071 , D: 0.292
+iteration: 94 , hf: 361.9088 , V: 4.449 , Re: 25070.4 , f: 0.025 , df: 270.9088353602 , D: 0.293
+iteration: 95 , hf: 356.0408 , V: 4.419 , Re: 24985.1 , f: 0.025 , df: 265.0407833058 , D: 0.294
+iteration: 96 , hf: 350.2877 , V: 4.389 , Re: 24900.4 , f: 0.0251 , df: 259.2877195108 , D: 0.295
+iteration: 97 , hf: 344.647 , V: 4.36 , Re: 24816.3 , f: 0.0251 , df: 253.6470046463 , D: 0.296
+iteration: 98 , hf: 339.1161 , V: 4.33 , Re: 24732.7 , f: 0.0251 , df: 248.1160687636 , D: 0.297
+iteration: 99 , hf: 333.6924 , V: 4.301 , Re: 24649.7 , f: 0.0251 , df: 242.692409241 , D: 0.298
+iteration: 100 , hf: 328.3736 , V: 4.273 , Re: 24567.3 , f: 0.0251 , df: 237.3735887977 , D: 0.299
+iteration: 101 , hf: 323.1572 , V: 4.244 , Re: 24485.4 , f: 0.0251 , df: 232.1572335727 , D: 0.3
+iteration: 102 , hf: 318.041 , V: 4.216 , Re: 24404.0 , f: 0.0252 , df: 227.0410312669 , D: 0.301
+iteration: 103 , hf: 313.0227 , V: 4.188 , Re: 24323.2 , f: 0.0252 , df: 222.0227293455 , D: 0.302
+iteration: 104 , hf: 308.1001 , V: 4.161 , Re: 24242.9 , f: 0.0252 , df: 217.1001332981 , D: 0.303
+iteration: 105 , hf: 303.2711 , V: 4.133 , Re: 24163.2 , f: 0.0252 , df: 212.2711049563 , D: 0.304
+iteration: 106 , hf: 298.5336 , V: 4.106 , Re: 24084.0 , f: 0.0252 , df: 207.5335608645 , D: 0.305
+iteration: 107 , hf: 293.8855 , V: 4.079 , Re: 24005.3 , f: 0.0252 , df: 202.8854707033 , D: 0.306
+iteration: 108 , hf: 289.3249 , V: 4.053 , Re: 23927.1 , f: 0.0253 , df: 198.3248557636 , D: 0.307
+iteration: 109 , hf: 284.8498 , V: 4.027 , Re: 23849.4 , f: 0.0253 , df: 193.8497874694 , D: 0.308
+iteration: 110 , hf: 280.4584 , V: 4.001 , Re: 23772.2 , f: 0.0253 , df: 189.4583859471 , D: 0.309
+iteration: 111 , hf: 276.1488 , V: 3.975 , Re: 23695.5 , f: 0.0253 , df: 185.1488186406 , D: 0.31
+iteration: 112 , hf: 271.9193 , V: 3.949 , Re: 23619.3 , f: 0.0253 , df: 180.9192989705 , D: 0.311
+iteration: 113 , hf: 267.7681 , V: 3.924 , Re: 23543.6 , f: 0.0253 , df: 176.7680850345 , D: 0.312
+iteration: 114 , hf: 263.6935 , V: 3.899 , Re: 23468.4 , f: 0.0254 , df: 172.6934783494 , D: 0.313
+iteration: 115 , hf: 259.6938 , V: 3.874 , Re: 23393.7 , f: 0.0254 , df: 168.6938226326 , D: 0.314
+iteration: 116 , hf: 255.7675 , V: 3.85 , Re: 23319.4 , f: 0.0254 , df: 164.7675026208 , D: 0.315
+iteration: 117 , hf: 251.9129 , V: 3.825 , Re: 23245.6 , f: 0.0254 , df: 160.9129429263 , D: 0.316
+iteration: 118 , hf: 248.1286 , V: 3.801 , Re: 23172.3 , f: 0.0254 , df: 157.1286069282 , D: 0.317
+iteration: 119 , hf: 244.413 , V: 3.777 , Re: 23099.4 , f: 0.0254 , df: 153.4129956979 , D: 0.318
+iteration: 120 , hf: 240.7646 , V: 3.754 , Re: 23027.0 , f: 0.0255 , df: 149.7646469581 , D: 0.319
+iteration: 121 , hf: 237.1821 , V: 3.73 , Re: 22955.0 , f: 0.0255 , df: 146.1821340736 , D: 0.32
+iteration: 122 , hf: 233.6641 , V: 3.707 , Re: 22883.5 , f: 0.0255 , df: 142.6640650722 , D: 0.321
+iteration: 123 , hf: 230.2091 , V: 3.684 , Re: 22812.5 , f: 0.0255 , df: 139.2090816968 , D: 0.322
+iteration: 124 , hf: 226.8159 , V: 3.661 , Re: 22741.8 , f: 0.0255 , df: 135.8158584856 , D: 0.323
+iteration: 125 , hf: 223.4831 , V: 3.639 , Re: 22671.6 , f: 0.0255 , df: 132.48310188 , D: 0.324
+iteration: 126 , hf: 220.2095 , V: 3.616 , Re: 22601.9 , f: 0.0256 , df: 129.2095493597 , D: 0.325
+iteration: 127 , hf: 216.994 , V: 3.594 , Re: 22532.6 , f: 0.0256 , df: 125.9939686042 , D: 0.326
+iteration: 128 , hf: 213.8352 , V: 3.572 , Re: 22463.6 , f: 0.0256 , df: 122.8351566789 , D: 0.327
+iteration: 129 , hf: 210.7319 , V: 3.55 , Re: 22395.2 , f: 0.0256 , df: 119.7319392461 , D: 0.328
+iteration: 130 , hf: 207.6832 , V: 3.529 , Re: 22327.1 , f: 0.0256 , df: 116.6831697988 , D: 0.329
+iteration: 131 , hf: 204.6877 , V: 3.508 , Re: 22259.4 , f: 0.0256 , df: 113.6877289185 , D: 0.33
+iteration: 132 , hf: 201.7445 , V: 3.486 , Re: 22192.2 , f: 0.0257 , df: 110.7445235537 , D: 0.331
+iteration: 133 , hf: 198.8525 , V: 3.465 , Re: 22125.3 , f: 0.0257 , df: 107.8524863207 , D: 0.332
+iteration: 134 , hf: 196.0106 , V: 3.445 , Re: 22058.9 , f: 0.0257 , df: 105.0105748245 , D: 0.333
+iteration: 135 , hf: 193.2178 , V: 3.424 , Re: 21992.9 , f: 0.0257 , df: 102.2177709999 , D: 0.334
+iteration: 136 , hf: 190.4731 , V: 3.404 , Re: 21927.2 , f: 0.0257 , df: 99.4730804719 , D: 0.335
+iteration: 137 , hf: 187.7755 , V: 3.383 , Re: 21861.9 , f: 0.0257 , df: 96.7755319348 , D: 0.336
+iteration: 138 , hf: 185.1242 , V: 3.363 , Re: 21797.1 , f: 0.0258 , df: 94.1241765491 , D: 0.337
+iteration: 139 , hf: 182.5181 , V: 3.343 , Re: 21732.6 , f: 0.0258 , df: 91.5180873565 , D: 0.338
+iteration: 140 , hf: 179.9564 , V: 3.324 , Re: 21668.5 , f: 0.0258 , df: 88.9563587112 , D: 0.339
+iteration: 141 , hf: 177.4381 , V: 3.304 , Re: 21604.7 , f: 0.0258 , df: 86.4381057279 , D: 0.34
+iteration: 142 , hf: 174.9625 , V: 3.285 , Re: 21541.4 , f: 0.0258 , df: 83.962463746 , D: 0.341
+iteration: 143 , hf: 172.5286 , V: 3.266 , Re: 21478.4 , f: 0.0258 , df: 81.5285878088 , D: 0.342
+iteration: 144 , hf: 170.1357 , V: 3.247 , Re: 21415.8 , f: 0.0259 , df: 79.1356521573 , D: 0.343
+iteration: 145 , hf: 167.7828 , V: 3.228 , Re: 21353.5 , f: 0.0259 , df: 76.7828497396 , D: 0.344
+iteration: 146 , hf: 165.4694 , V: 3.209 , Re: 21291.6 , f: 0.0259 , df: 74.4693917326 , D: 0.345
+iteration: 147 , hf: 163.1945 , V: 3.191 , Re: 21230.1 , f: 0.0259 , df: 72.1945070791 , D: 0.346
+iteration: 148 , hf: 160.9574 , V: 3.172 , Re: 21168.9 , f: 0.0259 , df: 69.9574420361 , D: 0.347
+iteration: 149 , hf: 158.7575 , V: 3.154 , Re: 21108.1 , f: 0.0259 , df: 67.7574597377 , D: 0.348
+iteration: 150 , hf: 156.5938 , V: 3.136 , Re: 21047.6 , f: 0.026 , df: 65.5938397688 , D: 0.349
+iteration: 151 , hf: 154.4659 , V: 3.118 , Re: 20987.5 , f: 0.026 , df: 63.4658777515 , D: 0.35
+iteration: 152 , hf: 152.3729 , V: 3.1 , Re: 20927.7 , f: 0.026 , df: 61.372884943 , D: 0.351
+iteration: 153 , hf: 150.3142 , V: 3.083 , Re: 20868.2 , f: 0.026 , df: 59.3141878446 , D: 0.352
+iteration: 154 , hf: 148.2891 , V: 3.065 , Re: 20809.1 , f: 0.026 , df: 57.2891278214 , D: 0.353
+iteration: 155 , hf: 146.2971 , V: 3.048 , Re: 20750.3 , f: 0.026 , df: 55.297060733 , D: 0.354
+iteration: 156 , hf: 144.3374 , V: 3.031 , Re: 20691.9 , f: 0.0261 , df: 53.3373565741 , D: 0.355
+iteration: 157 , hf: 142.4094 , V: 3.014 , Re: 20633.7 , f: 0.0261 , df: 51.4093991249 , D: 0.356
+iteration: 158 , hf: 140.5126 , V: 2.997 , Re: 20575.9 , f: 0.0261 , df: 49.5125856112 , D: 0.357
+iteration: 159 , hf: 138.6463 , V: 2.98 , Re: 20518.5 , f: 0.0261 , df: 47.6463263742 , D: 0.358
+iteration: 160 , hf: 136.81 , V: 2.964 , Re: 20461.3 , f: 0.0261 , df: 45.8100445487 , D: 0.359
+iteration: 161 , hf: 135.0032 , V: 2.947 , Re: 20404.5 , f: 0.0261 , df: 44.0031757505 , D: 0.36
+iteration: 162 , hf: 133.2252 , V: 2.931 , Re: 20348.0 , f: 0.0262 , df: 42.225167772 , D: 0.361
+iteration: 163 , hf: 131.4755 , V: 2.915 , Re: 20291.7 , f: 0.0262 , df: 40.4754802865 , D: 0.362
+iteration: 164 , hf: 129.7536 , V: 2.899 , Re: 20235.8 , f: 0.0262 , df: 38.75358456 , D: 0.363
+iteration: 165 , hf: 128.059 , V: 2.883 , Re: 20180.3 , f: 0.0262 , df: 37.058963171 , D: 0.364
+iteration: 166 , hf: 126.3911 , V: 2.867 , Re: 20125.0 , f: 0.0262 , df: 35.3911097377 , D: 0.365
+iteration: 167 , hf: 124.7495 , V: 2.851 , Re: 20070.0 , f: 0.0262 , df: 33.7495286528 , D: 0.366
+iteration: 168 , hf: 123.1337 , V: 2.836 , Re: 20015.3 , f: 0.0262 , df: 32.1337348253 , D: 0.367
+iteration: 169 , hf: 121.5433 , V: 2.821 , Re: 19960.9 , f: 0.0263 , df: 30.5432534285 , D: 0.368
+iteration: 170 , hf: 119.9776 , V: 2.805 , Re: 19906.8 , f: 0.0263 , df: 28.9776196561 , D: 0.369
+iteration: 171 , hf: 118.4364 , V: 2.79 , Re: 19853.0 , f: 0.0263 , df: 27.4363784833 , D: 0.37
+iteration: 172 , hf: 116.9191 , V: 2.775 , Re: 19799.5 , f: 0.0263 , df: 25.919084435 , D: 0.371
+iteration: 173 , hf: 115.4253 , V: 2.76 , Re: 19746.3 , f: 0.0263 , df: 24.4253013604 , D: 0.372
+iteration: 174 , hf: 113.9546 , V: 2.745 , Re: 19693.3 , f: 0.0263 , df: 22.9546022124 , D: 0.373
+iteration: 175 , hf: 112.5066 , V: 2.731 , Re: 19640.7 , f: 0.0264 , df: 21.506568834 , D: 0.374
+iteration: 176 , hf: 111.0808 , V: 2.716 , Re: 19588.3 , f: 0.0264 , df: 20.0807917497 , D: 0.375
+iteration: 177 , hf: 109.6769 , V: 2.702 , Re: 19536.2 , f: 0.0264 , df: 18.6768699623 , D: 0.376
+iteration: 178 , hf: 108.2944 , V: 2.688 , Re: 19484.4 , f: 0.0264 , df: 17.2944107549 , D: 0.377
+iteration: 179 , hf: 106.933 , V: 2.673 , Re: 19432.8 , f: 0.0264 , df: 15.9330294988 , D: 0.378
+iteration: 180 , hf: 105.5923 , V: 2.659 , Re: 19381.6 , f: 0.0264 , df: 14.5923494652 , D: 0.379
+iteration: 181 , hf: 104.272 , V: 2.645 , Re: 19330.6 , f: 0.0265 , df: 13.2720016427 , D: 0.38
+iteration: 182 , hf: 102.9716 , V: 2.631 , Re: 19279.8 , f: 0.0265 , df: 11.9716245592 , D: 0.381
+iteration: 183 , hf: 101.6909 , V: 2.618 , Re: 19229.4 , f: 0.0265 , df: 10.690864108 , D: 0.382
+iteration: 184 , hf: 100.4294 , V: 2.604 , Re: 19179.1 , f: 0.0265 , df: 9.4293733791 , D: 0.383
+iteration: 185 , hf: 99.1868 , V: 2.59 , Re: 19129.2 , f: 0.0265 , df: 8.186812494 , D: 0.384
+iteration: 186 , hf: 97.9628 , V: 2.577 , Re: 19079.5 , f: 0.0265 , df: 6.9628484453 , D: 0.385
+iteration: 187 , hf: 96.7572 , V: 2.564 , Re: 19030.1 , f: 0.0265 , df: 5.7571549403 , D: 0.386
+iteration: 188 , hf: 95.5694 , V: 2.55 , Re: 18980.9 , f: 0.0266 , df: 4.5694122482 , D: 0.387
+iteration: 189 , hf: 94.3993 , V: 2.537 , Re: 18932.0 , f: 0.0266 , df: 3.3993070513 , D: 0.388
+iteration: 190 , hf: 93.2465 , V: 2.524 , Re: 18883.3 , f: 0.0266 , df: 2.2465323005 , D: 0.389
+iteration: 191 , hf: 92.1108 , V: 2.511 , Re: 18834.9 , f: 0.0266 , df: 1.1107870736 , D: 0.39
+iteration: 192 , hf: 90.9918 , V: 2.498 , Re: 18786.7 , f: 0.0266 , df: 0.0082235627 , D: 0.391
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
 </section>
 </section>
 </section>
