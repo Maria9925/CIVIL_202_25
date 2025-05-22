@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module 5: Conservation of Momentum &#8212; CIVIL 202: Fluid Mechanics and Pipe Flow</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module5ConservationofMomentum_Sol';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Module 4: Conservation of Energy" href="Module4ConservationEnergy_Sol.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">CIVIL 202: Fluid Mechanics and Pipe Flow</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="chapter1.html">
+                    CIVIL 202 COURSE EXERCISES
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module1FluidProperties_SolV2.html">Module 1: Fluid properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module2Hydrostatics_SolV2.html">Module 2: Hydrostatics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module3Kinematicfluid_Sol.html">Module 3: Kinematics and Conservation of Mass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module4ConservationEnergy_Sol.html">Module 4: Conservation of Energy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 5: Conservation of Momentum</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Module5ConservationofMomentum_Sol.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 5: Conservation of Momentum</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-28-conservation-of-linear-momentum-1">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-5-conservation-of-momentum">
+<h1>Module 5: Conservation of Momentum<a class="headerlink" href="#module-5-conservation-of-momentum" title="Link to this heading">#</a></h1>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>Global variables:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g &amp;= 9.810 \; \;\textrm{(m/s2)}
+ &amp;\rho_{water} &amp;= 1000 \; \;\textrm{(kg/m3)}
+ &amp;\rho_{Hg} &amp;= 13600 \; \;\textrm{(kg/m3)}
+\\[10pt]
+ p_{atm} &amp;= 101325 \; \;\textrm{(Pa)}
+\end{aligned}
+\end{split}\]</div>
+</div>
+</div>
+<section id="problems-for-lecture-28-conservation-of-linear-momentum-1">
+<h2>Problems for Lecture 28: Conservation of Linear Momentum 1<a class="headerlink" href="#problems-for-lecture-28-conservation-of-linear-momentum-1" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="question-1-r">
+<h3>Question 1 (***)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h3>
+<p>Water flows through a sluice gate as shown below. The friction losses through the gate are estimated to be 0.2 m. Find the horizontal thrust of the water per meter width on the sluice gate. Given: y<sub>1</sub> = 2.2 m, y<sub>2</sub> = 0.4 m, y<sub>3</sub> = 0.5 m</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/3e7aeb28a0bb800833cf1d369083dc1702ce783e09baa441ab1a86c0674431c2.png" src="_images/3e7aeb28a0bb800833cf1d369083dc1702ce783e09baa441ab1a86c0674431c2.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+12.33 \; kN\;to \;the \;right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
+<p class="sd-card-text">Find the velocities before and after the gate using the Energy equation.</p>
+<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-2">
+<h3>Question 2 (***)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h3>
+<p>Flow occurs over a spillway with a width of 100 m. The spillway has a cross section as shown below. The water depth on the upstream side of the spillway (y<Sub>1</sub>) is 20 m, and on the downstream side (y<Sub>2</sub>) is 1.5 m. The friction energy headloss over the spillway is 1.2 m. Determine the horizontal force of the water on the spillway.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8dfa604294d779d700b2b149c4f64244ddc02fea18b857fcc1f753936954f802.png" src="_images/8dfa604294d779d700b2b149c4f64244ddc02fea18b857fcc1f753936954f802.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+147.7 \; MN\; to \; the \; right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
+<p class="sd-card-text">Find the velocities using the Energy equation.</p>
+<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/abf8db1b16cb2fe8c30e00f4735effb51cee1fb49a865371e79f09853950c8e4.png" src="_images/abf8db1b16cb2fe8c30e00f4735effb51cee1fb49a865371e79f09853950c8e4.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of mass:</p>
+<p class="sd-card-text">\begin{align*}
+Q_1 &amp;= Q_2 \
+v_1 A_1 &amp;= v_2 A_2 \
+v_1 y_1 b &amp;= v_2 y_2 b \
+v_2 &amp;= \frac{y_1 v_1}{y_2}
+\end{align*}</p>
+<p class="sd-card-text">Conservation of Energy:</p>
+<p class="sd-card-text">\begin{align*}
+z_1 + \frac{P_1}{\rho g} + \frac{v_1^2}{2g} &amp;= z_2 + \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + h_f \
+\frac{P_1}{\rho g} &amp;= y_1, \quad \frac{P_2}{\rho g} = y_2\
+z_1 = z_2\
+\end{align*}</p>
+<p class="sd-card-text">\begin{align*}
+\frac{v_1^2}{2g} &amp;= y_2 + \frac{v_2^2}{2g} + h_f - y_1 \
+\frac{v_1^2}{2g} &amp;= y_2 + \frac{y_1^2 v_1^2}{2g y_2^2} + h_f - y_1
+\end{align*}</p>
+<p class="sd-card-text">Once the velocities at both sections are determined, the conservation of momentum can then be applied:</p>
+<p class="sd-card-text">\begin{align*}
+\sum F_x &amp;= \rho Q (v_2 - v_1) \
+F_1 - F_2 -R_x &amp;= \rho Q (v_2 - v_1)
+\end{align*}</p>
+<p class="sd-card-text">The centroid of the spillway is:</p>
+<p class="sd-card-text">\begin{align*}
+\rho g \frac{y_1}{2} A_1 - \rho g \frac{y_2}{2} A_2 - F &amp;= \rho Q (v_2 - v_1)
+\end{align*}</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+b &amp;= 100 \; \;\textrm{(m)}
+\\[10pt]
+y_{1} &amp;= 20 \; \;\textrm{(m)}
+\\[10pt]
+y_{2} &amp;= 1.500 \; \;\textrm{(m)}
+\\[10pt]
+h_{f} &amp;= 1.200 \; \;\textrm{(m)}
+\\[10pt]
+v_{1} &amp;= \left( \frac{ \left( y_{1} - y_{2} - h_{f} \right) \cdot 2 \cdot g }{ \left( \frac{ y_{1} }{ y_{2} } \right) ^{ 2 } - 1 } \right) ^{ 0.5 } \\&amp;= \left( \frac{ \left( 20 - 1.500 - 1.200 \right) \cdot 2 \cdot 9.810 }{ \left( \frac{ 20 }{ 1.500 } \right) ^{ 2 } - 1 } \right) ^{ 0.5 } \\&amp;= 1.386 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+v_{2} &amp;= y_{1} \cdot \frac{ v_{1} }{ y_{2} } \\&amp;= 20 \cdot \frac{ 1.386 }{ 1.500 } \\&amp;= 18.476 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q &amp;= v_{1} \cdot y_{1} \cdot b \\&amp;= 1.386 \cdot 20 \cdot 100 \\&amp;= 2771.333 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+A_{1} &amp;= b \cdot y_{1} \\&amp;= 100 \cdot 20 \\&amp;= 2000 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= b \cdot y_{2} \\&amp;= 100 \cdot 1.500 \\&amp;= 150.000 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \rho_{water} \cdot g \cdot y_{1} \cdot \frac{ A_{1} }{ 2 } - \rho_{water} \cdot g \cdot y_{2} \cdot \frac{ A_{2} }{ 2 } - \rho_{water} \cdot Q \cdot \left( v_{2} - v_{1} \right) \\&amp;= 1000 \cdot 9.810 \cdot 20 \cdot \frac{ 2000 }{ 2 } - 1000 \cdot 9.810 \cdot 1.500 \cdot \frac{ 150.000 }{ 2 } - 1000 \cdot 2771.333 \cdot \left( 18.476 - 1.386 \right) \\&amp;= 147.735 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \frac{ R_{x} }{ 1000000 } \\&amp;= \frac{ 147.735 }{ 1000000 } \\&amp;= 147.735 \; \;\textrm{(MN)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The force on the structure is on the same site but opposite in direction (<span class="math notranslate nohighlight">\(N \mathrm{III}\)</span>）: <span class="math notranslate nohighlight">\(F_x = 147.735 MN\)</span> to the right.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-3-r">
+<h3>Question 3 (***)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h3>
+<p>The inlet water passage shown in the figure below is 3 m wide (normal to the plane of the figure) and narrows down to be 2.5 m wide at the outlet section. Determine the horizontal force acting on the structure. Assume ideal flow.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/172f26a4acfaeb6783b0c99e518980fc40f2cf50d48fb45e7f63369b2c5b0fe5.png" src="_images/172f26a4acfaeb6783b0c99e518980fc40f2cf50d48fb45e7f63369b2c5b0fe5.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+12.2 \; m^3/s\; ;\;11.98\;kN\;to\;the\;right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
+<p class="sd-card-text">Find the velocities using the Energy equation.</p>
+<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</div>
+</details></section>
+</section>
+<section id="problems-for-lecture-29-conservation-of-linear-momentum-2">
+<h2>Problems for Lecture 29: Conservation of Linear Momentum 2<a class="headerlink" href="#problems-for-lecture-29-conservation-of-linear-momentum-2" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="id1">
+<h3>Question 1 (**)[R]<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>A nozzle is attached to a pipe as shown below. The inside diameter of the pipe is 100 mm, while the water jet exiting from the nozzle has a diameter of 50 mm. The pressure at section 1 is 500 kPa, and the velocity at sections 1 is 6 m/s. Calculate the force of the water on the nozzle.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/66b063dd2c41aba492b79f6e2c6409fccffaac0990627fdea849f09c54162682.png" src="_images/66b063dd2c41aba492b79f6e2c6409fccffaac0990627fdea849f09c54162682.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+3.079\; kN\; to\; the\; right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the continuity equation to find the velocity at the nozzle exit.</p>
+<p class="sd-card-text">Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> equation in the x-Direction to calculate the force on the nozzle.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="id2">
+<h3>Question 2 (**)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>The diameters in the figure below are 750 mm and 500 mm. The pressure at point 1 is 650 kPa and the velocity 2.8 m/s. Neglecting friction, find the resultant force on the horizontal conical reducer if water flows:</p>
+<p>a. to the right.</p>
+<p>b. to the left.</p>
+<p>c. What would happen with the previous answers if we did not neglect friction?</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/f4d972ecc39863f6f8c4249eb88d426ec5a010e30608e1b6d8a2b20d9fe98ff5.png" src="_images/f4d972ecc39863f6f8c4249eb88d426ec5a010e30608e1b6d8a2b20d9fe98ff5.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;158.3 \; kN\;to\;the\;right
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;158.3 \; kN\;to\;the\;right
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;increase \; Fx\;in\;(a)\;and\;decrease\;Fx\;in\;(b)
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the conservation of mass to relate the flow rates at different sections and solve for the unknow velocity.</p>
+<p class="sd-card-text">Apply the energy equation.</p>
+<p class="sd-card-text">Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> in the horizontal direction to calculate the force on the reducer.</p>
+</div>
+</details><p><strong>Question 2 (a)</strong></p>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of mass:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_1=Q_2\\
+v_1A_1=v_2A_2\\
+v_2=\frac{v_1A_1}{A_2}
+\end{split}\]</div>
+<p class="sd-card-text">Conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
+z_1= 0, 
+z_2=0\\
+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
+P_2=(\frac {P_1}{\rho g}+\frac{v_1^2}{2g}-\frac{v_2^2}{2g}) \rho g
+\end{split}\]</div>
+<p class="sd-card-text">Conservation of momentum:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x = \rho Q (v_2-v_1)\\
+P_1A_1-P_2A_2-R_x = \rho Q (v_2-v_1)\\
+\end{split}\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{1} &amp;= \frac{ 750 }{ 1000 } &amp;= 0.750 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 500 }{ 1000 } &amp;= 0.500 \; \;\textrm{(m)}
+\\[10pt]
+p_{1} &amp;= 650 \cdot 1000 &amp;= 650000 \; \;\textrm{(Pa)}
+\\[10pt]
+v_{1} &amp;= 2.800 \; \;\textrm{(m/s)}
+\\[10pt]
+v_{2} &amp;= \frac{ v_{1} \cdot \left( \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \right) }{ \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 2.800 \cdot \left( 3.142 \cdot \frac{ \left( 0.750 \right) ^{ 2 } }{ 4 } \right) }{ 3.142 \cdot \frac{ \left( 0.500 \right) ^{ 2 } }{ 4 } } \\&amp;= 6.300 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= \left( \left( \frac{ p_{1} }{ \rho_{water} \cdot g } \right) + \left( \frac{ \left( v_{1} \right) ^{ 2 } }{ 2 \cdot g } \right) - \left( \frac{ \left( v_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \left( \frac{ 650000 }{ 1000 \cdot 9.810 } \right) + \left( \frac{ \left( 2.800 \right) ^{ 2 } }{ 2 \cdot 9.810 } \right) - \left( \frac{ \left( 6.300 \right) ^{ 2 } }{ 2 \cdot 9.810 } \right) \right) \cdot 1000 \cdot 9.810 \\&amp;= 634075.000 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.750 \right) ^{ 2 } }{ 4 } \\&amp;= 0.442 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.500 \right) ^{ 2 } }{ 4 } \\&amp;= 0.196 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= v_{1} \cdot A_{1} \\&amp;= 2.800 \cdot 0.442 \\&amp;= 1.237 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= p_{1} \cdot A_{1} - p_{2} \cdot A_{2} - \rho_{water} \cdot Q \cdot \left( v_{2} - v_{1} \right) \\&amp;= 650000 \cdot 0.442 - 634075.000 \cdot 0.196 - 1000 \cdot 1.237 \cdot \left( 6.300 - 2.800 \right) \\&amp;= 158331.361 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&amp;= 158.331 \; \;\textrm{(kN)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Force of the water on nozzle is 158.3 kN to the right</p>
+</div>
+</details><p><strong>Question 2 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Apply the conservation of mass to relate the flow rates at different sections and solve for the unknown velocity.</p>
+<p class="sd-card-text">Apply the energy equation, assuming no friction, with the direction of flow reversed.</p>
+<p class="sd-card-text">Apply NII in the horizontal direction to calculate the force on the reducer, considering the reversed flow direction.</p>
+</div>
+</details><p><strong>Question 2 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Assuming the same pressure at the larger section in both cases, as given, friction will reduce <span class="math notranslate nohighlight">\(F_2\)</span> and therefore increase <span class="math notranslate nohighlight">\(R_x\)</span> in case (a) and do the opposite in case (b).</p>
+</div>
+</details></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module4ConservationEnergy_Sol.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 4: Conservation of Energy</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-28-conservation-of-linear-momentum-1">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
