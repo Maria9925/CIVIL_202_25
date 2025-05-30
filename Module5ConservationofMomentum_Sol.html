@@ -339,6 +339,23 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 3 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-r">Question 7 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (***)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 1 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 2 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 3 (**)[R]</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -458,7 +475,7 @@ F_1 - F_2 -R_x &amp;= \rho Q (v_2 - v_1)
 <p class="sd-card-text">The centroid of the spillway is:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho g \frac{y_1}{2} A_1 - \rho g \frac{y_2}{2} A_2 - F &amp;= \rho Q (v_2 - v_1)
+\rho g \frac{y_1}{2} A_1 - \rho g \frac{y_2}{2} A_2 - F = \rho Q (v_2 - v_1)
 \]</div>
 </div>
 </details><div class="cell tag_remove-input tag_hide-output docutils container">
@@ -552,7 +569,19 @@ R_{x} &amp;= \frac{ R_{x} }{ 1000000 } \\&amp;= \frac{ 147.735 }{ 1000000 } \\&a
 <p class="sd-card-text">Use the continuity equation to find the velocity at the nozzle exit.</p>
 <p class="sd-card-text">Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> equation in the x-Direction to calculate the force on the nozzle.</p>
 </div>
-</details><hr class="docutils" />
+</details><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;figures/29_Momentum_1.png&quot;</span><span class="p">)</span>
+<span class="n">img</span><span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">300</span><span class="p">,</span><span class="mi">190</span><span class="p">))</span>
+<span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6f84bebc35cfdd3fbfb5ec9f5855b3cfb417e85e4fd4390cc2635327b2aade58.png" src="_images/6f84bebc35cfdd3fbfb5ec9f5855b3cfb417e85e4fd4390cc2635327b2aade58.png" />
+</div>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id2">
 <h3>Question 2 (**)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
@@ -670,6 +699,757 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 </div>
 </details></section>
 </section>
+<section id="problems-for-lecture-30-conservation-of-linear-momentum-3">
+<h2>Problems for Lecture 30: Conservation of Linear Momentum 3<a class="headerlink" href="#problems-for-lecture-30-conservation-of-linear-momentum-3" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="question-1">
+<h3>Question 1 (***)<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h3>
+<p>A perforated plate with 50% of its area consisting of small holes is installed at the outlet of a 30 cm diameter horizontal water pipe carrying water at a velocity of 2 m/s. Neglect energy losses and calculate the force of the water on the perforated plate. Assume that the pressure head in the pipe is much greater than it’s diameter, so that you can use a uniform pressure distribution for any pipe cross section.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+142 \; N\;to\;the\;right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use conservation of mass to find the water velocity through the holes.</p>
+<p class="sd-card-text">Apply the Bernoulli euqation to find the pressure difference.</p>
+<p class="sd-card-text">Use conservation of momentum to calculate the force on the perforated plate.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-2-r">
+<h3>Question 2 (***)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h3>
+<p>A reducing right-angled bend lies in the horizontal plane. Water enters from the west at a velocity of 3 m/s and a pressure of 50 kPa, and leaves toward the north. The diameter of the entrance is 500 mm and at the exit 250 mm. Neglecting friction losses, find the magnitude of the x and y components of the resultant force on the bend.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+11.6 \; kN\;;\;6.2\;kN
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use conservation of energy (Bernoulli equation) to find the exit velocity and pressure.</p>
+<p class="sd-card-text">Apply conservation of momentum in the x and y directions to calculate the force components on the bend.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
+z_1= 0, 
+z_2=0\\
+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
+P_2=(\frac {P_1}{\rho g}+\frac{v_1^2}{2g}-\frac{v_2^2}{2g}) \rho g
+\end{split}\]</div>
+<p class="sd-card-text">Conservation of momentum in x:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x = \rho Q (v_2-v_1)\\
+P_1A_1-R_x = \rho Q (v_2-v_1)\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+V_2=0
+\]</div>
+<p class="sd-card-text">Conservation of momentum in y:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_y = \rho Q (v_2-v_1)\\
+R_y-P_2A_2 = \rho Q (v_2-v_1)\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+v_1=0
+\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_{1} &amp;= 3 \; \;\textrm{(m/s)}
+\\[10pt]
+p_{1} &amp;= 50 \cdot 1000 &amp;= 50000 \; \;\textrm{(Pa)}
+\\[10pt]
+D_{1} &amp;= \frac{ 500 }{ 1000 } &amp;= 0.500 \; \;\textrm{(m)}
+\\[10pt]
+D_{2} &amp;= \frac{ 250 }{ 1000 } &amp;= 0.250 \; \;\textrm{(m)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.500 \right) ^{ 2 } }{ 4 } \\&amp;= 0.196 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+A_{2} &amp;= \pi \cdot \frac{ \left( D_{2} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.250 \right) ^{ 2 } }{ 4 } \\&amp;= 0.049 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= v_{1} \cdot A_{1} \\&amp;= 3 \cdot 0.196 \\&amp;= 0.589 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+v_{2} &amp;= \frac{ Q }{ A_{2} } \\&amp;= \frac{ 0.589 }{ 0.049 } \\&amp;= 12.000 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= \left( \left( \frac{ p_{1} }{ \rho_{water} \cdot g } \right) + \left( \frac{ \left( v_{1} \right) ^{ 2 } }{ 2 \cdot g } \right) - \left( \frac{ \left( v_{2} \right) ^{ 2 } }{ 2 \cdot g } \right) \right) \cdot \rho_{water} \cdot g \\&amp;= \left( \left( \frac{ 50000 }{ 1000 \cdot 9.810 } \right) + \left( \frac{ \left( 3 \right) ^{ 2 } }{ 2 \cdot 9.810 } \right) - \left( \frac{ \left( 12.000 \right) ^{ 2 } }{ 2 \cdot 9.810 } \right) \right) \cdot 1000 \cdot 9.810 \\&amp;= -17500.000 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+F_{x} &amp;= p_{1} \cdot A_{1} - \rho_{water} \cdot Q \cdot \left( 0 - v_{1} \right) \\&amp;= 50000 \cdot 0.196 - 1000 \cdot 0.589 \cdot \left( 0 - 3 \right) \\&amp;= 11584.623 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+F_{y} &amp;= \rho_{water} \cdot Q \cdot \left( v_{2} - 0 \right) + p_{2} \cdot A_{2} \\&amp;= 1000 \cdot 0.589 \cdot \left( 12.000 - 0 \right) + -17500.000 \cdot 0.049 \\&amp;= 6209.554 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The force in x is 11.584 kN to the left and the force in y is 6.2 kN down.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="id3">
+<h3>Question 3 (***)[R]<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>The figure below shows a pipe that ends in a set of two nozzles (points 2 and 3) at right angles to each other, and exiting into the atmosphere. The nozzles are in the horizontal plane. The pipe has a diameter of 150 mm and nozzles 2 and 3 have exit diameters of 100 and 50 mm respectively. The exit velocity at both points 2 and 3 is 10 m/s. Assume ideal flow.Calculate the following:</p>
+<p>a)	The flow rate and velocity at at point 1.</p>
+<p>b)	The pressure at point 1.</p>
+<p>c)	The size and direction of the force that the fluid exerts on the pipe.</p>
+<p>d)	Assume the pressure at point 1 remains as in (b), but an energy headloss of 0.5 m occurs through each of the nozzles at points 2 and 3. Calculate the flow rate in the system and the velocities at points 1 and 2. Ignore energy losses other that those at the nozzles and assume the distribution of the flow between 2 and 3 remains the same as in (a).</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/12237781b9d3cb080762bbdb3ea9c3986c0b7dc0c0f7c8aa1ccdc0cce0e83ab6.png" src="_images/12237781b9d3cb080762bbdb3ea9c3986c0b7dc0c0f7c8aa1ccdc0cce0e83ab6.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;5.55 \; m/s
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;34.57 \; kPa
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;420 \; N\; at\; 27.9\; °\; above\; East
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+d) \;91 \;L/s\;;\; 5.15\; m/s\;;\; 9.3 \;m/s
+\)</span></p>
+</div>
+</details><p><strong>Question 3 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To calculate the flow rate and velocity in point 1 the conservation of mass can be used:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_1=Q_2+Q_3
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+v_1A_1=v_2A_2+v_3A_3
+\]</div>
+</div>
+</details><p><strong>Question 3 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
+\end{split}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(p_2=0 Pa\)</span> because of atmospheric pressure</p>
+<p class="sd-card-text">Considering the assumptions, the pressure in point 1 is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac {p_1}{\rho g}=\frac{v_2^2}{2g}-\frac{v_1^2}{2g}\\
+\end{split}\]</div>
+</div>
+</details><p><strong>Question 3 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Momentum in x:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x= \rho Q(v_{out_x}-v_{in_x})\\
+\sum F_x= \rho Q(v_2-v_1)\\
+P_1A_1-F_x= \rho Q(v_2-v_1)\\
+P_1A_1-F_x= \rho Q_2v_2-\rho Q_1v_1)\\
+\end{split}\]</div>
+<p class="sd-card-text">Momentum in y. It is important to include the velocity sign in this equation; in this example <span class="math notranslate nohighlight">\(v_{3y}\)</span> is negative.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_y= \rho Q(v_{out_y}-v_{in_y})\\
+\sum F_y= \rho Q(-v_3-0)\\
+F_3+F_y= \rho Q_3*(-v_3)-0)\\
+\end{split}\]</div>
+<p class="sd-card-text">Once the <span class="math notranslate nohighlight">\(F_x\)</span> and <span class="math notranslate nohighlight">\(F_y\)</span> are calculated, the force can be determine as:</p>
+<div class="math notranslate nohighlight">
+\[
+F= \sqrt{F_x^2+F_y^2}
+\]</div>
+<p class="sd-card-text">and the direction of the force can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta= arctan (\frac{F_y}{F_x})
+\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/056a33fc5b40add5ce21b4bc54763067d981d7c5c970f3ed66008c35dc6c7217.png" src="_images/056a33fc5b40add5ce21b4bc54763067d981d7c5c970f3ed66008c35dc6c7217.png" />
+</div>
+</details>
+</div>
+<p><strong>Question 3 (d)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {P_2}{\rho g}+\frac{v_2^2}{2g}+h_f\\
+\end{split}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(P_2=0 Pa\)</span> because of atmospheric pressure</p>
+<p class="sd-card-text">Assuming the distribution of the flow between 2 and 3 remains the same as in (a), it is necessary to calculate the distribution</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_2= \frac {0.0789}{0.0981}\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_2=0.80 Q_1\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_3=0.2 Q_1\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2A_2=0.80v_1A_1\\
+\end{split}\]</div>
+<p class="sd-card-text">Using conservation of mass:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2 \frac{\pi D_2^2}{4}=0.80 v_1\frac{\pi D_1^2}{4}\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2 D_2^2=0.80 v_1 D_1^2\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_2 (0.1)^2=0.80 v_1 (0.15)^2\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+v_2= 1.8 v_1
+\]</div>
+<p class="sd-card-text">Using conservation of energy and mass with an energy headloss of 0.5 m, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=\frac{(1.8 v_1)^2}{2g}+h_f\\
+\end{split}\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-4">
+<h3>Question 4 (**)<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h3>
+<p>A 40 mm diameter jet has a velocity of 25 m/s. If this jet were to strike a large flat plat normally, what would the resultant force on the plate be?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+785 \; N
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The jet direction will be parallel to the plate after hitting it.</p>
+<p class="sd-card-text">The force exerted by the water on the flat can be calculated with the momentum equation as:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum F_x = \rho Q (v_1-v_2cos \theta)
+\]</div>
+<p class="sd-card-text">where:</p>
+<div class="math notranslate nohighlight">
+\[
+cos \theta=cos(90°)=0
+\]</div>
+</div>
+</details><p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{1} &amp;= \frac{ 40 }{ 1000 } &amp;= 0.040 \; \;\textrm{(m)}
+\\[10pt]
+v_{1} &amp;= 25 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.040 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \rho_{water} \cdot A_{1} \cdot v_{1} \cdot \left( v_{1} - 0 \right) \\&amp;= 1000 \cdot 0.001 \cdot 25 \cdot \left( 25 - 0 \right) \\&amp;= 785.398 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-5">
+<h3>Question 5 (***)<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h3>
+<p>Water hits the curved plate shown below that entirely reverses the flow direction. The diameter of the jet is 50 mm and it hits the plate at a velocity of 12 m/s. The water leaves the plate at the same velocity, but in the opposite direction. Find the force exerted by the water on the vane.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0991be9b27c639aadbf4612e585da94957343e7aaf2ab2107374e0f1c53c3108.png" src="_images/0991be9b27c639aadbf4612e585da94957343e7aaf2ab2107374e0f1c53c3108.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+565 \; N\; to\; the\; right
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the conservation of mass to confirm the flow rate stays the same in and out.</p>
+<p class="sd-card-text">Apply the momentum equation in the horizontal direction, considering the change in flow direction.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-6-r">
+<h3>Question 6 (***)[R]<a class="headerlink" href="#question-6-r" title="Link to this heading">#</a></h3>
+<p>A jet is bent through an angle θ = 120° by a blade in the horizontal plane as shown below. The water jet has a velocity of 25 m/s and a diameter of 20 mm. Calculate the size and direction of the force on the blade.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/78a65f2c4a5768e9c943b57da0a27aa56ddfec0e0f6076acc853e288e606d49b.png" src="_images/78a65f2c4a5768e9c943b57da0a27aa56ddfec0e0f6076acc853e288e606d49b.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+340 \; N\;at\;30\;°\;above\;the\;horizon
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use conservation of mass to find the mass flow rate of the jet.</p>
+<p class="sd-card-text">Aplly the momentum equation to find the force, using the change in both x and y drections.</p>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/223eaf78d22483aa7caffdf2aa9dc0b09e819ede3c08d950318316e63c52ca07.png" src="_images/223eaf78d22483aa7caffdf2aa9dc0b09e819ede3c08d950318316e63c52ca07.png" />
+</div>
+</details>
+</div>
+<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To calculate the size and direction of the force on the blade we need to calculate the force on the x and y axes. We can do this using the momentum equation:</p>
+<p class="sd-card-text">In the x-axis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x= \rho Q(v_{2_x}-v_{1_x})\\
+-R_x= \rho Q(v_{2_x}-v_{1_x})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the x-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[v_{2x}= v_2*cos (180-\theta) m/s\]</div>
+<div class="math notranslate nohighlight">
+\[v_{1x}= 25 m/s \text{ (this is given)}\]</div>
+<p class="sd-card-text">In the conservation of momentum, it is important to include the sign that indicates the direction of the velocity component. Therefore, in this exercise, the <span class="math notranslate nohighlight">\(v_{2x}\)</span> component is negative</p>
+<div class="math notranslate nohighlight">
+\[
+-R_x= \rho Q(-v_{2x}-v_{1x})
+\]</div>
+<p class="sd-card-text">In the y-axis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_y= \rho Q(v_{2_y}-v_{1_y})\\
+-R_y= \rho Q(v_{2_y}-v_{1_y})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the y-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_{2x}= v_2*sin (180-\theta) m/s\\
+v_{1x}= 0 m/s \text{( since $v_1$ is horizontal)}
+\end{split}\]</div>
+<p class="sd-card-text">Conidering the direction of the velocities, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+-R_y= \rho Q(-v_{2y}-v_{1y})
+\]</div>
+<p class="sd-card-text">Then, the size of the force can be calculated with the following equation:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \sqrt{(R_x)^2 + (R_y)^2}
+\]</div>
+<p class="sd-card-text">and the angle can be calculated as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta=\frac{R_y}{R_x}
+\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\theta &amp;= 120 \; \;\textrm{(°)}
+\\[10pt]
+v &amp;= 25 \; \;\textrm{(m/s)}
+\\[10pt]
+D &amp;= 0.0200 \; \;\textrm{(m)}
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0003 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= v \cdot A \\&amp;= 25 \cdot 0.0003 \\&amp;= 0.0079 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+\alpha &amp;= 180 - \theta \\&amp;= 180 - 120 \\&amp;= 60 \; \;\textrm{(°)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \left( - \rho_{water} \right) \cdot Q \cdot \left( \left( - v \right) \cdot \cos \left( \operatorname{radians} \alpha \right) - v \right) \\&amp;= \left( - 1000 \right) \cdot 0.0079 \cdot \left( \left( - 25 \right) \cdot \cos \left( \operatorname{radians} 60 \right) - 25 \right) \\&amp;= 294.5243 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{y} &amp;= \left( - \rho_{water} \right) \cdot Q \cdot \left( \left( - v \right) \cdot \sin \left( \operatorname{radians} \alpha \right) - 0 \right) \\&amp;= \left( - 1000 \right) \cdot 0.0079 \cdot \left( \left( - 25 \right) \cdot \sin \left( \operatorname{radians} 60 \right) - 0 \right) \\&amp;= 170.0437 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+F &amp;= \sqrt { \left( R_{x} \right) ^{ 2 } + \left( R_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 294.5243 \right) ^{ 2 } + \left( 170.0437 \right) ^{ 2 } } \\&amp;= 340.0874 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\theta_{F} &amp;= \operatorname{degrees} \left( \arctan \left( \frac{ R_{y} }{ R_{x} } \right) \right) \\&amp;= \operatorname{degrees} \left( \arctan \left( \frac{ 170.0437 }{ 294.5243 } \right) \right) \\&amp;= 30.0000 \; \;\textrm{(°)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="question-7-r">
+<h3>Question 7 (***)[R]<a class="headerlink" href="#question-7-r" title="Link to this heading">#</a></h3>
+<p>A jet of water with a velocity of 25 m/s and diameter of 40 mm strikes a blade in a horizontal plane. If the angle of deflection is 115° and friction reduces the velocity to 22 m/s, find;</p>
+<p>a.	the component of the force acting on the blade in the direction of the jet.</p>
+<p>b.	the component of the force normal/ perpendicular to the jet.</p>
+<p>c.	the magnitude and direction of the resultant force exerted on the blade.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/56364849ddbaa581eb494e260fc7b715e71812c6060d9a319389a2e1251d925d.png" src="_images/56364849ddbaa581eb494e260fc7b715e71812c6060d9a319389a2e1251d925d.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+a) \;1.077 \; kN\; to\; the\; right
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+b) \;0.626 \; kN\; downwards
+\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+c) \;1.246 \; kN\; at\;30.2\;°\;below\;east
+\)</span></p>
+</div>
+</details><p><strong>Question 7 (a)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The force on the X-axis can be calculated with the momentum equation as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x= \rho Q(v_{out_x}-v_{in_x})\\
+-R_x= \rho Q(v_{out_x}-v_{in_x})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the X-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[
+v_{2x}= v_2*cos (180-\theta)
+\]</div>
+<p class="sd-card-text">In the conservation of momentum, it is important to include the sign that indicates the direction of the velocity component. Therefore, in this exercise, the <span class="math notranslate nohighlight">\(v_{2x}\)</span> component is negative</p>
+<div class="math notranslate nohighlight">
+\[
+-R_x= \rho Q(-v_{2x}-v_{1x})
+\]</div>
+</div>
+</details><p><strong>Question 7 (b)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The force on the Y-axis can be calculated with the momentum equation as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_y= \rho Q(v_{out_y}-v_{in_y})\\
+R_y= \rho Q(v_{out_y}-v_{in_y})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the X-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[
+v_{2y}= v_2*sin (180-\theta)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+R_y= \rho Q(v_{2y}-v_{1y})
+\]</div>
+<p class="sd-card-text">In this example, there is no component of the velocitu one in the Y-axis</p>
+</div>
+</details><p><strong>Question 7 (c)</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Once the <span class="math notranslate nohighlight">\(R_x\)</span> and <span class="math notranslate nohighlight">\(R_y\)</span> are calculated, the force can be determine as:</p>
+<div class="math notranslate nohighlight">
+\[
+F= \sqrt{R_x^2+R_y^2}
+\]</div>
+<p class="sd-card-text">and the direction of the force can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta= arctan (\frac{R_y}{R_x})
+\]</div>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="question-8">
+<h3>Question 8 (***)<a class="headerlink" href="#question-8" title="Link to this heading">#</a></h3>
+<p>The figure below represents ideal flow in a horizontal plane. The jet (v = 12 m/s, D = 150 mm) is divided by the splitter so that one third of the water is diverted to A. Calculate the magnitude and direction of the resultant force on the blade if the blade is moving to the right at 5 m/s.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e7748c412f3a0e37d581a5da6d0b61de4bd6e25fc14e1bfeeab8aa606ceb985b.png" src="_images/e7748c412f3a0e37d581a5da6d0b61de4bd6e25fc14e1bfeeab8aa606ceb985b.png" />
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+763.65 \; N\;at\;19.11\;°\;below\;the\;horizontal
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use relative velocity to find the flow entering and leaving the blade.</p>
+<p class="sd-card-text">Use conservation of mass to find the flow rates in each direction.</p>
+<p class="sd-card-text">Apply the momentum equation to calculate the force on the moving blade, based on changes in flow direction and speed.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, the exercise provides <span class="math notranslate nohighlight">\(V_1\)</span>. However, since the system moves in the opposite direction with velocity <span class="math notranslate nohighlight">\(V\)</span>, we can calculate the relative velocity 1 (<span class="math notranslate nohighlight">\(u_1\)</span>) by subtracting the two velocities:</p>
+<div class="math notranslate nohighlight">
+\[
+v_1=V_1-V
+\]</div>
+<p class="sd-card-text">Then, we need to calculate the flow rate in A and B with the given fraction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_A=Q*fraction_A\\
+Q_B=Q*(1-fraction_A)
+\end{split}\]</div>
+<p class="sd-card-text">To calculate the magnitud and direction of the resultant force on the blade we need to calculate the force on the x and y axes. We can do this using the momentum equation. Remember to include the sign in the velocities to indicate the direction:</p>
+<p class="sd-card-text">In the x-axis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-R_x= \rho Q_A(-V_{2Ax}-V_{1Ax})+\rho Q_B(V_{2Bx}-V_{1Bx})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the x-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[V_{2Ax}=V_{2Bx}= v_1*cos (\theta) m/s\]</div>
+<div class="math notranslate nohighlight">
+\[V_{1Ax}=V_{1Bx} v_1 m/s\]</div>
+<p class="sd-card-text">In the y-axis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_y= \rho Q_A(-V_{2Ay}-V_{1Ay})+\rho Q_B(V_{2By}-V_{1By})\\
+\end{split}\]</div>
+<p class="sd-card-text">In this example, the velocity component along the y-axis can be determined as follows</p>
+<div class="math notranslate nohighlight">
+\[V_{2Ay}=V_{2By}= v_1*sin (\theta) m/s\]</div>
+<div class="math notranslate nohighlight">
+\[V_{1Ay}=V_{1By} 0 m/s\]</div>
+<p class="sd-card-text">Finally, the size of the force can be calculated with the following equation:</p>
+<div class="math notranslate nohighlight">
+\[
+R = \sqrt{(R_x)^2 + (R_y)^2}
+\]</div>
+<p class="sd-card-text">and the angle can be calculated as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\Theta=\frac{R_y}{R_x}
+\]</div>
+</div>
+</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+V_{1} &amp;= 12 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{1} &amp;= 0.15 \; \;\textrm{(m)}
+\\[10pt]
+\mathrm{fraction}_{A} &amp;= 0.33 \; 
+\\[10pt]
+V &amp;= 5 \; \;\textrm{(m/s)}
+\\[10pt]
+\theta &amp;= 60 \; \;\textrm{(°)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.14 \cdot \frac{ \left( 0.15 \right) ^{ 2 } }{ 4 } \\&amp;= 0.02 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+v_{1} &amp;= V_{1} - V \\&amp;= 12 - 5 \\&amp;= 7 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+Q &amp;= A_{1} \cdot v_{1} \\&amp;= 0.02 \cdot 7 \\&amp;= 0.12 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{A} &amp;= Q \cdot \mathrm{fraction}_{A} \\&amp;= 0.12 \cdot 0.33 \\&amp;= 0.04 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+Q_{B} &amp;= Q \cdot \left( 1 - \mathrm{fraction}_{A} \right) \\&amp;= 0.12 \cdot \left( 1 - 0.33 \right) \\&amp;= 0.08 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \left( - \rho_{water} \right) \cdot Q_{A} \cdot \left( \left( - v_{1} \right) \cdot \cos \left( \operatorname{radians} \theta \right) - v_{1} \right) - \rho_{water} \cdot Q_{B} \cdot \left( v_{1} \cdot \cos \left( \operatorname{radians} \theta \right) - v_{1} \right) \\&amp;= \left( - 1000 \right) \cdot 0.04 \cdot \left( \left( - 7 \right) \cdot \cos \left( \operatorname{radians} 60 \right) - 7 \right) - 1000 \cdot 0.08 \cdot \left( 7 \cdot \cos \left( \operatorname{radians} 60 \right) - 7 \right) \\&amp;= 721.58 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{y} &amp;= \rho_{water} \cdot Q_{A} \cdot \left( \left( - v_{1} \right) \cdot \sin \left( \operatorname{radians} \theta \right) - 0 \right) + \rho_{water} \cdot Q_{B} \cdot \left( v_{1} \cdot \sin \left( \operatorname{radians} \theta \right) - 0 \right) \\&amp;= 1000 \cdot 0.04 \cdot \left( \left( - 7 \right) \cdot \sin \left( \operatorname{radians} 60 \right) - 0 \right) + 1000 \cdot 0.08 \cdot \left( 7 \cdot \sin \left( \operatorname{radians} 60 \right) - 0 \right) \\&amp;= 249.96 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R &amp;= \sqrt { \left( R_{x} \right) ^{ 2 } + \left( R_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 721.58 \right) ^{ 2 } + \left( 249.96 \right) ^{ 2 } } \\&amp;= 763.65 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\theta_{F} &amp;= \operatorname{degrees} \left( \arctan \left( \frac{ R_{y} }{ R_{x} } \right) \right) \\&amp;= \operatorname{degrees} \left( \arctan \left( \frac{ 249.96 }{ 721.58 } \right) \right) \\&amp;= 19.11 \; \;\textrm{(°)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">
+<h2>Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe<a class="headerlink" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="id4">
+<h3>Question 1 (**)[R]<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>A 2 km long, 500 mm diameter pipeline carries water at a velocity of 2 m/s.  Calculate the pressure rise in the system if water assuming a rigid pipe and a water temperature of 15 °Celsius.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+298 \; m
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the water hammer equation to calculate the pressure rise, assuming the pipe is rigid and the water is incompressible.</p>
+</div>
+</details><hr class="docutils" />
+</section>
+<section id="id5">
+<h3>Question 2 (**)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Calculate the celerity of a pressure wave in water at 20 °C assuming a water density of 1000 kg/m3 . What difference does it make to your answer if change in water density with temperature is taken into account?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+1476.48 \; m/s\; 1477.81\; m/s\; ,\; thus\; less\; than\; 0.1\; \% \; difference
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the water hammer equation to calculate the pressure rise, assuming the pipe is rigid and the water is incompressible.</p>
+</div>
+</details><p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To calculate the celerity the hammer equation can be used.</p>
+<div class="math notranslate nohighlight">
+\[
+c= \sqrt {\frac{E_v}{\rho}}
+\]</div>
+<p class="sd-card-text">From Table A.1, the density of water at 20 °C is <span class="math notranslate nohighlight">\(998.2 kg/m^3\)</span><br />
+From Table A.4, <span class="math notranslate nohighlight">\(E_v= 1030 x10^6 N/m^2\)</span></p>
+<p class="sd-card-text">The effect of the density can be calculated with the difference between the celerities:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{difference} = \left( \frac{c_2 - c_1}{c_2} \right)  100
+\]</div>
+</div>
+</details><div class="cell tag_hide-output tag_remove-input docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 20 \; \;\textrm{(°C)}
+\\[10pt]
+\rho &amp;= 1000 \; \;\textrm{(kg/m3)}
+\\[10pt]
+\rho_{20} &amp;= 998.20 \; \;\textrm{(kg/m3)}
+\\[10pt]
+E_{v} &amp;= 2180000000.00 \; \;\textrm{(N/m2)}
+\\[10pt]
+c_{1} &amp;= \sqrt { \frac{ E_{v} }{ \rho } } \\&amp;= \sqrt { \frac{ 2180000000.00 }{ 1000 } } \\&amp;= 1476.48 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+c_{2} &amp;= \sqrt { \frac{ E_{v} }{ \rho_{20} } } \\&amp;= \sqrt { \frac{ 2180000000.00 }{ 998.20 } } \\&amp;= 1477.81 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\mathrm{difference} &amp;= \left( \frac{ c_{2} - c_{1} }{ c_{2} } \right) \cdot 100 \\&amp;= \left( \frac{ 1477.81 - 1476.48 }{ 1477.81 } \right) \cdot 100 \\&amp;= 0.09 \; \;\textrm{(%)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
+</section>
+<section id="id6">
+<h3>Question 3 (**)[R]<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Find the celerity of a pressure wave in benzene if a rigid pipe is assumed. If the initial flow velocity is 2 m/s, what will the increased pressure and pressure head be if a valve in the pipe is suddenly closed?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Answer</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(
+\;1081.88\; m/s\;;\; 1.9\; MPa\;; \;220.57\; m \;benzene
+\)</span></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the water hammer equation to calculate the pressure rise, assuming the pipe is rigid and the water is incompressible.</p>
+</div>
+</details></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -736,6 +1516,23 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 3 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5 (***)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6-r">Question 6 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7-r">Question 7 (***)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8 (***)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 1 (**)[R]</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 2 (**)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 3 (**)[R]</a></li>
 </ul>
 </li>
 </ul>
