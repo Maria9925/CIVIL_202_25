@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Module 5: Conservation of Momentum &#8212; CIVIL 202: Fluid Mechanics and Pipe Flow</title>
+    <title>Problems for Lecture 28: Conservation of Linear Momentum 1 &#8212; CIVIL 202: Fluid Mechanics and Pipe Flow</title>
   
   
   
@@ -59,10 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Module5ConservationofMomentum_Sol';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Module 5 Conservation of Momentum';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Module 4: Conservation of Energy" href="Module4ConservationEnergy_Sol.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -174,12 +175,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Module1FluidProperties_SolV2.html">Module 1: Fluid properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module2Hydrostatics_SolV2.html">Module 2: Hydrostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module3Kinematicfluid_Sol.html">Module 3: Kinematics and Conservation of Mass</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module4ConservationEnergy_Sol.html">Module 4: Conservation of Energy</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 5: Conservation of Momentum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module5ConservationofMomentum_Sol.html">Module 5: Conservation of Momentum</a></li>
 </ul>
 
     </div>
@@ -234,7 +235,7 @@
       
       
       
-      <li><a href="_sources/Module5ConservationofMomentum_Sol.ipynb" target="_blank"
+      <li><a href="_sources/Module 5 Conservation of Momentum.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +319,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 5: Conservation of Momentum</h1>
+    <h1>Problems for Lecture 28: Conservation of Linear Momentum 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -328,38 +329,39 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-28-conservation-of-linear-momentum-1">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 1 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (***)¶</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (****)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 1 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (***)¶</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (****)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-31-conservation-of-linear-momentum-4">Problems for Lecture 31: Conservation of Linear Momentum 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (**)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 2 (***)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 3 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (***)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-31-conservation-of-linear-momentum-4">Problems for Lecture 31: Conservation of Linear Momentum 4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (**)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 2 (***)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 3 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (***)[R]</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 1 (**)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2 (**)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Question 3 (**)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 1 (**)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2 (**)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Question 3 (**)[R]</a></li>
 </ul>
 </li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -370,9 +372,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="module-5-conservation-of-momentum">
-<h1>Module 5: Conservation of Momentum<a class="headerlink" href="#module-5-conservation-of-momentum" title="Link to this heading">#</a></h1>
-<div class="cell tag_remove-input docutils container">
+  <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
@@ -387,10 +387,10 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 </div>
 </div>
 <section id="problems-for-lecture-28-conservation-of-linear-momentum-1">
-<h2>Problems for Lecture 28: Conservation of Linear Momentum 1<a class="headerlink" href="#problems-for-lecture-28-conservation-of-linear-momentum-1" title="Link to this heading">#</a></h2>
+<h1>Problems for Lecture 28: Conservation of Linear Momentum 1<a class="headerlink" href="#problems-for-lecture-28-conservation-of-linear-momentum-1" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="question-1-r">
-<h3>Question 1 (***)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h3>
+<h2>Question 1 (***)[R]<a class="headerlink" href="#question-1-r" title="Link to this heading">#</a></h2>
 <p>Water flows through a sluice gate as shown below. The friction losses through the gate are estimated to be 0.2 m. Find the horizontal thrust of the water per meter width on the sluice gate. Given: y<sub>1</sub> = 2.2 m, y<sub>2</sub> = 0.4 m, y<sub>3</sub> = 0.5 m</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -404,17 +404,17 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 12.33 \; kN\;to \;the \;right
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
-<p class="sd-card-text">Find the velocities before and after the gate using the Energy equation.</p>
-<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Apply the momentum equation in the horizontal direction.</p>
+<p>Find the velocities before and after the gate using the Energy equation.</p>
+<p>Apply Newton’s Second Law to find the horizontal force.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="question-2">
-<h3>Question 2 (***)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h3>
+<h2>Question 2 (***)<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
 <p>Flow occurs over a spillway with a width of 100 m. The spillway has a cross section as shown below. The water depth on the upstream side of the spillway (y<Sub>1</sub>) is 20 m, and on the downstream side (y<Sub>2</sub>) is 1.5 m. The friction energy headloss over the spillway is 1.2 m. Determine the horizontal force of the water on the spillway.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -428,14 +428,14 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 147.7 \; MN\; to \; the \; right
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
-<p class="sd-card-text">Find the velocities using the Energy equation.</p>
-<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Apply the momentum equation in the horizontal direction.</p>
+<p>Find the velocities using the Energy equation.</p>
+<p>Apply Newton’s Second Law to find the horizontal force.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Solution</strong></p>
+<p><strong>Solution</strong></p>
 <div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
@@ -447,10 +447,8 @@ g &amp;= 9.810 \; \;\textrm{(m/s2)}
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Conservation of mass:</p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Conservation of mass:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 Q_1 = Q_2 \\
@@ -458,7 +456,7 @@ v_1 A_1 = v_2 A_2 \\
 v_1 y_1 b = v_2 y_2 b \\
 v_2 = \frac{y_1 v_1}{y_2}
 \end{split}\]</div>
-<p class="sd-card-text">Conservation of Energy:</p>
+<p>Conservation of Energy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z_1 + \frac{P_1}{\rho g} + \frac{v_1^2}{2g} = z_2 + \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + h_f \\
@@ -470,19 +468,21 @@ z_1 = z_2
 \frac{v_1^2}{2g} = y_2 + \frac{v_2^2}{2g} + h_f - y_1 \\
 \frac{v_1^2}{2g} = y_2 + \frac{y_1^2 v_1^2}{2g y_2^2} + h_f - y_1
 \end{split}\]</div>
-<p class="sd-card-text">Once the velocities at both sections are determined, the conservation of momentum can then be applied:</p>
+<p>Once the velocities at both sections are determined, the conservation of momentum can then be applied:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_x = \rho Q (v_2 - v_1) \\
 F_1 - F_2 -R_x = \rho Q (v_2 - v_1)
 \end{split}\]</div>
-<p class="sd-card-text">The centroid of the spillway is:</p>
+<p>The centroid of the spillway is:</p>
 <div class="math notranslate nohighlight">
 \[
 \rho g \frac{y_1}{2} A_1 - \rho g \frac{y_2}{2} A_2 - F = \rho Q (v_2 - v_1)
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -518,15 +518,15 @@ R_{x} &amp;= \frac{ R_{x} }{ 1000000 } \\&amp;= \frac{ 147.735 }{ 1000000 } \\&a
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The force on the structure is on the same site but opposite in direction (<span class="math notranslate nohighlight">\(N \mathrm{III}\)</span>）: <span class="math notranslate nohighlight">\(F_x = 147.735 MN\)</span> to the right.</p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>The force on the structure is on the same site but opposite in direction (<span class="math notranslate nohighlight">\(N \mathrm{III}\)</span>）: <span class="math notranslate nohighlight">\(F_x = 147.735 MN\)</span> to the right.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="question-3-r">
-<h3>Question 3 (***)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h3>
+<h2>Question 3 (***)[R]<a class="headerlink" href="#question-3-r" title="Link to this heading">#</a></h2>
 <p>The inlet water passage shown in the figure below is 3 m wide (normal to the plane of the figure) and narrows down to be 2.5 m wide at the outlet section. Determine the horizontal force acting on the structure. Assume ideal flow.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -540,20 +540,20 @@ R_{x} &amp;= \frac{ R_{x} }{ 1000000 } \\&amp;= \frac{ 147.735 }{ 1000000 } \\&a
 12.2 \; m^3/s\; ;\;11.98\;kN\;to\;the\;right
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Apply the momentum equation in the horizontal direction.</p>
-<p class="sd-card-text">Find the velocities using the Energy equation.</p>
-<p class="sd-card-text">Apply Newton’s Second Law to find the horizontal force.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Apply the momentum equation in the horizontal direction.</p>
+<p>Find the velocities using the Energy equation.</p>
+<p>Apply Newton’s Second Law to find the horizontal force.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details></section>
+</section>
 </section>
 <section id="problems-for-lecture-29-conservation-of-linear-momentum-2">
-<h2>Problems for Lecture 29: Conservation of Linear Momentum 2<a class="headerlink" href="#problems-for-lecture-29-conservation-of-linear-momentum-2" title="Link to this heading">#</a></h2>
+<h1>Problems for Lecture 29: Conservation of Linear Momentum 2<a class="headerlink" href="#problems-for-lecture-29-conservation-of-linear-momentum-2" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="id1">
-<h3>Question 1 (**)[R]<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h2>Question 1 (**)[R]<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>A nozzle is attached to a pipe as shown below. The inside diameter of the pipe is 100 mm, while the water jet exiting from the nozzle has a diameter of 50 mm. The pressure at section 1 is 500 kPa, and the velocity at sections 1 is 6 m/s. Calculate the force of the water on the nozzle.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -567,16 +567,16 @@ R_{x} &amp;= \frac{ R_{x} }{ 1000000 } \\&amp;= \frac{ 147.735 }{ 1000000 } \\&a
 3.079\; kN\; to\; the\; right
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Use the continuity equation to find the velocity at the nozzle exit.</p>
-<p class="sd-card-text">Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> equation in the x-Direction to calculate the force on the nozzle.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Use the continuity equation to find the velocity at the nozzle exit.</p>
+<p>Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> equation in the x-Direction to calculate the force on the nozzle.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="id2">
-<h3>Question 2 (**)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h2>Question 2 (**)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>The diameters in the figure below are 750 mm and 500 mm. The pressure at point 1 is 650 kPa and the velocity 2.8 m/s. Neglecting friction, find the resultant force on the horizontal conical reducer if water flows:</p>
 <p>a. to the right.</p>
 <p>b. to the left.</p>
@@ -599,14 +599,14 @@ b) \;158.3 \; kN\;to\;the\;right
 c) \;increase \; Fx\;in\;(a)\;and\;decrease\;Fx\;in\;(b)
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Apply the conservation of mass to relate the flow rates at different sections and solve for the unknow velocity.</p>
-<p class="sd-card-text">Apply the energy equation.</p>
-<p class="sd-card-text">Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> in the horizontal direction to calculate the force on the reducer.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Apply the conservation of mass to relate the flow rates at different sections and solve for the unknow velocity.</p>
+<p>Apply the energy equation.</p>
+<p>Apply <span class="math notranslate nohighlight">\(N \mathrm{II}\)</span> in the horizontal direction to calculate the force on the reducer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 2 (a)</strong></p>
+<p><strong>Question 2 (a)</strong></p>
 <p><strong>Solution</strong></p>
 <div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
@@ -619,17 +619,15 @@ c) \;increase \; Fx\;in\;(a)\;and\;decrease\;Fx\;in\;(b)
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Conservation of mass:</p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Conservation of mass:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 Q_1=Q_2\\
 v_1A_1=v_2A_2\\
 v_2=\frac{v_1A_1}{A_2}
 \end{split}\]</div>
-<p class="sd-card-text">Conservation of energy:</p>
+<p>Conservation of energy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z_1+\frac {P_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
@@ -638,14 +636,16 @@ z_2=0\\
 \frac {P_1}{\rho g}+\frac{v_1^2}{2g}=\frac {P_2}{\rho g}+\frac{v_2^2}{2g}\\
 P_2=(\frac {P_1}{\rho g}+\frac{v_1^2}{2g}-\frac{v_2^2}{2g}) \rho g
 \end{split}\]</div>
-<p class="sd-card-text">Conservation of momentum:</p>
+<p>Conservation of momentum:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_x = \rho Q (v_2-v_1)\\
 P_1A_1-P_2A_2-R_x = \rho Q (v_2-v_1)\\
 \end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -681,32 +681,32 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Force of the water on nozzle is 158.3 kN to the right</p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Force of the water on nozzle is 158.3 kN to the right</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 2 (b)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Apply the conservation of mass to relate the flow rates at different sections and solve for the unknown velocity.</p>
-<p class="sd-card-text">Apply the energy equation, assuming no friction, with the direction of flow reversed.</p>
-<p class="sd-card-text">Apply NII in the horizontal direction to calculate the force on the reducer, considering the reversed flow direction.</p>
+<p><strong>Question 2 (b)</strong></p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Apply the conservation of mass to relate the flow rates at different sections and solve for the unknown velocity.</p>
+<p>Apply the energy equation, assuming no friction, with the direction of flow reversed.</p>
+<p>Apply NII in the horizontal direction to calculate the force on the reducer, considering the reversed flow direction.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 2 (c)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Assuming the same pressure at the larger section in both cases, as given, friction will reduce <span class="math notranslate nohighlight">\(F_2\)</span> and therefore increase <span class="math notranslate nohighlight">\(R_x\)</span> in case (a) and do the opposite in case (b).</p>
+<p><strong>Question 2 (c)</strong></p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Assuming the same pressure at the larger section in both cases, as given, friction will reduce <span class="math notranslate nohighlight">\(F_2\)</span> and therefore increase <span class="math notranslate nohighlight">\(R_x\)</span> in case (a) and do the opposite in case (b).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details></section>
+</section>
 </section>
 <section id="problems-for-lecture-30-conservation-of-linear-momentum-3">
-<h2>Problems for Lecture 30: Conservation of Linear Momentum 3<a class="headerlink" href="#problems-for-lecture-30-conservation-of-linear-momentum-3" title="Link to this heading">#</a></h2>
+<h1>Problems for Lecture 30: Conservation of Linear Momentum 3<a class="headerlink" href="#problems-for-lecture-30-conservation-of-linear-momentum-3" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="id3">
-<h3>Question 1 (***)[R]<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h2>Question 1 (***)[R]<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>A 90° bend bend of a 300 mm diameter pipe lies in the horizontal plane. Water flows through the pipe  at a velocity of 3 m/s and the inlet of the bend has a pressure of 50 kPa.  Neglecting friction losses, calculate the resultant force of the water on the bend.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -720,16 +720,95 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 19.4 \; kN\
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Use conservation of energy (Bernoulli equation) to find the exit pressure.</p>
-<p class="sd-card-text">Apply conservation of momentum in the x and z directions to calculate the force components on the bend.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Use conservation of energy (Bernoulli equation) to find the exit pressure.</p>
+<p>Apply conservation of momentum in the x and z directions to calculate the force components on the bend.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/fb98b24c06353e9d5d650d1954c9e56d4b7a31b2b0ab55fe1e737bcd003de6f1.png" src="_images/fb98b24c06353e9d5d650d1954c9e56d4b7a31b2b0ab55fe1e737bcd003de6f1.png" />
+</div>
+</details>
+</div>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
+\end{split}\]</div>
+<p>\begin{align*}
+\text{but} \quad z_1 &amp;= z_2 \quad;\quad \text{bend in the horizontal plane}\
+v_1 &amp;= v_2 \quad; \quad \text{Conservation of mass}\
+\text{thus} \quad p_1 &amp;= p_2
+\end{align*}</p>
+<p>Conservation of momentum in x:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x = \rho Q (v_{2x}-v_{1x})\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_x-p_2A_2 = \rho Q (v_{2x}-v_{1x})\\
+\end{split}\]</div>
+<p>Conservation of momentum in z:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_z = \rho Q (v_{2z}-v_{1z})\\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p_1A_1-R_z = \rho Q (v_{2z}-v_{1z})\\
+\end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input tag_solution tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_{1} &amp;= 6.300 \; \;\textrm{(m/s)}
+\\[10pt]
+p_{1} &amp;= 50000 \; \;\textrm{(Pa)}
+\\[10pt]
+D &amp;= 0.300 \; \;\textrm{(m)}
+\\[10pt]
+v_{1} &amp;= 6.300 \; \;\textrm{(m/s)}
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.300 \right) ^{ 2 } }{ 4 } \\&amp;= 0.071 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= v_{1} \cdot A \\&amp;= 6.300 \cdot 0.071 \\&amp;= 0.445 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+p_{2} &amp;= 50000 \; \;\textrm{(Pa)}
+\\[10pt]
+R_{x} &amp;= p_{2} \cdot A + \rho_{water} \cdot Q \cdot \left( v_{2} - 0 \right) \\&amp;= 50000 \cdot 0.071 + 1000 \cdot 0.445 \cdot \left( 6.300 - 0 \right) \\&amp;= 6339.813 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{z} &amp;= p_{1} \cdot A - \rho_{water} \cdot Q \cdot \left( 0 - v_{1} \right) \\&amp;= 50000 \cdot 0.071 - 1000 \cdot 0.445 \cdot \left( 0 - 6.300 \right) \\&amp;= 6339.813 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R &amp;= \sqrt { \left( R_{x} \right) ^{ 2 } + \left( R_{z} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 6339.813 \right) ^{ 2 } + \left( 6339.813 \right) ^{ 2 } } \\&amp;= 8965.849 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<p>The force of the water on the bend is the same size, but opposite in direction.</p>
+<hr class="docutils" />
 </section>
 <section id="question-2-r">
-<h3>Question 2 (***)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h3>
+<h2>Question 2 (***)[R]<a class="headerlink" href="#question-2-r" title="Link to this heading">#</a></h2>
 <p>A reducing right-angled bend lies in the horizontal plane. Water enters from the west at a velocity of 3 m/s and a pressure of 50 kPa, and leaves toward the north. The diameter of the entrance is 500 mm and at the exit 250 mm. Neglecting friction losses, find the magnitude of the x and y components of the resultant force on the bend.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -738,13 +817,13 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 11.6 \; kN\;;\;6.2\;kN
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Use conservation of energy (Bernoulli equation) to find the exit pressure.</p>
-<p class="sd-card-text">Apply conservation of momentum in the x and z directions to calculate the force components on the bend.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Use conservation of energy (Bernoulli equation) to find the exit pressure.</p>
+<p>Apply conservation of momentum in the x and z directions to calculate the force components on the bend.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Solution</strong></p>
+<p><strong>Solution</strong></p>
 <div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
@@ -756,31 +835,30 @@ R_{x_{}} &amp;= \frac{ R_{x} }{ 1000 } \\&amp;= \frac{ 158331.361 }{ 1000 } \\&a
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Conservation of energy:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g} &amp;= z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
-\text{but} \quad z_1 &amp;= z_2 \quad ; \quad \text{horizontal plane}\\
-\frac {p_1}{\rho g}+\frac{v_1^2}{2g} &amp;= \frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Conservation of energy:</p>
+<p>\begin{align*}
+z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g} &amp;= z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\
+\text{but} \quad z_1 &amp;= z_2 \quad ; \quad \text{horizontal plane}\
+\frac {p_1}{\rho g}+\frac{v_1^2}{2g} &amp;= \frac {p_2}{\rho g}+\frac{v_2^2}{2g}\
 p_2 &amp;= (\frac {p_1}{\rho g}+\frac{v_1^2}{2g}-\frac{v_2^2}{2g}) \rho g
-\end{split}\]</div>
-<p class="sd-card-text">Conservation of momentum in x:</p>
+\end{align*}</p>
+<p>Conservation of momentum in x:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_x = \rho Q (v_{2x}-v_{1x})\\
 p_1A_1-R_x = \rho Q (v_{2x}-v_{1x})\\
 \end{split}\]</div>
-<p class="sd-card-text">Conservation of momentum in z:</p>
+<p>Conservation of momentum in z:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_z = \rho Q (v_{2z}-v_{1z})\\
 R_z-p_2A_2 = \rho Q (v_{2z}-v_{1z})\\
 \end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -816,15 +894,15 @@ R_{z} &amp;= \rho_{water} \cdot Q \cdot \left( v_{2} - 0 \right) + p_{2} \cdot A
 </div>
 </details>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The force on the bend in the x direction is 11.584 kN to the right and the force in y direction is 6.2 kN down. (NⅢ）</p>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>The force on the bend in the x direction is 11.584 kN to the right and the force in y direction is 6.2 kN down. (NⅢ）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="question-3">
-<h3>Question 3 (***)¶<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h3>
+<h2>Question 3 (***)¶<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
 <p>A perforated plate with 50% of its area consisting of small holes is installed at the outlet of a 30 cm diameter horizontal water pipe carrying water at a velocity of 2 m/s. Neglect energy losses and calculate the force of the water on the perforated plate. Assume that the pressure head in the pipe is much greater than it’s diameter, so that you can use a uniform pressure distribution for any pipe cross section.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -841,10 +919,89 @@ R_{z} &amp;= \rho_{water} \cdot Q \cdot \left( v_{2} - 0 \right) + p_{2} \cdot A
 </details><p>Use conservation of mass to find the water velocity through the holes.</p>
 <p>Apply the Bernoulli euqation to find the pressure difference.</p>
 <p>Use conservation of momentum to calculate the force on the perforated plate.</p>
+<p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_solution tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/33163c9f5962937c618b07055859573f23f9e9228ce07b1fbcbb8a14a199412d.png" src="_images/33163c9f5962937c618b07055859573f23f9e9228ce07b1fbcbb8a14a199412d.png" />
+</div>
+</details>
+</div>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>Conservation of mass:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q_1=Q_2\\
+v_1 A_1=v_2 A_2\\
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_2 = 0.5 A_1\)</span> .</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+v_1 A_1= v_2 \cdot 0.5\cdot A_1\\
+v_2=2 v_1
+\end{split}\]</div>
+<p>Conservation of energy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
+\end{split}\]</div>
+<p>\begin{align*}
+\text{where} \quad z_1 &amp;= z_2 \quad ; \quad \text{horizontal plane}\
+p_2 &amp;= 0 \quad ; \quad \text{free jet}
+\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[
+\frac {p_1}{\rho g}=\frac{v_2^2}{2g}-\frac{v_1^2}{2g}
+\]</div>
+<p>NⅡ:
+$<span class="math notranslate nohighlight">\(
+\sum F_x = \rho Q (v_{2x}-v_{1x})\\
+p_1 A_1 - R_x = \rho Q (v_{2x}-v_{1x})\\
+\)</span>$</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input tag_solution tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_{1} &amp;= 2 \; \;\textrm{(m/s)}
+\\[10pt]
+D_{1} &amp;= \frac{ 30 }{ 100 } &amp;= 0.300 \; \;\textrm{(m)}
+\\[10pt]
+v_{2} &amp;= \frac{ v_{1} }{ 0.5 } \\&amp;= \frac{ 2 }{ 0.5 } \\&amp;= 4.000 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.300 \right) ^{ 2 } }{ 4 } \\&amp;= 0.071  \\[10pt]
+\\[10pt]
+Q &amp;= v_{1} \cdot A_{1} \\&amp;= 2 \cdot 0.071 \\&amp;= 0.141 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+P_{1} &amp;= \left( \frac{ \left( v_{2} \right) ^{ 2 } }{ 2 \cdot g } - \frac{ \left( v_{1} \right) ^{ 2 } }{ 2 \cdot g } \right) \cdot g \cdot \rho_{water} \\&amp;= \left( \frac{ \left( 4.000 \right) ^{ 2 } }{ 2 \cdot 9.810 } - \frac{ \left( 2 \right) ^{ 2 } }{ 2 \cdot 9.810 } \right) \cdot 9.810 \cdot 1000 \\&amp;= 6000.000 \; \;\textrm{(Pa)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= P_{1} \cdot A_{1} - \rho_{water} \cdot Q \cdot \left( v_{2} - v_{1} \right) \\&amp;= 6000.000 \cdot 0.071 - 1000 \cdot 0.141 \cdot \left( 4.000 - 2 \right) \\&amp;= 141.372 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>The force on the plate is 141.4 N to the right.(NⅡ)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <hr class="docutils" />
 </section>
 <section id="question-4">
-<h3>Question 4 (****)<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h3>
+<h2>Question 4 (****)<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h2>
 <p>The figure below shows a pipe that ends in a set of two nozzles (points 2 and 3) at right angles to each other, and exiting into the atmosphere. The nozzles are in the horizontal plane. The pipe has a diameter of 150 mm and nozzles 2 and 3 have exit diameters of 100 and 50 mm respectively. The exit velocity at both points 2 and 3 is 10 m/s. Assume ideal flow.Calculate the following:</p>
 <p>a)	The flow rate and velocity at at point 1.</p>
 <p>b)	The pressure at point 1.</p>
@@ -872,10 +1029,8 @@ d) \;91 \;L/s\;;\; 5.15\; m/s\;;\; 9.3 \;m/s
 \)</span></p>
 </div>
 </details><p><strong>Question 4 (a)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To calculate the flow rate and velocity in point 1 the conservation of mass can be used:</p>
+<!-- ```{Dropdown} Hint-->
+<p>To calculate the flow rate and velocity in point 1 the conservation of mass can be used:</p>
 <div class="math notranslate nohighlight">
 \[
 Q_1=Q_2+Q_3
@@ -884,28 +1039,28 @@ Q_1=Q_2+Q_3
 \[
 v_1A_1=v_2A_2+v_3A_3
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 4 (b)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Using conservation of energy:</p>
+<p><strong>Question 4 (b)</strong></p>
+<!-- ```{Dropdown} Hint-->
+<p>Using conservation of energy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}\\
 \end{split}\]</div>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(p_2=0 Pa\)</span> because of atmospheric pressure</p>
-<p class="sd-card-text">Considering the assumptions, the pressure in point 1 is:</p>
+<p><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(p_2=0 Pa\)</span> because of atmospheric pressure</p>
+<p>Considering the assumptions, the pressure in point 1 is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \frac {p_1}{\rho g}=\frac{v_2^2}{2g}-\frac{v_1^2}{2g}\\
 \end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 4 (c)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Momentum in x:</p>
+<p><strong>Question 4 (c)</strong></p>
+<!-- ```{Dropdown} Hint-->
+<p>Momentum in x:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_x= \rho Q(v_{out_x}-v_{in_x})\\
@@ -913,25 +1068,27 @@ z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g
 p_1A_1-F_x= \rho Q(v_2-v_1)\\
 p_1A_1-F_x= \rho Q_2v_2-\rho Q_1v_1)\\
 \end{split}\]</div>
-<p class="sd-card-text">Momentum in y. It is important to include the velocity sign in this equation; in this example <span class="math notranslate nohighlight">\(v_{3y}\)</span> is negative.</p>
+<p>Momentum in y. It is important to include the velocity sign in this equation; in this example <span class="math notranslate nohighlight">\(v_{3y}\)</span> is negative.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_y= \rho Q(v_{out_y}-v_{in_y})\\
 \sum F_y= \rho Q(-v_3-0)\\
 F_3+F_y= \rho Q_3*(-v_3)-0)\\
 \end{split}\]</div>
-<p class="sd-card-text">Once the <span class="math notranslate nohighlight">\(F_x\)</span> and <span class="math notranslate nohighlight">\(F_y\)</span> are calculated, the force can be determine as:</p>
+<p>Once the <span class="math notranslate nohighlight">\(F_x\)</span> and <span class="math notranslate nohighlight">\(F_y\)</span> are calculated, the force can be determine as:</p>
 <div class="math notranslate nohighlight">
 \[
 F= \sqrt{F_x^2+F_y^2}
 \]</div>
-<p class="sd-card-text">and the direction of the force can be calculated as:</p>
+<p>and the direction of the force can be calculated as:</p>
 <div class="math notranslate nohighlight">
 \[
 \theta= arctan (\frac{F_y}{F_x})
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_hide-output tag_remove-input docutils container">
+<div class="cell tag_hide-output tag_remove-input docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -943,16 +1100,14 @@ F= \sqrt{F_x^2+F_y^2}
 </details>
 </div>
 <p><strong>Question 4 (d)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Using conservation of energy:</p>
+<!-- ```{Dropdown} Hint-->
+<p>Using conservation of energy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z_1+\frac {p_1}{\rho g}+\frac{v_1^2}{2g}=z_2+\frac {p_2}{\rho g}+\frac{v_2^2}{2g}+h_f\\
 \end{split}\]</div>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(p_2=0\)</span> because of atmospheric pressure</p>
-<p class="sd-card-text">Assuming the distribution of the flow between 2 and 3 remains the same as in (a), it is necessary to calculate the distribution</p>
+<p><span class="math notranslate nohighlight">\(z_1=z_2\)</span> because is horizontal and <span class="math notranslate nohighlight">\(p_2=0\)</span> because of atmospheric pressure</p>
+<p>Assuming the distribution of the flow between 2 and 3 remains the same as in (a), it is necessary to calculate the distribution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 Q_2= \frac {0.0789}{0.0981}\\
@@ -969,7 +1124,7 @@ Q_3=0.2 Q_1\\
 \[\begin{split}
 v_2A_2=0.80v_1A_1\\
 \end{split}\]</div>
-<p class="sd-card-text">Using conservation of mass:</p>
+<p>Using conservation of mass:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 v_2 \frac{\pi D_2^2}{4}=0.80 v_1\frac{\pi D_1^2}{4}\\
@@ -986,19 +1141,21 @@ v_2 (0.1)^2=0.80 v_1 (0.15)^2\\
 \[
 v_2= 1.8 v_1
 \]</div>
-<p class="sd-card-text">Using conservation of energy and mass with an energy headloss of 0.5 m, we have:</p>
+<p>Using conservation of energy and mass with an energy headloss of 0.5 m, we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \frac {p_1}{\rho g}+\frac{v_1^2}{2g}=\frac{(1.8 v_1)^2}{2g}+h_f\\
 \end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details></section>
+</section>
 </section>
 <section id="problems-for-lecture-31-conservation-of-linear-momentum-4">
-<h2>Problems for Lecture 31: Conservation of Linear Momentum 4<a class="headerlink" href="#problems-for-lecture-31-conservation-of-linear-momentum-4" title="Link to this heading">#</a></h2>
+<h1>Problems for Lecture 31: Conservation of Linear Momentum 4<a class="headerlink" href="#problems-for-lecture-31-conservation-of-linear-momentum-4" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="question-1">
-<h3>Question 1 (**)<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h3>
+<h2>Question 1 (**)<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
 <p>A 40 mm diameter jet has a velocity of 25 m/s. If this jet were to strike a large flat plat normally, what would the resultant force on the plate be?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1007,18 +1164,62 @@ v_2= 1.8 v_1
 785 \; N
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The jet direction will be parallel to the plate after hitting it.</p>
-<p class="sd-card-text">Assume the jet speed remains constant.</p>
-<p class="sd-card-text">Ignore friction losses.</p>
-<p class="sd-card-text">Apply NⅡ.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>The jet direction will be parallel to the plate after hitting it.</p>
+<p>Assume the jet speed remains constant.</p>
+<p>Ignore friction losses.</p>
+<p>Apply NⅡ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_solution tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/680f1526a97e1868f67f7aa51e19aa0403d5ada8cec5d45cebed377f2bf5a6ee.png" src="_images/680f1526a97e1868f67f7aa51e19aa0403d5ada8cec5d45cebed377f2bf5a6ee.png" />
+</div>
+</details>
+</div>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>NⅡ:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x = \rho Q (v_{2x} - v_{1x})\\
+-R = \rho Q (0 - v_1)\\
+\end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+D_{1} &amp;= \frac{ 40 }{ 1000 } &amp;= 0.040 \; \;\textrm{(m)}
+\\[10pt]
+v_{1} &amp;= 25 \; \;\textrm{(m/s)}
+\\[10pt]
+A_{1} &amp;= \pi \cdot \frac{ \left( D_{1} \right) ^{ 2 } }{ 4 } \\&amp;= 3.142 \cdot \frac{ \left( 0.040 \right) ^{ 2 } }{ 4 } \\&amp;= 0.001 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \rho_{water} \cdot A_{1} \cdot v_{1} \cdot \left( v_{1} - 0 \right) \\&amp;= 1000 \cdot 0.001 \cdot 25 \cdot \left( 25 - 0 \right) \\&amp;= 785.398 \; \;\textrm{(N)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="id4">
-<h3>Question 2 (***)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h2>Question 2 (***)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Water hits the curved plate shown below that entirely reverses the flow direction. The diameter of the jet is 50 mm and it hits the plate at a velocity of 12 m/s. The water leaves the plate at the same velocity, but in the opposite direction. Find the force exerted by the water on the vane.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -1032,15 +1233,15 @@ v_2= 1.8 v_1
 565 \; N\; to\; the\; right
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The jet direction will be parallel to the plate after hitting it.</p>
-<p class="sd-card-text">Assume the jet speed remains constant.</p>
-<p class="sd-card-text">Ignore friction losses.</p>
-<p class="sd-card-text">Apply NⅡ.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>The jet direction will be parallel to the plate after hitting it.</p>
+<p>Assume the jet speed remains constant.</p>
+<p>Ignore friction losses.</p>
+<p>Apply NⅡ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_remove-input tag_hide-output docutils container">
+<div class="cell tag_remove-input tag_hide-output docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -1054,7 +1255,7 @@ v_2= 1.8 v_1
 <hr class="docutils" />
 </section>
 <section id="id5">
-<h3>Question 3 (***)[R]<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h2>Question 3 (***)[R]<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>A jet is bent through an angle θ = 120° by a blade in the horizontal plane as shown below. The water jet has a velocity of 25 m/s and a diameter of 20 mm. Calculate the size and direction of the force on the blade.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -1068,18 +1269,85 @@ v_2= 1.8 v_1
 340 \; N\;at\;30\;°\;above\;the\;horizon
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The jet direction will be parallel to the plate after hitting it.</p>
-<p class="sd-card-text">Assume the jet speed remains constant.</p>
-<p class="sd-card-text">Ignore friction losses.</p>
-<p class="sd-card-text">Apply NⅡ.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>The jet direction will be parallel to the plate after hitting it.</p>
+<p>Assume the jet speed remains constant.</p>
+<p>Ignore friction losses.</p>
+<p>Apply NⅡ.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<p><strong>Solution</strong></p>
+<div class="cell tag_remove-input tag_solution tag_hide-output docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="_images/61a5d33bcc4e28872794ee0ed2c347638b3220468b94e2c4755e72c574397db8.png" src="_images/61a5d33bcc4e28872794ee0ed2c347638b3220468b94e2c4755e72c574397db8.png" />
+</div>
+</details>
+</div>
+<!-- ```{Dropdown} Show code cell outputs-->
+<p>NⅡ in the x direction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum F_x= \rho Q(v_{2_x}-v_{1_x})\\
+-R_x= \rho Q(v_{2_x}-v_{1_x})\\
+\end{split}\]</div>
+<p>\begin{align*}
+v_1 &amp; = 25 \quad \text{m/s}\
+v_2 &amp;= v_1\
+d_1 &amp;= 180^\circ - 120^\circ\
+v_{1x} &amp;= v_1\
+v_{1y} &amp;= 0\
+v_{2x} &amp;= -v_2 \sin \theta\
+v_{2y} &amp;= -v_2 \cos \theta\
+-R_x &amp;= \rho Q (v_{2x}-v_{1x})\
+-R_y &amp;= \rho Q (v_{2y}-v_{1y})\
+\end{align*}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input tag_hide-output tag_solution docutils container">
+<details class="hide above-output">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell outputs</span>
+<span class="expanded">Hide code cell outputs</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\theta &amp;= 120 \; \;\textrm{(°)}
+\\[10pt]
+v &amp;= 25 \; \;\textrm{(m/s)}
+\\[10pt]
+D &amp;= 0.0200 \; \;\textrm{(m)}
+\\[10pt]
+A &amp;= \pi \cdot \frac{ \left( D \right) ^{ 2 } }{ 4 } \\&amp;= 3.1416 \cdot \frac{ \left( 0.0200 \right) ^{ 2 } }{ 4 } \\&amp;= 0.0003 \; \;\textrm{(m2)}\\[10pt]
+\\[10pt]
+Q &amp;= v \cdot A \\&amp;= 25 \cdot 0.0003 \\&amp;= 0.0079 \; \;\textrm{(m3/s)}\\[10pt]
+\\[10pt]
+\alpha &amp;= 180 - \theta \\&amp;= 180 - 120 \\&amp;= 60 \; \;\textrm{(°)}\\[10pt]
+\\[10pt]
+R_{x} &amp;= \left( - \rho_{water} \right) \cdot Q \cdot \left( \left( - v \right) \cdot \cos \left( \operatorname{radians} \alpha \right) - v \right) \\&amp;= \left( - 1000 \right) \cdot 0.0079 \cdot \left( \left( - 25 \right) \cdot \cos \left( \operatorname{radians} 60 \right) - 25 \right) \\&amp;= 294.5243 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+R_{y} &amp;= \left( - \rho_{water} \right) \cdot Q \cdot \left( \left( - v \right) \cdot \sin \left( \operatorname{radians} \alpha \right) - 0 \right) \\&amp;= \left( - 1000 \right) \cdot 0.0079 \cdot \left( \left( - 25 \right) \cdot \sin \left( \operatorname{radians} 60 \right) - 0 \right) \\&amp;= 170.0437 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+F &amp;= \sqrt { \left( R_{x} \right) ^{ 2 } + \left( R_{y} \right) ^{ 2 } } \\&amp;= \sqrt { \left( 294.5243 \right) ^{ 2 } + \left( 170.0437 \right) ^{ 2 } } \\&amp;= 340.0874 \; \;\textrm{(N)}\\[10pt]
+\\[10pt]
+\theta_{F} &amp;= \operatorname{degrees} \left( \arctan \left( \frac{ R_{y} }{ R_{x} } \right) \right) \\&amp;= \operatorname{degrees} \left( \arctan \left( \frac{ 170.0437 }{ 294.5243 } \right) \right) \\&amp;= 30.0000 \; \;\textrm{(°)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
+</div>
+</details>
+</div>
+<hr class="docutils" />
 </section>
 <section id="question-4-r">
-<h3>Question 4 (***)[R]<a class="headerlink" href="#question-4-r" title="Link to this heading">#</a></h3>
+<h2>Question 4 (***)[R]<a class="headerlink" href="#question-4-r" title="Link to this heading">#</a></h2>
 <p>A jet of water with a velocity of 25 m/s and diameter of 40 mm strikes a blade in a horizontal plane. If the angle of deflection is 115° and friction reduces the velocity to 22 m/s, find;</p>
 <p>a.	the component of the force acting on the blade in the direction of the jet.</p>
 <p>b.	the component of the force normal/ perpendicular to the jet.</p>
@@ -1103,37 +1371,35 @@ c) \;1.246 \; kN\; at\;30.2\;°\;below\;east
 \)</span></p>
 </div>
 </details><p><strong>Question 4 (a)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The force on the X-axis can be calculated with the momentum equation as:</p>
+<!-- ```{Dropdown} Hint-->
+<p>The force on the X-axis can be calculated with the momentum equation as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_x= \rho Q(v_{out_x}-v_{in_x})\\
 -R_x= \rho Q(v_{out_x}-v_{in_x})\\
 \end{split}\]</div>
-<p class="sd-card-text">In this example, the velocity component along the X-axis can be determined as follows</p>
+<p>In this example, the velocity component along the X-axis can be determined as follows</p>
 <div class="math notranslate nohighlight">
 \[
 v_{2x}= v_2*cos (180-\theta)
 \]</div>
-<p class="sd-card-text">In the conservation of momentum, it is important to include the sign that indicates the direction of the velocity component. Therefore, in this exercise, the <span class="math notranslate nohighlight">\(v_{2x}\)</span> component is negative</p>
+<p>In the conservation of momentum, it is important to include the sign that indicates the direction of the velocity component. Therefore, in this exercise, the <span class="math notranslate nohighlight">\(v_{2x}\)</span> component is negative</p>
 <div class="math notranslate nohighlight">
 \[
 -R_x= \rho Q(-v_{2x}-v_{1x})
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 4 (b)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The force on the Y-axis can be calculated with the momentum equation as:</p>
+<p><strong>Question 4 (b)</strong></p>
+<!-- ```{Dropdown} Hint-->
+<p>The force on the Y-axis can be calculated with the momentum equation as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \sum F_y= \rho Q(v_{out_y}-v_{in_y})\\
 R_y= \rho Q(v_{out_y}-v_{in_y})\\
 \end{split}\]</div>
-<p class="sd-card-text">In this example, the velocity component along the X-axis can be determined as follows</p>
+<p>In this example, the velocity component along the X-axis can be determined as follows</p>
 <div class="math notranslate nohighlight">
 \[
 v_{2y}= v_2*sin (180-\theta)
@@ -1142,30 +1408,32 @@ v_{2y}= v_2*sin (180-\theta)
 \[
 R_y= \rho Q(v_{2y}-v_{1y})
 \]</div>
-<p class="sd-card-text">In this example, there is no component of the velocitu one in the Y-axis</p>
+<p>In this example, there is no component of the velocitu one in the Y-axis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Question 4 (c)</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Once the <span class="math notranslate nohighlight">\(R_x\)</span> and <span class="math notranslate nohighlight">\(R_y\)</span> are calculated, the force can be determine as:</p>
+<p><strong>Question 4 (c)</strong></p>
+<!-- ```{Dropdown} Hint-->
+<p>Once the <span class="math notranslate nohighlight">\(R_x\)</span> and <span class="math notranslate nohighlight">\(R_y\)</span> are calculated, the force can be determine as:</p>
 <div class="math notranslate nohighlight">
 \[
 F= \sqrt{R_x^2+R_y^2}
 \]</div>
-<p class="sd-card-text">and the direction of the force can be calculated as:</p>
+<p>and the direction of the force can be calculated as:</p>
 <div class="math notranslate nohighlight">
 \[
 \theta= arctan (\frac{R_y}{R_x})
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details></section>
+</section>
 </section>
 <section id="problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">
-<h2>Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe<a class="headerlink" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe" title="Link to this heading">#</a></h2>
+<h1>Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe<a class="headerlink" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="id6">
-<h3>Question 1 (**)[R]<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h2>Question 1 (**)[R]<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>A 2 km long, 500 mm diameter pipeline carries water at a velocity of 2 m/s.  Calculate the pressure rise in the system if water assuming a rigid pipe and a water temperature of 15 °Celsius.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1174,16 +1442,16 @@ F= \sqrt{R_x^2+R_y^2}
 298 \; m
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Calculate the celerity of the transient wave c.</p>
-<p class="sd-card-text">Calculate the pressure increase using the Joukowski equation.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Calculate the celerity of the transient wave c.</p>
+<p>Calculate the pressure increase using the Joukowski equation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><hr class="docutils" />
+<hr class="docutils" />
 </section>
 <section id="id7">
-<h3>Question 2 (**)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h2>Question 2 (**)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Calculate the celerity of a pressure wave in water at 20 °C assuming a water density of 1000 kg/m3 . What difference does it make to your answer if change in water density with temperature is taken into account?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1192,29 +1460,29 @@ F= \sqrt{R_x^2+R_y^2}
 1476.48 \; m/s\; 1477.81\; m/s\; ,\; thus\; less\; than\; 0.1\; \% \; difference
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Calculate the celerity of the transient wave c.</p>
-<p class="sd-card-text">Calculate the pressure increase using the Joukowski equation.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Calculate the celerity of the transient wave c.</p>
+<p>Calculate the pressure increase using the Joukowski equation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><p><strong>Solution</strong></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Show code cell outputs</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p><strong>Solution</strong></p>
+<!-- ```{Dropdown} Show code cell outputs-->
 <div class="math notranslate nohighlight">
 \[
 c= \sqrt {\frac{E_v}{\rho}}
 \]</div>
-<p class="sd-card-text">From Table A.1, the density of water at 20 °C is <span class="math notranslate nohighlight">\(998.2 kg/m^3\)</span><br />
+<p>From Table A.1, the density of water at 20 °C is <span class="math notranslate nohighlight">\(998.2 kg/m^3\)</span><br />
 From Table A.4, <span class="math notranslate nohighlight">\(E_v= 1030 x10^6 N/m^2\)</span></p>
-<p class="sd-card-text">The effect of the density can be calculated with the difference between the celerities:</p>
+<p>The effect of the density can be calculated with the difference between the celerities:</p>
 <div class="math notranslate nohighlight">
 \[
 \text{difference} = \left( \frac{c_2 - c_1}{c_2} \right)  100
 \]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details><div class="cell tag_hide-output tag_remove-input docutils container">
+<div class="cell tag_hide-output tag_remove-input docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
@@ -1245,7 +1513,7 @@ c_{2} &amp;= \sqrt { \frac{ E_{v} }{ \rho_{20} } } \\&amp;= \sqrt { \frac{ 21800
 <hr class="docutils" />
 </section>
 <section id="id8">
-<h3>Question 3 (**)[R]<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<h2>Question 3 (**)[R]<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>Find the celerity of a pressure wave in benzene if a rigid pipe is assumed. If the initial flow velocity is 2 m/s, what will the increased pressure and pressure head be if a valve in the pipe is suddenly closed?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1254,13 +1522,12 @@ c_{2} &amp;= \sqrt { \frac{ E_{v} }{ \rho_{20} } } \\&amp;= \sqrt { \frac{ 21800
 \;1081.88\; m/s\;;\; 1.9\; MPa\;; \;220.57\; m \;benzene
 \)</span></p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Hint</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Calculate the celerity of the transient wave c.</p>
-<p class="sd-card-text">Calculate the pressure increase using the Joukowski equation.</p>
+</details><!-- ```{Dropdown} Hint-->
+<p>Calculate the celerity of the transient wave c.</p>
+<p>Calculate the pressure increase using the Joukowski equation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</details></section>
 </section>
 </section>
 
@@ -1294,15 +1561,6 @@ c_{2} &amp;= \sqrt { \frac{ E_{v} }{ \rho_{20} } } \\&amp;= \sqrt { \frac{ 21800
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Module4ConservationEnergy_Sol.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Module 4: Conservation of Energy</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -1319,38 +1577,39 @@ c_{2} &amp;= \sqrt { \frac{ E_{v} }{ \rho_{20} } } \\&amp;= \sqrt { \frac{ 21800
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-28-conservation-of-linear-momentum-1">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Problems for Lecture 28: Conservation of Linear Momentum 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-r">Question 1 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2 (***)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3-r">Question 3 (***)[R]</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-29-conservation-of-linear-momentum-2">Problems for Lecture 29: Conservation of Linear Momentum 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Question 1 (**)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question 2 (**)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 1 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (***)¶</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (****)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-30-conservation-of-linear-momentum-3">Problems for Lecture 30: Conservation of Linear Momentum 3</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Question 1 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2-r">Question 2 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3 (***)¶</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4 (****)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-31-conservation-of-linear-momentum-4">Problems for Lecture 31: Conservation of Linear Momentum 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (**)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 2 (***)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 3 (***)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (***)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-31-conservation-of-linear-momentum-4">Problems for Lecture 31: Conservation of Linear Momentum 4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1 (**)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Question 2 (***)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 3 (***)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4-r">Question 4 (***)[R]</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 1 (**)[R]</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2 (**)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Question 3 (**)[R]</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-for-lecture-32-transients-elastic-fluid-in-a-rigid-pipe">Problems	for	Lecture	32: Transients	– Elastic	fluid	in	a	rigid	pipe</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Question 1 (**)[R]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2 (**)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Question 3 (**)[R]</a></li>
 </ul>
 </li>
 </ul>
+
   </nav></div>
 
 </div></div>
