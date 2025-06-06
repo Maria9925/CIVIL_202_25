@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Module4ConservationEnergy_Sol';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 5: Conservation of Momentum" href="Module5ConservationofMomentum_Sol.html" />
     <link rel="prev" title="Module 3: Kinematics and Conservation of Mass" href="Module3Kinematicfluid_Sol.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -179,6 +180,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Module2Hydrostatics_SolV2.html">Module 2: Hydrostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Module3Kinematicfluid_Sol.html">Module 3: Kinematics and Conservation of Mass</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Module 4: Conservation of Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module5ConservationofMomentum_Sol.html">Module 5: Conservation of Momentum</a></li>
 </ul>
 
     </div>
@@ -3737,18 +3739,56 @@ c) \;99.8\; kW
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">126</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">h_ss</span><span class="o">=</span> <span class="n">k_s</span><span class="o">*</span><span class="p">(</span><span class="n">v_s</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="p">))</span> <span class="c1">#m</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">v_d</span><span class="o">=</span> <span class="n">Q</span><span class="o">/</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">D_d</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#m/s</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">Re_d</span><span class="o">=</span> <span class="n">V_d</span><span class="o">*</span><span class="n">D_d</span><span class="o">/</span><span class="n">nu</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">f_d</span><span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">log10</span><span class="p">(</span><span class="mf">5.74</span><span class="o">/</span><span class="p">(</span><span class="n">Re_d</span><span class="o">**</span><span class="mf">0.9</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">e_d</span><span class="o">/</span><span class="p">(</span><span class="mf">3.7</span><span class="o">*</span><span class="n">D_d</span><span class="p">)))))</span><span class="o">**</span><span class="mi">2</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">h_fd</span><span class="o">=</span> <span class="p">(</span><span class="n">f_d</span><span class="o">*</span><span class="n">L_d</span><span class="o">*</span><span class="n">v_d</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">D_d</span><span class="p">)</span> <span class="c1">#m</span>
-
-<span class="ne">NameError</span>: name &#39;V_d&#39; is not defined
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+T &amp;= 15 \; \;\textrm{(°C)}
+\\[10pt]
+\Delta_{z} &amp;= 50 \; \;\textrm{(m)}
+\\[10pt]
+L_{s} &amp;= 600 \; \;\textrm{(m)}
+\\[10pt]
+D_{s} &amp;= 0.200000 \; \;\textrm{(m)}
+\\[10pt]
+e_{s} &amp;= 0.000200 \; \;\textrm{(m)}
+\\[10pt]
+L_{d} &amp;= 2000 \; \;\textrm{(m)}
+\\[10pt]
+D_{d} &amp;= 0.150000 \; \;\textrm{(m)}
+\\[10pt]
+e_{d} &amp;= 0.000200 \; \;\textrm{(m)}
+\\[10pt]
+k_{s} &amp;= 80 \; 
+\\[10pt]
+k_{d} &amp;= 200 \; 
+\\[10pt]
+Q &amp;= 0.040000 \; \;\textrm{(m3/s)}
+\\[10pt]
+\nu &amp;= 0.000001 \; \;\textrm{(m2/s)}
+\\[10pt]
+v_{s} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{s} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.040000 }{ 3.141593 \cdot \frac{ \left( 0.200000 \right) ^{ 2 } }{ 4 } } \\&amp;= 1.273240 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\mathrm{Re}_{s} &amp;= v_{s} \cdot \frac{ D_{s} }{ \nu } \\&amp;= 1.273240 \cdot \frac{ 0.200000 }{ 0.000001 } \\&amp;= 223375.358725  \\[10pt]
+\\[10pt]
+f_{s} &amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ e_{s} }{ 3.7 \cdot D_{s} } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ \mathrm{Re}_{s} } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 1.8 \right) \cdot \log_{10} \left( \left( \frac{ 0.000200 }{ 3.7 \cdot 0.200000 } \right) ^{ 1.11 } + \left( \frac{ 6.9 }{ 223375.358725 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.020793  \\[10pt]
+\\[10pt]
+h_{fs} &amp;= \frac{ f_{s} \cdot L_{s} \cdot \left( v_{s} \right) ^{ 2 } }{ 2 \cdot g \cdot D_{s} } \\&amp;= \frac{ 0.020793 \cdot 600 \cdot \left( 1.273240 \right) ^{ 2 } }{ 2 \cdot 9.810000 \cdot 0.200000 } \\&amp;= 5.154117 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{ss} &amp;= k_{s} \cdot \left( \frac{ \left( v_{s} \right) ^{ 2 } }{ 2 \cdot g } \right) \\&amp;= 80 \cdot \left( \frac{ \left( 1.273240 \right) ^{ 2 } }{ 2 \cdot 9.810000 } \right) \\&amp;= 6.610149 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+v_{d} &amp;= \frac{ Q }{ \pi \cdot \frac{ \left( D_{d} \right) ^{ 2 } }{ 4 } } \\&amp;= \frac{ 0.040000 }{ 3.141593 \cdot \frac{ \left( 0.150000 \right) ^{ 2 } }{ 4 } } \\&amp;= 2.263537 \; \;\textrm{(m/s)}\\[10pt]
+\\[10pt]
+\mathrm{Re}_{d} &amp;= v_{d} \cdot \frac{ D_{d} }{ \nu } \\&amp;= 2.263537 \cdot \frac{ 0.150000 }{ 0.000001 } \\&amp;= 297833.811634  \\[10pt]
+\\[10pt]
+f_{d} &amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( \mathrm{Re}_{d} \right) ^{ 0.9 } } + \left( \frac{ e_{d} }{ 3.7 \cdot D_{d} } \right) \right) } \right) ^{ 2 } \\&amp;= \left( \frac{ 1 }{ \left( - 2 \right) \cdot \log_{10} \left( \frac{ 5.74 }{ \left( 297833.811634 \right) ^{ 0.9 } } + \left( \frac{ 0.000200 }{ 3.7 \cdot 0.150000 } \right) \right) } \right) ^{ 2 } \\&amp;= 0.022036  \\[10pt]
+\\[10pt]
+h_{fd} &amp;= \frac{ f_{d} \cdot L_{d} \cdot \left( v_{d} \right) ^{ 2 } }{ 2 \cdot g \cdot D_{d} } \\&amp;= \frac{ 0.022036 \cdot 2000 \cdot \left( 2.263537 \right) ^{ 2 } }{ 2 \cdot 9.810000 \cdot 0.150000 } \\&amp;= 76.728104 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{sd} &amp;= k_{d} \cdot \left( \frac{ \left( v_{d} \right) ^{ 2 } }{ 2 \cdot g } \right) \\&amp;= 200 \cdot \left( \frac{ \left( 2.263537 \right) ^{ 2 } }{ 2 \cdot 9.810000 } \right) \\&amp;= 52.228334 \; \;\textrm{(m)}\\[10pt]
+\\[10pt]
+h_{p} &amp;= \Delta_{z} + h_{fs} + h_{ss} + h_{fd} + h_{sd} \\&amp;= 50 + 5.154117 + 6.610149 + 76.728104 + 52.228334 \\&amp;= 190.720705 \; \;\textrm{(m)}\\[10pt]
+\end{aligned}
+\end{split}\]</div>
 </div>
 </details>
 </div>
@@ -3788,7 +3828,7 @@ h_p=191 m
 \begin{aligned}
 \eta &amp;= 0.75 \; 
 \\[10pt]
-P &amp;= \frac{ \frac{ \rho_{water} \cdot g \cdot h_{p} \cdot Q }{ \eta } }{ 1000 } \\&amp;= \frac{ \frac{ 1000 \cdot 9.81 \cdot 393.29 \cdot 0.04 }{ 0.75 } }{ 1000 } \\&amp;= 205.77 \; \;\textrm{(kW)}\\[10pt]
+P &amp;= \frac{ \frac{ \rho_{water} \cdot g \cdot h_{p} \cdot Q }{ \eta } }{ 1000 } \\&amp;= \frac{ \frac{ 1000 \cdot 9.81 \cdot 190.72 \cdot 0.04 }{ 0.75 } }{ 1000 } \\&amp;= 99.79 \; \;\textrm{(kW)}\\[10pt]
 \end{aligned}
 \end{split}\]</div>
 </div>
@@ -4146,6 +4186,15 @@ Q &amp;= A \cdot V_{C} \\&amp;= 0.096 \cdot 5.980 \\&amp;= 0.575 \; \;\textrm{(m
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Module 3: Kinematics and Conservation of Mass</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Module5ConservationofMomentum_Sol.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Module 5: Conservation of Momentum</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
