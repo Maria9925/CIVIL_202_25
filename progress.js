@@ -55,7 +55,10 @@
       controls.append(email);
       button('Email me a sign-in link', async () => {
         if (!email.reportValidity()) return;
-        const {error:e} = await db.auth.signInWithOtp({email:email.value.trim(), options:{emailRedirectTo:location.origin+location.pathname}});
+        const {error:e} = await db.auth.signInWithPassword({
+           email: email.value.trim(),
+           password: password.value
+         });s:{emailRedirectTo:location.origin+location.pathname}});
         renderText(e ? 'Sign-in error: ' + e.message : 'Check your email for a sign-in link.');
       });
       return;
