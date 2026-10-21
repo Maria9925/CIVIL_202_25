@@ -18,6 +18,10 @@
 
   // CREATE INTERFACE
   const root = document.createElement('section');
+  if (document.getElementById('civil202-progress-root')) {
+  return;
+}
+  root.id = 'civil202-progress-root';
   root.setAttribute('aria-label', 'CIVIL202 exercise tracking');
 
   root.style.cssText = `
@@ -164,12 +168,10 @@
           });
 
         if (signInError) {
-          renderText(
-            'Sign-in error: ' + signInError.message
-          );
-        } else {
-          await draw();
-        }
+        renderText('Sign-in error: ' + signInError.message);
+      } else {
+        window.location.reload();
+      }
       });
 
       return;
@@ -245,14 +247,10 @@
     // SIGN OUT
     button('Sign out', async () => {
       await db.auth.signOut();
-      await draw();
+      window.location.reload();
     });
   }
 
   await draw();
-
-  db.auth.onAuthStateChange(() => {
-    setTimeout(draw, 0);
-  });
 
 })();
