@@ -84,7 +84,14 @@
     b.style.cssText='margin:4px 10px 4px 0;padding:7px 10px;border:1px solid #247c67;border-radius:5px;background:white;cursor:pointer';
     b.onclick=fn;tools.append(b);return b;
   }
-  function reveal(node){node.hidden=false;if(node.matches('details'))node.open=true;}
+  function reveal(node) {
+  node.hidden = false;
+  node.style.removeProperty('display');
+
+  if (node.matches('details')) {
+    node.open = true;
+  }
+}
   const showSolution=async()=>{
     if (!events.some(e=>e.event_type==='solution_viewed')) {
       if(!await save({event_type:'solution_viewed'}))return;
@@ -103,11 +110,17 @@
       addButton('Show worked solution',showSolution);
     }else if(count()===1){
       feedback.textContent='First attempt incorrect. Review the hint and try once more.';
-      addButton('Show hint',async()=>{
-        if(!events.some(e=>e.event_type==='hint_viewed')){
-          if(!await save({event_type:'hint_viewed'}))return;
+      addButton('Show hint', async () => {
+        if (!events.some(e => e.event_type === 'hint_viewed')) {
+          if (!await save({ event_type: 'hint_viewed' })) return;
         }
+      
         reveal(hintNode);
+      
+        hintNode.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
       });
     }else feedback.textContent='Enter your answer before opening the hint.';
     if(events.some(e=>e.event_type==='hint_viewed'))reveal(hintNode);
