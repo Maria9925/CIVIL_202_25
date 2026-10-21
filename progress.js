@@ -46,23 +46,52 @@
   async function draw() {
     controls.replaceChildren();
     const { data: { user }, error } = await db.auth.getUser();
-    if (error || !user) {
-      renderText('Sign in with your university email to save your completed exercises.');
-      const email = document.createElement('input');
-      email.type = 'email'; email.placeholder = 'University email'; email.required = true;
-      email.autocomplete='email'; email.setAttribute('aria-label','University email');
-      email.style.cssText='padding:8px;max-width:260px;width:100%;border:1px solid #aaa;border-radius:6px';
-      controls.append(email);
-      button('Email me a sign-in link', async () => {
-        if (!email.reportValidity()) return;
-        const {error:e} = await db.auth.signInWithPassword({
+    
+   if (error || !user) {
+     renderText('Sign in to track your CIVIL202 progress.');
+   
+     // Email
+     const email = document.createElement('input');
+     email.type = 'email';
+     email.placeholder = 'University email';
+     email.autocomplete = 'email';
+     email.required = true;
+     email.style.cssText =
+       'padding:8px;margin:5px;border:1px solid #aaa;border-radius:6px';
+   
+     // Password
+     const password = document.createElement('input');
+     password.type = 'password';
+     password.placeholder = 'Password';
+     password.autocomplete = 'current-password';
+     password.required = true;
+     password.style.cssText =
+       'padding:8px;margin:5px;border:1px solid #aaa;border-radius:6px';
+   
+     controls.append(email, password);
+   
+     // Sign in
+     button('Sign in', async () => {
+       if (!email.reportValidity() || !password.reportValidity()) {
+         return;
+       }
+   
+       const { error: signInError } =
+         await db.auth.signInWithPassword({
            email: email.value.trim(),
            password: password.value
-         });s:{emailRedirectTo:location.origin+location.pathname}});
-        renderText(e ? 'Sign-in error: ' + e.message : 'Check your email for a sign-in link.');
-      });
-      return;
-    }
+         });
+   
+       if (signInError) {
+         renderText('Sign-in error: ' + signInError.message);
+       } else {
+         await draw();
+       }
+     });
+   
+     return;
+   }
+
     const {data:rows,error:fetchError} = await db.from('exercise_completions').select('exercise_id').eq('user_id',user.id);
     if (fetchError) { renderText('Could not load progress: '+fetchError.message); return; }
     const completed = new Set(rows.map(row=>row.exercise_id));
