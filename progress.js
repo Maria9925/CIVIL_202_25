@@ -114,6 +114,7 @@
   );
 
   // MAIN INTERFACE
+  let drawing = false;
   async function draw() {
     controls.replaceChildren();
 
