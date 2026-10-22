@@ -172,7 +172,7 @@
    
    // Find the Python output after Solution
    const possibleSolutionCell = solutionTitle?.nextElementSibling;
-   
+
    const solutionCell =
      possibleSolutionCell?.classList.contains('cell')
        ? possibleSolutionCell
