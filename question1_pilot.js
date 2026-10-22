@@ -40,9 +40,9 @@
 
   const box = document.createElement('div');
   box.style.cssText = 'border:1px solid #b7c8c7;border-radius:8px;padding:15px;margin:14px 0;background:#f6fbfa;color:#173d38;max-width:740px';
-  box.innerHTML = `<strong>Try this question</strong><p style="margin:8px 0">Calculate the specific weight (N/m³).</p>`;
+  box.innerHTML = '';
   const input = document.createElement('input');
-  input.type = 'number'; input.step='any'; input.placeholder='Your answer in N/m³';
+  input.type = 'number'; input.step='any'; input.placeholder='Your answer N/m³';
   input.style.cssText='padding:7px;border:1px solid #889;border-radius:5px;max-width:210px';
   input.setAttribute('aria-label', 'Specific weight in N per cubic metre');
   const check = document.createElement('button');
