@@ -181,7 +181,8 @@
  
     // LOAD QUESTION PROGRESS
     const QUESTION_IDS = [
-      'module1_basic_properties_q1'
+  'module1_basic_properties_q1',
+  'module1_basic_properties_q2'
     ];
 
     const { data: events, error: fetchError } = await db
@@ -237,38 +238,64 @@
     const percentage = Math.round(100 * completed / total);
 
     // MODULE PROGRESS
-    renderText(`Signed in as ${user.email}`);
+    
+    // SIMPLE MODULE PROGRESS
+
+    const total = QUESTION_IDS.length;
+    const percentage = total > 0
+      ? Math.round((completed / total) * 100)
+      : 0;
+
+    renderText('');
 
     const summary = document.createElement('div');
 
-    summary.innerHTML = `
-      <h3>Module 1 - Fluid Properties</h3>
-
-      <p><strong>Questions completed:
-        ${completed}/${total} (${percentage}%)</strong></p>
-
-      <div style="
-        width:100%;
-        height:12px;
-        background:#dce8e5;
-        border-radius:8px;
-        overflow:hidden;
-        margin-bottom:18px;
-      ">
-        <div style="
-          width:${percentage}%;
-          height:100%;
-          background:#258b70;
-        "></div>
-      </div>
-
-      // <p>Correct on first attempt: ${firstCorrect}</p>
-      // <p>Correct on second attempt: ${secondCorrect}</p>
-      // <p>Questions where Hint was used: ${hintsUsed}</p>
-      // <p>Questions where Solution was viewed: ${solutionsViewed}</p>
+    summary.style.cssText = `
+      padding: 6px 0;
+      font-family: system-ui, sans-serif;
     `;
 
-    controls.appendChild(summary);
+    const heading = document.createElement('div');
+    heading.style.cssText = `
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    `;
+
+    const label = document.createElement('strong');
+    label.textContent =
+      `${completed} of ${total} questions completed`;
+
+    const percent = document.createElement('strong');
+    percent.textContent = `${percentage}%`;
+
+    heading.append(label, percent);
+
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+      width: 100%;
+      height: 10px;
+      background: #dce8e5;
+      border-radius: 8px;
+      overflow: hidden;
+    `;
+
+    const progressFill = document.createElement('div');
+    progressFill.style.cssText = `
+      width: ${percentage}%;
+      height: 100%;
+      background: #258b70;
+      border-radius: 8px;
+      transition: width 0.3s ease;
+    `;
+
+    progressBar.append(progressFill);
+    summary.append(heading, progressBar);
+    controls.append(summary);
+
+
 
     // SIGN OUT
     button('Sign out', async () => {
