@@ -79,21 +79,83 @@
     const { data: { user }, error: authError } =
       await db.auth.getUser();
 
-    if (authError || !user) {
-      status.textContent =
-        'Please sign in from the CIVIL202 main page.';
+    
+  if (authError || !user) {
+  
+    status.textContent =
+      'Please sign in to access the exercises and track your progress.';
+  
+    summary.replaceChildren();
+  
+    const link = document.createElement('a');
+  
+    link.href =
+      'https://maria9925.github.io/CIVIL_202_25/';
+  
+    link.textContent = 'Go to sign in';
+  
+    link.style.cssText = `
+      display: inline-block;
+      margin-top: 10px;
+      padding: 9px 16px;
+      background: #258b70;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    `;
+  
+    summary.append(link);
+  
+    return;
+  }
 
-      summary.replaceChildren();
+    
+    // Display signed-in student and Sign out button
+    status.replaceChildren();
 
-      const link = document.createElement('a');
-      link.href = 'index.html';
-      link.textContent = 'Go to sign in';
+    status.style.cssText = `
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 14px 0;
+    `;
 
-      summary.append(link);
-      return;
-    }
+    const userLabel = document.createElement('span');
+    userLabel.textContent = `Signed in as ${user.email}`;
 
-    status.textContent = `Signed in as ${user.email}`;
+    const signOutButton = document.createElement('button');
+    signOutButton.type = 'button';
+    signOutButton.textContent = 'Sign out';
+
+    signOutButton.style.cssText = `
+      padding: 8px 14px;
+      background: white;
+      border: 1px solid #247c67;
+      border-radius: 6px;
+      color: #195b4d;
+      cursor: pointer;
+      font: inherit;
+    `;
+
+    signOutButton.addEventListener('click', async () => {
+      signOutButton.disabled = true;
+
+      const { error } = await db.auth.signOut();
+
+      if (error) {
+        signOutButton.disabled = false;
+        alert('Could not sign out: ' + error.message);
+        return;
+      }
+
+      window.location.href = 'index.html';
+    });
+
+    status.append(userLabel, signOutButton);
+
 
     const { data, error } = await db
       .from('question_events')
