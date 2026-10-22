@@ -178,72 +178,97 @@
       return;
     }
 
-    // LOAD STUDENT PROGRESS
-    const {
-      data: rows,
-      error: fetchError
-    } = await db
-      .from('exercise_completions')
-      .select('exercise_id')
-      .eq('user_id', user.id);
+ 
+    // LOAD QUESTION PROGRESS
+    const QUESTION_IDS = [
+      'module1_basic_properties_q1'
+    ];
+
+    const { data: events, error: fetchError } = await db
+      .from('question_events')
+      .select('question_id, event_type, attempt_number, is_correct')
+      .eq('user_id', user.id)
+      .in('question_id', QUESTION_IDS);
 
     if (fetchError) {
-      renderText(
-        'Could not load progress: ' + fetchError.message
-      );
+      renderText('Could not load progress: ' + fetchError.message);
       return;
     }
 
-    const completed = new Set(
-      rows.map(row => row.exercise_id)
-    );
+    const records = events || [];
 
-    const exercise = getExercise();
+    let completed = 0;
+    let firstCorrect = 0;
+    let secondCorrect = 0;
+    let hintsUsed = 0;
+    let solutionsViewed = 0;
 
-    const completedCount =
-      Object.keys(EXERCISES).filter(
-        key => completed.has(key)
-      ).length;
+    for (const id of QUESTION_IDS) {
+      const q = records.filter(e => e.question_id === id);
+      const attempts = q.filter(e => e.event_type === 'attempt');
 
-    renderText(
-      `Signed in as ${user.email}. ` +
-      `Completed ${completedCount}/` +
-      `${Object.keys(EXERCISES).length} exercises.`
-    );
+      // A question is completed if answered correctly
+      // or if the two attempts have been used.
+      if (
+        attempts.some(e => e.is_correct) ||
+        attempts.length >= 2
+      ) {
+        completed++;
+      }
 
-    // MARK MODULE AS COMPLETED
-    if (exercise) {
-      const [id, title] = exercise;
+      if (attempts.some(e =>
+        e.attempt_number === 1 && e.is_correct
+      )) firstCorrect++;
 
-      button(
-        completed.has(id)
-          ? `✓ ${title} — Completed (undo)`
-          : `Mark ${title} as completed`,
+      if (attempts.some(e =>
+        e.attempt_number === 2 && e.is_correct
+      )) secondCorrect++;
 
-        async () => {
-          const result = completed.has(id)
-            ? await db
-                .from('exercise_completions')
-                .delete()
-                .eq('exercise_id', id)
-                .eq('user_id', user.id)
-            : await db
-                .from('exercise_completions')
-                .insert({
-                  exercise_id: id,
-                  user_id: user.id
-                });
+      if (q.some(e => e.event_type === 'hint_viewed')) {
+        hintsUsed++;
+      }
 
-          if (result.error) {
-            renderText(
-              'Could not save: ' + result.error.message
-            );
-          } else {
-            await draw();
-          }
-        }
-      );
+      if (q.some(e => e.event_type === 'solution_viewed')) {
+        solutionsViewed++;
+      }
     }
+
+    const total = QUESTION_IDS.length;
+    const percentage = Math.round(100 * completed / total);
+
+    // MODULE PROGRESS
+    renderText(`Signed in as ${user.email}`);
+
+    const summary = document.createElement('div');
+
+    summary.innerHTML = `
+      <h3>Module 1 - Fluid Properties</h3>
+
+      <p><strong>Questions completed:
+        ${completed}/${total} (${percentage}%)</strong></p>
+
+      <div style="
+        width:100%;
+        height:12px;
+        background:#dce8e5;
+        border-radius:8px;
+        overflow:hidden;
+        margin-bottom:18px;
+      ">
+        <div style="
+          width:${percentage}%;
+          height:100%;
+          background:#258b70;
+        "></div>
+      </div>
+
+      <p>Correct on first attempt: ${firstCorrect}</p>
+      <p>Correct on second attempt: ${secondCorrect}</p>
+      <p>Questions where Hint was used: ${hintsUsed}</p>
+      <p>Questions where Solution was viewed: ${solutionsViewed}</p>
+    `;
+
+    controls.appendChild(summary);
 
     // SIGN OUT
     button('Sign out', async () => {
