@@ -1,305 +1,664 @@
-<!-- <meta http-equiv="Refresh" content="0; url=chapter1.html" /> -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CIVIL202 | Practice Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CIVIL 202 Course Exercises</title>
+
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #f3f6f8;
-      color: #243746;
-      font: 16px Arial, sans-serif;
-    }
-    main {
-      max-width: 680px;
-      margin: 48px auto;
-      padding: 28px;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px #00000012;
-    }
-    h1 { color: #164e63; margin-bottom: 4px; }
-    h2 { margin-top: 0; }
-    .subtitle { color: #64748b; }
-    .notice {
-      background: #f0f7f6;
-      padding: 16px;
-      border-radius: 8px;
+      padding: 35px 20px;
+      background: #ffffff;
+      color: #293241;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      margin: 22px 0;
     }
-    label { display: block; margin: 12px 0 5px; }
-    input {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 11px;
-      border: 1px solid #bac6d0;
-      border-radius: 6px;
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
     }
+
+    /* HEADER */
+
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 58px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      margin: 20px 0 30px;
+      color: #293241;
+    }
+
+    h2 {
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .welcome-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #455468;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .welcome-text p {
+      margin-bottom: 17px;
+    }
+
+    /* INFORMATION NOTE */
+
+    .notice {
+      background: #f4f6f8;
+      border-radius: 8px;
+      padding: 16px 22px;
+      margin: 30px auto;
+      max-width: 720px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #526071;
+    }
+
+    /* LOGIN SECTION */
+
+    .login-section {
+      max-width: 480px;
+      margin: 40px auto;
+      padding-top: 10px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tabs button {
+      flex: 1;
+    }
+
     button {
-      padding: 11px 18px;
-      border: 0;
-      border-radius: 6px;
-      background: #176b60;
+      background: #34465f;
       color: white;
+      border: 1px solid #34465f;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
       cursor: pointer;
-      margin-top: 14px;
+      transition: background 0.2s ease;
     }
-    button:disabled { opacity: .6; cursor: wait; }
-    .secondary { background: #e7efee; color: #17564d; }
-    .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
-    .tabs button { flex: 1; }
-    #message { margin-top: 15px; white-space: pre-wrap; }
-    .modules a {
+
+    button:hover:not(:disabled) {
+      background: #22364f;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .secondary {
+      background: white;
+      color: #34465f;
+      border: 1px solid #cbd5e1;
+    }
+
+    .secondary:hover:not(:disabled) {
+      background: #f4f6f8;
+    }
+
+    label {
       display: block;
-      margin: 12px 0;
-      padding: 14px;
-      background: #f0f7f6;
-      border-radius: 7px;
-      color: #164e63;
-      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 7px;
+      color: #293241;
     }
-    [hidden] { display: none !important; }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 15px;
+      margin-bottom: 19px;
+      background: white;
+    }
+
+    input:focus {
+      outline: 2px solid #64748b;
+      outline-offset: 1px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    #message {
+      margin-top: 18px;
+      font-size: 14px;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+
+    /* STUDENT MODULES */
+
+    .student-area {
+      margin-top: 40px;
+    }
+
+    .student-area h2 {
+      text-align: center;
+    }
+
+    #welcomeStudent {
+      text-align: center;
+      color: #64748b;
+    }
+
+    .module-link {
+      display: block;
+      padding: 17px 20px;
+      margin: 12px 0;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #f8fafc;
+      color: #293241;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.2s ease;
+    }
+
+    .module-link:hover {
+      background: #e9eef4;
+    }
+
+    .signout-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      .login-section {
+        margin-top: 25px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-<main>
-  <h1>CIVIL202</h1>
-  <p class="subtitle">Fluid Mechanics and Pipe Flow</p>
-  <h2>Interactive Practice Platform</h2>
 
-  <div class="notice">
-    <strong>About this platform</strong>
-    <p>
-      This platform supports independent practice,
-      feedback and learning progress tracking.
-    </p>
-    <p>
-      Your answers and progress will not contribute
-      to course grades or formal academic performance
-      assessments.
-    </p>
-    <p>
-      Your email, UPI and practice activity will be
-      recorded to track your progress and evaluate
-      how well this learning tool works.
-      Individual records are intended to be accessible
-      only to you and authorised teaching staff.
-    </p>
-  </div>
+  <main class="container">
 
-  <section id="authArea">
-    <div class="tabs">
-      <button id="loginTab" type="button">Sign in</button>
-      <button id="registerTab" type="button" class="secondary">
-        Create account
-      </button>
-    </div>
+    <!-- WELCOME SECTION -->
 
-    <form id="authForm">
-      <div id="upiArea" hidden>
-        <label for="upi">University UPI</label>
-        <input id="upi" placeholder="e.g. abcd123"
-               autocomplete="off">
+    <section id="welcomeSection" class="header">
+
+      <h1>CIVIL 202 COURSE EXERCISES</h1>
+
+      <h2>Welcome!</h2>
+
+      <div class="welcome-text">
+
+        <p>
+          We hope this platform helps you feel more
+          confident as you work through CIVIL 202!
+        </p>
+
+        <p>
+          Here, you can practise at your own pace,
+          check your answers, explore helpful hints,
+          and review step-by-step solutions whenever
+          you need them.
+        </p>
+
+        <p>
+          We hope these exercises make your learning
+          experience a little easier and more enjoyable!
+        </p>
+
       </div>
 
-      <label for="email">Personal email</label>
-      <input id="email" type="email"
-             autocomplete="email" required>
+      <div class="notice">
 
-      <label for="password">Password</label>
-      <input id="password" type="password"
-             autocomplete="current-password"
-             minlength="8" required>
+        <strong>A little note:</strong>
 
-      <button id="submitButton" type="submit">Sign in</button>
-    </form>
-  </section>
+        Your responses and progress will not affect
+        your course grades. They are collected to help
+        you track your learning and to help us evaluate
+        and improve this tool.
 
-  <section id="studentArea" hidden>
-    <h2>My Practice Modules</h2>
-    <p id="welcome"></p>
+      </div>
 
-    <div class="modules">
-      <a href="Module1FluidProperties_SolV2.html">
+    </section>
+
+
+    <!-- AUTHENTICATION -->
+
+    <section id="authArea" class="login-section" hidden>
+
+      <div class="tabs">
+
+        <button id="loginTab" type="button">
+          Sign in
+        </button>
+
+        <button id="registerTab"
+                type="button"
+                class="secondary">
+          Create account
+        </button>
+
+      </div>
+
+      <form id="authForm">
+
+        <!-- UPI IS REQUIRED ONLY DURING REGISTRATION -->
+
+        <div id="upiArea" hidden>
+
+          <label for="upi">
+            University UPI
+          </label>
+
+          <input
+            id="upi"
+            type="text"
+            placeholder="e.g. abcd123"
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <label for="email">
+          Personal email
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="student@example.com"
+          autocomplete="email"
+          required
+        >
+
+
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          minlength="8"
+          required
+        >
+
+
+        <button
+          id="submitButton"
+          type="submit"
+          class="submit-btn">
+          Sign in
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- STUDENT AREA AFTER LOGIN -->
+
+    <section
+      id="studentArea"
+      class="student-area"
+      hidden>
+
+      <h2>My Practice Modules</h2>
+
+      <p id="welcomeStudent"></p>
+
+      <a class="module-link"
+         href="Module1FluidProperties_SolV2.html">
         Module 1 — Fluid Properties
       </a>
-      <a href="Module2Hydrostatics_SolV2.html">
+
+      <a class="module-link"
+         href="Module2Hydrostatics_SolV2.html">
         Module 2 — Hydrostatics
       </a>
-      <a href="Module3Kinematicfluid_Sol.html">
+
+      <a class="module-link"
+         href="Module3Kinematicfluid_Sol.html">
         Module 3 — Fluid Kinematics
       </a>
-      <a href="Module4ConservationEnergy_Sol.html">
+
+      <a class="module-link"
+         href="Module4ConservationEnergy_Sol.html">
         Module 4 — Conservation of Energy
       </a>
-      <a href="Module5ConservationofMomentum_Sol.html">
+
+      <a class="module-link"
+         href="Module5ConservationofMomentum_Sol.html">
         Module 5 — Conservation of Momentum
       </a>
-    </div>
 
-    <button id="signOutButton" type="button" class="secondary">
-      Sign out
-    </button>
-  </section>
+      <div class="signout-container">
 
-  <p id="message" role="status"></p>
-</main>
+        <button
+          id="signOutButton"
+          type="button"
+          class="secondary">
+          Sign out
+        </button>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+      </div>
 
-<script>
-(async function () {
-  "use strict";
+    </section>
 
-  const SUPABASE_URL =
-    "https://kaflloebqtgwstcpnywa.supabase.co";
+    <p id="message" role="status" aria-live="polite"></p>
 
-  const SUPABASE_KEY =
-    "sb_publishable_fx7AOQeXAmJavxqUZt4FOQ_i_SobgIP";
+  </main>
 
-  const db = window.supabase.createClient(
-    SUPABASE_URL, SUPABASE_KEY
-  );
 
-  const $ = id => document.getElementById(id);
-  const message = text => { $("message").textContent = text; };
+  <!-- SUPABASE LIBRARY -->
 
-  let mode = "login";
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 
-  function setMode(next) {
-    mode = next;
-    $("upiArea").hidden = mode !== "register";
-    $("upi").required = mode === "register";
-    $("password").autocomplete =
-      mode === "register" ? "new-password" : "current-password";
-    $("submitButton").textContent =
-      mode === "register" ? "Create account" : "Sign in";
-    message("");
-  }
 
-  $("loginTab").onclick = () => setMode("login");
-  $("registerTab").onclick = () => setMode("register");
+  <!-- AUTHENTICATION LOGIC -->
 
-  async function saveProfile(user) {
-    const upi = user.user_metadata?.upi;
-    if (!upi) return;
+  <script>
 
-    const { data, error: readError } = await db
-      .from("student_profiles")
-      .select("user_id")
-      .eq("user_id", user.id)
-      .maybeSingle();
+  (async function () {
 
-    if (readError) throw readError;
-    if (data) return;
+    'use strict';
 
-    const { error } = await db
-      .from("student_profiles")
-      .insert({
-        user_id: user.id,
-        upi: upi.trim().toLowerCase()
-      });
+    const SUPABASE_URL =
+      'https://kaflloebqtgwstcpnywa.supabase.co';
 
-    if (error) throw error;
-  }
+    const SUPABASE_KEY =
+      'sb_publishable_fx7AOQeXAmJavxqUZt4FOQ_i_SobgIP';
 
-  async function showCurrentUser() {
-    const { data: { user }, error } =
-      await db.auth.getUser();
+    const db = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
 
-    if (error || !user) {
-      $("authArea").hidden = false;
-      $("studentArea").hidden = true;
-      return;
+    const $ = id => document.getElementById(id);
+
+    function message(text) {
+      $('message').textContent = text;
     }
 
-    try {
-      await saveProfile(user);
-    } catch (err) {
-      message("Profile setup needs attention: " + err.message);
-      $("authArea").hidden = true;
-      $("studentArea").hidden = true;
-      return;
+    let mode = 'login';
+
+
+    // SWITCH BETWEEN SIGN IN AND REGISTER
+
+    function setMode(next) {
+
+      mode = next;
+
+      $('upiArea').hidden = mode !== 'register';
+
+      $('upi').required = mode === 'register';
+
+      $('password').autocomplete =
+        mode === 'register'
+          ? 'new-password'
+          : 'current-password';
+
+      $('submitButton').textContent =
+        mode === 'register'
+          ? 'Create account'
+          : 'Sign in';
+
+      $('loginTab').className =
+        mode === 'login' ? '' : 'secondary';
+
+      $('registerTab').className =
+        mode === 'register' ? '' : 'secondary';
+
+      message('');
     }
 
-    $("authArea").hidden = true;
-    $("studentArea").hidden = false;
-    $("welcome").textContent =
-      "Signed in as " + user.email;
-    message("");
-  }
+    $('loginTab').onclick = () => setMode('login');
 
-  $("authForm").onsubmit = async event => {
-    event.preventDefault();
+    $('registerTab').onclick = () => setMode('register');
 
-    const email = $("email").value.trim();
-    const password = $("password").value;
-    const upi = $("upi").value.trim().toLowerCase();
-    const submit = $("submitButton");
 
-    if (mode === "register" && !/^[a-z0-9]{3,20}$/.test(upi)) {
-      message("Enter a valid UPI (3–20 letters or numbers).");
-      return;
-    }
+    // SAVE STUDENT UPI
 
-    submit.disabled = true;
-    message("Please wait...");
+    async function saveProfile(user) {
 
-    try {
-      if (mode === "register") {
-        const { data, error } = await db.auth.signUp({
-          email,
-          password,
-          options: {
-            data: { upi },
-            emailRedirectTo: location.origin + location.pathname
-          }
+      const upi = user.user_metadata?.upi;
+
+      if (!upi) return;
+
+      const { data, error: readError } = await db
+        .from('student_profiles')
+        .select('user_id')
+        .eq('user_id', user.id)
+        .maybeSingle();
+
+      if (readError) throw readError;
+
+      if (data) return;
+
+      const { error } = await db
+        .from('student_profiles')
+        .insert({
+          user_id: user.id,
+          upi: upi.trim().toLowerCase()
         });
 
-        if (error) throw error;
+      if (error) throw error;
+    }
 
-        if (!data.session) {
-          message(
-            "Account request received. Check your email " +
-            "to confirm your account, then sign in."
-          );
-          setMode("login");
-          message(
-            "Check your email to confirm your account, " +
-            "then sign in."
-          );
-        } else {
-          await saveProfile(data.user);
-          await showCurrentUser();
-        }
-      } else {
-        const { error } = await db.auth.signInWithPassword({
-          email, password
-        });
 
-        if (error) throw error;
-        await showCurrentUser();
+    // CHECK CURRENT SESSION
+
+    async function showCurrentUser() {
+
+      const {
+        data: { user },
+        error
+      } = await db.auth.getUser();
+
+      if (error || !user) {
+
+        $('authArea').hidden = false;
+        $('studentArea').hidden = true;
+
+        return;
       }
-    } catch (err) {
-      message("Error: " + err.message);
-    } finally {
-      submit.disabled = false;
+
+      try {
+
+        await saveProfile(user);
+
+      } catch (err) {
+
+        message(
+          'Profile setup error: ' + err.message
+        );
+
+        $('authArea').hidden = true;
+        $('studentArea').hidden = true;
+
+        return;
+      }
+
+      $('authArea').hidden = true;
+      $('studentArea').hidden = false;
+
+      $('welcomeStudent').textContent =
+        'Signed in as ' + user.email;
+
+      message('');
     }
-  };
 
-  $("signOutButton").onclick = async () => {
-    await db.auth.signOut();
-    location.reload();
-  };
 
-  setMode("login");
-  await showCurrentUser();
-})();
-</script>
+    // REGISTER OR SIGN IN
+
+    $('authForm').onsubmit = async event => {
+
+      event.preventDefault();
+
+      const email =
+        $('email').value.trim();
+
+      const password =
+        $('password').value;
+
+      const upi =
+        $('upi').value.trim().toLowerCase();
+
+      const submit =
+        $('submitButton');
+
+      if (
+        mode === 'register' &&
+        !/^[a-z0-9]{3,20}$/.test(upi)
+      ) {
+
+        message(
+          'Enter a valid UPI (3–20 letters or numbers).'
+        );
+
+        return;
+      }
+
+      submit.disabled = true;
+
+      message('Please wait...');
+
+      try {
+
+        if (mode === 'register') {
+
+          // CREATE ACCOUNT
+
+          const { data, error } =
+            await db.auth.signUp({
+
+              email,
+              password,
+
+              options: {
+
+                data: { upi },
+
+                emailRedirectTo:
+                  location.origin + location.pathname
+
+              }
+
+            });
+
+          if (error) throw error;
+
+          if (!data.session) {
+
+            setMode('login');
+
+            message(
+              'Check your email to confirm your account, ' +
+              'then sign in.'
+            );
+
+          } else {
+
+            await saveProfile(data.user);
+
+            await showCurrentUser();
+
+          }
+
+        } else {
+
+          // SIGN IN
+
+          const { error } =
+            await db.auth.signInWithPassword({
+              email,
+              password
+            });
+
+          if (error) throw error;
+
+          await showCurrentUser();
+
+        }
+
+      } catch (err) {
+
+        message('Error: ' + err.message);
+
+      } finally {
+
+        submit.disabled = false;
+
+      }
+
+    };
+
+
+    // SIGN OUT
+
+    $('signOutButton').onclick = async () => {
+
+      const { error } = await db.auth.signOut();
+
+      if (error) {
+        message('Could not sign out: ' + error.message);
+        return;
+      }
+
+      location.reload();
+
+    };
+
+
+    setMode('login');
+
+    await showCurrentUser();
+
+  })();
+
+  </script>
+
 </body>
 </html>
