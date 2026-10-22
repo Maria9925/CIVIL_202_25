@@ -13,7 +13,8 @@
   // Questions currently implemented
   const QUESTION_IDS = [
     'module1_basic_properties_q1',
-    'module1_basic_properties_q2'
+    'module1_basic_properties_q2',
+    "module1_basic_properties_q3"
   ];
 
   // Prevent duplicate progress boxes
