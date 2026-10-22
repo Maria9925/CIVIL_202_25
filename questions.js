@@ -164,21 +164,25 @@
 
     const children = [...section.children];
 
-    const solutionTitle = children.find(el =>
-      el.tagName === 'P' &&
-      el.textContent.trim().toLowerCase() === 'solution'
-    );
-
-    const solutionCell =
-      solutionTitle?.nextElementSibling
-        ?.classList.contains('tag_solution')
-        ? solutionTitle.nextElementSibling
-        : null;
-
-    const solutionParts = [
-      solutionTitle,
-      solutionCell
-    ].filter(Boolean);
+    // Find the Solution heading
+   const solutionTitle = [...section.children].find(el =>
+     el.tagName === 'P' &&
+     el.textContent.trim().toLowerCase() === 'solution'
+   );
+   
+   // Find the Python output after Solution
+   const possibleSolutionCell = solutionTitle?.nextElementSibling;
+   
+   const solutionCell =
+     possibleSolutionCell?.classList.contains('cell')
+       ? possibleSolutionCell
+       : null;
+   
+   // Elements to hide until the solution is unlocked
+   const solutionParts = [
+     solutionTitle,
+     solutionCell
+   ].filter(Boolean);
 
 
     // =====================================================
