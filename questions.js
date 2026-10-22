@@ -288,15 +288,18 @@
     actions.append(check);
     box.append(actions, feedback, extras);
 
-    const buttonStyle = `
-      margin: 6px 10px 4px 0;
-      padding: 8px 12px;
-      border: 1px solid #247c67;
-      border-radius: 6px;
-      background: white;
-      color: #195b4d;
-      cursor: pointer;
-    `;
+    
+   const buttonStyle = `
+     margin: 6px 10px 4px 0;
+     padding: 9px 16px;
+     border: 1px solid #4B5563;
+     border-radius: 6px;
+     background: #4B5563;
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+     transition: background 0.2s ease;
+   `;
 
     check.style.cssText = buttonStyle;
 
