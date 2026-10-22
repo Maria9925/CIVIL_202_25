@@ -262,10 +262,10 @@
         "></div>
       </div>
 
-      <p>Correct on first attempt: ${firstCorrect}</p>
-      <p>Correct on second attempt: ${secondCorrect}</p>
-      <p>Questions where Hint was used: ${hintsUsed}</p>
-      <p>Questions where Solution was viewed: ${solutionsViewed}</p>
+      // <p>Correct on first attempt: ${firstCorrect}</p>
+      // <p>Correct on second attempt: ${secondCorrect}</p>
+      // <p>Questions where Hint was used: ${hintsUsed}</p>
+      // <p>Questions where Solution was viewed: ${solutionsViewed}</p>
     `;
 
     controls.appendChild(summary);
