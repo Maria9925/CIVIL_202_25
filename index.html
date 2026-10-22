@@ -10,6 +10,12 @@
 
   <style>
 
+    .section-divider {
+      border: none;
+      border-top: 1px solid #d5dae1;
+      margin: 24px 0 30px;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -36,12 +42,13 @@
     }
 
     h1 {
-      font-size: clamp(38px, 6vw, 58px);
+      font-size: clamp(28px, 3.5vw, 42px);
       font-weight: 500;
-      line-height: 1.2;
-      letter-spacing: 0.5px;
-      margin: 20px 0 30px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      margin: 12px 0 22px;
       color: #293241;
+      text-align: center;
     }
 
     h2 {
@@ -49,17 +56,18 @@
       font-weight: 500;
       margin-bottom: 18px;
     }
-
+    
     .welcome-text {
-      font-size: 17px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.7;
       color: #455468;
       max-width: 720px;
       margin: 0 auto;
+      text-align: left;
     }
-
+    
     .welcome-text p {
-      margin-bottom: 17px;
+      margin: 0 0 14px;
     }
 
     /* INFORMATION NOTE */
@@ -75,6 +83,8 @@
       line-height: 1.7;
       color: #526071;
     }
+
+    <hr class="section-divider">
 
     /* LOGIN SECTION */
 
@@ -224,6 +234,8 @@
 
       <h1>CIVIL 202 COURSE EXERCISES</h1>
 
+      <hr class="section-divider">
+      
       <h2>Welcome!</h2>
 
       <div class="welcome-text">
@@ -292,7 +304,7 @@
           <input
             id="upi"
             type="text"
-            placeholder="e.g. abcd123"
+            placeholder="e.g. 20261234"
             autocomplete="off"
           >
 
