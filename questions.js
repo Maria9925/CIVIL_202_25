@@ -79,7 +79,7 @@
 
       fields: [
         {
-          label: 'Specific weight (N)',
+          label: 'Weight (N)',
           answer: 3.83,
           tolerance: 0.05
         }
