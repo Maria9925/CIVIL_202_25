@@ -548,19 +548,28 @@
         is_correct: correct
       });
 
+
       if (saved) {
 
         inputs.forEach(i => i.value = '');
 
         render();
 
+        // Update the progress bar automatically
+        window.dispatchEvent(
+          new Event('civil202-progress-updated')
+        );
+
       } else {
 
         check.disabled = false;
+
       }
+
     });
 
     render();
+
   }
 
 })();
