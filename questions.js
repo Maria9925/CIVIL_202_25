@@ -70,7 +70,21 @@
           tolerance: 0.02
         }
       ]
-    }
+    },
+
+       // QUESTION 3
+    {
+      heading: 'Question 3',
+      id: 'module1_basic_properties_q3',
+
+      fields: [
+        {
+          label: 'Specific weight (N)',
+          answer: 3.83,
+          tolerance: 0.05
+        }
+      ]
+    },
 
   ];
 
