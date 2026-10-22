@@ -292,9 +292,9 @@
    const buttonStyle = `
      margin: 6px 10px 4px 0;
      padding: 9px 16px;
-     border: 1px solid #4B5563;
+     border: 1px solid #94A3B8;
      border-radius: 6px;
-     background: #4B5563;
+     background: #94A3B8;
      color: white;
      font-weight: 600;
      cursor: pointer;
