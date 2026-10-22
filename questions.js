@@ -292,16 +292,26 @@
    const buttonStyle = `
      margin: 6px 10px 4px 0;
      padding: 9px 16px;
-     border: 1px solid #94A3B8;
+     border: 1px solid #247c67;
      border-radius: 6px;
-     background: #94A3B8;
-     color: white;
+     background: white;
+     color: #195b4d;
      font-weight: 600;
      cursor: pointer;
      transition: background 0.2s ease;
    `;
 
     check.style.cssText = buttonStyle;
+
+   check.addEventListener('mouseenter', () => {
+     if (!check.disabled) {
+       check.style.background = '#DCEFE9';
+     }
+   });
+   
+   check.addEventListener('mouseleave', () => {
+     check.style.background = 'white';
+   });
 
     heading.insertAdjacentElement('afterend', box);
 
