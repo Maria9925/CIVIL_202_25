@@ -150,6 +150,145 @@
     return button;
   }
 
+   
+const cardStyles = document.createElement('style');
+
+cardStyles.textContent = `
+  .civil-question-card {
+    background: #fcfcfc !important;
+    border: 1px solid #dfe2e5 !important;
+    border-radius: 18px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+    color: #293241 !important;
+  }
+
+  .civil-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .civil-card-heading h4 {
+    margin: 4px 0 0 !important;
+    font-size: 21px;
+    color: #293241;
+  }
+
+  .civil-card-subtitle {
+    font-size: 12px;
+    color: #737980;
+  }
+
+  .civil-status {
+    background: #f0f1f2;
+    border-radius: 30px;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #58616b;
+    white-space: nowrap;
+  }
+
+  .civil-question-card > p {
+    margin: 8px 0 16px;
+    line-height: 1.6;
+  }
+
+  .civil-help-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+  }
+
+  .civil-help-actions button {
+    border: 1px solid #d5d9dc !important;
+    border-radius: 30px !important;
+    background: #fff !important;
+    color: #505a63 !important;
+    padding: 7px 14px !important;
+    margin: 0 !important;
+  }
+
+  .civil-help-actions button:hover {
+    background: #edf1f2 !important;
+    border-color: #aeb9bf !important;
+  }
+
+  .civil-answer-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 12px 0;
+  }
+
+  .civil-fields {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .civil-fields label {
+    flex: 1 1 170px;
+    margin: 0 !important;
+    color: #505a63;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .civil-fields input {
+    width: 100% !important;
+    border: 1px solid #d5d9dc !important;
+    border-radius: 30px !important;
+    background: white;
+    padding: 12px 16px !important;
+    font-size: 15px;
+  }
+
+  .civil-check-button {
+    border-radius: 30px !important;
+    border: 1px solid #607783 !important;
+    background: #607783 !important;
+    color: white !important;
+    padding: 12px 18px !important;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+
+  .civil-check-button:hover:not(:disabled) {
+    background: #405762 !important;
+  }
+
+  .civil-check-button:disabled {
+    background: #edf0f1 !important;
+    border-color: #edf0f1 !important;
+    color: #92999e !important;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 600px) {
+    .civil-question-card {
+      padding: 15px !important;
+    }
+
+    .civil-answer-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .civil-check-button {
+      width: 100%;
+    }
+  }
+`;
+
+document.head.append(cardStyles);
+
+
   // =====================================================
   // 5. PROCESS EACH QUESTION
   // =====================================================
@@ -271,6 +410,15 @@
       color: #173d38;
     `;
 
+     const answerRow = document.createElement('div');
+      answerRow.className = 'civil-answer-row';
+      
+      const fieldsGroup = document.createElement('div');
+      fieldsGroup.className = 'civil-fields';
+      
+      answerRow.append(fieldsGroup);
+      box.append(answerRow);
+
     const inputs = config.fields.map(field => {
 
       const wrap = document.createElement('label');
@@ -299,7 +447,7 @@
       `;
 
       wrap.append(label, input);
-      box.append(wrap);
+      fieldsGroup.append(wrap);
 
       return input;
     });
@@ -325,32 +473,51 @@
     const reviewActions =
       document.createElement('div');
 
-    box.append(
-      helpActions,
-      check,
-      feedback,
-      choices,
-      reviewActions
-    );
+    box.insertBefore(helpActions, answerRow);
+   helpActions.className = 'civil-help-actions';
+   
+   check.classList.add('civil-check-button');
+   answerRow.append(check);
+   
+   box.append(
+     feedback,
+     choices,
+     reviewActions
+   );
 
-    heading.insertAdjacentElement(
-      'afterend',
-      box
-    );
+    box.classList.add('civil-question-card');
 
-    const statement = [
-      ...section.children
-    ].find(el =>
-      el.tagName === 'P' &&
-      el !== solutionTitle
-    );
+const statement = [
+  ...section.children
+].find(el =>
+  el.tagName === 'P' &&
+  el !== solutionTitle
+);
 
-    if (statement) {
-      statement.insertAdjacentElement(
-        'afterend',
-        box
-      );
-    }
+heading.insertAdjacentElement('afterend', box);
+
+const header = document.createElement('div');
+header.className = 'civil-card-header';
+
+const headerLeft = document.createElement('div');
+headerLeft.className = 'civil-card-heading';
+
+const subtitle = document.createElement('div');
+subtitle.className = 'civil-card-subtitle';
+subtitle.textContent = 'CIVIL202 · FLUID PROPERTIES';
+
+const status = document.createElement('span');
+status.className = 'civil-status';
+status.textContent = 'Not started';
+
+headerLeft.append(subtitle, heading);
+header.append(headerLeft, status);
+
+box.prepend(header);
+
+if (statement) {
+  header.insertAdjacentElement('afterend', statement);
+}
 
     // =====================================================
     // 10. CHECK USER AUTHENTICATION
@@ -765,6 +932,14 @@
 
       const count = attempts().length;
       const last = lastAttempt();
+       status.textContent =
+  count === 0
+    ? 'Not started'
+    : last?.is_correct
+      ? 'Correct'
+      : count >= 2
+        ? 'Free practice'
+        : 'Try again';
 
       const needsDecision =
         count > 0 &&
