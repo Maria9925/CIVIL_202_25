@@ -627,6 +627,110 @@
       }
     }
 
+     
+   function createOptionBox(title) {
+     const panel = document.createElement('div');
+   
+     panel.style.cssText = `
+       background: #edf7f3;
+       border: 1px solid #c4ddd2;
+       border-radius: 9px;
+       padding: 16px;
+       margin: 12px 0;
+     `;
+   
+     const heading = document.createElement('p');
+     heading.textContent = title;
+   
+     heading.style.cssText = `
+       margin: 0 0 14px;
+       font-weight: 600;
+       color: #195b4d;
+     `;
+   
+     panel.append(heading);
+     return panel;
+   }
+   
+   function createRadioFeedback() {
+     const panel = createOptionBox(
+       'What was your main difficulty?'
+     );
+   
+     const options = [
+       ['no_idea', 'I had no idea how to start'],
+       ['wrong_approach', 'I followed the wrong approach'],
+       ['calculation_error', 'I made a calculation error']
+     ];
+   
+     const group = document.createElement('div');
+     const groupName = 'difficulty_' + config.id;
+   
+     let selected = '';
+   
+     options.forEach(([value, label]) => {
+       const row = document.createElement('label');
+   
+       row.style.cssText = `
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         padding: 7px 0;
+         cursor: pointer;
+         color: #284c43;
+       `;
+   
+       const radio = document.createElement('input');
+       radio.type = 'radio';
+       radio.name = groupName;
+       radio.value = value;
+   
+       radio.style.cssText = `
+         width: auto;
+         margin: 0;
+         accent-color: #247c67;
+         cursor: pointer;
+       `;
+   
+       radio.addEventListener('change', () => {
+         selected = value;
+         submit.disabled = false;
+       });
+   
+       const text = document.createElement('span');
+       text.textContent = label;
+   
+       row.append(radio, text);
+       group.append(row);
+     });
+   
+     const submit = makeButton(
+       'Submit feedback',
+       async () => {
+         if (!selected) return;
+   
+         submit.disabled = true;
+   
+         const saved = await save({
+           event_type: 'difficulty_reported',
+           difficulty_reason: selected
+         });
+   
+         if (saved) {
+           render();
+         } else {
+           submit.disabled = false;
+         }
+       }
+     );
+   
+     submit.disabled = true;
+   
+     panel.append(group, submit);
+     return panel;
+   }
+
+
     // =====================================================
     // 20. UPDATE QUESTION INTERFACE
     // =====================================================
@@ -693,11 +797,22 @@
 
       if (needsDecision) {
 
-        feedback.textContent =
-          'Not quite. ' +
-          'What would you like to do next?';
-
-        addChoices(choices, [
+        feedback.textContent = '';
+      
+        const panel = createOptionBox(
+          'Not quite! What would you like to do next?'
+        );
+      
+        const optionButtons = document.createElement('div');
+      
+        optionButtons.style.cssText = `
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 8px;
+        `;
+      
+        const options = [
           [
             'I have no idea — show me the solution',
             () => chooseDecision('show_solution')
@@ -710,28 +825,33 @@
             'Show correct answer',
             () => chooseDecision('show_answer')
           ]
-        ]);
-
+        ];
+      
+        options.forEach(([label, callback]) => {
+      
+          const button = makeButton(label, callback);
+      
+          button.style.cssText += `
+            display: block;
+            width: 100%;
+            margin: 0;
+            text-align: left;
+            background: white;
+            padding: 11px 14px;
+          `;
+      
+          optionButtons.append(button);
+        });
+      
+        panel.append(optionButtons);
+        choices.append(panel);
+      
       } else if (needsReason) {
-
-        feedback.textContent =
-          'What was your main difficulty?';
-
-        addChoices(choices, [
-          [
-            'I had no idea how to start',
-            () => reportDifficulty('no_idea')
-          ],
-          [
-            'I followed the wrong approach',
-            () => reportDifficulty('wrong_approach')
-          ],
-          [
-            'I made a calculation error',
-            () => reportDifficulty('calculation_error')
-          ]
-        ]);
-
+      
+        feedback.textContent = '';
+      
+        choices.append(createRadioFeedback());
+      
       } else if (last?.is_correct) {
 
         feedback.textContent =
