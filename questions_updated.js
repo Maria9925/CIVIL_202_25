@@ -1,0 +1,875 @@
+
+/* CIVIL202 — question practice and learning events
+   Load AFTER progress.js.
+   Learning scores are NOT displayed.
+*/
+
+(async () => {
+  'use strict';
+
+  // =====================================================
+  // 1. SUPABASE CONFIGURATION
+  // =====================================================
+
+  const URL =
+    'https://kaflloebqtgwstcpnywa.supabase.co';
+
+  const KEY =
+    'sb_publishable_fx7AOQeXAmJavxqUZt4FOQ_i_SobgIP';
+
+  if (!location.pathname.endsWith(
+    '/Module1FluidProperties_SolV2.html'
+  )) return;
+
+  // =====================================================
+  // 2. QUESTION CONFIGURATION
+  // =====================================================
+
+  const QUESTIONS = [
+    {
+      heading: 'Question 1',
+      id: 'module1_basic_properties_q1',
+      videoUrl: null,
+      fields: [
+        {
+          label: 'Specific weight (N/m³)',
+          answer: 9.81 / 0.70,
+          tolerance: 0.05
+        }
+      ]
+    },
+    {
+      heading: 'Question 2',
+      id: 'module1_basic_properties_q2',
+      videoUrl: null,
+      fields: [
+        {
+          label: 'Weight (kN)',
+          answer: 11.77,
+          tolerance: 0.05
+        },
+        {
+          label: 'Mass density (kg/m³)',
+          answer: 1261,
+          tolerance: 2
+        },
+        {
+          label: 'Specific weight (kN/m³)',
+          answer: 12.36,
+          tolerance: 0.05
+        },
+        {
+          label: 'Specific gravity',
+          answer: 1.26,
+          tolerance: 0.02
+        }
+      ]
+    },
+    {
+      heading: 'Question 3',
+      id: 'module1_basic_properties_q3',
+      videoUrl: null,
+      fields: [
+        {
+          label: 'Weight (N)',
+          answer: 3.83,
+          tolerance: 0.05
+        }
+      ]
+    }
+  ];
+
+  // =====================================================
+  // 3. LOAD SUPABASE
+  // =====================================================
+
+  if (!window.supabase) {
+    const script = document.createElement('script');
+
+    script.src =
+      'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+
+    try {
+      await new Promise((resolve, reject) => {
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.append(script);
+      });
+    } catch (e) {
+      console.error('Supabase failed to load', e);
+      return;
+    }
+  }
+
+  const db = window.supabase.createClient(URL, KEY);
+
+  const {
+    data: { user },
+    error: authError
+  } = await db.auth.getUser();
+
+  const headings = [
+    ...document.querySelectorAll('main h4, article h4')
+  ];
+
+  // =====================================================
+  // 4. BUTTON STYLE
+  // =====================================================
+
+  const buttonStyle = `
+    margin: 6px 10px 4px 0;
+    padding: 9px 16px;
+    border: 1px solid #247c67;
+    border-radius: 6px;
+    background: white;
+    color: #195b4d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  `;
+
+  function makeButton(label, callback) {
+    const button = document.createElement('button');
+
+    button.type = 'button';
+    button.textContent = label;
+    button.style.cssText = buttonStyle;
+
+    button.addEventListener('mouseenter', () => {
+      if (!button.disabled) {
+        button.style.background = '#dcefe9';
+      }
+    });
+
+    button.addEventListener('mouseleave', () => {
+      button.style.background = 'white';
+    });
+
+    button.addEventListener('click', callback);
+
+    return button;
+  }
+
+  // =====================================================
+  // 5. PROCESS EACH QUESTION
+  // =====================================================
+
+  for (const config of QUESTIONS) {
+
+    const heading = headings.find(h =>
+      h.textContent.trim().startsWith(
+        config.heading + ' ('
+      ) ||
+      h.textContent.trim() === config.heading
+    );
+
+    if (!heading) {
+      console.warn('Missing heading', config.heading);
+      continue;
+    }
+
+    const section = heading.closest('section');
+
+    if (!section) continue;
+
+    // =====================================================
+    // 6. FIND HINT, ANSWER AND SOLUTION
+    // =====================================================
+
+    const dropdowns = [
+      ...section.querySelectorAll('details')
+    ];
+
+    const findDropdown = word =>
+      dropdowns.find(d =>
+        d.querySelector('summary')
+          ?.textContent.trim()
+          .toLowerCase()
+          .startsWith(word)
+      );
+
+    const hint = findDropdown('hint');
+    const answer = findDropdown('answer');
+
+    if (!hint || !answer) {
+      console.warn(
+        'Missing hint/answer',
+        config.heading
+      );
+      continue;
+    }
+
+    const solutionTitle = [
+      ...section.children
+    ].find(el =>
+      el.tagName === 'P' &&
+      el.textContent.trim().toLowerCase() === 'solution'
+    );
+
+    const candidate =
+      solutionTitle?.nextElementSibling;
+
+    const solutionCell =
+      candidate?.classList.contains('cell')
+        ? candidate
+        : null;
+
+    const solutionParts = [
+      solutionTitle,
+      solutionCell
+    ].filter(Boolean);
+
+    for (const element of [
+      hint,
+      answer,
+      ...solutionParts
+    ]) {
+      if (element.matches('details')) {
+        element.open = false;
+      }
+
+      element.style.display = 'none';
+    }
+
+    function reveal(element) {
+      element.style.removeProperty('display');
+      element.hidden = false;
+
+      if (element.matches('details')) {
+        element.open = true;
+      }
+    }
+
+    // =====================================================
+    // 7. FIND OPTIONAL VIDEO
+    // =====================================================
+
+    const existingVideo = section.querySelector(
+      'a[href*="panopto"], ' +
+      'a[href*="youtube"], ' +
+      'a[href*="youtu.be"], ' +
+      'a[href*="vimeo"]'
+    );
+
+    const videoUrl =
+      config.videoUrl ||
+      existingVideo?.href ||
+      null;
+
+    // =====================================================
+    // 8. CREATE QUESTION BOX
+    // =====================================================
+
+    const box = document.createElement('div');
+
+    box.style.cssText = `
+      border: 1px solid #b7c8c7;
+      border-radius: 9px;
+      padding: 14px;
+      margin: 16px 0;
+      background: #f6fbfa;
+      color: #173d38;
+    `;
+
+    const inputs = config.fields.map(field => {
+
+      const wrap = document.createElement('label');
+
+      wrap.style.cssText = `
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 4px 12px 8px 0;
+      `;
+
+      const label = document.createElement('span');
+      label.textContent = field.label;
+
+      const input = document.createElement('input');
+
+      input.type = 'number';
+      input.step = 'any';
+      input.placeholder = 'Your answer';
+
+      input.style.cssText = `
+        padding: 8px;
+        border: 1px solid #889;
+        border-radius: 5px;
+        width: 175px;
+      `;
+
+      wrap.append(label, input);
+      box.append(wrap);
+
+      return input;
+    });
+
+    // =====================================================
+    // 9. CREATE CONTROLS
+    // =====================================================
+
+    const helpActions =
+      document.createElement('div');
+
+    const check =
+      makeButton('Check answer', checkAnswer);
+
+    const feedback =
+      document.createElement('p');
+
+    feedback.setAttribute('role', 'status');
+
+    const choices =
+      document.createElement('div');
+
+    const reviewActions =
+      document.createElement('div');
+
+    box.append(
+      helpActions,
+      check,
+      feedback,
+      choices,
+      reviewActions
+    );
+
+    heading.insertAdjacentElement(
+      'afterend',
+      box
+    );
+
+    const statement = [
+      ...section.children
+    ].find(el =>
+      el.tagName === 'P' &&
+      el !== solutionTitle
+    );
+
+    if (statement) {
+      statement.insertAdjacentElement(
+        'afterend',
+        box
+      );
+    }
+
+    // =====================================================
+    // 10. CHECK USER AUTHENTICATION
+    // =====================================================
+
+    if (authError || !user) {
+
+      feedback.textContent =
+        'Sign in from the main CIVIL202 page, ' +
+        'then reload this module.';
+
+      check.disabled = true;
+
+      inputs.forEach(input => {
+        input.disabled = true;
+      });
+
+      continue;
+    }
+
+    // =====================================================
+    // 11. LOAD PREVIOUS EVENTS
+    // =====================================================
+
+    const { data, error } = await db
+      .from('question_events')
+      .select(
+        'event_type,attempt_number,answer_value,' +
+        'is_correct,decision_after_error,' +
+        'difficulty_reason,created_at'
+      )
+      .eq('user_id', user.id)
+      .eq('question_id', config.id)
+      .order('created_at', {
+        ascending: true
+      });
+
+    if (error) {
+      feedback.textContent =
+        'Could not load progress: ' +
+        error.message;
+
+      check.disabled = true;
+      continue;
+    }
+
+    const events = data || [];
+    let busy = false;
+
+    const attempts = () =>
+      events.filter(
+        e => e.event_type === 'attempt'
+      );
+
+    const lastAttemptIndex = () =>
+      events.map(
+        e => e.event_type
+      ).lastIndexOf('attempt');
+
+    const sinceLastAttempt = () =>
+      events.slice(lastAttemptIndex() + 1);
+
+    const lastAttempt = () =>
+      attempts().at(-1);
+
+    const decisionAfterLast = () =>
+      sinceLastAttempt().find(
+        e => e.event_type === 'error_decision'
+      );
+
+    const reasonAfterLast = () =>
+      sinceLastAttempt().find(
+        e => e.event_type === 'difficulty_reported'
+      );
+
+    const ever = name =>
+      events.some(
+        e => e.event_type === name
+      );
+
+    // =====================================================
+    // 12. SAVE EVENTS
+    // =====================================================
+
+    async function save(row) {
+
+      if (busy) return false;
+
+      busy = true;
+
+      try {
+
+        const record = {
+          ...row,
+          user_id: user.id,
+          question_id: config.id
+        };
+
+        const {
+          data: inserted,
+          error: writeError
+        } = await db
+          .from('question_events')
+          .insert(record)
+          .select(
+            'event_type,attempt_number,answer_value,' +
+            'is_correct,decision_after_error,' +
+            'difficulty_reason,created_at'
+          )
+          .single();
+
+        if (writeError) {
+          throw writeError;
+        }
+
+        events.push(inserted);
+
+        return true;
+
+      } catch (e) {
+
+        feedback.textContent =
+          'Could not save: ' + e.message;
+
+        return false;
+
+      } finally {
+        busy = false;
+      }
+    }
+
+    // =====================================================
+    // 13. SHOW HINT
+    // =====================================================
+
+    async function showHint() {
+
+      if (!ever('hint_viewed')) {
+        const saved = await save({
+          event_type: 'hint_viewed'
+        });
+
+        if (!saved) return;
+      }
+
+      reveal(hint);
+      render();
+    }
+
+    // =====================================================
+    // 14. SHOW VIDEO
+    // =====================================================
+
+    async function showVideo() {
+
+      if (!videoUrl) return;
+
+      const tab = window.open(
+        'about:blank',
+        '_blank'
+      );
+
+      if (tab) tab.opener = null;
+
+      const saved = await save({
+        event_type: 'video_opened'
+      });
+
+      if (!saved) {
+        if (tab) tab.close();
+        return;
+      }
+
+      if (tab) {
+        tab.location.replace(videoUrl);
+      } else {
+        feedback.textContent =
+          'Video click saved. ' +
+          'Please allow pop-ups to open the video.';
+      }
+
+      render();
+    }
+
+    // =====================================================
+    // 15. SHOW CORRECT ANSWER
+    // =====================================================
+
+    async function showAnswer() {
+
+      if (!ever('answer_viewed')) {
+        const saved = await save({
+          event_type: 'answer_viewed'
+        });
+
+        if (!saved) return;
+      }
+
+      reveal(answer);
+      render();
+    }
+
+    // =====================================================
+    // 16. SHOW WORKED SOLUTION
+    // =====================================================
+
+    async function showSolution() {
+
+      if (!ever('solution_viewed')) {
+        const saved = await save({
+          event_type: 'solution_viewed'
+        });
+
+        if (!saved) return;
+      }
+
+      solutionParts.forEach(reveal);
+
+      window.dispatchEvent(
+        new Event('civil202-progress-updated')
+      );
+
+      render();
+    }
+
+    // =====================================================
+    // 17. CHOOSE ACTION AFTER ERROR
+    // =====================================================
+
+    async function chooseDecision(value) {
+
+      const saved = await save({
+        event_type: 'error_decision',
+        decision_after_error: value
+      });
+
+      if (!saved) return;
+
+      if (value === 'show_solution') {
+        await showSolution();
+      } else if (value === 'show_answer') {
+        await showAnswer();
+      }
+
+      render();
+    }
+
+    // =====================================================
+    // 18. REPORT DIFFICULTY
+    // =====================================================
+
+    async function reportDifficulty(value) {
+
+      if (!value) return;
+
+      const saved = await save({
+        event_type: 'difficulty_reported',
+        difficulty_reason: value
+      });
+
+      if (saved) render();
+    }
+
+    // =====================================================
+    // 19. ADD BUTTONS
+    // =====================================================
+
+    function addChoices(target, labels) {
+
+      for (const [label, action] of labels) {
+        target.append(
+          makeButton(label, action)
+        );
+      }
+    }
+
+    // =====================================================
+    // 20. UPDATE QUESTION INTERFACE
+    // =====================================================
+
+    function render() {
+
+      choices.replaceChildren();
+      reviewActions.replaceChildren();
+      helpActions.replaceChildren();
+
+      helpActions.append(
+        makeButton('Show hint', showHint)
+      );
+
+      if (videoUrl) {
+        helpActions.append(
+          makeButton('Show video', showVideo)
+        );
+      }
+
+      if (ever('hint_viewed')) {
+        reveal(hint);
+      }
+
+      if (ever('answer_viewed')) {
+        reveal(answer);
+      }
+
+      if (ever('solution_viewed')) {
+        solutionParts.forEach(reveal);
+      }
+
+      const count = attempts().length;
+      const last = lastAttempt();
+
+      const needsDecision =
+        count > 0 &&
+        count < 2 &&
+        !last.is_correct &&
+        !decisionAfterLast();
+
+      const decision =
+        decisionAfterLast()?.decision_after_error;
+
+      const needsReason =
+        decision === 'show_solution' &&
+        !reasonAfterLast();
+
+      const allowInput =
+        !needsDecision &&
+        !needsReason;
+
+      check.disabled =
+        !allowInput || busy;
+
+      inputs.forEach(i => {
+        i.disabled = !allowInput;
+      });
+
+      check.textContent =
+        count >= 2
+          ? 'Check answer (free practice)'
+          : 'Check answer';
+
+      if (needsDecision) {
+
+        feedback.textContent =
+          'Not quite. ' +
+          'What would you like to do next?';
+
+        addChoices(choices, [
+          [
+            'I have no idea — show me the solution',
+            () => chooseDecision('show_solution')
+          ],
+          [
+            'Let me try again',
+            () => chooseDecision('try_again')
+          ],
+          [
+            'Show correct answer',
+            () => chooseDecision('show_answer')
+          ]
+        ]);
+
+      } else if (needsReason) {
+
+        feedback.textContent =
+          'What was your main difficulty?';
+
+        addChoices(choices, [
+          [
+            'I had no idea how to start',
+            () => reportDifficulty('no_idea')
+          ],
+          [
+            'I followed the wrong approach',
+            () => reportDifficulty('wrong_approach')
+          ],
+          [
+            'I made a calculation error',
+            () => reportDifficulty('calculation_error')
+          ]
+        ]);
+
+      } else if (last?.is_correct) {
+
+        feedback.textContent =
+          'Correct! You can review the ' +
+          'answer or worked solution.';
+
+      } else if (count >= 2) {
+
+        feedback.textContent =
+          'You can keep practising ' +
+          'as many times as you like.';
+
+      } else {
+
+        feedback.textContent = '';
+      }
+
+      if (
+        (last?.is_correct || count >= 2) &&
+        !needsDecision &&
+        !needsReason
+      ) {
+
+        addChoices(reviewActions, [
+          [
+            'Show correct answer',
+            showAnswer
+          ],
+          [
+            'Show solution',
+            showSolution
+          ]
+        ]);
+      }
+    }
+
+    // =====================================================
+    // 21. CHECK STUDENT ANSWERS
+    // =====================================================
+
+    async function checkAnswer() {
+
+      if (busy || check.disabled) return;
+
+      const values = inputs.map(
+        input => input.value.trim()
+      );
+
+      if (
+        values.some(
+          v =>
+            v === '' ||
+            !Number.isFinite(Number(v))
+        )
+      ) {
+
+        feedback.textContent =
+          'Please enter all numeric answers.';
+
+        return;
+      }
+
+      const correct = values.every(
+        (value, index) =>
+          Math.abs(
+            Number(value) -
+            config.fields[index].answer
+          ) <= config.fields[index].tolerance
+      );
+
+      // Only the first two attempts are recorded.
+
+      if (attempts().length < 2) {
+
+        const saved = await save({
+
+          event_type: 'attempt',
+
+          attempt_number:
+            attempts().length + 1,
+
+          answer_value:
+            JSON.stringify(values),
+
+          is_correct: correct,
+
+          is_scored_attempt: true,
+
+          help_before_attempt:
+            ever('hint_viewed') ||
+            ever('video_opened')
+        });
+
+        if (!saved) {
+          render();
+          return;
+        }
+
+        window.dispatchEvent(
+          new Event('civil202-progress-updated')
+        );
+
+        inputs.forEach(i => {
+          i.value = '';
+        });
+
+        render();
+
+      } else {
+
+        // Attempts 3+ are free practice.
+        // They are not saved to Supabase.
+
+        feedback.textContent = correct
+          ? 'Correct! (Free practice — ' +
+            'not included in recorded attempts.)'
+          : 'Not quite. Try again! ' +
+            '(Free practice.)';
+
+        if (correct) {
+
+          reviewActions.replaceChildren();
+
+          addChoices(reviewActions, [
+            [
+              'Show correct answer',
+              showAnswer
+            ],
+            [
+              'Show solution',
+              showSolution
+            ]
+          ]);
+        }
+      }
+    }
+
+    render();
+  }
+
+})();
