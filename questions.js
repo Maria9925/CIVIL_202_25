@@ -1,7 +1,7 @@
 
-/* CIVIL202 - Reusable Question Tracking System
-   Supports multiple questions in the same HTML.
+/* CIVIL202 — question practice and learning events
    Load AFTER progress.js.
+   Learning scores are NOT displayed.
 */
 
 (async () => {
@@ -21,19 +21,15 @@
     '/Module1FluidProperties_SolV2.html'
   )) return;
 
-
   // =====================================================
   // 2. QUESTION CONFIGURATION
-  // Add new questions here
   // =====================================================
 
   const QUESTIONS = [
-
-    // QUESTION 1
     {
       heading: 'Question 1',
       id: 'module1_basic_properties_q1',
-
+      videoUrl: null,
       fields: [
         {
           label: 'Specific weight (N/m³)',
@@ -42,12 +38,10 @@
         }
       ]
     },
-
-    // QUESTION 2
     {
       heading: 'Question 2',
       id: 'module1_basic_properties_q2',
-
+      videoUrl: null,
       fields: [
         {
           label: 'Weight (kN)',
@@ -71,12 +65,10 @@
         }
       ]
     },
-
-       // QUESTION 3
     {
       heading: 'Question 3',
       id: 'module1_basic_properties_q3',
-
+      videoUrl: null,
       fields: [
         {
           label: 'Weight (N)',
@@ -84,10 +76,8 @@
           tolerance: 0.05
         }
       ]
-    },
-
+    }
   ];
-
 
   // =====================================================
   // 3. LOAD SUPABASE
@@ -99,16 +89,16 @@
     script.src =
       'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
 
-    await new Promise((resolve, reject) => {
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.append(script);
-    }).catch(() => {});
-  }
-
-  if (!window.supabase) {
-    console.error('CIVIL202: Supabase not loaded');
-    return;
+    try {
+      await new Promise((resolve, reject) => {
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.append(script);
+      });
+    } catch (e) {
+      console.error('Supabase failed to load', e);
+      return;
+    }
   }
 
   const db = window.supabase.createClient(URL, KEY);
@@ -118,14 +108,51 @@
     error: authError
   } = await db.auth.getUser();
 
-
-  // =====================================================
-  // 4. FIND QUESTIONS IN HTML
-  // =====================================================
-
   const headings = [
     ...document.querySelectorAll('main h4, article h4')
   ];
+
+  // =====================================================
+  // 4. BUTTON STYLE
+  // =====================================================
+
+  const buttonStyle = `
+    margin: 6px 10px 4px 0;
+    padding: 9px 16px;
+    border: 1px solid #247c67;
+    border-radius: 6px;
+    background: white;
+    color: #195b4d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  `;
+
+  function makeButton(label, callback) {
+    const button = document.createElement('button');
+
+    button.type = 'button';
+    button.textContent = label;
+    button.style.cssText = buttonStyle;
+
+    button.addEventListener('mouseenter', () => {
+      if (!button.disabled) {
+        button.style.background = '#dcefe9';
+      }
+    });
+
+    button.addEventListener('mouseleave', () => {
+      button.style.background = 'white';
+    });
+
+    button.addEventListener('click', callback);
+
+    return button;
+  }
+
+  // =====================================================
+  // 5. PROCESS EACH QUESTION
+  // =====================================================
 
   for (const config of QUESTIONS) {
 
@@ -137,32 +164,28 @@
     );
 
     if (!heading) {
-      console.warn('Missing heading:', config.heading);
+      console.warn('Missing heading', config.heading);
       continue;
     }
 
     const section = heading.closest('section');
 
-    if (!section) {
-      console.warn('Missing section:', config.heading);
-      continue;
-    }
-
+    if (!section) continue;
 
     // =====================================================
-    // 5. FIND HINT, ANSWER AND SOLUTION
+    // 6. FIND HINT, ANSWER AND SOLUTION
     // =====================================================
 
     const dropdowns = [
       ...section.querySelectorAll('details')
     ];
 
-    const findDropdown = text =>
+    const findDropdown = word =>
       dropdowns.find(d =>
         d.querySelector('summary')
           ?.textContent.trim()
           .toLowerCase()
-          .startsWith(text)
+          .startsWith(word)
       );
 
     const hint = findDropdown('hint');
@@ -170,60 +193,71 @@
 
     if (!hint || !answer) {
       console.warn(
-        'Missing hint/answer:',
+        'Missing hint/answer',
         config.heading
       );
       continue;
     }
 
-    const children = [...section.children];
+    const solutionTitle = [
+      ...section.children
+    ].find(el =>
+      el.tagName === 'P' &&
+      el.textContent.trim().toLowerCase() === 'solution'
+    );
 
-    // Find the Solution heading
-   const solutionTitle = [...section.children].find(el =>
-     el.tagName === 'P' &&
-     el.textContent.trim().toLowerCase() === 'solution'
-   );
-   
-   // Find the Python output after Solution
-   const possibleSolutionCell = solutionTitle?.nextElementSibling;
+    const candidate =
+      solutionTitle?.nextElementSibling;
 
-   const solutionCell =
-     possibleSolutionCell?.classList.contains('cell')
-       ? possibleSolutionCell
-       : null;
-   
-   // Elements to hide until the solution is unlocked
-   const solutionParts = [
-     solutionTitle,
-     solutionCell
-   ].filter(Boolean);
+    const solutionCell =
+      candidate?.classList.contains('cell')
+        ? candidate
+        : null;
 
+    const solutionParts = [
+      solutionTitle,
+      solutionCell
+    ].filter(Boolean);
 
-    // =====================================================
-    // 6. HIDE HINT AND SOLUTION INITIALLY
-    // =====================================================
-
-    [hint, answer, ...solutionParts].forEach(el => {
-
-      if (el.matches('details')) {
-        el.open = false;
+    for (const element of [
+      hint,
+      answer,
+      ...solutionParts
+    ]) {
+      if (element.matches('details')) {
+        element.open = false;
       }
 
-      el.style.display = 'none';
-    });
+      element.style.display = 'none';
+    }
 
-    function show(el) {
-      el.style.removeProperty('display');
-      el.hidden = false;
+    function reveal(element) {
+      element.style.removeProperty('display');
+      element.hidden = false;
 
-      if (el.matches('details')) {
-        el.open = true;
+      if (element.matches('details')) {
+        element.open = true;
       }
     }
 
+    // =====================================================
+    // 7. FIND OPTIONAL VIDEO
+    // =====================================================
+
+    const existingVideo = section.querySelector(
+      'a[href*="panopto"], ' +
+      'a[href*="youtube"], ' +
+      'a[href*="youtu.be"], ' +
+      'a[href*="vimeo"]'
+    );
+
+    const videoUrl =
+      config.videoUrl ||
+      existingVideo?.href ||
+      null;
 
     // =====================================================
-    // 7. CREATE ANSWER INPUTS
+    // 8. CREATE QUESTION BOX
     // =====================================================
 
     const box = document.createElement('div');
@@ -270,64 +304,56 @@
       return input;
     });
 
-
     // =====================================================
-    // 8. CREATE BUTTONS AND FEEDBACK
+    // 9. CREATE CONTROLS
     // =====================================================
 
-    const actions = document.createElement('div');
+    const helpActions =
+      document.createElement('div');
 
-    const check = document.createElement('button');
-    check.textContent = 'Check answer';
+    const check =
+      makeButton('Check answer', checkAnswer);
 
-    const feedback = document.createElement('p');
+    const feedback =
+      document.createElement('p');
+
     feedback.setAttribute('role', 'status');
 
-    const extras = document.createElement('div');
+    const choices =
+      document.createElement('div');
 
-    actions.append(check);
-    box.append(actions, feedback, extras);
+    const reviewActions =
+      document.createElement('div');
 
-    
-   const buttonStyle = `
-     margin: 6px 10px 4px 0;
-     padding: 9px 16px;
-     border: 1px solid #247c67;
-     border-radius: 6px;
-     background: white;
-     color: #195b4d;
-     font-weight: 600;
-     cursor: pointer;
-     transition: background 0.2s ease;
-   `;
+    box.append(
+      helpActions,
+      check,
+      feedback,
+      choices,
+      reviewActions
+    );
 
-    check.style.cssText = buttonStyle;
+    heading.insertAdjacentElement(
+      'afterend',
+      box
+    );
 
-   check.addEventListener('mouseenter', () => {
-     if (!check.disabled) {
-       check.style.background = '#DCEFE9';
-     }
-   });
-   
-   check.addEventListener('mouseleave', () => {
-     check.style.background = 'white';
-   });
-
-    heading.insertAdjacentElement('afterend', box);
-
-    // Move the box below the problem statement
-    const statement = [...section.children].find(el =>
+    const statement = [
+      ...section.children
+    ].find(el =>
       el.tagName === 'P' &&
       el !== solutionTitle
     );
 
     if (statement) {
-      statement.insertAdjacentElement('afterend', box);
+      statement.insertAdjacentElement(
+        'afterend',
+        box
+      );
     }
 
-
     // =====================================================
-    // 9. CHECK STUDENT LOGIN
+    // 10. CHECK USER AUTHENTICATION
     // =====================================================
 
     if (authError || !user) {
@@ -338,85 +364,131 @@
 
       check.disabled = true;
 
-      inputs.forEach(i => i.disabled = true);
+      inputs.forEach(input => {
+        input.disabled = true;
+      });
 
       continue;
     }
 
-
     // =====================================================
-    // 10. LOAD PREVIOUS ATTEMPTS
+    // 11. LOAD PREVIOUS EVENTS
     // =====================================================
 
-    const {
-      data,
-      error
-    } = await db
+    const { data, error } = await db
       .from('question_events')
       .select(
-        'event_type,attempt_number,is_correct,answer_value'
+        'event_type,attempt_number,answer_value,' +
+        'is_correct,decision_after_error,' +
+        'difficulty_reason,created_at'
       )
       .eq('user_id', user.id)
       .eq('question_id', config.id)
-      .order('created_at', { ascending: true });
+      .order('created_at', {
+        ascending: true
+      });
 
     if (error) {
+      feedback.textContent =
+        'Could not load progress: ' +
+        error.message;
 
-      feedback.textContent = error.message;
       check.disabled = true;
-
       continue;
     }
 
     const events = data || [];
+    let busy = false;
 
     const attempts = () =>
-      events.filter(e => e.event_type === 'attempt');
+      events.filter(
+        e => e.event_type === 'attempt'
+      );
 
-    const isCorrect = () =>
-      attempts().some(e => e.is_correct);
+    const lastAttemptIndex = () =>
+      events.map(
+        e => e.event_type
+      ).lastIndexOf('attempt');
 
-    const hasEvent = type =>
-      events.some(e => e.event_type === type);
+    const sinceLastAttempt = () =>
+      events.slice(lastAttemptIndex() + 1);
 
+    const lastAttempt = () =>
+      attempts().at(-1);
+
+    const decisionAfterLast = () =>
+      sinceLastAttempt().find(
+        e => e.event_type === 'error_decision'
+      );
+
+    const reasonAfterLast = () =>
+      sinceLastAttempt().find(
+        e => e.event_type === 'difficulty_reported'
+      );
+
+    const ever = name =>
+      events.some(
+        e => e.event_type === name
+      );
 
     // =====================================================
-    // 11. SAVE EVENTS IN SUPABASE
+    // 12. SAVE EVENTS
     // =====================================================
 
-    async function save(evt) {
+    async function save(row) {
 
-      const row = {
-        ...evt,
-        user_id: user.id,
-        question_id: config.id
-      };
+      if (busy) return false;
 
-      const { error } = await db
-        .from('question_events')
-        .insert(row);
+      busy = true;
 
-      if (error) {
+      try {
+
+        const record = {
+          ...row,
+          user_id: user.id,
+          question_id: config.id
+        };
+
+        const {
+          data: inserted,
+          error: writeError
+        } = await db
+          .from('question_events')
+          .insert(record)
+          .select(
+            'event_type,attempt_number,answer_value,' +
+            'is_correct,decision_after_error,' +
+            'difficulty_reason,created_at'
+          )
+          .single();
+
+        if (writeError) {
+          throw writeError;
+        }
+
+        events.push(inserted);
+
+        return true;
+
+      } catch (e) {
+
         feedback.textContent =
-          'Could not save: ' + error.message;
+          'Could not save: ' + e.message;
 
         return false;
+
+      } finally {
+        busy = false;
       }
-
-      events.push(row);
-
-      return true;
     }
 
-
     // =====================================================
-    // 12. SHOW HINT
+    // 13. SHOW HINT
     // =====================================================
 
-    async function displayHint() {
+    async function showHint() {
 
-      if (!hasEvent('hint_viewed')) {
-
+      if (!ever('hint_viewed')) {
         const saved = await save({
           event_type: 'hint_viewed'
         });
@@ -424,23 +496,70 @@
         if (!saved) return;
       }
 
-      show(hint);
-
-      hint.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
+      reveal(hint);
+      render();
     }
 
+    // =====================================================
+    // 14. SHOW VIDEO
+    // =====================================================
+
+    async function showVideo() {
+
+      if (!videoUrl) return;
+
+      const tab = window.open(
+        'about:blank',
+        '_blank'
+      );
+
+      if (tab) tab.opener = null;
+
+      const saved = await save({
+        event_type: 'video_opened'
+      });
+
+      if (!saved) {
+        if (tab) tab.close();
+        return;
+      }
+
+      if (tab) {
+        tab.location.replace(videoUrl);
+      } else {
+        feedback.textContent =
+          'Video click saved. ' +
+          'Please allow pop-ups to open the video.';
+      }
+
+      render();
+    }
 
     // =====================================================
-    // 13. SHOW WORKED SOLUTION
+    // 15. SHOW CORRECT ANSWER
     // =====================================================
 
-    async function displaySolution() {
+    async function showAnswer() {
 
-      if (!hasEvent('solution_viewed')) {
+      if (!ever('answer_viewed')) {
+        const saved = await save({
+          event_type: 'answer_viewed'
+        });
 
+        if (!saved) return;
+      }
+
+      reveal(answer);
+      render();
+    }
+
+    // =====================================================
+    // 16. SHOW WORKED SOLUTION
+    // =====================================================
+
+    async function showSolution() {
+
+      if (!ever('solution_viewed')) {
         const saved = await save({
           event_type: 'solution_viewed'
         });
@@ -448,105 +567,224 @@
         if (!saved) return;
       }
 
-      show(answer);
+      solutionParts.forEach(reveal);
 
-      solutionParts.forEach(show);
+      window.dispatchEvent(
+        new Event('civil202-progress-updated')
+      );
+
+      render();
     }
 
-
     // =====================================================
-    // 14. CREATE ADDITIONAL BUTTONS
+    // 17. CHOOSE ACTION AFTER ERROR
     // =====================================================
 
-    function addButton(text, callback) {
+    async function chooseDecision(value) {
 
-      const b = document.createElement('button');
+      const saved = await save({
+        event_type: 'error_decision',
+        decision_after_error: value
+      });
 
-      b.textContent = text;
-      b.style.cssText = buttonStyle;
+      if (!saved) return;
 
-      b.addEventListener('click', callback);
+      if (value === 'show_solution') {
+        await showSolution();
+      } else if (value === 'show_answer') {
+        await showAnswer();
+      }
 
-      extras.append(b);
+      render();
     }
 
+    // =====================================================
+    // 18. REPORT DIFFICULTY
+    // =====================================================
+
+    async function reportDifficulty(value) {
+
+      if (!value) return;
+
+      const saved = await save({
+        event_type: 'difficulty_reported',
+        difficulty_reason: value
+      });
+
+      if (saved) render();
+    }
 
     // =====================================================
-    // 15. UPDATE QUESTION INTERFACE
+    // 19. ADD BUTTONS
+    // =====================================================
+
+    function addChoices(target, labels) {
+
+      for (const [label, action] of labels) {
+        target.append(
+          makeButton(label, action)
+        );
+      }
+    }
+
+    // =====================================================
+    // 20. UPDATE QUESTION INTERFACE
     // =====================================================
 
     function render() {
 
-      extras.replaceChildren();
+      choices.replaceChildren();
+      reviewActions.replaceChildren();
+      helpActions.replaceChildren();
+
+      helpActions.append(
+        makeButton('Show hint', showHint)
+      );
+
+      if (videoUrl) {
+        helpActions.append(
+          makeButton('Show video', showVideo)
+        );
+      }
+
+      if (ever('hint_viewed')) {
+        reveal(hint);
+      }
+
+      if (ever('answer_viewed')) {
+        reveal(answer);
+      }
+
+      if (ever('solution_viewed')) {
+        solutionParts.forEach(reveal);
+      }
 
       const count = attempts().length;
+      const last = lastAttempt();
 
-      const done = isCorrect() || count >= 2;
+      const needsDecision =
+        count > 0 &&
+        count < 2 &&
+        !last.is_correct &&
+        !decisionAfterLast();
 
-      check.disabled = done;
+      const decision =
+        decisionAfterLast()?.decision_after_error;
 
-      inputs.forEach(i => i.disabled = done);
+      const needsReason =
+        decision === 'show_solution' &&
+        !reasonAfterLast();
 
-      if (isCorrect()) {
+      const allowInput =
+        !needsDecision &&
+        !needsReason;
+
+      check.disabled =
+        !allowInput || busy;
+
+      inputs.forEach(i => {
+        i.disabled = !allowInput;
+      });
+
+      check.textContent =
+        count >= 2
+          ? 'Check answer (free practice)'
+          : 'Check answer';
+
+      if (needsDecision) {
 
         feedback.textContent =
-          'Correct! You can review the worked solution.';
+          'Not quite. ' +
+          'What would you like to do next?';
 
-        addButton(
-          'Show solution',
-          displaySolution
-        );
+        addChoices(choices, [
+          [
+            'I have no idea — show me the solution',
+            () => chooseDecision('show_solution')
+          ],
+          [
+            'Let me try again',
+            () => chooseDecision('try_again')
+          ],
+          [
+            'Show correct answer',
+            () => chooseDecision('show_answer')
+          ]
+        ]);
+
+      } else if (needsReason) {
+
+        feedback.textContent =
+          'What was your main difficulty?';
+
+        addChoices(choices, [
+          [
+            'I had no idea how to start',
+            () => reportDifficulty('no_idea')
+          ],
+          [
+            'I followed the wrong approach',
+            () => reportDifficulty('wrong_approach')
+          ],
+          [
+            'I made a calculation error',
+            () => reportDifficulty('calculation_error')
+          ]
+        ]);
+
+      } else if (last?.is_correct) {
+
+        feedback.textContent =
+          'Correct! You can review the ' +
+          'answer or worked solution.';
 
       } else if (count >= 2) {
 
         feedback.textContent =
-          'Two attempts used. You can review the worked solution.';
-
-        addButton(
-          'Show solution',
-          displaySolution
-        );
-
-      } else if (count === 1) {
-
-        feedback.textContent =
-          'Not quite. You can view the hint and try once more.';
-
-        addButton(
-          'Show hint',
-          displayHint
-        );
+          'You can keep practising ' +
+          'as many times as you like.';
 
       } else {
 
         feedback.textContent = '';
       }
 
-      if (hasEvent('hint_viewed')) {
-        show(hint);
-      }
+      if (
+        (last?.is_correct || count >= 2) &&
+        !needsDecision &&
+        !needsReason
+      ) {
 
-      if (hasEvent('solution_viewed')) {
-        show(answer);
-        solutionParts.forEach(show);
+        addChoices(reviewActions, [
+          [
+            'Show correct answer',
+            showAnswer
+          ],
+          [
+            'Show solution',
+            showSolution
+          ]
+        ]);
       }
     }
 
-
     // =====================================================
-    // 16. CHECK STUDENT ANSWERS
+    // 21. CHECK STUDENT ANSWERS
     // =====================================================
 
-    check.addEventListener('click', async () => {
+    async function checkAnswer() {
 
-      const values = inputs.map(i =>
-        i.value.trim()
+      if (busy || check.disabled) return;
+
+      const values = inputs.map(
+        input => input.value.trim()
       );
 
       if (
-        values.some(v =>
-          v === '' ||
-          !Number.isFinite(Number(v))
+        values.some(
+          v =>
+            v === '' ||
+            !Number.isFinite(Number(v))
         )
       ) {
 
@@ -556,47 +794,82 @@
         return;
       }
 
-      check.disabled = true;
-
-      const correct = values.every((v, idx) =>
-        Math.abs(
-          Number(v) - config.fields[idx].answer
-        ) <= config.fields[idx].tolerance
+      const correct = values.every(
+        (value, index) =>
+          Math.abs(
+            Number(value) -
+            config.fields[index].answer
+          ) <= config.fields[index].tolerance
       );
 
-      const saved = await save({
+      // Only the first two attempts are recorded.
 
-        event_type: 'attempt',
+      if (attempts().length < 2) {
 
-        attempt_number: attempts().length + 1,
+        const saved = await save({
 
-        answer_value: JSON.stringify(values),
+          event_type: 'attempt',
 
-        is_correct: correct
-      });
+          attempt_number:
+            attempts().length + 1,
 
+          answer_value:
+            JSON.stringify(values),
 
-      if (saved) {
+          is_correct: correct,
 
-        inputs.forEach(i => i.value = '');
+          is_scored_attempt: true,
 
-        render();
+          help_before_attempt:
+            ever('hint_viewed') ||
+            ever('video_opened')
+        });
 
-        // Update the progress bar automatically
+        if (!saved) {
+          render();
+          return;
+        }
+
         window.dispatchEvent(
           new Event('civil202-progress-updated')
         );
 
+        inputs.forEach(i => {
+          i.value = '';
+        });
+
+        render();
+
       } else {
 
-        check.disabled = false;
+        // Attempts 3+ are free practice.
+        // They are not saved to Supabase.
 
+        feedback.textContent = correct
+          ? 'Correct! (Free practice — ' +
+            'not included in recorded attempts.)'
+          : 'Not quite. Try again! ' +
+            '(Free practice.)';
+
+        if (correct) {
+
+          reviewActions.replaceChildren();
+
+          addChoices(reviewActions, [
+            [
+              'Show correct answer',
+              showAnswer
+            ],
+            [
+              'Show solution',
+              showSolution
+            ]
+          ]);
+        }
       }
-
-    });
+    }
 
     render();
-
   }
 
 })();
