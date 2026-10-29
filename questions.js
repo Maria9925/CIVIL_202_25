@@ -776,16 +776,6 @@ if (statement) {
 
     async function showSolution() {
 
-       const pendingFeedback =
-        decisionAfterLast()?.decision_after_error === 'show_solution' &&
-        !reasonAfterLast();
-      
-      if (pendingFeedback) {
-        feedback.textContent =
-          'Please submit your feedback to view the worked solution.';
-        return;
-      }
-
       if (!ever('solution_viewed')) {
         const saved = await save({
           event_type: 'solution_viewed'
@@ -816,13 +806,12 @@ if (statement) {
 
       if (!saved) return;
 
-      if (value === 'show_answer') {
+      if (value === 'show_solution') {
+        await showSolution();
+      } else if (value === 'show_answer') {
         await showAnswer();
       }
-      
-      // If 'show_solution' was selected, wait for
-      // difficulty feedback before revealing it.
-      
+
       render();
     }
 
@@ -945,17 +934,9 @@ if (statement) {
          });
    
          if (saved) {
-         
-           // Feedback was successfully recorded.
-           // Now reveal the worked solution.
-           await showSolution();
-         
            render();
-         
          } else {
-         
            submit.disabled = false;
-         
          }
        }
      );
@@ -1118,15 +1099,11 @@ if (statement) {
         panel.append(optionButtons);
         choices.append(panel);
       
-      
       } else if (needsReason) {
       
-        feedback.textContent =
-          'Please submit your feedback to view the worked solution.';
+        feedback.textContent = '';
       
         choices.append(createRadioFeedback());
-      
-      }
       
       } else if (last?.is_correct) {
 
