@@ -248,6 +248,28 @@ cardStyles.textContent = `
     padding: 12px 16px !important;
     font-size: 15px;
   }
+  .civil-feedback:not(:empty) {
+  padding: 12px 16px;
+  border-radius: 9px;
+  margin: 14px 0;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 1px solid #d7e0e9;
+  background: #f0f4f8;
+  color: #485a72;
+}
+
+.civil-feedback.is-correct {
+  background: #edf7f2;
+  border-color: #cde5d6;
+  color: #285f45;
+}
+
+.civil-feedback.is-incorrect {
+  background: #fff8ea;
+  border-color: #eaddbd;
+  color: #775522;
+}
 
   .civil-check-button {
     border-radius: 30px !important;
@@ -466,6 +488,7 @@ document.head.append(cardStyles);
       document.createElement('p');
 
     feedback.setAttribute('role', 'status');
+     feedback.className = 'civil-feedback';
 
     const choices =
       document.createElement('div');
@@ -904,6 +927,11 @@ if (statement) {
 
     function render() {
 
+       feedback.classList.remove(
+        'is-correct',
+        'is-incorrect'
+      );
+
       choices.replaceChildren();
       reviewActions.replaceChildren();
       helpActions.replaceChildren();
@@ -1140,12 +1168,13 @@ if (statement) {
         // Attempts 3+ are free practice.
         // They are not saved to Supabase.
 
-        feedback.textContent = correct
-          ? 'Correct! (Free practice — ' +
-            'not included in recorded attempts.)'
-          : 'Not quite. Try again! ' +
-            '(Free practice.)';
-
+          feedback.textContent = correct
+          ? 'Correct! Well done.'
+          : 'Not quite! Give it another try.';
+      
+        feedback.classList.toggle('is-correct', correct);
+        feedback.classList.toggle('is-incorrect', !correct);
+      
         if (correct) {
 
           reviewActions.replaceChildren();
