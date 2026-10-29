@@ -985,36 +985,39 @@ if (statement) {
         solutionParts.forEach(reveal);
       }
 
+
       const count = attempts().length;
       const last = lastAttempt();
       
-      // Remove previous status colours
-      status.classList.remove(
-        'status-correct',
-        'status-retry',
-        'status-practising'
-      );
+      // Apply status colours directly
+      status.style.fontWeight = '600';
       
       if (count === 0) {
       
         status.textContent = 'Not started';
+        status.style.backgroundColor = '#f0f1f2';
+        status.style.color = '#58616b';
       
       } else if (last?.is_correct) {
       
-        status.textContent = 'Correct';
-        status.classList.add('status-correct');
+        status.textContent = '✓ Correct';
+        status.style.backgroundColor = '#dff3e8';
+        status.style.color = '#276749';
       
       } else if (count >= 2) {
       
         status.textContent = 'Practising';
-        status.classList.add('status-practising');
+        status.style.backgroundColor = '#e8eff8';
+        status.style.color = '#4b6485';
       
       } else {
       
         status.textContent = 'Try again';
-        status.classList.add('status-retry');
+        status.style.backgroundColor = '#fff2d9';
+        status.style.color = '#986719';
       
       }
+
 
       const needsDecision =
         count > 0 &&
