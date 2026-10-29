@@ -163,6 +163,15 @@ cardStyles.textContent = `
     color: #293241 !important;
   }
 
+  .civil-status {
+  background: #f0f1f2;
+  border-radius: 30px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #58616b;
+  white-space: nowrap;
+}
+
   .civil-card-header {
     display: flex;
     align-items: center;
@@ -301,6 +310,26 @@ cardStyles.textContent = `
       flex-direction: column;
       align-items: stretch;
     }
+
+    
+   /* Correct answer - soft green */
+   .civil-status.status-correct {
+     background: #dff3e8;
+     color: #276749;
+   }
+   
+   /* Incorrect answer - soft yellow */
+   .civil-status.status-retry {
+     background: #fff2d9;
+     color: #986719;
+   }
+   
+   /* Additional practice - soft blue */
+   .civil-status.status-practising {
+     background: #e8eff8;
+     color: #4b6485;
+   }
+
 
     .civil-check-button {
       width: 100%;
@@ -957,14 +986,34 @@ if (statement) {
 
       const count = attempts().length;
       const last = lastAttempt();
-       status.textContent =
-  count === 0
-    ? 'Not started'
-    : last?.is_correct
-      ? 'Correct'
-      : count >= 2
-        ? 'Free practice'
-        : 'Try again';
+      
+      // Remove previous status colours
+      status.classList.remove(
+        'status-correct',
+        'status-retry',
+        'status-practising'
+      );
+      
+      if (count === 0) {
+      
+        status.textContent = 'Not started';
+      
+      } else if (last?.is_correct) {
+      
+        status.textContent = 'Correct';
+        status.classList.add('status-correct');
+      
+      } else if (count >= 2) {
+      
+        status.textContent = 'Practising';
+        status.classList.add('status-practising');
+      
+      } else {
+      
+        status.textContent = 'Try again';
+        status.classList.add('status-retry');
+      
+      }
 
       const needsDecision =
         count > 0 &&
