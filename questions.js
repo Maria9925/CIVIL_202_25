@@ -525,15 +525,12 @@ header.className = 'civil-card-header';
 const headerLeft = document.createElement('div');
 headerLeft.className = 'civil-card-heading';
 
-const subtitle = document.createElement('div');
-subtitle.className = 'civil-card-subtitle';
-subtitle.textContent = 'CIVIL202 · FLUID PROPERTIES';
 
 const status = document.createElement('span');
 status.className = 'civil-status';
 status.textContent = 'Not started';
 
-headerLeft.append(subtitle, heading);
+headerLeft.append(heading);
 header.append(headerLeft, status);
 
 box.prepend(header);
