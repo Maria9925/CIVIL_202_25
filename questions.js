@@ -301,7 +301,27 @@ cardStyles.textContent = `
     cursor: not-allowed;
   }
 
+  /* Correct answer - soft green */
+  .civil-status.status-correct {
+    background: #dff3e8;
+    color: #276749;
+  }
+
+  /* Incorrect answer - soft yellow */
+  .civil-status.status-retry {
+    background: #fff2d9;
+    color: #986719;
+  }
+
+  /* Additional practice - soft blue */
+  .civil-status.status-practising {
+    background: #e8eff8;
+    color: #4b6485;
+  }
+
+  /* Mobile layout */
   @media (max-width: 600px) {
+
     .civil-question-card {
       padding: 15px !important;
     }
@@ -311,29 +331,10 @@ cardStyles.textContent = `
       align-items: stretch;
     }
 
-    
-   /* Correct answer - soft green */
-   .civil-status.status-correct {
-     background: #dff3e8;
-     color: #276749;
-   }
-   
-   /* Incorrect answer - soft yellow */
-   .civil-status.status-retry {
-     background: #fff2d9;
-     color: #986719;
-   }
-   
-   /* Additional practice - soft blue */
-   .civil-status.status-practising {
-     background: #e8eff8;
-     color: #4b6485;
-   }
-
-
     .civil-check-button {
       width: 100%;
     }
+
   }
 `;
 
