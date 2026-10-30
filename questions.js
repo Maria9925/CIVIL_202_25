@@ -806,12 +806,13 @@ if (statement) {
 
       if (!saved) return;
 
-      if (value === 'show_solution') {
-        await showSolution();
-      } else if (value === 'show_answer') {
+      if (value === 'show_answer') {
         await showAnswer();
       }
-
+      
+      // When the student requests the solution,
+      // wait until their difficulty feedback is submitted.
+      
       render();
     }
 
@@ -934,9 +935,16 @@ if (statement) {
          });
    
          if (saved) {
+
+           // Show the solution only after feedback is saved
+           await showSolution();
+         
            render();
+         
          } else {
+         
            submit.disabled = false;
+         
          }
        }
      );
